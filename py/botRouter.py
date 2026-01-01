@@ -81,6 +81,23 @@ SYNONYMS_JSON = {
     }
 }
 
+KEY_CANONICALIZATION_JSON = {
+    # Canonical -> alle Alias-Keys, die im Kontext vorkommen können
+    "Lebensraum": ["Lebensraum", "Habitat"],
+    "Fortpflanzung": ["Fortpflanzung", "Paarung"],
+    "Größe": ["Größe", "Groesse"],
+    "Öffnungszeiten": ["Öffnungszeiten", "Oeffnungszeiten"],
+
+    # Optional: je nach euren Daten
+    "Wissenswertes": ["Wissenswertes", "Wissenswert", "Infos"]
+}
+CANONICAL_REVERSE = {
+    alias: canonical
+    for canonical, aliases in KEY_CANONICALIZATION_JSON.items()
+    for alias in aliases
+}
+
+
 ROUTING_MATRIX_JSON = {
     "priority": [
         "function_intent",   # immer zuerst prüfen
@@ -96,6 +113,17 @@ ROUTING_MATRIX_JSON = {
         "intent_min": 0.45,           # TF-IDF cosine für Intent (optional)
         "llm_fallback_topk": 3
     }
+}
+
+INTENT_GATING_JSON = {
+    # Diese Intents dürfen nur "gewinnen", wenn eine Knowledge-Entity erkannt wurde
+    "requires_entity": [
+        "tp_definition"
+    ],
+    # Optional: Intents, die eher "Fragewort-Pattern" sind und dadurch oft falsch matchen
+    "phrase_bias_intents": [
+        "tp_definition"
+    ]
 }
 
 
@@ -362,6 +390,49 @@ class KnowledgeIndex:
         out.sort(key=lambda x: x.score, reverse=True)
         return out[:k]
 
+    def find_entity_partial(self, query: str, k: int = 5) -> List[Dict[str, Any]]:
+        """
+        Partial matching for short queries like 'frosch' -> Springfrosch, Teichfrosch.
+        Returns list: {Name, Typ, score}
+        """
+        q = normalize(query)
+        if not q or len(q) < 3:
+            return []
+
+        q_tokens = set(tokenize_simple(q))
+        suggestions: Dict[str, Dict[str, Any]] = {}
+
+        for e in self.entries:
+            name = (e.get("Name") or "").strip()
+            typ = (e.get("Typ") or "").strip()
+            if not name:
+                continue
+
+            nm = normalize(name)
+            name_tokens = set(tokenize_simple(nm))
+
+            sub = (q in nm)  # substring
+            tok = bool(q_tokens & name_tokens)  # token overlap
+            pr = fuzz.partial_ratio(q, nm)  # fuzzy partial
+
+            if sub or tok or pr >= 80:
+                score = 0.0
+                if sub:
+                    score += 60.0
+                if tok:
+                    score += 20.0
+                score += 0.2 * pr
+                score -= 0.1 * max(0, len(nm) - len(q))
+
+                prev = suggestions.get(name)
+                if (prev is None) or (score > prev["score"]):
+                    suggestions[name] = {"Name": name, "Typ": typ, "score": float(score)}
+
+        out = list(suggestions.values())
+        out.sort(key=lambda x: x["score"], reverse=True)
+        return out[:k]
+
+
     def keys_for_entity(self, entry: Dict[str, Any]) -> List[str]:
         keys = []
         for k, v in entry.items():
@@ -414,12 +485,15 @@ class Router:
         synonyms: Dict[str, Any],
         routing_matrix: Dict[str, Any],
         llm_client: Optional[OpenAICompatClient] = None,
+        llm_fallback_threshold: float = 0.45,
     ):
         self.intent_index = intent_index
+        self.gating = INTENT_GATING_JSON
         self.kidx = knowledge_index
         self.syn = synonyms
         self.mx = routing_matrix
         self.llm = llm_client
+        self.llm_fallback_threshold = llm_fallback_threshold
         self.dialog_state: Dict[str, Any] = {
             "last_entity_name": None,
             "last_entity_type": None,
@@ -453,6 +527,20 @@ class Router:
                 best_hits = hits
                 best = fname
         return best if best_hits > 0 else None
+
+    # ---------- Intent gating ----------
+    def strip_common_question_phrases(self, text: str) -> str:
+        t = normalize(text)
+        # typische Einleitungen, die sonst alles dominieren
+        phrases = [
+            "was ist", "was sind", "wer ist", "wer sind",
+            "was bedeutet", "bedeutung von", "definition von",
+            "erklär", "erklaer", "erkläre", "erklaere"
+        ]
+        for p in phrases:
+            t = re.sub(rf"\b{re.escape(p)}\b", " ", t)
+        t = re.sub(r"\s+", " ", t).strip()
+        return t
 
     # ---------- Slot extraction (minimal examples, extend as needed) ----------
     def extract_slots(self, function_name: str, text: str) -> Dict[str, Any]:
@@ -489,27 +577,62 @@ class Router:
             return slots
 
         if function_name == "transit_times":
-            # to: "zum X", "zur X", "nach X"
-            m_to = re.search(r"\b(zum|zur|nach)\s+([a-zäöüß0-9 \-]+)$", t)
-            if m_to:
-                slots["to"] = m_to.group(2).strip()
+            # Normalize simple separators
+            tt = t.replace("->", " ").replace("→", " ").replace("—", " ")
 
-            # If "nazka" mentioned, overwrite to= nazka
-            if "nazka" in t:
+            # Helper to clean extracted place text
+            def clean_place(s: str) -> str:
+                s = s.strip(" ,.;:-")
+                s = re.sub(r"\s+", " ", s).strip()
+                return s
+
+            # 1) Parse patterns that contain BOTH from and to in one sentence:
+            # e.g. "vom durlacher tor zum nazka"
+            m_both = re.search(
+                r"\b(von|vom)\s+(?P<from>.+?)\s+\b(nach|zum|zur)\s+(?P<to>.+)$",
+                tt
+            )
+            if m_both:
+                slots["from"] = clean_place(m_both.group("from"))
+                slots["to"] = clean_place(m_both.group("to"))
+            else:
+                # 2) Parse from only (stop before a to-indicator if present)
+                m_from = re.search(
+                    r"\b(von|vom)\s+(?P<from>.+?)(?=\s+\b(nach|zum|zur)\b|$)",
+                    tt
+                )
+                if m_from:
+                    slots["from"] = clean_place(m_from.group("from"))
+
+                # 3) Parse to only
+                m_to = re.search(
+                    r"\b(nach|zum|zur)\s+(?P<to>.+)$",
+                    tt
+                )
+                if m_to:
+                    slots["to"] = clean_place(m_to.group("to"))
+
+                # 4) Comma list fallback: "A, B" => from=A, to=B (only if still missing)
+                if ("from" not in slots or "to" not in slots) and "," in tt:
+                    parts = [clean_place(p) for p in tt.split(",") if clean_place(p)]
+                    if len(parts) >= 2:
+                        slots.setdefault("from", parts[0])
+                        slots.setdefault("to", parts[1])
+
+            # 5) Special handling for "nazka" only when explicitly marked by direction words
+            if re.search(r"\b(von|vom)\s+nazka\b", tt):
+                slots["from"] = "nazka"
+            if re.search(r"\b(nach|zum|zur)\s+nazka\b", tt):
                 slots["to"] = "nazka"
 
-            # from: "von X"
-            m_from = re.search(r"\b(von|vom)\s+([a-zäöüß0-9 \-]+)", t)
-            if m_from:
-                slots["from"] = m_from.group(1).strip()
-
-            # datetime: now/today + optional time
-            slots["datetime"] = "now" if ("jetzt" in t or "nächste" in t or "naechste" in t) else "today"
-            m_time = re.search(r"\b(\d{1,2}:\d{2})\b", t)
+            # 6) datetime: now/today + optional time
+            slots["datetime"] = "now" if ("jetzt" in tt or "nächste" in tt or "naechste" in tt) else "today"
+            m_time = re.search(r"\b(\d{1,2}:\d{2})\b", tt)
             if m_time:
                 slots["time"] = m_time.group(1)
 
             return slots
+
 
         if function_name == "sensor_readings":
             # detect sensor types
@@ -644,6 +767,9 @@ class Router:
         # 1) Key candidates
         key_cands = self.detect_key_candidates(text)
         best_key = key_cands[0].key if key_cands else None
+        # --- key canonicalization (e.g., Habitat -> Lebensraum) ---
+        if best_key:
+            best_key = CANONICAL_REVERSE.get(best_key, best_key)
         type_hint = self.infer_type_hint_from_key(best_key) if best_key else None
 
         # 2) Entity candidates
@@ -725,33 +851,103 @@ class Router:
 
         # 6) Key only => ask for entity
         if best_key and not best_ent:
+            data={
+                "type": "need_entity",
+                "key": best_key,
+                "question": self.clarify_for_entity(best_key, type_hint)
+            }
+            partial = self.kidx.find_entity_partial(text, k=5)
+            if partial:
+                data["suggestions"] = [{"name": p["Name"], "type": p["Typ"], "score": p["score"]} for p in partial]
             return RouteResult(
                 route="clarify",
-                data={
-                    "type": "need_entity",
-                    "key": best_key,
-                    "question": self.clarify_for_entity(best_key, type_hint)
-                }
+                data=data
             )
 
         # 7) Fall back to intent classification (from intents.json)
         intent_top = self.intent_index.topk(text, k=5)
         best = intent_top[0]
 
-        if best["score"] >= self.mx["confidence"]["intent_min"]:
-            self.dialog_state["last_intent"] = best["intent_id"]
-            return RouteResult(
-                route="intent",
-                data={
-                    "intent_id": best["intent_id"],
-                    "intent_name": best["intent_name"],
-                    "confidence": best["score"],
-                    "candidates": intent_top
-                }
+        # --- INTENT GATING: requires entity for certain intents (e.g., tp_definition) ---
+        requires_entity_ids = set(self.gating.get("requires_entity_ids", []))
+        requires_entity_names = set(self.gating.get("requires_entity", []))
+
+        best_id = best.get("intent_id")
+        best_name = best.get("intent_name")
+
+        needs_entity = (best_id in requires_entity_ids) or (best_name in requires_entity_names)
+
+        gated_entity = None  # <-- will be filled if we detect an entity for gated intents
+
+        if needs_entity:
+            # Try to detect entity from user query (strip generic question phrases first)
+            entity_query = self.strip_common_question_phrases(text)
+            ent_cands = self.kidx.find_entity(
+                entity_query,
+                min_score=self.mx["confidence"]["entity_fuzzy_min"],
+                k=5,
+                type_hint=None
             )
 
+            if not ent_cands:
+                # Partial matching suggestions (e.g., "frosch" -> "Springfrosch", "Teichfrosch")
+                partial = self.kidx.find_entity_partial(entity_query, k=5)
+                if partial:
+                    self.dialog_state["pending"] = None
+                    return RouteResult(
+                        route="clarify",
+                        data={
+                            "type": "need_entity_for_definition",
+                            "intent_id": best_id,
+                            "intent_name": best_name,
+                            "question": "Meinst du eines davon?",
+                            "suggestions": [
+                                {"name": p["Name"], "type": p["Typ"], "score": p["score"]}
+                                for p in partial
+                            ]
+                        }
+                    )
+
+                # No entity -> do NOT accept tp_definition; ask for clarification
+                self.dialog_state["pending"] = None
+                return RouteResult(
+                    route="clarify",
+                    data={
+                        "type": "need_entity_for_definition",
+                        "intent_id": best_id,
+                        "intent_name": best_name,
+                        "question": "Meinst du ein bestimmtes Tier, eine Pflanze oder etwas aus den Rheinauen? Nenne bitte den Namen."
+                    }
+                )
+
+            # Entity found -> include it in output
+            gated_entity = {
+                "top": {"name": ent_cands[0].name, "type": ent_cands[0].typ, "confidence": ent_cands[0].score},
+                "candidates": [{"name": e.name, "type": e.typ, "confidence": e.score} for e in ent_cands]
+            }
+
+        if best["score"] >= self.mx["confidence"]["intent_min"]:
+            self.dialog_state["last_intent"] = best["intent_id"]
+
+            data = {
+                "intent_id": best["intent_id"],
+                "intent_name": best["intent_name"],
+                "confidence": best["score"],
+                "candidates": intent_top
+            }
+
+            # Attach entity info for gated intents
+            if gated_entity is not None:
+                data["entity"] = gated_entity
+                # Also annotate each candidate with the same entity (for debugging/telemetry)
+                for c in data["candidates"]:
+                    c["entity"] = gated_entity["top"]
+
+            return RouteResult(route="intent", data=data)
+
         # 8) Optional LLM fallback: choose among top intent + maybe propose clarify
-        if self.llm:
+        # Only use LLM fallback in the "uncertain zone"
+        if self.llm and best["score"] >= self.llm_fallback_threshold and best["score"] < self.mx["confidence"]["intent_min"]:
             print("LLM Fallback for routing...")
             #top_ids = [iid for iid, _ in intent_top[: self.mx["confidence"]["llm_fallback_topk"]]]
             top_ids = [x["intent_id"] for x in intent_top[: self.mx["confidence"]["llm_fallback_topk"]]]
@@ -774,6 +970,8 @@ class Router:
                 return RouteResult(route="intent", data={"intent_id": "smalltalk", "confidence": 0.0, "llm": True})
 
         # 9) Total fallback
+        print("Total fallback to clarify...")
+        print("Top intent candidates:", intent_top,"mx",self.mx["confidence"]["intent_min"])
         return RouteResult(
             route="clarify",
             data={
@@ -819,7 +1017,7 @@ class FunctionDispatcher:
 # 8) Main: CLI Demo
 # =========================
 
-def build_router(intents_path: str, context_path: str) -> Router:
+def build_router(intents_path: str, context_path: str, llmThreshold = .45) -> Router:
     intents = load_intents(intents_path)
     ctx = load_context_entries(context_path)
 
@@ -843,19 +1041,22 @@ def build_router(intents_path: str, context_path: str) -> Router:
     if api_key:
         llm = OpenAICompatClient(base_url=base_url, api_key=api_key, chat_model=chat_model, embed_model=embed_model)
 
-    return Router(intent_index, knowledge_index, SYNONYMS_JSON, ROUTING_MATRIX_JSON, llm_client=llm)
+    return Router(intent_index, knowledge_index, SYNONYMS_JSON, ROUTING_MATRIX_JSON, llm_client=llm, llm_fallback_threshold=llmThreshold)
 
 
 def demo():
     intents_path = "../rawData/intents.json"
     context_path = "../rawData/tiere_pflanzen_auen.json"
 
-    router = build_router(intents_path, context_path)
+    router = build_router(intents_path, context_path, llmThreshold=0.55)
     dispatcher = FunctionDispatcher()
 
     print("Router Demo. Tippe Text (exit zum Beenden).")
     while True:
-        user = input("\nUser> ").strip()
+        try:
+            user = input("\nUser> ").strip()
+        except (EOFError, KeyboardInterrupt):
+            break
         if user.lower() in ("exit", "quit"):
             break
 
