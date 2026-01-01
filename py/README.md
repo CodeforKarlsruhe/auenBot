@@ -2,6 +2,9 @@
 
 Refactoring von `botRouter.py` in ein kleines, modulareres Paket.
 
+Initial ChatGpt conversation: https://chatgpt.com/share/6956cad8-204c-8012-ae36-cbbff7a99a84 
+
+
 ## Struktur
 
 - `bot_router/config/*.json`  
