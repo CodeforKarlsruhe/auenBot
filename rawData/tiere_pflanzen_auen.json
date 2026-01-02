@@ -257,7 +257,7 @@
     "Fortpflanzung": "Die Larven entwickeln sich zwei bis vier Jahre lang im weichen, feuchten Holz kranker, alter Bäume. Sie fressen sich von der Rinde aus immer weiter in den Stamm hinein. Dabei müssen sie vor Spechten, Ameisen, Schlupfwespen und Buntkäfern auf der Hut sein, welche die Larven „zum Fressen gern“ haben. Spechte fressen auch erwachsene Käfer.\nDer dämmerungs- und nachtaktive Käfer lebt über mehrere Generationen an einem Brutbaum. Diesen erkennt man an seinen fingergroßen ovalen Schlupflöchern erkennen.",
     "Schutz": "Früher galt der Große Eichenbock als Schädling. Heute ist er stark gefährdet und steht unter Schutz. Durch den Verlust sehr alte Eichen, ist er sehr selten geworden.",
     "Feinde": "Sie müssen vor Spechten, Ameisen, Schlupfwespen und Buntkäfern auf der Hut sein, welche die Larven „zum Fressen gern“ haben. Spechte fressen auch erwachsene Käfer.",
-    "Name": "",
+    "Name": "Großer Eichenbock",
     "Typ":"Tier"
   },
   {
@@ -283,7 +283,7 @@
     "Habitat": "Die dicklichen weißen Rosenkäferlarven findet man in weichen Holzresten, im Gartenboden und manchmal auch in Blumentöpfen, die mehrere Jahre nicht verschoben wurden.",
     "Fortpflanzung": "Die Entwicklung von der Larve zum fertigen Käfer dauert etwa zwei Jahre.",
     "Größe": "bis zu 3,5 cm",
-    "Name": "Reh",
+    "Name": "Rosenkäfer",
     "Typ":"Tier"
   },
   {
@@ -293,7 +293,7 @@
     "Erkennungsmerkmale": "Sein Aussehen weicht stark vom gewohnten Bild eines Käfers ab. Die Flügeldecken sind zu Stummeln verkürzt und klaffen weit auseinander.  [Fortpflanzung] Die Männchen werden oft nur 10 mm groß, die Weibchen 3x so lang.  Ihr Hinterleib schwillt während der Ei-Entwicklung stark an, denn sie legen mehrmals 3000–9500 Eier in den sandigen Boden ab.\n\nDie Flügeldecken des Kleinen Weidenblattkäfers glänzen blaugrün-metallisch oder kupferfarben. Sie sind mit Reihen kleiner weißer Punkte geschmückt.",
     "Fortpflanzung": "Die Männchen werden oft nur 10 mm groß, die Weibchen 3x so lang.  Ihr Hinterleib schwillt während der Ei-Entwicklung stark an, denn sie legen mehrmals 3000–9500 Eier in den sandigen Boden ab.  Durch die komplizierte Entwicklung werden nur wenige zu einem fertigen Käfer. \nDie geschlüpften Larven klettern auf Blüten und warten dort auf Wildbienen. Wenn sie eine zu fassen bekommen, klammern sie sich mit ihren Klauen fest und lassen sich in deren Nest tragen. Dort ernähren sie sich von den Wildbieneneiern. Nach der ersten Häutung werden sie zu einer blinden Made, die sich vom Honigpollenbrei, der für die Wildbienenlarve deponiert war, ernährt. Nach drei weiteren Häutungen verlässt die Made das Nest und häutet sich zu einer Scheinpuppe, die im Boden überwintert.\nErst nach einer weiteren Häutung im Frühjahr folgt das eigentliche Puppenstadium. Zwischen März und Mai schlüpfen endlich die fertigen Käfer und fangen sofort an Krautpflanzen zu fressen. Die Weibchen nehmen dabei bis zum sechsfachen des Ausgangsgewichtes zu. Mit der Paarung und der Eiablage beginnt alles von Neuem.\n\nDie Weibchen legen ihre Eier an Weidenblättern ab. Die Larven sammeln sich auf den Blattunterseiten im unteren Bereich der Pflanze und fressen gesellig nebeneinander die untere Blattschicht, so dass ein dünnes, transparentes Gewebe übrigbleibt. Das bezeichnet man als Fensterfraß.\nDie Larven verpuppen sich an den Blättern. Pro Jahr werden zwei bis drei Generationen ausgebildet. Die letzte Generation überwintert als ausgewachsener Käfer gut versteckt unter loser Rinde oder in Holzspalten.",
     "Größe": "[Fortpflanzung] Die Männchen werden oft nur 10 mm groß, die Weibchen 3x so lang.",
-    "Name": "",
+    "Name": "Schwarzblauer Ölkäfer",
     "Typ":"Tier"
   },
   {
@@ -330,7 +330,7 @@
     "Fortpflanzung": "[Habitat] Ursprünglich sind Gelbbauchunken typische Bewohner von Bach- und Flussauen. Dort besiedeln sie durch die Auendynamik immer wieder neu entstandenen Kleingewässer. Da solche Gewässer immer seltener werden, weichen sie für die Eiablage auf wassergefüllte Traktorspuren, Pfützen und kleine Wassergräben aus.  Dort lauern meist keine Fressfeinde und die flachen Kleinstgewässer erwärmen sich so schnell, dass die Kaulquappen oft schon 2-3 Tage nach der Eiablage schlüpfen können. [Habitat] Man findet diese Pionierart auch häufig in Steinbrüchen oder Kiesgruben sowie auf Truppenübungsplätzen.",
     "Habitat": "Ursprünglich sind Gelbbauchunken typische Bewohner von Bach- und Flussauen. Dort besiedeln sie durch die Auendynamik immer wieder neu entstandenen Kleingewässer. Da solche Gewässer immer seltener werden, weichen sie für die Eiablage auf wassergefüllte Traktorspuren, Pfützen und kleine Wassergräben aus.\n\nMan findet diese Pionierart auch häufig in Steinbrüchen oder Kiesgruben sowie auf Truppenübungsplätzen.",
     "Größe": "5 cm",
-    "Name": "Reh",
+    "Name": "Gelbbauchunke",
     "Typ":"Tier"
   },
   {
@@ -502,7 +502,7 @@
     "Genießbarkeit": "Vorsicht! Alle Teile des Gelben Windröschens sind giftig und können Übelkeit, Durchfall und Nierenschädigungen hervorrufen.",
     "Größe": "10-30 cm",
     "Name": "Gelbes Windröschen",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Erkennungsmerkmale": "Der 50-150 cm hohe Blutweiderich [Vorkommen]wächst auf nassen Böden, z.B. auf Nasswiesen, im Röhricht, an Flussufern oder Gräben. [Blütezeit] Seine auffälligen rosa bis violetten Blütenstände sieht man fast den ganzen Sommer hindurch von Juni bis September. Sie bestehen aus über hundert Blüten und können bis zu 30 Zentimeter lang werden.  [Ökologische Bedeutung] Die sehr nektarreichen Blüten bieten vielen Bienen und Schmetterlingen Nahrung.  Die länglichen, dunkelgrünen Blätter des Blutweiderichs sind gegenständig angeordnet. Der kräftige aufrechte Stängel ist vierkantig und behaart.",
@@ -554,7 +554,7 @@
     "Schutz": "Die Kuckucks-Lichtnelke ist in Europa weit verbreitet, steht in einigen Regionen aber wegen des zunehmenden Rückgangs ihrer feuchten Wuchsorte unter Schutz.",
     "Größe": "30-60 cm",
     "Name": "Kuckucks-Lichtnelke",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Erkennungsmerkmale": "[Vorkommen] Die Flatterulme ist ein bis zu 35 m hoher Baum\n\nIhre Blätter sind am Rand gesägt und an der Blattbasis stark asymmetrisch. Sie werden im Herbst goldgelb.\n\nEinzigartig sind die Brettwurzeln der Flatterulme. Mit ihnen gleicht sie die mangelnde Sauerstoffzufuhr während der Überflutungen aus und gibt dem Baum mehr Halt im feucht-weichen Boden. Typisch für Flatterulmen sind die zahlreichen Stockausschläge und Wasserreiser, die aus dem Stamm austreiben.",
@@ -564,7 +564,7 @@
     "Ökologische Bedeutung": "Die Flatterulme ist weniger anfällig für die Ulmenkrankheit, als andere Ulmenarten und deshalb eine \"Rettungsinsel\" für alle spezialisierten Ulmenbesiedler wie den Ulmenzipfelfalter oder den Ulmenblattfloh.",
     "Größe": "35 m",
     "Name": "Flatterulme",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Erkennungsmerkmale": "Das Pfeifengras ist eine ausdauernde Grasart, die Wuchshöhen von 30 bis 100 cm erreichen kann. Es bildet dichte Horste mit schlanken, aufrechten Stängeln und lanzettlichen, grünen, oft rauen Blättern.\n\nDie Blütenstände tragen zahlreiche kleine, eingeschachtelte Ährchen mit winzigen Blüten, die in der Farbe von violett über rötlich bis hin zu silbrig-grau variieren.",
@@ -585,7 +585,7 @@
     "Giftigkeit": "Das Busch-Windröschen ist in allen Teilen giftig.",
     "Größe": "20 cm",
     "Name": "Busch-Windröschen",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Erkennungsmerkmale": "[Vorkommen] Die bis zu 150 cm große Brennnessel wächst auf stickstoffreichen Böden in Wäldern, Gebüschen und auf Schuttplätzen.",
@@ -642,7 +642,7 @@
     "Wissenswertes": "Das dichte Wurzelsystem des Aronstabs kann Erosion verhindern und hilft dabei, Uferbereiche zu schützen.",
     "Größe": "15-40 cm",
     "Name": "Aronstab",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Erkennungsmerkmale": "[Blütezeit] „Gemeiner Schneeball“ dazu fällt mir Einiges ein! Aber nein, der Gemeine (= gewöhnliche) Schneeball hat seinen Namen von den runden weißen Blütenschirmen, die er im Mai in üppiger Pracht hervorbringt.  Am äußeren Kreis der Trugdolde sitzen große duftende, sterile Randblüten, die als Blickfang dienen. [Ökologische Bedeutung] In der Mitte bieten die deutlich kleineren, nicht duftenden, fruchtbaren Blüten ihren Nektar an.\n\nDie gegenständig angeordneten Laubblätter weisen drei grob gezähnte, nach vorne gerichtete Lappen auf.",
@@ -652,7 +652,7 @@
     "Genießbarkeit": "Für Menschen sind die Beeren giftig.",
     "Vorkommen": "Der bis zu 4 m hohe Strauch wächst in feuchten Gebieten, Laubwäldern, Gärten und Parks.",
     "Name": "Gemeiner Schneeball",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Erkennungsmerkmale": "Der Weißdorn ist ein Strauch oder kleiner, bis 10 m hoher Baum mit dornigen Zweigen.\n\n[Ökologische Bedeutung] Seine weißen Blüten sind die ersten Farbtupfer im Frühlingswald und eine wichtige Futterquelle für Bienen, Hummeln und Falter. Ihr Geruch ähnelt dem von Mäuseurin. \nDie Blätter des Weißdorns sind glänzend und stark gebuchtet. Sie dienen mehr als 50 Arten von Schmetterlingsraupen als Futter.",
@@ -661,7 +661,7 @@
     "Frucht": "[Verwendung] Die roten, kugeligen Früchte reifen im August und September und bleiben oft bis in den Frühling hinein am Strauch. Sie sind säuerlich-mehlig und deshalb zum rohen Verzehr wenig geeignet, werden aber gern zur Herstellung von Marmeladen und Tees verwendet.",
     "Verwendung": "Die roten, kugeligen Früchte reifen im August und September und bleiben oft bis in den Frühling hinein am Strauch. Sie sind säuerlich-mehlig und deshalb zum rohen Verzehr wenig geeignet, werden aber gern zur Herstellung von Marmeladen und Tees verwendet.  In Notzeiten wurden die Früchte als Mus gegessen und das getrocknete Fruchtfleisch als Mehlzusatz beim Brotbacken verwendet. Die Kerne dienten als Kaffeeersatz. \nWeißdornextrakte werden in der traditionellen Medizin zur Unterstützung bei Herz-Kreislauf-Erkrankungen eingesetzt. \nDas Holz des Weißdorns ist hart und schwer. Es wurde früher häufig für Werkzeugstiele oder für Drechslerarbeiten verwendet.",
     "Größe": "10 m",
-    "Name": "",
+    "Name": "Weißdorn",
     "Typ":"Pflanze"
   },
   {
@@ -671,7 +671,7 @@
     "Genießbarkeit": "Nach der Blüte entwickelt die Heckenkirsche kleine rote Beeren, die bei Vögeln sehr beliebt sind. Leider verwechseln Kinder die Beeren oft mit Johannisbeeren. Da sie aber nur schwach giftig und sehr bitter sind, kommt es meist nicht zu einer ernsthaften Vergiftung.",
     "Vorkommen": "Die Heckenkirsche wächst bevorzugt an feuchten, halbschattigen Stellen im Unterholz von Laub- und Mischwäldern, gerne auch in Ufernähe von Gewässern.",
     "Name": "Heckenkirsche",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Erkennungsmerkmale": "Die Feldulme ist ein wärmeliebender etwa 35 m hoher Baum mit breiter Krone und kurzem Stamm.\n\n[Blütezeit] Die Feld-Ulme blüht ab März, vor dem Laubaustrieb, in unauffällig rötlich-braun gefärbten Büscheln.\n\nIm April reifen die frischgrünen 1-2 cm großen geflügelten Nüsschen, die oft irrtümlich fürs erste Laub gehalten werden. Die reifen, geflügelten Früchte werden vom Wind weit verbreitet. \nDie Blätter der Feldulme sind eiförmig, doppelt gezähnt und oberseits glänzend dunkelgrün. Sie können bis zu 15 cm lang werden und färben sich im Herbst leuchtend gelb. Auf den kahlen Zweigen der Feldulme bildet sich an manchen Stellen eine Korkschicht aus.",
@@ -705,7 +705,7 @@
     "Schutz": "Der Kantenlauch ist selten und gilt als gefährdet.",
     "Größe": "20 bis 35, manchmal auch bis 50 cm",
     "Name": "Kanten-Lauch",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Erkennungsmerkmale": "Der mehrjährige Große Wiesenknopf ist eine krautige Pflanze und erreicht Wuchshöhen bis etwa 1,20 m. [Vorkommen] An den feuchtesten Stellen von Mähwiesen, in Gräben und in Flachmooren fallen die tiefbraunroten kugeligen Blütenstände den ganzen Sommer über ins Auge.",
@@ -766,7 +766,7 @@
     "Wissenswertes": "In der Landwirtschaft wird es oft als lästiges Unkraut betrachtet, da es sich stark ausbreitet und Ernten beeinträchtigen kann. Die Rhizome sind schwer zu entfernen und resistent gegen viele Herbizide.",
     "Größe": "3 bis maximal 25, selten bis zu 40 cm hoch",
     "Name": "Braunes Zypergras",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Erkennungsmerkmale": "[Vorkommen] Der 8-25 cm hohe Gewöhnliche Hufeisenklee wächst in hübschen gelben Blütenpolstern auf sonnigen Magerwiesen, Trockenrasen, in lichten Kiefernwäldern und an Waldrändern.\n\nSeine Blätter sind gefiedert und bestehen aus zahlreichen kleinen Blättchen.",
@@ -788,7 +788,7 @@
     "Wissenswertes": "Die früher großen Bestände sind durch das Ausgraben der Knollen zur Salep-Gewinnung (reizmildernder Schleimstoff) und das Umwandeln von Trockenrasen zu Ackerflächen stark zurück gegangen.",
     "Größe": "20 - 40 cm",
     "Name": "Helm-Knabenkraut",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Erkennungsmerkmale": "Der Bergahorn kann bis zu 30 Meter hoch werden und [Vorkommen]wächst am liebsten auf steinigem, feuchtem Untergrund. Er gehört in der Hartholzaue zu den dominierenden Baumarten. [Fortpflanzung] Er hat große fünflappige Blätter, die aber nie spitz auslaufen wie beim Spitzahorn und bildet im Frühjahr grünlich-gelbe Blütentrauben, die vom Wind bestäubt werden.",
@@ -834,7 +834,7 @@
     "Schutz": "Fast alle Arten des Knabenkrauts stehen auf der Roten Liste und sind teilweise im Bestand stark gefährdet oder sogar vom Aussterben bedroht.",
     "Größe": "25 bis 80 cm",
     "Name": "Purpur-Knabenkraut",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Erkennungsmerkmale": "Die Schwarzpappel ist ein stattlicher bis zu 30 Meter hoher Laubbaum mit oft ausladender Krone. Sie hat eine auffällig rissige, dunkle, grau-schwarze Rinde, die zur Namensgebung führte. Die Blätter sind oberseitig glänzend, herzförmig, gezähnt und zugespitzt.",
@@ -910,7 +910,7 @@
     "Wissenswertes": "Der Zottige Klappertopf zapft als Halbschmarotzer mit speziellen Wurzeln bevorzugt die Wurzelsysteme von Wiesengräsern an und entnimmt diesen die Nährstoffe. Im Gegensatz zu Vollschmarotzern produzieren sie durch Photosynthese selbständig Sauerstoff und Zucker. \nDie von Landwirten aufgrund ihres geringen Futterwertes als „Unkraut” gewertete Klappertopf wird im Volksmund auch Milchdieb genannt, da die Wiesenpflanzen in Nachbarschaft der Halbschmarotzer weniger gut gedeihen.",
     "Genießbarkeit": "Der Klappertopf enthält Aucubin, das für Pferde, Rinder, Ziegen und Schafe leicht giftig ist.",
     "Name": "Zottiger Klappertopf",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Erkennungsmerkmale": "Die dunkelbraun gefärbten Tiere haben weiße Punktreihen und einen weißbehaarten Rand am Hinterleib.",
@@ -975,7 +975,7 @@
     "Wissenswertes": "Früher nannte man das Vergissmeinnicht auch „Blauer Augentrost“, weil die blauen Blüten im Volksglauben an die Augen frisch verliebter Menschen erinnern. Sie wurden als Liebes- und Treuebeweis verschenkt. Weitere Namen des Vergissmeinnicht sind Kleine Hundszung, Museohr, Katzenäuglein und Blaue Leuchte.",
     "Größe": "Die Pflanze erreicht eine Höhe von 10 bis 80 Zentimetern.",
     "Name": "Sumpf-Vergissmeinnicht",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Erkennungsmerkmale": "Die Schopfige Kreuzblume, auch Schopf-Kreuzblümchen genannt, ist eine sommergrüne krautige Pflanze, die zwischen 5 und 30 cm hoch werden kann. An den aufrechten Stängeln wachsen die grünen, spatelförmigen Blätter in wechselständiger Anordnung. \nDank ihres auffälligen Blütenstands, der aus kräftig-violetten (selten auch blauen oder weißen) Blüten besteht, ist die Schopfige Kreuzblume trotz ihrer geringen Größe leicht zu erkennen.",
@@ -985,7 +985,7 @@
     "Vorkommen": "Die Schopfige Kreuzblume gedeiht an sonnigen Standorten auf mäßig trockenen, nährstoffarmen Böden mit mäßig wechselnder Feuchtigkeit und bildet eine dünne Pfahlwurzel und ein verzweigtes Rhizom aus.",
     "Größe": "zwischen 5 und 30 cm hoch",
     "Name": "Schopfige Kreuzblume",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Blütezeit": "Seine blauvioletten Blüten sieht man fast den ganzen Sommer hindurch von Mai bis September.",
@@ -1042,7 +1042,7 @@
     "Alter": "[Fortpflanzung] Der Schwimmfarn ist eine einjährige Pflanze, die im Oktober nach den ersten kalten Nächten abstirbt.",
     "Größe": "Es handelt sich um 2 bis 20 cm große, an der Wasseroberfläche treibende Pflanzen.",
     "Name": "Schwimmfarn",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Vorkommen": "Die Waldrebe, auch Klematis genannt, ist eine Pflanzengattung innerhalb der Familie der Hahnenfußgewächse. Alle Clematis-Arten wachsen an mehr oder weniger schattigen Waldrändern. Diese sollten humusreich, durchlässig und gleichbleibend feucht sein.",
@@ -1067,7 +1067,7 @@
     "Schutz": "wie alle Seerosengewächse, besonders geschützt",
     "Größe": "Über der Wasserlinie wird sie nur 5 bis 10 Zentimeter hoch, unter Wasser reichen ihre Stängel bis in eine Tiefe von 200 Zentimetern.",
     "Name": "Teichrose",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Erkennungsmerkmale": "Er bildet eine Pfahlwurzel aus und hat grüne, dreifach gefiederte Blätter. Zumindest im Frühjahr enthalten die jungen, kantigen und hohlen Stängel einen weißlichen Milchsaft.\n\nVon Juli bis August kannst Du den Sumpf-Haarstrang an seinen aufrechten Blütenstängeln mit den weißen Doldenblüten erkennen",
@@ -1076,7 +1076,7 @@
     "Ökologische Bedeutung": "[Erkennungsmerkmale] Von Juli bis August kannst Du den Sumpf-Haarstrang an seinen aufrechten Blütenstängeln mit den weißen Doldenblüten erkennen, die vielen Raupen einheimischer Schmetterlinge, darunter auch dem Schwalbenschwanz, sowie Bienen als Nahrungsquelle dienen.",
     "Größe": "bis zu 1,6 Meter",
     "Name": "Sumpf-Haarstrang",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Vorkommen": "Die Zypressen-Wolfsmilch ist eine 15 – 50 cm hohe bläulichgrüne, mehrjährige, krautige Pflanze, die an trockenen und sonnigen Standorten in Magerrasen, Schafweiden, an Bahndämmen und auf felsigen Standorten wächst.",
@@ -1088,7 +1088,7 @@
     "Ökologische Bedeutung": "Die Zypressen-Wolfsmilch ist eine wichtige Nektarpflanze für viele Insekten und Schmetterlingsarten. Für die Raupen des gefährdeten Wolfsmilchschwärmers ist die Pflanze die wichtigste Nahrungsquelle. Durch die giftige Nahrung werden die Raupen selbst zum Giftcocktail und sind bestens gegen Fressfeinde geschützt.",
     "Größe": "[Vorkommen] Die Zypressen-Wolfsmilch ist eine 15 – 50 cm hohe bläulichgrüne, mehrjährige, krautige Pflanze",
     "Name": "Zypressen-Wolfsmilch",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Vorkommen": "Der Wasser-Hahnenfuß ist eine mehrjährige immergrüne Wasserpflanze und wächst bevorzugt in sonnigen bis halbschattigen Bereichen von Wildteichen, Tümpeln und in langsam fließenden Gewässern. Er bildet je nach Wasserverhältnissen eine niedrigwüchsige Landform am Ufer oder eine Wasserform aus, deren freischwimmende und im Grund wurzelnde Triebe bis zu zwei Meter lang werden.",
@@ -1101,7 +1101,7 @@
     "Genießbarkeit": "Für Menschen sind alle Teile vom Wasser-Hahnenfuß giftig.",
     "Größe": "Bei der Wasserform befindet sich der Großteil des Pflanzensprosses unter Wasser. Oberhalb der Wasserlinie erreicht der Wasser-Hahnenfuß nur eine Höhe von etwa fünf Zentimetern.",
     "Name": "Wasser-Hahnenfuß",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Vorkommen": "Die Wassernuss, auch als Wasserkastanie bekannt, ist eine sommergrüne, einjährige Schwimmblattpflanze. Sie ist über mit einen 1 bis 3 Meter langen Haupttrieb mit den Widerhaken der Frucht im Boden verankert. Ihr bevorzugter Lebensraum sind kalkarme, aber nährstoffreiche und sommerwarme Altwässer, Humus-Schlammseen und Teiche.",
@@ -1124,7 +1124,7 @@
     "Ökologische Bedeutung": "Die Bestäubung der nacht- oder tagblühenden Seerosen erfolgt durch unterschiedliche Insekten.",
     "Genießbarkeit": "Alle Pflanzenteile der einheimischen Weißen Seerose sind giftig.",
     "Name": "Weiße Seerose",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Erkennungsmerkmale": "Die Steppen-Wolfsmilch ist eine mehrjährige, krautige Pflanze und kann eine Höhe von 15 bis 40 cm erreichen.  Meist stehen mehrere aufrechte Stängel buschig beisammen. Die blaugrünen lanzettlichen Laubblätter sind ledrig und durch einen wachsartigen Überzug vor starker Verdunstung geschützt.",
@@ -1134,7 +1134,7 @@
     "Genießbarkeit": "Vorsicht! Die Steppen-Wolfsmilch enthält in ihren Stängeln und Blättern eine weiße, giftige Flüssigkeit, die man Milchsaft nennt und die bei Berührung mit der Haut oder den Schleimhäuten zu Reizungen führen kann. Darauf nimmt auch ihr Name Bezug, laut Volksmund ist der Pflanzensaft so gefährlich wie ein Wolf.",
     "Größe": "Die Steppen-Wolfsmilch ist eine mehrjährige, krautige Pflanze und kann eine Höhe von 15 bis 40 cm erreichen.",
     "Name": "Steppen-Wolfsmilch",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Vorkommen": "Der Winter-Schachtelhalm braucht feuchten Untergrund und findet diesen in Auenwäldern, Quellmooren und in wechselfeuchten Wäldern, die von Grund- oder Sickerwasser geprägt sind.",
@@ -1155,7 +1155,7 @@
     "Erkennungsmerkmale": "Nur für kurze Zeit könnt ihr die etwa 30 cm hohen, an der Spitze etwas umgebogenen Blütenstände mit fleischfarbenen bis zartviolett gefärbten Blüten bewundern.",
     "Fortpflanzung": "[Ökologische Bedeutung] Die Blüten werden von Insekten, insbesondere von Hummeln und Bienen, bestäubt, manchmal auch vom Wind.  Die langlebigen Samen werden durch Wind, Wasser und von Ameisen verbreitet.",
     "Name": "Schuppenwurz",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Alter": "Die Sumpf-Wolfsmilch ist eine krautige Pflanze, die mehrere Jahrzehnte alt werden kann",
@@ -1167,7 +1167,7 @@
     "Schutz": "Die Sumpf-Wolfsmilch ist in Deutschland unter besonderen Schutz gestellt und ihre Art wird als „gefährdet“ bewertet.",
     "Größe": "Die Sumpf-Wolfsmilch ist eine krautige Pflanze, die mehrere Jahrzehnte alt werden kann[/Alter] und eine Höhe von 0,5 bis 1,5 Metern erreicht.",
     "Name": "Sumpf-Wolfsmilch",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Vorkommen": "Die Wasser-Sumpfkresse, auch als Ufer-Sumpfkresse bekannt, gehört zu den Kreuzblütengewächsen. Sie siedelt bevorzugt in feuchten, sumpfigen Gebieten wie lichten Auwäldern und an den Ufern langsam fließender Gewässer sowie Seen und Tümpeln. Gerne werden auch nährstoffreiche Abwässerkanäle besiedelt oder zeitweise trocken fallende Flächen.",
@@ -1179,7 +1179,7 @@
     "Genießbarkeit": "Alles an dieser einheimischen Wildpflanze ist essbar: Die noch zarten Blätter und jungen Blütenstängel, die Blüten und unreifen Früchte, die Samen und schließlich auch die Rhizome sowie der Wurzelstock, der wie Meerrettich verarbeitet werden kann.",
     "Größe": "Die mehrjährige Wasser-Sumpfkresse erreicht eine Wuchshöhe von etwa 50 bis 150 cm.",
     "Name": "Wasser-Sumpfkresse",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Vorkommen": "Der Schlammling ist eine einjährige Pionierpflanze offener, zeitweise überspülter und nährstoffreicher Sand- und Schlammflächen in Ufergebieten.",
@@ -1189,7 +1189,7 @@
     "Schutz": "Durch die Verbauung natürlicher Sandufer und Flussregulierungen ist die Art selten und nur zerstreut zu finden. In einigen deutschen Bundesländern steht der Schlammling auf den Roten Listen gefährdeter Arten.",
     "Größe": "Die gesamte Pflanze ist zwischen zwei und zehn Zentimetern hoch",
     "Name": "Schlammling",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Vorkommen": "Sie besiedelte ursprünglich bevorzugt Flussufer und Auwälder entlang größerer Flüsse, so auch am Rhein.",
@@ -1201,7 +1201,7 @@
     "Schutz": "Durch die Regulierung von Flüssen und Trockenlegung ehemalige Auenwälder gibt in Deutschland es nur noch wenige Wilde Weinreben. Früher wurden auch viele Wilde Weinreben vom Menschen entfernt, um die Verbreitung der Reblaus (eine Laus-Art, die unterirdisch an den Wurzeln der Weinrebe saugt) einzudämmen, die auch auf den kultivierten Wein übergeht.",
     "Größe": "Die verzweigte, verholzende Kletterpflanze (Liane) bildet an ihren dünnen, langen Trieben Ranken aus, mit denen sie bis zu 40 Meter hoch in die Baumkronen wachsen kann, um dort ein Blätterdach zu bilden, zu blühen und zu fruchten.",
     "Name": "Wilde Weinrebe",
-    "Typ":"Tier"
+    "Typ":"Pflanze"
   },
   {
     "Vorkommen": "Er wächst auf Moorwiesen, Halbtrockenrasen und Feuchtwiesen, an Wegrändern oder auf Brachflächen in sonnigen bis halbschattigen Bereichen.",
