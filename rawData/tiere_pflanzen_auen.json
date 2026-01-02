@@ -5,6 +5,10 @@
     "Fortpflanzung": "Die Holzbiene lebt nicht in einem Volk, sondern alleine. Sie wird schon fr\u00fch im Jahr aktiv und beginnt mit ihren kr\u00e4ftigen Mundwerkzeugen eine fingerdicke, etwa 30 cm lange Brutr\u00f6hre in totes Holz zu nagen. Ans Ende der R\u00f6hre tr\u00e4gt sie einen Nahrungsvorrat aus Pollen und Nektar ein, bis die Kammer randvoll ist und legt ein Ei darauf. Anschlie\u00dfend verschlie\u00dft sie die Zelle mit einer Wand aus Holzsp\u00e4nen und Speichel. In einer Brutr\u00f6hre werden um die 15 Zellen angelegt. Die fertig entwickelten Bienen fliegen bereits im Juni aus.",
     "Gr\u00f6\u00dfe": "Die etwa 28mm gro\u00dfe Blauschwarze Holzbiene ist unsere gr\u00f6\u00dfte heimische Wildbienenart. Unter ihrer Last neigt sich mancher Bl\u00fctenkopf nach unten.",
     "Name": "Blauschwarze Holzbiene",
+    "Name_alt": "Gro\u00dfe Blaue Holzbiene",
+    "Links": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Abeille_charpentiere_1024.jpg/330px-Abeille_charpentiere_1024.jpg"
+    ],
     "Typ": "Tier"
   },
   {
@@ -36,6 +40,10 @@
     "Nahrung": "die ausgewachsenen K\u00e4fer fressen Weiden- und Pappelbl\u00e4tter.",
     "Feinde": "Bei Gefahr geben sie eine streng nach Blaus\u00e4ure riechende Fl\u00fcssigkeit ab und vertreiben damit ihre Feinde. Das sch\u00fctzt sie aber nicht vor den Angriffen von Raupenfliegen und Schlupfwespen. In guten Jahren schaffen es trotzdem 2-3 Generationen von Pappelblattk\u00e4fern zwischen Mai und August aufzuwachsen.",
     "Name": "Weidenblattk\u00e4fer",
+    "Name_alt": "Pappel-Blattk\u00e4fer",
+    "Links": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Chrysomelidae_-_Chrysomela_populi.JPG/330px-Chrysomelidae_-_Chrysomela_populi.JPG"
+    ],
     "Typ": "Tier"
   },
   {
@@ -120,6 +128,10 @@
     "Lebensweise": "[Habitat] Der lange Name des Hellen Wiesenknopf-Bl\u00e4ulings erz\u00e4hlt uns schon eine Menge \u00fcber den h\u00fcbschen silberblauen Tagfalter mit der spannenden Lebensweise: Er bewohnt feuchte Wiesen, auf denen der Gro\u00dfe Wiesenknopf w\u00e4chst, denn nur an dessen Bl\u00fcten legen die Weibchen im Hochsommer ihre Eier ab.  Die hellrosa Raupen fressen sich in die roten Bl\u00fcten hinein und werden durch diese Kost selbst immer purpurroter. Nach der dritten H\u00e4utung lassen sich die Raupen auf den Boden fallen und warten\u2026\nF\u00fcr Trockenrasen-Knotenameisen m\u00fcssen die Raupen wie die eigene Brut duften, denn wenn sie eine Bl\u00e4ulings-Raupe finden, tragen sie sie in ihren Ameisenbau und versorgen sie dort. Das wird ihnen schlecht gedankt, denn die Raupe frisst den ganzen Winter \u00fcber - gut gesch\u00fctzt im warmen Ameisenbau -  von den Larven der Ameisen, ohne behelligt zu werden. Im sp\u00e4ten Fr\u00fchjahr verpuppt sie sich. Wenn schlie\u00dflich der Falter im Ameisenbau schl\u00fcpft, muss er schnell den Ausgang finden, seine Fl\u00fcgel aufpumpen, sie aush\u00e4rten und davonfliegen, damit er jetzt nicht seinerseits von den Ameisen verspeist wird!",
     "Habitat": "Der lange Name des Hellen Wiesenknopf-Bl\u00e4ulings erz\u00e4hlt uns schon eine Menge \u00fcber den h\u00fcbschen silberblauen Tagfalter mit der spannenden Lebensweise: Er bewohnt feuchte Wiesen, auf denen der Gro\u00dfe Wiesenknopf w\u00e4chst, denn nur an dessen Bl\u00fcten legen die Weibchen im Hochsommer ihre Eier ab.",
     "Name": "Heller Wiesenknopf-Bl\u00e4ulings",
+    "Name_alt": "Heller Wiesenknopf-Ameisenbl\u00e4uling",
+    "Links": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Glaucopsyche_nausithous_Schwaebisch_Hall-Wackershofen_20080723_2.jpg/330px-Glaucopsyche_nausithous_Schwaebisch_Hall-Wackershofen_20080723_2.jpg"
+    ],
     "Typ": "Tier"
   },
   {
@@ -171,6 +183,9 @@
     "Nahrung": "Der Russische B\u00e4r geh\u00f6rt zu den Nachtfaltern, ist aber oft tags\u00fcber unterwegs, um Nektar zu saugen, mit Vorliebe an den Bl\u00fcten des Wasserdosts oder am Sommerflieder. Im Gegensatz zu anderen B\u00e4renspinnern hat er einen gut ausgebildeten Saugr\u00fcssel. \n[Erkennungsmerkmale] Die schwarz-gelb gestreifte Raupen mit den roten Borstenb\u00fcndeln kannst Du im Herbst oder Fr\u00fchjahr an Brennnesseln, Weidenr\u00f6schen, Hasel- oder Himbeerstr\u00e4uchern finden.",
     "Name": "Russische B\u00e4r",
     "Name_alt": "Spanische Flagge",
+    "Links": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/0_%C3%89caille_chin%C3%A9e_-_Euplagia_quadripunctaria_-_Havr%C3%A9%2C_Begique_%283%29.JPG/330px-0_%C3%89caille_chin%C3%A9e_-_Euplagia_quadripunctaria_-_Havr%C3%A9%2C_Begique_%283%29.JPG"
+    ],
     "Typ": "Tier"
   },
   {
@@ -190,6 +205,10 @@
     "Fortpflanzung": "Die Weibchen des Schillerfalters sieht man selten. Sie fliegen meist in den hohen Baumkronen. Nach der Befruchtung legen sie ihre Eier in die Rindenspalten alter Weidenb\u00e4ume. Die grasgr\u00fcnen Raupen tragen zwei Kopfh\u00f6rner und \u00e4hneln damit Nacktschnecken. Sie \u00fcberwintern zwischen Weidenbl\u00e4ttern. Bis zum darauf folgenden Fr\u00fchjahr erreichen sie eine stattliche Gr\u00f6\u00dfe und sind nach der 4. H\u00e4utung etwa 42 mm lang.",
     "Gr\u00f6\u00dfe": "etwa 42 mm lang",
     "Name": "Schillerfalter",
+    "Name_alt": "Gro\u00dfer Schillerfalter",
+    "Links": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Apatura_iris_Weinsberg_20080618_3.jpg/330px-Apatura_iris_Weinsberg_20080618_3.jpg"
+    ],
     "Typ": "Tier"
   },
   {
@@ -207,7 +226,10 @@
     "Erkennungsmerkmale": "Ein Gabelschwanz? Woher kommt dieser Name? An den hellen, fein gemusterten Falter finden wir nichts, was darauf schlie\u00dfen l\u00e4sst. Auf Baumrinde ist er mit dieser Zeichnung aber bestens getarnt. Im Gegensatz dazu setzt die dicke gr\u00fcne Raupe auf Abschreckung: Sie zieht ihren dunklen Kopf ein und streckt dem Feind ihren roten Halsring mit zwei tiefschwarzen Scheinaugen entgegen. Ihr Hinterleib endet in einer Schwanzgabel mit zwei langen, dunkelgeringelten Spitzen, aus denen rote F\u00e4den ausgest\u00fclpt werden k\u00f6nnen. Reicht diese Warntracht noch nicht aus, um einen Feind zu verjagen, so verspritzt sie aus einer Dr\u00fcse an der Unterseite ihres Kopfes Ameisens\u00e4ure. Das verdirbt wohl den meisten V\u00f6geln endg\u00fcltig den Appetit!",
     "Fortpflanzung": "[Habitat] Gro\u00dfe Gabelschw\u00e4nze leben in lichten feuchten W\u00e4ldern mit Pappeln und verschiedenen Weiden.  Von den Bl\u00e4ttern dieser B\u00e4ume ern\u00e4hren sich ihre Raupen. Am Ende der Raupenzeit bauen sie sich aus Spinnf\u00e4den und Nagesp\u00e4nen einen festen Kokon, in dessen Schutz sie den Winter \u00fcberstehen. \nDie Falter schl\u00fcpfen im April. Sie nehmen keine Nahrung mehr auf und k\u00fcmmern sich nur noch um die Fortpflanzung.",
     "Habitat": "Gro\u00dfe Gabelschw\u00e4nze leben in lichten feuchten W\u00e4ldern mit Pappeln und verschiedenen Weiden.",
-    "Name": "Gro\u00dfer Gabelschw\u00e4nze",
+    "Name": "Gro\u00dfer Gabelschwanz",
+    "Links": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Puss_Moth_1.jpg/330px-Puss_Moth_1.jpg"
+    ],
     "Typ": "Tier"
   },
   {
@@ -274,6 +296,9 @@
     "Habitat": "Lebensraum der stumpfen Sumpfdeckelschnecke sind m\u00e4\u00dfig bewegte Flussabschnitte und Seen mit schlammigem Grund.",
     "Gr\u00f6\u00dfe": "Die bis zu 4 cm lange Stumpfe Sumpfdeckelschnecke (auch Flussdeckelschnecke genannt) geh\u00f6rt zu den gr\u00f6\u00dften S\u00fc\u00dfwasserschnecken Europas.",
     "Name": "Sumpfdeckelschnecke",
+    "Links": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/ViviparusViviparus.JPG/330px-ViviparusViviparus.JPG"
+    ],
     "Typ": "Tier"
   },
   {
@@ -324,6 +349,9 @@
     "Schutz": "Fr\u00fcher galt der Gro\u00dfe Eichenbock als Sch\u00e4dling. Heute ist er stark gef\u00e4hrdet und steht unter Schutz. Durch den Verlust sehr alte Eichen, ist er sehr selten geworden.",
     "Feinde": "Sie m\u00fcssen vor Spechten, Ameisen, Schlupfwespen und Buntk\u00e4fern auf der Hut sein, welche die Larven \u201ezum Fressen gern\u201c haben. Spechte fressen auch erwachsene K\u00e4fer.",
     "Name": "Gro\u00dfer Eichenbock",
+    "Links": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Cerambyx_cerdo_Saarland_2012-05-17_004.jpg/330px-Cerambyx_cerdo_Saarland_2012-05-17_004.jpg"
+    ],
     "Typ": "Tier"
   },
   {
