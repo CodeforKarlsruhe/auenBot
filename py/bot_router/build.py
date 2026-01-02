@@ -65,6 +65,9 @@ def build_router(
             embed_model=embed_model or "text-embedding-3-small",
         )
         print(f"LLM Client initialized with model {llm.chat_model} / {llm.embed_model}")
+        if llm_threshold >= routing_matrix["confidence"]["intent_min"]:
+            raise ValueError("llm_threshold must be < intent_min, otherwise LLM fallback can never trigger.")
+
     else:
         print("No LLM Client initialized (missing API key)")
 

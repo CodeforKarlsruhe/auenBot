@@ -431,6 +431,13 @@ class Router:
         best_id = best.get("intent_id")
         best_name = best.get("intent_name")
 
+        # Debug: Print LLM and matrix thresholds
+        print(f"DEBUG - Intent score: {best['score']:.3f}, Intent min threshold: {self.mx['confidence']['intent_min']:.3f}")
+        if self.llm:
+            print(f"DEBUG - LLM fallback threshold: {self.llm_fallback_threshold:.3f}")
+        else:
+            print("DEBUG - No LLM client configured")
+
         # Intent gating: manche Intents nur gültig, wenn Entity erkannt wurde
         needs_entity = best_id in set(self.gating.get("requires_entity_ids", [])) or best_name in set(self.gating.get("requires_entity", []))
         gated_entity = None
@@ -527,7 +534,8 @@ class Router:
         out = self.llm.chat_json(system, user, schema_hint=schema_hint, temperature=0.0)
 
         if out.get("decision") == "intent" and out.get("intent_id") in top_ids:
-            return RouteResult(route="intent", data={"intent_id": out["intent_id"], "confidence": score, "llm": True})
+            intent_name = next((x["intent_name"] for x in intent_top if x["intent_id"] == out["intent_id"]), None)
+            return RouteResult(route="intent", data={"intent_id": out["intent_id"], "intent_name": intent_name, "confidence": score, "llm": True})  
         if out.get("decision") == "clarify" and out.get("question"):
             return RouteResult(route="clarify", data={"type": "llm", "question": out["question"]})
         if out.get("decision") == "smalltalk":

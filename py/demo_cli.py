@@ -44,7 +44,7 @@ def main() -> None:
         print("No private config found for LLM.")
         private = None
 
-    router = build_router(intents_path, context_path, llm_threshold=0.55, private=private)
+    router = build_router(intents_path, context_path, llm_threshold=0.25, private=private)
     dispatcher = DemoDispatcher()
 
     print("Router Demo. Tippe Text (exit zum Beenden).")
