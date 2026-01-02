@@ -294,7 +294,7 @@ class Router:
                 },
             )
 
-# Entity only => Rückfrage nach Key
+        # Entity only => Rückfrage nach Key
         if best_ent and not best_key:
             self.state.last_entity_name = best_ent.name
             self.state.last_entity_type = best_ent.typ
@@ -318,6 +318,27 @@ class Router:
             if partial:
                 data["suggestions"] = [{"name": p["Name"], "type": p["Typ"], "score": p["score"]} for p in partial]
             return RouteResult(route="clarify", data=data)
+
+        # Wenn keine Entity gefunden wurde (WRatio zu streng bei kurzen Queries),
+        # dann versuche Partial-Matching und gib Vorschläge zurück.
+        if not ent_cands and not best_key:
+            tokens = tokenize_simple(text)
+            if len(tokens) <= self.mx.get("short_input_token_threshold", 2):
+                partial = self.kidx.find_entity_partial(text, k=8)
+                if partial:
+                    return RouteResult(
+                        route="clarify",
+                        data={
+                            "type": "need_entity",
+                            "key": None,
+                            "question": "Meinst du eines davon?",
+                            "suggestions": [
+                                {"name": p["Name"], "type": p["Typ"], "score": p["score"]}
+                                for p in partial
+                            ],
+                        },
+                    )
+
 
         return None
 
