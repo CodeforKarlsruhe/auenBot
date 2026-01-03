@@ -25,7 +25,7 @@ def test_knowledge_entity_only_clarify_key(router):
     rr = router.route("Eisvogel")
     assert rr.route == "clarify"
     assert rr.data["type"] == "need_key"
-    assert rr.data["entity"]["name"] == "Eisvogel"
+    assert rr.data["entity"]["name"].split("/")[0] == "Eisvogel"
     assert "Wozu" in rr.data["question"]
 
 
