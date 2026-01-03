@@ -283,7 +283,7 @@ class Router:
         # Mehrdeutige Entity ohne Key: Auswahl statt "erstes Element gewinnt"
         if best_ent and not best_key and self._is_ambiguous_entity_query(text, ent_cands):
             # DE: Für die UI lieber kompakte Vorschläge (Top-N).
-            sugg = [{"name": e.name, "type": e.typ, "confidence": e.score} for e in ent_cands[:8]]
+            sugg = [{"name": f"{e.entry.get('Name','')}/{e.entry.get('Name_alt','')}/{e.entry.get('Name_sci','')}", "type": e.typ, "confidence": e.score} for e in ent_cands[:8]]
             return RouteResult(
                 route="clarify",
                 data={
@@ -298,11 +298,12 @@ class Router:
         if best_ent and not best_key:
             self.state.last_entity_name = best_ent.name
             self.state.last_entity_type = best_ent.typ
+            fullName = f"{best_ent.entry.get('Name','')}/{best_ent.entry.get('Name_alt','')}/{best_ent.entry.get('Name_sci','')}"
             return RouteResult(
                 route="clarify",
                 data={
                     "type": "need_key",
-                    "entity": {"name": best_ent.name, "type": best_ent.typ, "confidence": best_ent.score},
+                    "entity": {"name": fullName, "type": best_ent.typ, "confidence": best_ent.score},
                     "question": self.clarify_for_key(best_ent.entry),
                 },
             )
@@ -316,7 +317,7 @@ class Router:
             }
             partial = self.kidx.find_entity_partial(text, k=5)
             if partial:
-                data["suggestions"] = [{"name": p["Name"], "type": p["Typ"], "score": p["score"]} for p in partial]
+                data["suggestions"] = [{"name": f"{p['Name']}/{p['Name_alt']}/{p['Name_sci']}", "type": p["Typ"], "score": p["score"]} for p in partial]
             return RouteResult(route="clarify", data=data)
 
         # Wenn keine Entity gefunden wurde (WRatio zu streng bei kurzen Queries),
@@ -333,7 +334,7 @@ class Router:
                             "key": None,
                             "question": "Meinst du eines davon?",
                             "suggestions": [
-                                {"name": p["Name"], "type": p["Typ"], "score": p["score"]}
+                                {"name": f"{p['Name']}/{p.get('Name_alt','')}/{p.get('Name_sci','')}", "type": p["Typ"], "score": p["score"]}
                                 for p in partial
                             ],
                         },
@@ -357,9 +358,10 @@ class Router:
             return None
 
         self.state.last_key = best_key
+        fullName = f"{last_entry.get('Name','')}/{last_entry.get('Name_alt','')}/{last_entry.get('Name_sci','')}"
         return RouteResult(
             route="knowledge",
-            data={"entity": {"name": last_name, "type": last_entry.get("Typ")}, "key": best_key, "text": txt},
+            data={"entity": {"name": fullName, "type": last_entry.get("Typ")}, "key": best_key, "text": txt},
         )
 
     def _entity_key_answer(
@@ -461,7 +463,7 @@ class Router:
                             "intent_id": best_id,
                             "intent_name": best_name,
                             "question": "Meinst du eines davon?",
-                            "suggestions": [{"name": p["Name"], "type": p["Typ"], "score": p["score"]} for p in partial],
+                            "suggestions": [{"name": f"{p['Name']}/{p.get('Name_alt','')}/{p.get('Name_sci','')}", "type": p["Typ"], "score": p["score"]} for p in partial],
                         },
                     )
                 self.state.pending = None
@@ -485,13 +487,13 @@ class Router:
                         "intent_id": best_id,
                         "intent_name": best_name,
                         "question": "Meinst du eines davon?",
-                        "suggestions": [{"name": e.name, "type": e.typ, "confidence": e.score} for e in ent_cands[:8]],
+                        "suggestions": [{"name": f"{e.entry.get('Name','')}/{e.entry.get('Name_alt','')}/{e.entry.get('Name_sci','')}", "type": e.typ, "confidence": e.score} for e in ent_cands[:8]],
                     },
                 )
 
             gated_entity = {
-                    "top": {"name": ent_cands[0].name, "type": ent_cands[0].typ, "confidence": ent_cands[0].score},
-                    "candidates": [{"name": e.name, "type": e.typ, "confidence": e.score} for e in ent_cands],
+                    "top": {"name": f"{ent_cands[0].entry.get('Name','')}/{ent_cands[0].entry.get('Name_alt','')}/{ent_cands[0].entry.get('Name_sci','')}", "type": ent_cands[0].typ, "confidence": ent_cands[0].score},
+                    "candidates": [{"name": f"{e.entry.get('Name','')}/{e.entry.get('Name_alt','')}/{e.entry.get('Name_sci','')}", "type": e.typ, "confidence": e.score} for e in ent_cands],
                 }
 
         # Intent akzeptieren, wenn Score hoch genug
