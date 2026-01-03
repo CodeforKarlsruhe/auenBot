@@ -17,6 +17,7 @@ def build_router(
     config_dir: Optional[str] = None,
     llm_threshold: float = 0.45,
     private: Optional[dict] = None,
+    ranking: Optional[list[str]] = None,
 ) -> Router:
     """
     Factory/Builder.
@@ -30,7 +31,7 @@ def build_router(
     intents = load_intents(intents_path)
     ctx = load_context_entries(context_path)
 
-    intent_index = IntentIndex(intents)
+    intent_index = IntentIndex(intents,ranking=ranking)
     knowledge_index = KnowledgeIndex(ctx)
 
     cfg_dir = Path(config_dir) if config_dir else (Path(__file__).parent / "config")
@@ -58,15 +59,15 @@ def build_router(
 
     llm = None
     if api_key:
-        llm = OpenAICompatClient(
-            base_url=base_url or "https://api.openai.com",
-            api_key=api_key,
-            chat_model=chat_model or "gpt-4.1-mini",
-            embed_model=embed_model or "text-embedding-3-small",
-        )
-        print(f"LLM Client initialized with model {llm.chat_model} / {llm.embed_model}")
         if llm_threshold >= routing_matrix["confidence"]["intent_min"]:
             raise ValueError("llm_threshold must be < intent_min, otherwise LLM fallback can never trigger.")
+        llm = OpenAICompatClient(
+            base_url=base_url,
+            api_key=api_key,
+            chat_model=chat_model,
+            embed_model=embed_model,
+        )
+        print(f"LLM Client initialized with model {llm.chat_model} / {llm.embed_model}")
 
     else:
         print("No LLM Client initialized (missing API key)")
@@ -79,5 +80,5 @@ def build_router(
         key_canonicalization=key_canon,
         intent_gating=intent_gating,
         llm_client=llm,
-        llm_fallback_threshold=llm_threshold,
+        llm_fallback_threshold=llm_threshold
     )

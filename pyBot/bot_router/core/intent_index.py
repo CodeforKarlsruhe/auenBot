@@ -1,8 +1,7 @@
 from __future__ import annotations
 
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
-from rank_bm25 import BM25Okapi
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -15,12 +14,12 @@ class IntentIndex:
 
     Ansatz:
       - char-ngrams TF-IDF über aggregierte Beispiele pro Intent
-      - BM25 über Token
+      - BM25 über Token, sofern bm25 im Ranking-Modus angegeben
       - einfacher Blend beider Scores
 
     DE: Für euch bewusst "klassisch" (kein Embedding-Zwang), damit lokal testbar.
     """
-    def __init__(self, intents: List[Dict[str, Any]]):
+    def __init__(self, intents: List[Dict[str, Any]], ranking: Optional[list[str]] = None) -> None:
         self.intents = intents
         self.intent_ids = [it["id"] for it in intents]
         self.intent_names = [it.get("intent") for it in intents]
@@ -30,26 +29,44 @@ class IntentIndex:
         self.tfidf = self.vectorizer.fit_transform(self.intent_docs)
 
         tokenized = [tokenize_simple(doc) for doc in self.intent_docs]
-        self.bm25 = BM25Okapi(tokenized)
+        if ranking and "bm25" in ranking:
+            try:
+                from rank_bm25 import BM25Okapi
+                self.bm25 = BM25Okapi(tokenized)
+                print("BM25 initialized for IntentIndex.")
+            except ImportError:
+                self.bm25 = None
+        else:
+            self.bm25 = None
 
     def topk(self, query: str, k: int = 5) -> List[Dict[str, Any]]:
         qv = self.vectorizer.transform([query])
         sims = cosine_similarity(qv, self.tfidf)[0]
+        if not self.bm25:
+            blended: List[Dict[str, Any]] = []
+            for idx, iid in enumerate(self.intent_ids):
+                blended.append({
+                    "intent_id": iid,
+                    "intent_name": self.intent_names[idx],
+                    "score": float(sims[idx]),
+                })
+            blended.sort(key=lambda x: x["score"], reverse=True)
+            return blended[:k]
+        else:
+            bm_scores = self.bm25.get_scores(tokenize_simple(query))
+            bm_max = max(bm_scores) if len(bm_scores) else 0.0
 
-        bm_scores = self.bm25.get_scores(tokenize_simple(query))
-        bm_max = max(bm_scores) if len(bm_scores) else 0.0
+            blended: List[Dict[str, Any]] = []
+            for idx, iid in enumerate(self.intent_ids):
+                sim = float(sims[idx])
+                bm = float(bm_scores[idx]) if idx < len(bm_scores) else 0.0
+                bm_norm = (bm / (bm_max + 1e-9)) if bm_max > 0 else 0.0
+                score = 0.7 * sim + 0.3 * bm_norm
+                blended.append({
+                    "intent_id": iid,
+                    "intent_name": self.intent_names[idx],
+                    "score": score,
+                })
 
-        blended: List[Dict[str, Any]] = []
-        for idx, iid in enumerate(self.intent_ids):
-            sim = float(sims[idx])
-            bm = float(bm_scores[idx]) if idx < len(bm_scores) else 0.0
-            bm_norm = (bm / (bm_max + 1e-9)) if bm_max > 0 else 0.0
-            score = 0.7 * sim + 0.3 * bm_norm
-            blended.append({
-                "intent_id": iid,
-                "intent_name": self.intent_names[idx],
-                "score": score,
-            })
-
-        blended.sort(key=lambda x: x["score"], reverse=True)
-        return blended[:k]
+            blended.sort(key=lambda x: x["score"], reverse=True)
+            return blended[:k]

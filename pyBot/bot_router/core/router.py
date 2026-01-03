@@ -32,7 +32,7 @@ class Router:
         intent_gating: Dict[str, Any],
         llm_client: Optional[OpenAICompatClient] = None,
         llm_fallback_threshold: float = 0.45,
-        state: Optional[DialogState] = None,
+        state: Optional[DialogState] = None
     ):
         self.intent_index = intent_index
         self.kidx = knowledge_index
