@@ -1768,7 +1768,9 @@
     "Fortpflanzung": "Zur Ruhe zieht er sich in Baumh\u00f6hlen, Vogelnester oder in verlassene Kobel von Eichh\u00f6rnchen zur\u00fcck. Im April geb\u00e4ren die Weibchen ebenfalls in einer Baumh\u00f6hle drei winzige, blinde Baummarderjunge. Mit sechs Wochen \u00f6ffnen diese die Augen und verlassen bald darauf die H\u00f6hle. Sie wachsen nun schnell heran und sind im fr\u00fchen Herbst schon so gro\u00df wie ihre Eltern.",
     "Nahrung": "Baummarder gehen meist nachts auf die Jagd nach kleinen S\u00e4ugern und V\u00f6geln. Insekten und Beeren stehen auch auf ihrem Speisezettel. Mit ihren kr\u00e4ftigen Krallen k\u00f6nnen sie hervorragend klettern und laufen an B\u00e4umen genauso schnell hinauf wie kopf\u00fcber hinunter. Selbst die flinken Eichh\u00f6rnchen sind nicht vor ihnen sicher. Gerne springen sie bis zu 4 m weite von Ast zu Ast. Der buschige Schwanz ist dabei ihre Balancierstange.",
     "Verhalten": "Baummarder halten keine Winterruhe. Die behaarten Fu\u00dfsohlen sch\u00fctzen sie vor K\u00e4lte und helfen beim Laufen \u00fcber die Schneedecke.",
-    "Name": "Eichh\u00f6rnchen",
+    "Name": "Baummarder",
+    "Name_alt": "Marder",
+    "Name_sci": "Martes martes",
     "Typ": "Tier",
     "Links": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Squirrel_posing.jpg/220px-Squirrel_posing.jpg",

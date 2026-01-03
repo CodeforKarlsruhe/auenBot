@@ -31,9 +31,9 @@ class KnowledgeIndex:
             typ = (e.get("Typ") or "").strip()
             if not name:
                 continue
-            alt_name = (e.get("Name_alt") or "").strip()
-            aliases = e.get("Aliases") or e.get("aliases") or []
-            all_names = [name] + ([alt_name] if alt_name else []) + [a for a in aliases if isinstance(a, str)]
+            alt_name = e.get("Name_alt","")
+            sci_name = e.get("Name_sci","")
+            all_names = [name] + [alt_name] + [sci_name] 
             for nm in all_names:
                 self.entity_rows.append((name, typ, nm, e))
                 self.entity_names.append(nm)
@@ -169,7 +169,7 @@ class KnowledgeIndex:
     def keys_for_entity(self, entry: Dict[str, Any]) -> List[str]:
         keys: List[str] = []
         for k, v in entry.items():
-            if k in ("Name", "Typ", "Aliases", "aliases"):
+            if k in ("Name", "Typ", "Name_alt", "Name_sci"):
                 continue
             if isinstance(v, str) and v.strip():
                 keys.append(k)
