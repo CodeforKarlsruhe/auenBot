@@ -30,7 +30,12 @@ class DemoDispatcher(FunctionDispatcher):
 def main() -> None:
     intents_path = "../rawData/intents.json"
     context_path = "../rawData/tiere_pflanzen_auen.json"
+    # read intents here already
+    with open(intents_path, "r", encoding="utf-8") as f:
+        intents_ = json.load(f)
 
+    intents = {intent["id"]: intent for intent in intents_}
+        
     try:
         import private as pr  # type: ignore
         private = {
@@ -47,6 +52,8 @@ def main() -> None:
     router = build_router(intents_path, context_path, llm_threshold=0.25, private=private,ranking = None) #["bm25"])
     dispatcher = DemoDispatcher()
 
+
+
     print("Router Demo. Tippe Text (exit zum Beenden).")
     while True:
         try:
@@ -60,6 +67,18 @@ def main() -> None:
         print(f"Route: {rr.route}")
         print("Data:", json.dumps(rr.data, ensure_ascii=False, indent=2))
 
+        if rr.route == "intent":
+            print("\nIntent detected")
+            candidate = rr.data.get("candidates", [{}])[0]
+            intent_id = candidate.get("intent_id")
+            intent_score = candidate.get("score")
+            utter = intents.get(intent_id, {}).get("utter", "")
+            
+            print("\n(Erkannter Intent)")
+            print("Intent:", candidate.get("intent_id"))
+            print("Confidence:", candidate.get("score"))
+            print("\n",utter)
+
         if rr.route == "function":
             out = dispatcher.call(rr.data["function"], rr.data["slots"])
             print("Function result:", json.dumps(out, ensure_ascii=False, indent=2))
@@ -71,6 +90,7 @@ def main() -> None:
 
         if rr.route == "clarify":
             print("\nRückfrage:", rr.data.get("question"))
+
 
 
 if __name__ == "__main__":

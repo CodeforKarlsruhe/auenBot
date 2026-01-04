@@ -1,0 +1,1049 @@
+[
+  {
+    "Name": "Reh",
+    "Name_sci": "Capreolus capreolus",
+    "Wikidata_ID": "Q122069"
+  },
+  {
+    "Name": "Rothirsch",
+    "Name_sci": "Cervus elaphus",
+    "Wikidata_ID": "Q79794"
+  },
+  {
+    "Name": "Wildschwein",
+    "Name_sci": "Sus scrofa",
+    "Wikidata_ID": "Q58697"
+  },
+  {
+    "Name": "Baummarder",
+    "Name_sci": "Martes martes",
+    "Wikidata_ID": "Q26046"
+  },
+  {
+    "Name": "Rotfuchs",
+    "Name_sci": "Vulpes vulpes",
+    "Wikidata_ID": "Q8332"
+  },
+  {
+    "Name": "Wildkatze",
+    "Name_sci": "Felis silvestris",
+    "Wikidata_ID": "Q43576"
+  },
+  {
+    "Name": "Eichhörnchen",
+    "Name_sci": "Sciurus vulgaris",
+    "Wikidata_ID": "Q4388"
+  },
+  {
+    "Name": "Biber",
+    "Name_sci": "Castor fiber",
+    "Wikidata_ID": "Q181191"
+  },
+  {
+    "Name": "Wasserfledermaus",
+    "Name_sci": "Myotis daubentonii",
+    "Wikidata_ID": "Q504488"
+  },
+  {
+    "Name": "Bechsteinfledermaus",
+    "Name_sci": "Myotis bechsteinii",
+    "Wikidata_ID": "Q756687"
+  },
+  {
+    "Name": "Großes Mausohr",
+    "Name_sci": "Myotis myotis",
+    "Wikidata_ID": "Q723413"
+  },
+  {
+    "Name": "Eisvogel",
+    "Name_sci": "Alcedo atthis",
+    "Wikidata_ID": "Q79915"
+  },
+  {
+    "Name": "Pirol",
+    "Name_sci": "Oriolus oriolus",
+    "Wikidata_ID": "Q25388"
+  },
+  {
+    "Name": "Haubentaucher",
+    "Name_sci": "Podiceps cristatus",
+    "Wikidata_ID": "Q25422"
+  },
+  {
+    "Name": "Schwarzspecht",
+    "Name_sci": "Dryocopus martius",
+    "Wikidata_ID": "Q143284"
+  },
+  {
+    "Name": "Graureiher",
+    "Name_sci": "Aredea cinerea",
+    "Wikidata_ID": "Q25273"
+  },
+  {
+    "Name": "Weißstorch",
+    "Name_sci": "Ciconia ciconia",
+    "Wikidata_ID": "Q25352"
+  },
+  {
+    "Name": "Schwarzmilan",
+    "Name_sci": "Milvus migrans",
+    "Wikidata_ID": "Q80362"
+  },
+  {
+    "Name": "Flussregenpfeifer",
+    "Name_sci": "Charadrius dubius",
+    "Wikidata_ID": "Q18851"
+  },
+  {
+    "Name": "Teichrohrsänger",
+    "Name_sci": "Acrocephalus scirpaceus",
+    "Wikidata_ID": "Q159080"
+  },
+  {
+    "Name": "Kuckuck",
+    "Name_sci": "Cuculus canorus",
+    "Wikidata_ID": "Q18845"
+  },
+  {
+    "Name": "Krickente",
+    "Name_sci": "Anas crecca",
+    "Wikidata_ID": "Q25700"
+  },
+  {
+    "Name": "Schnatterente",
+    "Name_sci": "Anas strepera",
+    "Wikidata_ID": "Q25889"
+  },
+  {
+    "Name": "Schellente",
+    "Name_sci": "Bucephala clangula",
+    "Wikidata_ID": "Q29865"
+  },
+  {
+    "Name": "Reiherente",
+    "Name_sci": "Aythya fuligula",
+    "Wikidata_ID": "Q26444"
+  },
+  {
+    "Name": "Tafelente",
+    "Name_sci": "Aythya ferina",
+    "Wikidata_ID": "Q26742"
+  },
+  {
+    "Name": "Zwergtaucher",
+    "Name_sci": "Tachybaptus ruficollis",
+    "Wikidata_ID": "Q25421"
+  },
+  {
+    "Name": "Kormoran",
+    "Name_sci": "Phalacrocorax carbo",
+    "Wikidata_ID": "Q25440"
+  },
+  {
+    "Name": "Wasserralle",
+    "Name_sci": "Rallus aquaticus",
+    "Wikidata_ID": "Q185099"
+  },
+  {
+    "Name": "Bekassine",
+    "Name_sci": "Gallinago gallinago",
+    "Wikidata_ID": "Q25692"
+  },
+  {
+    "Name": "Lachmöwe",
+    "Name_sci": "Larus ridibundus",
+    "Wikidata_ID": "Q25689558"
+  },
+  {
+    "Name": "Flussseeschwalbe",
+    "Name_sci": "Sterna hirundo",
+    "Wikidata_ID": "Q18875"
+  },
+  {
+    "Name": "Uferschwalbe",
+    "Name_sci": "Riparia riparia",
+    "Wikidata_ID": "Q25909"
+  },
+  {
+    "Name": "Rohrammer",
+    "Name_sci": "Emberiza schoeniclus",
+    "Wikidata_ID": "Q26961"
+  },
+  {
+    "Name": "Kiebitz",
+    "Name_sci": "Vanellus vanellus",
+    "Wikidata_ID": "Q25392"
+  },
+  {
+    "Name": "Mittelspecht",
+    "Name_sci": "Dendrocopos medius",
+    "Wikidata_ID": "Q275591"
+  },
+  {
+    "Name": "Kleinspecht",
+    "Name_sci": "Dedrocopos minor",
+    "Wikidata_ID": "Q184518"
+  },
+  {
+    "Name": "Grauspecht",
+    "Name_sci": "Picus canus",
+    "Wikidata_ID": "Q201106"
+  },
+  {
+    "Name": "Grünspecht",
+    "Name_sci": "Picus viridis",
+    "Wikidata_ID": "Q166171"
+  },
+  {
+    "Name": "Turteltaube",
+    "Name_sci": "Streptopelia turtur",
+    "Wikidata_ID": "Q168514"
+  },
+  {
+    "Name": "Waldkauz",
+    "Name_sci": "Strix aluco",
+    "Wikidata_ID": "Q25756"
+  },
+  {
+    "Name": "Baumfalke",
+    "Name_sci": "Falco subbuteo",
+    "Wikidata_ID": "Q25876"
+  },
+  {
+    "Name": "Waldlaubsänger",
+    "Name_sci": "Phylloscopus sibilatrix",
+    "Wikidata_ID": "Q27075477"
+  },
+  {
+    "Name": "Feldschwirl",
+    "Name_sci": "Locustella naevia",
+    "Wikidata_ID": "Q208710"
+  },
+  {
+    "Name": "Mönchsgrasmücke",
+    "Name_sci": "Sylvia atricapilla",
+    "Wikidata_ID": "Q188446"
+  },
+  {
+    "Name": "Singdrossel",
+    "Name_sci": "Turdus philomelos",
+    "Wikidata_ID": "Q26349"
+  },
+  {
+    "Name": "Nachtigall",
+    "Name_sci": "Luscinia megarhynchos",
+    "Wikidata_ID": "Q25393"
+  },
+  {
+    "Name": "Flussuferläufer",
+    "Name_sci": "Actitis hypoleucos",
+    "Wikidata_ID": "Q18850"
+  },
+  {
+    "Name": "Hohltaube",
+    "Name_sci": "Columba oenas",
+    "Wikidata_ID": "Q26140"
+  },
+  {
+    "Name": "Blaukelchen",
+    "Name_sci": "Luscinia svecica",
+    "Wikidata_ID": "Q26578"
+  },
+  {
+    "Name": "Neuntöter",
+    "Name_sci": "Lanius collurio",
+    "Wikidata_ID": "Q26671"
+  },
+  {
+    "Name": "Wendehals",
+    "Name_sci": "Jynx torquilla",
+    "Wikidata_ID": "Q25678"
+  },
+  {
+    "Name": "Springfrosch",
+    "Name_sci": "Rana dalmatina",
+    "Wikidata_ID": "Q545917"
+  },
+  {
+    "Name": "Kleiner Wasserfrosch",
+    "Name_sci": "Rana lessonae",
+    "Wikidata_ID": "Q50407507"
+  },
+  {
+    "Name": "Teichfrosch",
+    "Name_sci": "Rana kl. Esculenta",
+    "Wikidata_ID": "Q31694"
+  },
+  {
+    "Name": "Erdkröte",
+    "Name_sci": "Bufo bufo",
+    "Wikidata_ID": "Q146375"
+  },
+  {
+    "Name": "Teichmolch",
+    "Name_sci": "Triturus vulgaris",
+    "Wikidata_ID": "Q50407527"
+  },
+  {
+    "Name": "Bergmolch",
+    "Name_sci": "Ichthyosaura alpestris;  Triturus alpestris",
+    "Wikidata_ID": "Q282715"
+  },
+  {
+    "Name": "Geldbauchunke",
+    "Name_sci": "Bombina variegata",
+    "Wikidata_ID": "Q606431"
+  },
+  {
+    "Name": "Laubfrosch",
+    "Name_sci": "Hyla arborea",
+    "Wikidata_ID": "Q2142057"
+  },
+  {
+    "Name": "Kammmolch",
+    "Name_sci": "Triturus cristatus",
+    "Wikidata_ID": "Q138539"
+  },
+  {
+    "Name": "Moorfrosch",
+    "Name_sci": "Rana arvalis",
+    "Wikidata_ID": "Q44324"
+  },
+  {
+    "Name": "Kreuzkröte",
+    "Name_sci": "Bufo calamita",
+    "Wikidata_ID": "Q50407495"
+  },
+  {
+    "Name": "Blindschleiche",
+    "Name_sci": "Anguis fragilis",
+    "Wikidata_ID": "Q183660"
+  },
+  {
+    "Name": "Ringelnatter",
+    "Name_sci": "Natrix natrix",
+    "Wikidata_ID": "Q170713"
+  },
+  {
+    "Name": "Zauneidechse",
+    "Name_sci": "Lacerta agilis",
+    "Wikidata_ID": "Q148595"
+  },
+  {
+    "Name": "Sumpf-Schildkröte",
+    "Name_sci": "Emys orbicularis",
+    "Wikidata_ID": "Q187036"
+  },
+  {
+    "Name": "Flussneunauge",
+    "Name_sci": "Lampetra fluviatilis",
+    "Wikidata_ID": "Q301019"
+  },
+  {
+    "Name": "Bachneunauge",
+    "Name_sci": "Lampetra planeri",
+    "Wikidata_ID": "Q798246"
+  },
+  {
+    "Name": "Lachs /Atlantische Lachs",
+    "Name_sci": "Salmo salar",
+    "Wikidata_ID": "Q188879"
+  },
+  {
+    "Name": "Bitterling",
+    "Name_sci": "Rhodeus amarus",
+    "Wikidata_ID": "Q1402074"
+  },
+  {
+    "Name": "Schlammpeitzger",
+    "Name_sci": "Misgurnus fossilis",
+    "Wikidata_ID": "Q747794"
+  },
+  {
+    "Name": "Steinbeißer",
+    "Name_sci": "Cobitis taenia",
+    "Wikidata_ID": "Q728408"
+  },
+  {
+    "Name": "Karausche",
+    "Name_sci": "Carassius carassius",
+    "Wikidata_ID": "Q194031"
+  },
+  {
+    "Name": "Groppe",
+    "Name_sci": "Cottus gobio",
+    "Wikidata_ID": "Q374092"
+  },
+  {
+    "Name": "Hirschkäfer",
+    "Name_sci": "Lucanus cervus",
+    "Wikidata_ID": "Q190491"
+  },
+  {
+    "Name": "Heldbock/Großer Eichenbock",
+    "Name_sci": "Cerambyx cerdo",
+    "Wikidata_ID": "Q570703"
+  },
+  {
+    "Name": "Moschusbock",
+    "Name_sci": "Aromia moschata",
+    "Wikidata_ID": "Q389732"
+  },
+  {
+    "Name": "Lederlaufkäfer",
+    "Name_sci": "Carabus coriaceus",
+    "Wikidata_ID": "Q541168"
+  },
+  {
+    "Name": "Goldglänzender Rosenkäfer",
+    "Name_sci": "Cetonia aurata",
+    "Wikidata_ID": "Q731970"
+  },
+  {
+    "Name": "Pappel-Blattkäfer",
+    "Name_sci": "Chrysomela populi",
+    "Wikidata_ID": "Q1071584"
+  },
+  {
+    "Name": "Weiden-Blattkäfer",
+    "Name_sci": "Phratora vulgatissima",
+    "Wikidata_ID": "Q1313090"
+  },
+  {
+    "Name": "Eichenblattroller",
+    "Name_sci": "Attelabus nitens",
+    "Wikidata_ID": "Q1168091"
+  },
+  {
+    "Name": "Gelbrandkäfer",
+    "Name_sci": "Dytiscus marginalis",
+    "Wikidata_ID": "Q20851"
+  },
+  {
+    "Name": "Schwarzblauer Ölkäfer o. Schwarzer Maiwurm",
+    "Name_sci": "Meloe proscarabaeus",
+    "Wikidata_ID": "Q256218"
+  },
+  {
+    "Name": "Dünen-Sandlaufkäfer",
+    "Name_sci": "Cicindela hybrida",
+    "Wikidata_ID": "Q239931"
+  },
+  {
+    "Name": "Hornisse",
+    "Name_sci": "Vespa crabro",
+    "Wikidata_ID": "Q30258"
+  },
+  {
+    "Name": "Gemeine Sandbiene",
+    "Name_sci": "Andrena flavipes",
+    "Wikidata_ID": "Q1163848"
+  },
+  {
+    "Name": "Große Blaue Holzbiene",
+    "Name_sci": "Xylocopa violacea",
+    "Wikidata_ID": "Q581995"
+  },
+  {
+    "Name": "Gelbe Kammschnake",
+    "Name_sci": "Ctenophora ornata",
+    "Wikidata_ID": "Q1395599"
+  },
+  {
+    "Name": "Stechmücke „Rheinschnake“",
+    "Name_sci": "Aedes vexans",
+    "Wikidata_ID": "Q144273"
+  },
+  {
+    "Name": "Regenbremse",
+    "Name_sci": "Haematopota pluvialis",
+    "Wikidata_ID": "Q939493"
+  },
+  {
+    "Name": "Sumpf-Schwebfliege",
+    "Name_sci": "Helophilus trivittatus",
+    "Wikidata_ID": "Q1548429"
+  },
+  {
+    "Name": "Russischer Bär",
+    "Name_sci": "Euplagia quadripunctaria",
+    "Wikidata_ID": "Q937987"
+  },
+  {
+    "Name": "Heller Wiesenknopf-Ameisenbläuling",
+    "Name_sci": "Maculinea nausithous",
+    "Wikidata_ID": "Q1340609"
+  },
+  {
+    "Name": "Dunkler Wiesenknopf-Ameisenbläuling",
+    "Name_sci": "Maculinea teleius",
+    "Wikidata_ID": "Q25343902"
+  },
+  {
+    "Name": "Großer Feuerfalter",
+    "Name_sci": "Lycaena dispar",
+    "Wikidata_ID": "Q378360"
+  },
+  {
+    "Name": "Zitronenfalter",
+    "Name_sci": "Gonepteryx rhamni",
+    "Wikidata_ID": "Q206474"
+  },
+  {
+    "Name": "Kleiner Eisvogel",
+    "Name_sci": "Limenitis populi",
+    "Wikidata_ID": "Q531946"
+  },
+  {
+    "Name": "Großer Schillerfalter",
+    "Name_sci": "Apatura iris",
+    "Wikidata_ID": "Q30982"
+  },
+  {
+    "Name": "Weidenbohrer",
+    "Name_sci": "Cossus cossus",
+    "Wikidata_ID": "Q278629"
+  },
+  {
+    "Name": "Kupferglucke",
+    "Name_sci": "Gastropacha quercifolia",
+    "Wikidata_ID": "Q1792836"
+  },
+  {
+    "Name": "Nagelfleck",
+    "Name_sci": "Aglia tau",
+    "Wikidata_ID": "Q1401296"
+  },
+  {
+    "Name": "Pappelschwärmer",
+    "Name_sci": "Laothoe populi",
+    "Wikidata_ID": "Q782434"
+  },
+  {
+    "Name": "Palpen-Zahnspinner",
+    "Name_sci": "Pterostoma palpina",
+    "Wikidata_ID": "Q2048415"
+  },
+  {
+    "Name": "Großer Gabelschwanz",
+    "Name_sci": "Cerura vinula",
+    "Wikidata_ID": "Q151543"
+  },
+  {
+    "Name": "Haseleule",
+    "Name_sci": "Colocasia coryli",
+    "Wikidata_ID": "Q260999"
+  },
+  {
+    "Name": "Eichen-Sichelflügler",
+    "Name_sci": "Watsonalla binaria",
+    "Wikidata_ID": "Q1301473"
+  },
+  {
+    "Name": "Eschen-Zackenrandspanner",
+    "Name_sci": "Ennomos fuscantaria",
+    "Wikidata_ID": "Q616123"
+  },
+  {
+    "Name": "Grünes Blatt",
+    "Name_sci": "Geometra papilionaria",
+    "Wikidata_ID": "Q1318172"
+  },
+  {
+    "Name": "Gemeine Schlammfliege",
+    "Name_sci": "Sialis lutaria",
+    "Wikidata_ID": "Q1316279"
+  },
+  {
+    "Name": "Gemeiner Teichläufer",
+    "Name_sci": "Hydrometra stagnorum",
+    "Wikidata_ID": "Q936922"
+  },
+  {
+    "Name": "Gemeiner Wasserläufer",
+    "Name_sci": "Gerris lacustris",
+    "Wikidata_ID": "Q20863"
+  },
+  {
+    "Name": "Wasserskorpion",
+    "Name_sci": "Nepa cinerea Syn. Nepa rubra",
+    "Wikidata_ID": "Q370289"
+  },
+  {
+    "Name": "Gemeiner Rückenschwimmer",
+    "Name_sci": "Notonecta glauca",
+    "Wikidata_ID": "Q266370"
+  },
+  {
+    "Name": null,
+    "Name_sci": null,
+    "Wikidata_ID": "Q253590"
+  },
+  {
+    "Name": null,
+    "Name_sci": null,
+    "Wikidata_ID": "Q253590"
+  },
+  {
+    "Name": "Heuschrecken",
+    "Name_sci": "Insekten",
+    "Wikidata_ID": "Q167810"
+  },
+  {
+    "Name": "Grüne Strandschrecke",
+    "Name_sci": "Aiolopus thalassinus",
+    "Wikidata_ID": "Q1552019"
+  },
+  {
+    "Name": "Lauchschrecke",
+    "Name_sci": "Mecostethus parapleurus",
+    "Wikidata_ID": "Q10578977"
+  },
+  {
+    "Name": "Kurzflügelige Schwertschrecke",
+    "Name_sci": "Conocephalus dorsalis",
+    "Wikidata_ID": "Q1794437"
+  },
+  {
+    "Name": "Sumpfschrecke",
+    "Name_sci": "Stethophyma grossum",
+    "Wikidata_ID": "Q2165826"
+  },
+  {
+    "Name": "Blauflügelige Ödlandschrecke",
+    "Name_sci": "Oedipoda caerulescens",
+    "Wikidata_ID": "Q882849"
+  },
+  {
+    "Name": "Gebänderte Prachtlibelle",
+    "Name_sci": "Calopteryx splendens",
+    "Wikidata_ID": "Q909597"
+  },
+  {
+    "Name": "Große Binsenjungfer od. Westliche Weidenjungfer",
+    "Name_sci": "Chalcolestes viridis, Syn. Lestes viridis"
+  },
+  {
+    "Name": "Blutrote Heidelibelle",
+    "Name_sci": "Sympetrum sanguineum",
+    "Wikidata_ID": "Q201023"
+  },
+  {
+    "Name": "Hufeisen-Azurjungfer",
+    "Name_sci": "Coenagrion puella",
+    "Wikidata_ID": "Q1049823"
+  },
+  {
+    "Name": "Große Pechlibelle",
+    "Name_sci": "Ischnura elegans",
+    "Wikidata_ID": "Q548472"
+  },
+  {
+    "Name": "Plattbauch",
+    "Name_sci": "Libellula depressa",
+    "Wikidata_ID": "Q302485"
+  },
+  {
+    "Name": "Großer Blaupfeil",
+    "Name_sci": "Orthetrum cancellatum",
+    "Wikidata_ID": "Q913064"
+  },
+  {
+    "Name": "Blaugrüne Mosaikjungfer",
+    "Name_sci": "Hydrometra stagnorum",
+    "Wikidata_ID": "Q936922"
+  },
+  {
+    "Name": "Grüne Flußkeiljungfer",
+    "Name_sci": "Ophiogomphus cecilia",
+    "Wikidata_ID": "Q942217"
+  },
+  {
+    "Name": "Helm-Azurjungfer",
+    "Name_sci": "Coenagrion mercuriale",
+    "Wikidata_ID": "Q302116"
+  },
+  {
+    "Name": "Süßwassergarnele",
+    "Name_sci": "Atyaephyra desmaresti",
+    "Wikidata_ID": "Q3629413"
+  },
+  {
+    "Name": "Sommerschildkrebs",
+    "Name_sci": "Triops cancriformis",
+    "Wikidata_ID": "Q132808"
+  },
+  {
+    "Name": "Gerandete Jagdspinne",
+    "Name_sci": "Dolomedes fimbriatus",
+    "Wikidata_ID": "Q847066"
+  },
+  {
+    "Name": "Schilf-Radnetzspinne",
+    "Name_sci": "Larinioides cornutus",
+    "Wikidata_ID": "Q1302181"
+  },
+  {
+    "Name": "Wasserspinne",
+    "Name_sci": "Argyroneta aquatica",
+    "Wikidata_ID": "Q119195"
+  },
+  {
+    "Name": "Gemeine Tapezierspinne",
+    "Name_sci": "Atypus affinis",
+    "Wikidata_ID": "Q136961"
+  },
+  {
+    "Name": "Piratenspinne",
+    "Name_sci": "Pirata piraticus",
+    "Wikidata_ID": "Q140678"
+  },
+  {
+    "Name": "Bachmuschel",
+    "Name_sci": "Unio crassus riparius",
+    "Wikidata_ID": "Q798236"
+  },
+  {
+    "Name": "Grobgerippte Körbchenmuschel",
+    "Name_sci": "Corbicula fluminea",
+    "Wikidata_ID": "Q728187"
+  },
+  {
+    "Name": "Bauchige Windelschnecke",
+    "Name_sci": "Vertigo moulinsiana",
+    "Wikidata_ID": "Q811137"
+  },
+  {
+    "Name": "Zierliche Tellerschnecke",
+    "Name_sci": "Anisus vorticulus",
+    "Wikidata_ID": "Q199130"
+  },
+  {
+    "Name": "Posthornschnecke",
+    "Name_sci": "Planorbarius corneus corneus",
+    "Wikidata_ID": "Q50656889"
+  },
+  {
+    "Name": "Sumpfdeckelschnecke",
+    "Name_sci": "Viviparus viviparus",
+    "Wikidata_ID": "Q1758969"
+  },
+  {
+    "Name": "Große Brennnessel",
+    "Name_sci": "Urtica dioica",
+    "Wikidata_ID": "Q155909"
+  },
+  {
+    "Name": "Winter-Schachtelhalm",
+    "Name_sci": "Equisetum hyemale",
+    "Wikidata_ID": "Q263881"
+  },
+  {
+    "Name": "Gewöhnliche Schuppenwurz",
+    "Name_sci": "Lathraea squamaria",
+    "Wikidata_ID": "Q158112"
+  },
+  {
+    "Name": "Gelbes Windröschen",
+    "Name_sci": "Anemone ranunculoides",
+    "Wikidata_ID": "Q161045"
+  },
+  {
+    "Name": "Busch-Windröschen",
+    "Name_sci": "Anemone nemorosa",
+    "Wikidata_ID": "Q161056"
+  },
+  {
+    "Name": "Sumpf-Vergissmeinnicht",
+    "Name_sci": "Myosotis scorpioides",
+    "Wikidata_ID": "Q147165"
+  },
+  {
+    "Name": "Bärlauch",
+    "Name_sci": "Allium ursinum",
+    "Wikidata_ID": "Q130882"
+  },
+  {
+    "Name": "Gefleckter Aronstab",
+    "Name_sci": "Arum maculatum",
+    "Wikidata_ID": "Q836366"
+  },
+  {
+    "Name": "Einbeere",
+    "Name_sci": "Paris quadrifolia",
+    "Wikidata_ID": "Q119135"
+  },
+  {
+    "Name": "Scharbockkraut",
+    "Name_sci": "Ranunulus ficaria"
+  },
+  {
+    "Name": "Pupur-Knabenkraut",
+    "Name_sci": "Orchis purpurea",
+    "Wikidata_ID": "Q159295"
+  },
+  {
+    "Name": "Gelbe Teichrose",
+    "Name_sci": "Nuphar lutea",
+    "Wikidata_ID": "Q146406"
+  },
+  {
+    "Name": "Seerose",
+    "Name_sci": "Nymphaea alba",
+    "Wikidata_ID": "Q147030"
+  },
+  {
+    "Name": "Wassernuss",
+    "Name_sci": "Trapa natans",
+    "Wikidata_ID": "Q161110"
+  },
+  {
+    "Name": "Gemeiner Schwimmfarn",
+    "Name_sci": "Salvinia natans",
+    "Wikidata_ID": "Q635586"
+  },
+  {
+    "Name": "Krebsschere",
+    "Name_sci": "Stratiotes aloides",
+    "Wikidata_ID": "Q162030"
+  },
+  {
+    "Name": "Gewöhnlicher Wasserhahnenfuß",
+    "Name_sci": "Ranunculus aquatilis",
+    "Wikidata_ID": "Q162818"
+  },
+  {
+    "Name": "Schlammling",
+    "Name_sci": "Limosella aquatica",
+    "Wikidata_ID": "Q159248"
+  },
+  {
+    "Name": "Braunes Zypergras",
+    "Name_sci": "Cyperus fuscus",
+    "Wikidata_ID": "Q159151"
+  },
+  {
+    "Name": "Sumpf-Schwertlilie",
+    "Name_sci": "Iris pseudacorus",
+    "Wikidata_ID": "Q21173"
+  },
+  {
+    "Name": "Schilf-Rohr",
+    "Name_sci": "Phragmites australis",
+    "Wikidata_ID": "Q28557"
+  },
+  {
+    "Name": "Blutweiderich",
+    "Name_sci": "Lythrum salicaria",
+    "Wikidata_ID": "Q157513"
+  },
+  {
+    "Name": "Gilbweiderich",
+    "Name_sci": "Lysimachia vulgaris",
+    "Wikidata_ID": "Q147843"
+  },
+  {
+    "Name": "Sumpf-Wolfsmilch",
+    "Name_sci": "Euphorbia palustris",
+    "Wikidata_ID": "Q149364"
+  },
+  {
+    "Name": "Gewöhlicher Wasser-Dost",
+    "Name_sci": "Eupatorium cannabinum",
+    "Wikidata_ID": "Q744339"
+  },
+  {
+    "Name": "Wasser-Sumpfkresse",
+    "Name_sci": "Rorippa amphibia",
+    "Wikidata_ID": "Q1190329"
+  },
+  {
+    "Name": "Sumpf-Haarstrang",
+    "Name_sci": "Peucedanum palustre",
+    "Wikidata_ID": "Q962714"
+  },
+  {
+    "Name": "Großer Wiesenknopf",
+    "Name_sci": "Sanguisorba officinalis",
+    "Wikidata_ID": "Q157347"
+  },
+  {
+    "Name": "Kuckucks-Lichtnelke",
+    "Name_sci": "Lychnis flos- cuculi"
+  },
+  {
+    "Name": "Kanten-Lauch",
+    "Name_sci": "Allium angulosum",
+    "Wikidata_ID": "Q159234"
+  },
+  {
+    "Name": "Rohr-Pfeifengras",
+    "Name_sci": "Molinia arundinacea",
+    "Wikidata_ID": "Q162399"
+  },
+  {
+    "Name": "Färber-Scharte",
+    "Name_sci": "Serratula tinctoria",
+    "Wikidata_ID": "Q7215753"
+  },
+  {
+    "Name": "Weiden-Alant",
+    "Name_sci": "Pentanema salicinum",
+    "Wikidata_ID": "Q89188206"
+  },
+  {
+    "Name": "Wiesen-Salbei",
+    "Name_sci": "Salvia pratensis",
+    "Wikidata_ID": "Q161772"
+  },
+  {
+    "Name": "Zottiger Klappertopf",
+    "Name_sci": "Rhinanthus alectorolophus",
+    "Wikidata_ID": "Q159437"
+  },
+  {
+    "Name": "Echte Schlüsselblume",
+    "Name_sci": "Primula veris",
+    "Wikidata_ID": "Q157552"
+  },
+  {
+    "Name": "Gewöhnlicher Hufeisenklee",
+    "Name_sci": "Hippocrepsis comosa",
+    "Wikidata_ID": "Q158369"
+  },
+  {
+    "Name": "Helm-Knabenkraut",
+    "Name_sci": "Orchis militaris",
+    "Wikidata_ID": "Q162755"
+  },
+  {
+    "Name": "Zypressen-Wolfsmilch",
+    "Name_sci": "Euphorbia cyparissias",
+    "Wikidata_ID": "Q148552"
+  },
+  {
+    "Name": "Milder Mauerpfeffer",
+    "Name_sci": "Sedum sexangulare",
+    "Wikidata_ID": "Q159471"
+  },
+  {
+    "Name": "Steppen-Wolfsmilch",
+    "Name_sci": "Euphorbia seguieriana",
+    "Wikidata_ID": "Q149896"
+  },
+  {
+    "Name": "Schopfiges Kreuzblümchen",
+    "Name_sci": "Polygala comosa",
+    "Wikidata_ID": "Q161302"
+  },
+  {
+    "Name": "Eingriffeliger Weißdorn",
+    "Name_sci": "Crataegus  monogyna",
+    "Wikidata_ID": "Q161511"
+  },
+  {
+    "Name": "Pfaffenhütchen",
+    "Name_sci": "Euonymus europaeus",
+    "Wikidata_ID": "Q161379"
+  },
+  {
+    "Name": "Roter Hartriegel",
+    "Name_sci": "Cornus sanguinea",
+    "Wikidata_ID": "Q161416"
+  },
+  {
+    "Name": "Gemeiner Schneeball",
+    "Name_sci": "Viburnum opulus",
+    "Wikidata_ID": "Q156928"
+  },
+  {
+    "Name": "Gemeiner Liguster",
+    "Name_sci": "Ligustrum vulgare",
+    "Wikidata_ID": "Q1848856"
+  },
+  {
+    "Name": "Gemeine Heckenkirsche",
+    "Name_sci": "Lonicera xylosteum",
+    "Wikidata_ID": "Q162760"
+  },
+  {
+    "Name": "Haselstrauch",
+    "Name_sci": "Corylus avellana",
+    "Wikidata_ID": "Q124969"
+  },
+  {
+    "Name": "Schwarzer Holunder",
+    "Name_sci": "Sambucus nigra",
+    "Wikidata_ID": "Q22701"
+  },
+  {
+    "Name": "Silberweide",
+    "Name_sci": "Salix alba",
+    "Wikidata_ID": "Q156918"
+  },
+  {
+    "Name": "Schwarzpappel",
+    "Name_sci": "Populus nigra",
+    "Wikidata_ID": "Q147064"
+  },
+  {
+    "Name": "Stieleiche",
+    "Name_sci": "Quercus robur",
+    "Wikidata_ID": "Q165145"
+  },
+  {
+    "Name": "Feldulme",
+    "Name_sci": "Ulmus minor",
+    "Wikidata_ID": "Q147487"
+  },
+  {
+    "Name": "Flatterulme",
+    "Name_sci": "Ulmus laevis",
+    "Wikidata_ID": "Q147492"
+  },
+  {
+    "Name": "Gemeine Esche",
+    "Name_sci": "Fraxinus excelsior",
+    "Wikidata_ID": "Q156907"
+  },
+  {
+    "Name": "Bergahorn",
+    "Name_sci": "Acer pseudoplatanus",
+    "Wikidata_ID": "Q156944"
+  },
+  {
+    "Name": "Hainbuche",
+    "Name_sci": "Carpinus betulus",
+    "Wikidata_ID": "Q158776"
+  },
+  {
+    "Name": "Holzapfel",
+    "Name_sci": "Malus sylvestris",
+    "Wikidata_ID": "Q47161"
+  },
+  {
+    "Name": "Wild-Birne",
+    "Name_sci": "Pyrus pyraster",
+    "Wikidata_ID": "Q149332"
+  },
+  {
+    "Name": "Efeu",
+    "Name_sci": "Hedera helix",
+    "Wikidata_ID": "Q26354"
+  },
+  {
+    "Name": "Gemeine Waldrebe",
+    "Name_sci": "Clematis vitalba",
+    "Wikidata_ID": "Q160100"
+  },
+  {
+    "Name": "Wilder Hopfen",
+    "Name_sci": "Humulus lupulus",
+    "Wikidata_ID": "Q104212"
+  },
+  {
+    "Name": "Wilde Weinrebe",
+    "Name_sci": "Vitis vinifera subsp. sylvestris",
+    "Wikidata_ID": "Q159852"
+  }
+]
