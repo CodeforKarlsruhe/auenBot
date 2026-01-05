@@ -48,10 +48,18 @@ def findItem(x,y):
     if item.empty:
         item = p[(p.Name.str.lower() == "gemeine " + x_lower) | (p.Name_alt.str.lower() == "gemeine " + x_lower)]
 
-    if item.empty:
-        print("NOT FOUND:", x)
     return item
 
 for item in tpa:
     if item["Typ"] != "Auen":
         tp = findItem(item["Name"],item.get("Name_alt",None))
+        if tp.empty:
+            print("MISSING ITEM:", item["Name"])
+            continue
+        for col in tp.columns:
+            if col not in item:
+                if pd.notna(tp.iloc[0][col]):
+                    item[col] = tp.iloc[0][col]
+
+with open("tiere_pflanzen_auen_enriched.json","w") as f:
+    json.dump(tpa,f,indent=2)   
