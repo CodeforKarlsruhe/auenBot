@@ -41,6 +41,7 @@ def main() -> None:
         private = {
             "apiKey": getattr(pr, "apiKey", None),
             "baseUrl": getattr(pr, "baseUrl", None),
+            "embUrl": getattr(pr, "embUrl", None),
             "embMdl": getattr(pr, "embMdl", None),
             "lngMdl": getattr(pr, "lngMdl", None),
         }

@@ -18,6 +18,7 @@ class OpenAICompatClient:
     """
     def __init__(self, base_url: str, api_key: str, chat_model: str, embed_model: str, timeout_s: int = 30):
         self.base_url = base_url.rstrip("/")
+        self.emb_url = base_url.rstrip("/")
         self.api_key = api_key
         self.chat_model = chat_model
         self.embed_model = embed_model
@@ -46,6 +47,7 @@ class OpenAICompatClient:
             payload["messages"].append({"role": "system", "content": f"Output must be valid JSON. {schema_hint}"})
 
         url = f"{self.base_url}/v1/chat/completions"
+
         r = requests.post(url, headers=self._headers(), data=json.dumps(payload), timeout=self.timeout_s)
         r.raise_for_status()
         data = r.json()

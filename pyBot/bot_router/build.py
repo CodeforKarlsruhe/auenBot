@@ -49,11 +49,13 @@ def build_router(
     if private:
         api_key = private.get("apiKey")
         base_url = private.get("baseUrl")
+        emb_url = private.get("embUrl", base_url)
         embed_model = private.get("embMdl")
         chat_model = private.get("lngMdl")
     else:
         api_key = os.getenv("OPENAI_API_KEY")
         base_url = os.getenv("OPENAI_BASE_URL", "https://api.openai.com")
+        emb_url = os.getenv("OPENAI_EMBED_URL", "https://api.openai.com")
         chat_model = os.getenv("OPENAI_CHAT_MODEL", "gpt-4.1-mini")
         embed_model = os.getenv("OPENAI_EMBED_MODEL", "text-embedding-3-small")
 
@@ -64,6 +66,7 @@ def build_router(
         llm = OpenAICompatClient(
             base_url=base_url,
             api_key=api_key,
+            emb_url=emb_url,
             chat_model=chat_model,
             embed_model=embed_model,
         )
