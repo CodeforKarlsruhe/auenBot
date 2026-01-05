@@ -1,0 +1,102 @@
+{
+    "dictionaries": [
+        "animal",
+        "plant"
+    ],
+    "day_of_week_translator": {
+        "Monday": [
+            1,
+            "Montag"
+        ],
+        "Tuesday": [
+            2,
+            "Dienstag"
+        ],
+        "Wednesday": [
+            3,
+            "Mittwoch"
+        ],
+        "Thursday": [
+            4,
+            "Donnerstag"
+        ],
+        "Friday": [
+            5,
+            "Freitag"
+        ],
+        "Saturday": [
+            6,
+            "Samstag"
+        ],
+        "Sunday": [
+            7,
+            "Sonntag"
+        ]
+    },
+    "tags": {
+        "TP_Groesse": "Gr\u00f6\u00dfe",
+        "Tiere_Nahrung": "Nahrung",
+        "Tiere_Feinde": "Feinde",
+        "TP_Erkennungsmerkmale": "Erkennungsmerkmale",
+        "TP_Fortpflanzung": "Fortpflanzung",
+        "TP_Habitat": "Habitat",
+        "Tiere_Geschwindigkeit": "Geschwindigkeit",
+        "TP_Lebenserwartung": "Lebenserwartung",
+        "Tiere_Gewicht": "Gewicht",
+        "Tiere_Lebensweise": "Lebensweise",
+        "Pflanzen_Bl\u00fctezeit": "Bl\u00fctezeit",
+        "Pflanzen_Frucht": "Frucht",
+        "Pflanzen_Verwendung": "Verwendung",
+        "Pflanzen_Genie\u00dfbarkeit": "Genie\u00dfbarkeit",
+        "Pflanzen_\u00d6kologischeBedeutung": "\u00d6kologischeBedeutung",
+        "Pflanzen_Wissenswertes": "Wissenswertes"
+    },
+    "defineKeywords": "append all animal synonyms and all plant synonyms and all auen synonyms",
+    "extractKeywords": "try to extract exactly one of the keys from input",
+    "generateAnimalOrPlantAnswer": [
+        "if animal: check TP_Definition, TP_LateinischerName, TP_Aussehen, Tiere_Rufe, others. Respond or clarify",
+        "if plant: check  TP_Definition, TP_LateinischerName, TP_Aussehen, ... Lebenserwartung, Alter, others? Respond or clarify",
+        "others: clarify"
+    ],
+    "messdaten_strings": {
+        "Ozon": "O3",
+        "Ozonwert": "O3",
+        "O3": "O3",
+        "Luftqualit\u00e4t": "LQI",
+        "Luftqualit\u00e4tsindex": "LQI",
+        "LQI": "LQI",
+        "Stickstoff-Dioxid": "NO2",
+        "NO2": "NO2",
+        "Feinstaub PM2,5": "PM2,5",
+        "Feinstaub PM10": "PM10",
+        "PM2,5": "PM2,5",
+        "PM10": "PM10"
+    },
+    "animal_categories": [
+        "S\u00e4ugetiere",
+        "V\u00f6gel",
+        "Amphibien",
+        "Reptilien",
+        "Fische",
+        "Krebstiere",
+        "Spinnen",
+        "Weichtiere",
+        "Insekten"
+    ],
+    "auen_categories": [
+        "Weichholzaue",
+        "Hartholzaue",
+        "Stillgew\u00e4sser",
+        "Flie\u00dfgew\u00e4sser",
+        "Feuchtwiesen",
+        "Magerwiesen",
+        "Magerrasen"
+    ],
+    "extract": [
+        "Tiere",
+        "Pflanzen",
+        "B\u00e4ume",
+        "Blumen"
+    ],
+    "tp_generell_answer": "find entity and key"
+}
