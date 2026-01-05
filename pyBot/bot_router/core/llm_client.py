@@ -16,9 +16,9 @@ class OpenAICompatClient:
     Hinweis (DE):
     Dieser Client ist bewusst klein gehalten. Für produktiv: Retries, Backoff, Telemetrie, etc.
     """
-    def __init__(self, base_url: str, api_key: str, chat_model: str, embed_model: str, timeout_s: int = 30):
+    def __init__(self, base_url: str, emb_url: str, api_key: str, chat_model: str, embed_model: str, timeout_s: int = 30):
         self.base_url = base_url.rstrip("/")
-        self.emb_url = base_url.rstrip("/")
+        self.emb_url = emb_url.rstrip("/")
         self.api_key = api_key
         self.chat_model = chat_model
         self.embed_model = embed_model
@@ -60,7 +60,7 @@ class OpenAICompatClient:
             return {"raw": content}
 
     def embed(self, texts: List[str]) -> List[List[float]]:
-        url = f"{self.base_url}/v1/embeddings"
+        url = f"{self.emb_url}/v1/embeddings"
         payload = {"model": self.embed_model, "input": texts}
         r = requests.post(url, headers=self._headers(), data=json.dumps(payload), timeout=self.timeout_s)
         r.raise_for_status()

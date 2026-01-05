@@ -800,7 +800,8 @@
     "Vorkommen": "Der Ligusterstrauch gedeiht besonders gut auf kalkhaltigem, nährstoffreichem Boden. Man findet ihn in Hecken oder an Waldrändern.",
     "Ökologische Bedeutung": "Dichte Ligusterhecken bieten Schutz, Lebensraum und Nahrung für Vögel, Bienen, Kleinsäuger, Schmetterlinge wie den Ligusterschwärmer und andere Insekten.",
     "Größe": "5 m",
-    "Name": "Ligusterstrauch",
+    "Name": "Liguster",
+    "Name_alt": "Ligusterstrauch",
     "Typ": "Pflanze"
   },
   {
@@ -866,6 +867,7 @@
     "Verwendung": "Die roten, kugeligen Früchte reifen im August und September und bleiben oft bis in den Frühling hinein am Strauch. Sie sind säuerlich-mehlig und deshalb zum rohen Verzehr wenig geeignet, werden aber gern zur Herstellung von Marmeladen und Tees verwendet.  In Notzeiten wurden die Früchte als Mus gegessen und das getrocknete Fruchtfleisch als Mehlzusatz beim Brotbacken verwendet. Die Kerne dienten als Kaffeeersatz. \nWeißdornextrakte werden in der traditionellen Medizin zur Unterstützung bei Herz-Kreislauf-Erkrankungen eingesetzt. \nDas Holz des Weißdorns ist hart und schwer. Es wurde früher häufig für Werkzeugstiele oder für Drechslerarbeiten verwendet.",
     "Größe": "10 m",
     "Name": "Weißdorn",
+    "Name_alt":"Hagedorn",
     "Typ": "Pflanze",
     "Links": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/%28MHNT%29_Crataegus_monogyna_-_flowers_and_buds.jpg/330px-%28MHNT%29_Crataegus_monogyna_-_flowers_and_buds.jpg"
@@ -878,6 +880,7 @@
     "Genießbarkeit": "Nach der Blüte entwickelt die Heckenkirsche kleine rote Beeren, die bei Vögeln sehr beliebt sind. Leider verwechseln Kinder die Beeren oft mit Johannisbeeren. Da sie aber nur schwach giftig und sehr bitter sind, kommt es meist nicht zu einer ernsthaften Vergiftung.",
     "Vorkommen": "Die Heckenkirsche wächst bevorzugt an feuchten, halbschattigen Stellen im Unterholz von Laub- und Mischwäldern, gerne auch in Ufernähe von Gewässern.",
     "Name": "Heckenkirsche",
+    "Name_alt": "Gemeine Heckenkirsche",
     "Typ": "Pflanze"
   },
   {
@@ -906,6 +909,7 @@
     "Fortpflanzung": "In feuchtschattigen Wäldern vermehrt sich der Hartriegel leicht durch Wurzelausläufer oder durch herabgesenkte Zweige, die sich unter dem feuchten Laub bewurzeln. An diesen Standorten blüht der Rote Hartriegel kaum.",
     "Größe": "5 m",
     "Name": "Blutroter Hartriegel",
+    "Name_alt": "Roter Hartriegel",
     "Typ": "Pflanze",
     "Links": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Cornus-sanguinea.JPG/330px-Cornus-sanguinea.JPG"
@@ -1195,7 +1199,7 @@
     "Lebensweise": "Tagsüber ruhen sie in einer bis zu 30 cm langen unterirdischen Wohnröhre. Das obere Ende der fingerdicken Röhre liegt dem Erdboden auf und ist mit Gras und Moos getarnt. Nachts hängen die Tapezierspinnen unbeweglich mit dem Bauch nach oben in diesem oberirdischen Schlauch und lauern auf Beutetiere. Wenn diese den Schlauch nichts ahnend überqueren, packen die Tapezierspinnen durch das Schlauchgewebe zu, ziehen die Beute nach innen und verzehren sie am Grund der Erdröhre.",
     "Fortpflanzung": "Die Tapezierspinnen werden mit etwa vier Jahren geschlechtsreif. Die Männchen begeben sich dann im Juni oder Juli auf die Suche nach den Fangschläuchen der Weibchen und paaren sich mit ihnen im Innern des Gespinstes. \nDie Weibchen legen ihren Eikokon am Grund ihrer Wohnröhre ab. Im Herbst schlüpfen daraus die Jungspinnen. Sie überwintern bei der Mutter. In den ersten warmen Frühlingstagen des folgenden Jahres verlassen sie den Bau und steigen an Pflanzen hoch. Am oberen Ende angekommen stoßen sie einen Spinnfaden aus, der vom Wind samt der winzigen Jungspinne in einen neuen Lebensraum getragen wird.",
     "Größe": "Die Männchen der schwarzen oder braunen Tapezierspinne können bis zu 9 mm, die Weibchen bis zu 15 mm groß werden.",
-    "Name": "Tapezierspinnen",
+    "Name": "Tapezierspinne",
     "Typ": "Tier"
   },
   {
@@ -1295,6 +1299,7 @@
     "Verwendung": "Der Wasser-Dost besitzt viele gesundheitsförderliche Inhaltsstoffe, die fiebersenkend, harntreibend und entzündungshemmend wirken. Früher legte man seine frischen Blätter auf angeschnittenes Brot, um Schimmelbildung zu vermeiden. Pelze und Felle wurden mit dem Pflanzensaft eingerieben, um Motten fernzuhalten.",
     "Größe": "Sie erreicht eine Höhe von 1 bis 2 Metern.",
     "Name": "Wasserdost",
+    "Name_alt": "Gemeiner Wasserdost",
     "Typ": "Pflanze",
     "Links": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Eupatorium_cannabinum.jpg/330px-Eupatorium_cannabinum.jpg"
@@ -1360,6 +1365,7 @@
     "Schutz": "wie alle Seerosengewächse, besonders geschützt",
     "Größe": "Über der Wasserlinie wird sie nur 5 bis 10 Zentimeter hoch, unter Wasser reichen ihre Stängel bis in eine Tiefe von 200 Zentimetern.",
     "Name": "Teichrose",
+    "Name_alt": "Gelbe Teichrose",
     "Typ": "Pflanze",
     "Links": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Nuphar_lutea.jpeg/330px-Nuphar_lutea.jpeg"
@@ -1403,6 +1409,7 @@
     "Genießbarkeit": "Für Menschen sind alle Teile vom Wasser-Hahnenfuß giftig.",
     "Größe": "Bei der Wasserform befindet sich der Großteil des Pflanzensprosses unter Wasser. Oberhalb der Wasserlinie erreicht der Wasser-Hahnenfuß nur eine Höhe von etwa fünf Zentimetern.",
     "Name": "Wasser-Hahnenfuß",
+    "Name_alt": "Gewöhnlicher Wasserhahnenfuß",
     "Typ": "Pflanze",
     "Links": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Ranunculus_aquatilis_plant.jpg/330px-Ranunculus_aquatilis_plant.jpg"
@@ -1580,7 +1587,7 @@
     "Erkennungsmerkmale": "Die braunen, etwa 10-20 mm langen Gemeinen Schlammfliegen oder Wasserflorfliegen bewohnen die Ufer von Bächen, Teichen und nährstoffreichen Seen.  Ihre Flügel ragen weit über den Körper hinaus, werden in Ruhestellung dachartig zusammengelegt und sind sehr stark geädert, was die Schlammfliegen von Florfliegen unterscheidet.",
     "Fortpflanzung": "Schlammfliegen halten sich am Boden oder an Uferpflanzen auf und fliegen nur ungern. Bei der Paarung läuft das Männchen dem Weibchen hinterher, bis es paarungsbereit ist und anhält. Nach der Befruchtung klebt das Weibchen etwa 200 Eier an einen Pflanzenstängel über dem Wasser. Die geschlüpften Larven werden vom Regen ins Gewässer gespült. Hier jagen sie zwischen den Wasserpflanzen und im Schlamm nach Kleinstlebewesen. \nNach fast zwei Jahren verlassen die Larven das Wasser und verpuppen sich im feuchten Uferboden. Aus den Puppen schlüpfen im Mai oder Juni die fertig entwickelten Fliegen. Diese nehmen keine Nahrung mehr zu sich und sorgen in den wenigen Lebenstagen, die ihnen bleiben, nur noch für Nachwuchs.",
     "Größe": "etwa 10-20 mm lang",
-    "Name": "Gemeine Schlammfliegen",
+    "Name": "Gemeine Schlammfliege",
     "Name_alt": "Wasserflorfliegen",
     "Typ": "Tier"
   },
@@ -1589,7 +1596,7 @@
     "Lebensweise": "Die Tiere werden erst in der Abenddämmerung aktiv. Tagsüber ruhen sie sich an Land aus. Bei Störungen stellen sie sich tot.",
     "Nahrung": "Sie ernähren sich von toten Insekten, die auf der Wasseroberfläche treiben, jagen aber auch nach Mücken, Stechmückenlarven, Wasserflöhen und Springschwänzen. Ihre Beute spüren sie mit einem feinen Geruchssinn auf.",
     "Fortpflanzung": "Die Weibchen legen ihre Eier an waagerechten Pflanzenstängeln, einige Zentimeter über dem Wasserspiegel am Ufer ab.",
-    "Name": "Gemeine Teichläufer",
+    "Name": "Gemeiner Teichläufer",
     "Typ": "Tier"
   },
   {

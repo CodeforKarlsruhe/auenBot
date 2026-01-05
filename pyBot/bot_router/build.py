@@ -43,6 +43,7 @@ def build_router(
     # Optional LLM client (nur wenn ENV/private vorhanden)
     api_key = None
     base_url = None
+    emb_url = None
     chat_model = None
     embed_model = None
 

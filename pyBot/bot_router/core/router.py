@@ -132,6 +132,12 @@ class Router:
             data={"type": "fallback", "question": "Geht es um ein Tier, eine Pflanze, die Rheinauen oder Infos wie Wetter/Anreise/Öffnungszeiten?"},
         )
 
+    def vectorize(self, user_text: List[str]) -> List[List[float]]:
+        if self.llm is None:
+            raise ValueError("LLM client not configured; cannot vectorize.")
+        # Implement vectorization logic here
+        return self.llm.embed(user_text)  # type: ignore
+
     # -----------------------------
     # Abort
     # -----------------------------

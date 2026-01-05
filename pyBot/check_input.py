@@ -5,7 +5,6 @@ from dataclasses import dataclass
 from typing import Any, Dict
 
 from bot_router import build_router
-from bot_router.hooks.functions import FunctionDispatcher
 
 
 
@@ -70,11 +69,9 @@ def main() -> None:
                 entry["function"] = False
                 if entry.get("route") == "intent":
                     intent_count += 1
-                    text = entry.get("text")
                     data = entry.get("data") or {}
                     matching = data.get("intent_id") == intent
                     entry["match"] = matching
-                    snips += 1
                     if matching:
                         good += 1
                 elif entry.get("route") == "clarify":
