@@ -1,0 +1,1432 @@
+[
+  {
+    "Name":"Reh",
+    "Typ":"S\u00e4ugetiere",
+    "Name_sci":"Capreolus capreolus",
+    "Name_eng":"roe deer",
+    "Name_alt":"Europ\u00e4isches Reh",
+    "Familie":"Hirsche (Cervidae)",
+    "Gattung":"Rehe (Capreolus)",
+    "Lebensraum":"Hartholzaue.Weichholzaue.Feuchtwiesen"
+  },
+  {
+    "Name":"Rothirsch",
+    "Typ":"S\u00e4ugetiere",
+    "Name_sci":"Cervus elaphus",
+    "Name_eng":"red deer",
+    "Name_alt":"Edelhirsch",
+    "Familie":"Hirsche (Cervidae)",
+    "Gattung":"Edelhirsche (Cervus)",
+    "Lebensraum":"Hartholzaue.Weichholzaue"
+  },
+  {
+    "Name":"Wildschwein",
+    "Typ":"S\u00e4ugetiere",
+    "Name_sci":"Sus scrofa",
+    "Name_eng":"wild boar",
+    "Name_alt":"Schwarzwild",
+    "Familie":"Echte Schweine (Suidae)",
+    "Gattung":"Sus",
+    "Lebensraum":"Hartholzaue.Weichholzaue"
+  },
+  {
+    "Name":"Baummarder",
+    "Typ":"S\u00e4ugetiere",
+    "Name_sci":"Martes martes",
+    "Name_eng":"pine marten",
+    "Name_alt":"Edelmarder",
+    "Familie":"Marder (Mustelidae)",
+    "Gattung":"Echte Marder (Martes)",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Rotfuchs",
+    "Typ":"S\u00e4ugetiere",
+    "Name_sci":"Vulpes vulpes",
+    "Name_eng":"red fox",
+    "Name_alt":null,
+    "Familie":"Hunde (Canidae)",
+    "Gattung":"Vulpes",
+    "Lebensraum":"Hartholzaue.Weichholzaue.Feuchtwiesen.Magerrasen"
+  },
+  {
+    "Name":"Wildkatze",
+    "Typ":"S\u00e4ugetiere",
+    "Name_sci":"Felis silvestris",
+    "Name_eng":"european wildcat",
+    "Name_alt":"Europ\u00e4ische Wildkatze, Waldkatze",
+    "Familie":"Katzen (Felidae)",
+    "Gattung":"Echte Katzen (Felis)",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Eichh\u00f6rnchen",
+    "Typ":"S\u00e4ugetiere",
+    "Name_sci":"Sciurus vulgaris",
+    "Name_eng":"red squirrel",
+    "Name_alt":"Eurasisches Eichh\u00f6rnchen",
+    "Familie":"H\u00f6rnchen (Sciuridae)",
+    "Gattung":"Eichh\u00f6rnchen (Sciurus)",
+    "Lebensraum":"Hartholzaue.Weichholzaue.Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Biber",
+    "Typ":"S\u00e4ugetiere",
+    "Name_sci":"Castor fiber",
+    "Name_eng":"european beaver",
+    "Name_alt":"Eurasischer Biber",
+    "Familie":"Biber (Castoridae)",
+    "Gattung":"Castor",
+    "Lebensraum":"Weichholzaue.Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Wasserfledermaus",
+    "Typ":"S\u00e4ugetiere",
+    "Name_sci":"Myotis daubentonii",
+    "Name_eng":"daubenton\u2019s bat",
+    "Name_alt":null,
+    "Familie":"Glattnasen (Vespertilionidae)",
+    "Gattung":"Mausohren (Myotis)",
+    "Lebensraum":"Hartholzaue.Weichholzaue.Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Bechsteinfledermaus",
+    "Typ":"S\u00e4ugetiere",
+    "Name_sci":"Myotis bechsteinii",
+    "Name_eng":"Bechstein's bat",
+    "Name_alt":null,
+    "Familie":"Glattnasen (Vespertilionidae)",
+    "Gattung":"Mausohren (Myotis)",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Gro\u00dfes Mausohr",
+    "Typ":"S\u00e4ugetiere",
+    "Name_sci":"Myotis myotis",
+    "Name_eng":null,
+    "Name_alt":null,
+    "Familie":"Glattnasen (Vespertilionidae)",
+    "Gattung":"Mausohren (Myotis)",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Eisvogel",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Alcedo atthis",
+    "Name_eng":"common kingfisher",
+    "Name_alt":null,
+    "Familie":"Eisv\u00f6gel (Alcedinidae)",
+    "Gattung":"Alcedo",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser.Weichholzaue"
+  },
+  {
+    "Name":"Pirol",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Oriolus oriolus",
+    "Name_eng":"eurasian golden oriole",
+    "Name_alt":null,
+    "Familie":"Pirole (Oriolidae)",
+    "Gattung":"Eigentliche Pirole (Oriolus)",
+    "Lebensraum":"Hartholzaue.Weichholzaue"
+  },
+  {
+    "Name":"Haubentaucher",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Podiceps cristatus",
+    "Name_eng":"great crested grebe",
+    "Name_alt":null,
+    "Familie":"Lappentaucher (Podicipedidae)",
+    "Gattung":"Taucher (Podiceps)",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Schwarzspecht",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Dryocopus martius",
+    "Name_eng":"black woodpecker",
+    "Name_alt":null,
+    "Familie":"Spechte (Picidae)",
+    "Gattung":"Dryocopus",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Graureiher",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Aredea cinerea",
+    "Name_eng":"grey heron",
+    "Name_alt":"Fischreiher",
+    "Familie":"Reiher (Ardeidae)",
+    "Gattung":"Ardea",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser.Weichholzaue.Feuchtwiesen"
+  },
+  {
+    "Name":"Wei\u00dfstorch",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Ciconia ciconia",
+    "Name_eng":"white stork",
+    "Name_alt":"Klapperstorch",
+    "Familie":"St\u00f6rche (Ciconiidae)",
+    "Gattung":"Wei\u00dfstorch",
+    "Lebensraum":"Feuchtwiesen.Weichholzaue.Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Schwarzmilan",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Milvus migrans",
+    "Name_eng":"black kite",
+    "Name_alt":"Schwarze Milan",
+    "Familie":"Habichtartige (Accipitridae)",
+    "Gattung":"Milane (Milvus)",
+    "Lebensraum":"Hartholzaue.Weichholzaue.Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Flussregenpfeifer",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Charadrius dubius",
+    "Name_eng":"little ringed plover",
+    "Name_alt":null,
+    "Familie":"Regenpfeifer (Charadriidae)",
+    "Gattung":"Charadrius",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser.Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Teichrohrs\u00e4nger",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Acrocephalus scirpaceus",
+    "Name_eng":"common reed warbler",
+    "Name_alt":null,
+    "Familie":"Rohrs\u00e4ngerartige (Acrocephalidae)",
+    "Gattung":"Rohrs\u00e4nger (Acrocephalus)",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Kuckuck",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Cuculus canorus",
+    "Name_eng":"common cuckoo",
+    "Name_alt":null,
+    "Familie":"Kuckucke (Cuculidae)",
+    "Gattung":"Kuckucke (Cuculus)",
+    "Lebensraum":"Hartholzaue.Weichholzaue"
+  },
+  {
+    "Name":"Krickente",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Anas crecca",
+    "Name_eng":"common teal",
+    "Name_alt":"Kriekente",
+    "Familie":"Entenv\u00f6gel (Anatidae)",
+    "Gattung":"Eigentliche Enten (Anas)",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Schnatterente",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Anas strepera",
+    "Name_eng":"gadwall",
+    "Name_alt":"Mittelente, Knarrente",
+    "Familie":"Entenv\u00f6gel (Anatidae)",
+    "Gattung":"Mareca",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Schellente",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Bucephala clangula",
+    "Name_eng":"common goldeneye",
+    "Name_alt":null,
+    "Familie":"Entenv\u00f6gel (Anatidae)",
+    "Gattung":"Bucephala",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Reiherente",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Aythya fuligula",
+    "Name_eng":"tufted duck",
+    "Name_alt":null,
+    "Familie":"Entenv\u00f6gel (Anatidae)",
+    "Gattung":"Aythya",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Tafelente",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Aythya ferina",
+    "Name_eng":"common porchard",
+    "Name_alt":null,
+    "Familie":"Entenv\u00f6gel (Anatidae)",
+    "Gattung":"Aythya",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Zwergtaucher",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Tachybaptus ruficollis",
+    "Name_eng":"call duck",
+    "Name_alt":null,
+    "Familie":"Lappentaucher (Podicipedidae)",
+    "Gattung":"Tachybaptus",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Kormoran",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Phalacrocorax carbo",
+    "Name_eng":"great cormorant",
+    "Name_alt":null,
+    "Familie":"Kormorane (Phalacrocoracidae)",
+    "Gattung":"Phalacrocorax",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser.Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Wasserralle",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Rallus aquaticus",
+    "Name_eng":"water rail",
+    "Name_alt":null,
+    "Familie":"Rallen (Rallidae)",
+    "Gattung":"Rallus",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Bekassine",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Gallinago gallinago",
+    "Name_eng":"common snipe",
+    "Name_alt":null,
+    "Familie":"Schnepfenv\u00f6gel (Scolopacidae)",
+    "Gattung":"Bekassinen (Gallinago)",
+    "Lebensraum":"Feuchtwiesen.Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Lachm\u00f6we",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Larus ridibundus",
+    "Name_eng":"Black-headed gull",
+    "Name_alt":null,
+    "Familie":"M\u00f6wenverwandte (Laridae)",
+    "Gattung":"Chroicocephalus",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Flussseeschwalbe",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Sterna hirundo",
+    "Name_eng":"common tern",
+    "Name_alt":null,
+    "Familie":"M\u00f6wenverwandte (Laridae)",
+    "Gattung":"Sterna",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser.Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Uferschwalbe",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Riparia riparia",
+    "Name_eng":"sand martin",
+    "Name_alt":null,
+    "Familie":"Schwalben (Hirundinidae)",
+    "Gattung":"Riparia",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Rohrammer",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Emberiza schoeniclus",
+    "Name_eng":"common reed bunting",
+    "Name_alt":"Rohrspatz",
+    "Familie":"Emberizidae",
+    "Gattung":"Ammern (Emberiza)",
+    "Lebensraum":"Stillgew\u00e4sser.Feuchtwiesen"
+  },
+  {
+    "Name":"Kiebitz",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Vanellus vanellus",
+    "Name_eng":"northern lapwing",
+    "Name_alt":null,
+    "Familie":"Regenpfeifer (Charadriidae)",
+    "Gattung":"Kiebitze (Vanellus)",
+    "Lebensraum":"Feuchtwiesen.Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Mittelspecht",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Dendrocopos medius",
+    "Name_eng":"middle spotted woodpecker",
+    "Name_alt":null,
+    "Familie":"Spechte (Picidae)",
+    "Gattung":"Leiopicus",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Kleinspecht",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Dedrocopos minor",
+    "Name_eng":"lesser spotted woodpecker",
+    "Name_alt":null,
+    "Familie":"Spechte (Picidae)",
+    "Gattung":"Dryobates",
+    "Lebensraum":"Weichholzaue.Hartholzaue"
+  },
+  {
+    "Name":"Grauspecht",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Picus canus",
+    "Name_eng":"grey-headed woodpecker",
+    "Name_alt":null,
+    "Familie":"Spechte (Picidae)",
+    "Gattung":"Picus",
+    "Lebensraum":"Hartholzaue.Weichholzaue"
+  },
+  {
+    "Name":"Gr\u00fcnspecht",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Picus viridis",
+    "Name_eng":"european green woodpecker",
+    "Name_alt":"Grasspecht, Erdspecht",
+    "Familie":"Spechte (Picidae)",
+    "Gattung":"Picus",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Turteltaube",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Streptopelia turtur",
+    "Name_eng":"european turtle dove",
+    "Name_alt":null,
+    "Familie":"Tauben (Columbidae)",
+    "Gattung":"Turteltauben (Streptopelia)",
+    "Lebensraum":"Hartholzaue.Weichholzaue"
+  },
+  {
+    "Name":"Waldkauz",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Strix aluco",
+    "Name_eng":"tawny owl",
+    "Name_alt":null,
+    "Familie":"Eigentliche Eulen (Strigidae)",
+    "Gattung":"Strix",
+    "Lebensraum":"Hartholzaue.Weichholzaue"
+  },
+  {
+    "Name":"Baumfalke",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Falco subbuteo",
+    "Name_eng":"eurasian hobby",
+    "Name_alt":null,
+    "Familie":"Falkenartige (Falconidae)",
+    "Gattung":"Falken (Falco)",
+    "Lebensraum":"Hartholzaue.Weichholzaue.Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Waldlaubs\u00e4nger",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Phylloscopus sibilatrix",
+    "Name_eng":"wood warbler",
+    "Name_alt":null,
+    "Familie":"Laubs\u00e4ngerartige (Phylloscopidae)",
+    "Gattung":"Laubs\u00e4nger (Phylloscopus)",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Feldschwirl",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Locustella naevia",
+    "Name_eng":"common grasshopper warbler",
+    "Name_alt":null,
+    "Familie":"Schwirlverwandte (Locustellidae)",
+    "Gattung":"Schwirle (Locustella)",
+    "Lebensraum":"Feuchtwiesen.Stillgew\u00e4sser"
+  },
+  {
+    "Name":"M\u00f6nchsgrasm\u00fccke",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Sylvia atricapilla",
+    "Name_eng":"eurasian blackcap",
+    "Name_alt":null,
+    "Familie":"Grasm\u00fcckenartige (Sylviidae)",
+    "Gattung":"Grasm\u00fccken (Sylvia)",
+    "Lebensraum":"Hartholzaue.Weichholzaue"
+  },
+  {
+    "Name":"Singdrossel",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Turdus philomelos",
+    "Name_eng":"song thrush",
+    "Name_alt":null,
+    "Familie":"Drosseln (Turdidae)",
+    "Gattung":"Echte Drosseln (Turdus)",
+    "Lebensraum":"Hartholzaue.Weichholzaue"
+  },
+  {
+    "Name":"Nachtigall",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Luscinia megarhynchos",
+    "Name_eng":"nightingale",
+    "Name_alt":null,
+    "Familie":"Fliegenschn\u00e4pper (Muscicapidae)",
+    "Gattung":"Luscinia",
+    "Lebensraum":"Weichholzaue.Hartholzaue"
+  },
+  {
+    "Name":"Flussuferl\u00e4ufer",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Actitis hypoleucos",
+    "Name_eng":"Common Sandpiper",
+    "Name_alt":null,
+    "Familie":"Schnepfenv\u00f6gel (Scolopacidae)",
+    "Gattung":"Uferl\u00e4ufer (Actitis)",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser.Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Hohltaube",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Columba oenas",
+    "Name_eng":"Stock Dove",
+    "Name_alt":null,
+    "Familie":"Tauben (Columbidae)",
+    "Gattung":"Feldtauben",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Blaukelchen",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Luscinia svecica",
+    "Name_eng":"Bluethroat",
+    "Name_alt":null,
+    "Familie":"Fliegenschn\u00e4pper (Muscicapidae)",
+    "Gattung":"Luscinia",
+    "Lebensraum":"Stillgew\u00e4sser.Weichholzaue.Hartholzaue"
+  },
+  {
+    "Name":"Neunt\u00f6ter",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Lanius collurio",
+    "Name_eng":"Red-backed Shrike",
+    "Name_alt":null,
+    "Familie":"W\u00fcrger",
+    "Gattung":"Echte W\u00fcrger",
+    "Lebensraum":"Magerrasen.Hartholzaue"
+  },
+  {
+    "Name":"Wendehals",
+    "Typ":"V\u00f6gel",
+    "Name_sci":"Jynx torquilla",
+    "Name_eng":"Eurasian Wryneck",
+    "Name_alt":null,
+    "Familie":"Spechte (Picidae)",
+    "Gattung":"Wendeh\u00e4lse",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Springfrosch",
+    "Typ":"Amphibien",
+    "Name_sci":"Rana dalmatina",
+    "Name_eng":"agile frog",
+    "Name_alt":null,
+    "Familie":"Echte Fr\u00f6sche (Ranidae)",
+    "Gattung":"Echte Fr\u00f6sche (Rana)",
+    "Lebensraum":"Hartholzaue.Stillgew\u00e4sser.Feuchtwiesen.Weichholzaue"
+  },
+  {
+    "Name":"Kleiner Wasserfrosch",
+    "Typ":"Amphibien",
+    "Name_sci":"Rana lessonae",
+    "Name_eng":"water frog",
+    "Name_alt":"Gr\u00fcnfr\u00f6sche",
+    "Familie":"Echte Fr\u00f6sche (Ranidae)",
+    "Gattung":"Wasserfr\u00f6sche (Pelophylax)",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Teichfrosch",
+    "Typ":"Amphibien",
+    "Name_sci":"Rana kl. Esculenta",
+    "Name_eng":"edible frog",
+    "Name_alt":"Wasserfrosch oder Gr\u00fcnfrosch",
+    "Familie":"Echte Fr\u00f6sche (Ranidae)",
+    "Gattung":"Wasserfr\u00f6sche (Pelophylax)",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Erdkr\u00f6te",
+    "Typ":"Amphibien",
+    "Name_sci":"Bufo bufo",
+    "Name_eng":"common toad",
+    "Name_alt":null,
+    "Familie":"Kr\u00f6ten (Bufonidae)",
+    "Gattung":"Echte Kr\u00f6ten (Bufo)",
+    "Lebensraum":"Hartholzaue.Weichholzaue.Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Teichmolch",
+    "Typ":"Amphibien",
+    "Name_sci":"Triturus vulgaris",
+    "Name_eng":"smooth newt",
+    "Name_alt":null,
+    "Familie":"Echte Salamander (Salamandridae)",
+    "Gattung":"Lissotriton",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Bergmolch",
+    "Typ":"Amphibien",
+    "Name_sci":"Ichthyosaura alpestris;  Triturus alpestris",
+    "Name_eng":"alpine newt",
+    "Name_alt":"Alpenmolch",
+    "Familie":"Echte Salamander (Salamandridae)",
+    "Gattung":"Ichthyosaura",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Gelbbauchunke",
+    "Typ":"Amphibien",
+    "Name_sci":"Bombina variegata",
+    "Name_eng":"yellow-bellied toad",
+    "Name_alt":"Bergunke",
+    "Familie":"Unken und Barbourfr\u00f6sche (Bombinatoridae)",
+    "Gattung":"Unken (Bombina)",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Laubfrosch",
+    "Typ":"Amphibien",
+    "Name_sci":"Hyla arborea",
+    "Name_eng":"european tree frog",
+    "Name_alt":"Europ\u00e4ischer Laubfrosch",
+    "Familie":"Laubfr\u00f6sche i. w. S. (Hylidae)",
+    "Gattung":"Laubfr\u00f6sche (Hyla)",
+    "Lebensraum":"Stillgew\u00e4sser.Weichholzaue"
+  },
+  {
+    "Name":"Kammmolch",
+    "Typ":"Amphibien",
+    "Name_sci":"Triturus cristatus",
+    "Name_eng":"northern crested newt",
+    "Name_alt":"n\u00f6rdlicher Kammmolch",
+    "Familie":"Echte Salamander (Salamandridae)",
+    "Gattung":"Triturus",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Moorfrosch",
+    "Typ":"Amphibien",
+    "Name_sci":"Rana arvalis",
+    "Name_eng":"moor frog",
+    "Name_alt":null,
+    "Familie":"Echte Fr\u00f6sche (Ranidae)",
+    "Gattung":"Echte Fr\u00f6sche (Rana)",
+    "Lebensraum":"Weichholzaue.Stillgew\u00e4sser.Feuchtwiesen"
+  },
+  {
+    "Name":"Kreuzkr\u00f6te",
+    "Typ":"Amphibien",
+    "Name_sci":"Bufo calamita",
+    "Name_eng":"natterjack toad",
+    "Name_alt":null,
+    "Familie":"Kr\u00f6ten (Bufonidae)",
+    "Gattung":"Epidalea",
+    "Lebensraum":"Magerrasen.Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Blindschleiche",
+    "Typ":"Reptilien",
+    "Name_sci":"Anguis fragilis",
+    "Name_eng":"slow worm",
+    "Name_alt":"Westliche Blindschleiche",
+    "Familie":"Schleichen (Anguidae)",
+    "Gattung":"Anguis",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Ringelnatter",
+    "Typ":"Reptilien",
+    "Name_sci":"Natrix natrix",
+    "Name_eng":"grass snake",
+    "Name_alt":null,
+    "Familie":"Nattern (Colubridae)",
+    "Gattung":"Europ\u00e4ische Wassernattern",
+    "Lebensraum":"Stillgew\u00e4sser.Weichholzaue.Feuchtwiesen"
+  },
+  {
+    "Name":"Zauneidechse",
+    "Typ":"Reptilien",
+    "Name_sci":"Lacerta agilis",
+    "Name_eng":"sand lizard",
+    "Name_alt":null,
+    "Familie":"Echte Eidechsen (Lacertidae)",
+    "Gattung":"Lacerta",
+    "Lebensraum":"Magerrasen"
+  },
+  {
+    "Name":"Sumpf-Schildkr\u00f6te",
+    "Typ":"Reptilien",
+    "Name_sci":"Emys orbicularis",
+    "Name_eng":"european pond turtle",
+    "Name_alt":null,
+    "Familie":"Neuwelt-Sumpfschildkr\u00f6ten (Emydidae)",
+    "Gattung":"Europ\u00e4ische Sumpfschildkr\u00f6te",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Flussneunauge",
+    "Typ":"Fische",
+    "Name_sci":"Lampetra fluviatilis",
+    "Name_eng":"european river lamprey",
+    "Name_alt":null,
+    "Familie":"Petromyzontidae",
+    "Gattung":"Lampetra",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Bachneunauge",
+    "Typ":"Fische",
+    "Name_sci":"Lampetra planeri",
+    "Name_eng":"European brook lamprey",
+    "Name_alt":null,
+    "Familie":"Petromyzontidae",
+    "Gattung":"Lampetra",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Atlantischer Lachs",
+    "Typ":"Fische",
+    "Name_sci":"Salmo salar",
+    "Name_eng":"salmon",
+    "Name_alt":"Salm",
+    "Familie":"Lachsfische (Salmonidae)",
+    "Gattung":"Salmo",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Bitterling",
+    "Typ":"Fische",
+    "Name_sci":"Rhodeus amarus",
+    "Name_eng":"european bitterling",
+    "Name_alt":null,
+    "Familie":"Bitterlinge",
+    "Gattung":null,
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Schlammpeitzger",
+    "Typ":"Fische",
+    "Name_sci":"Misgurnus fossilis",
+    "Name_eng":"pond loach",
+    "Name_alt":"Schlammbei\u00dfer",
+    "Familie":"Steinbei\u00dfer (Cobitidae)",
+    "Gattung":"Schlammpeitzger",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser.Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Steinbei\u00dfer",
+    "Typ":"Fische",
+    "Name_sci":"Cobitis taenia",
+    "Name_eng":"spined loach",
+    "Name_alt":"Dorngrundel",
+    "Familie":"Steinbei\u00dfer (Cobitidae)",
+    "Gattung":"Cobitis",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Karausche",
+    "Typ":"Fische",
+    "Name_sci":"Carassius carassius",
+    "Name_eng":"crucian carp",
+    "Name_alt":null,
+    "Familie":"Karpfenfische (Cyprinidae)",
+    "Gattung":"Carassius",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Groppe",
+    "Typ":"Fische",
+    "Name_sci":"Cottus gobio",
+    "Name_eng":null,
+    "Name_alt":"Kaulkopf, Rotzkopf, Westgroppe, Koppe, M\u00fchlkoppe, Dickkopf oder Dolm",
+    "Familie":"Groppen",
+    "Gattung":"Cottus",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Hirschk\u00e4fer",
+    "Typ":"Insekten-K\u00e4fer",
+    "Name_sci":"Lucanus cervus",
+    "Name_eng":"stag beetle",
+    "Name_alt":null,
+    "Familie":"Schr\u00f6ter (Lucanidae)",
+    "Gattung":"Lucanus",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Gro\u00dfer Eichenbock",
+    "Typ":"Insekten-K\u00e4fer",
+    "Name_sci":"Cerambyx cerdo",
+    "Name_eng":"great capricorn beetle",
+    "Name_alt":"Eichenbock, Riesenbock, Spie\u00dfbock",
+    "Familie":"Bockk\u00e4fer(Cerambycidae)",
+    "Gattung":"Cerambyx",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Moschusbock",
+    "Typ":"Insekten-K\u00e4fer",
+    "Name_sci":"Aromia moschata",
+    "Name_eng":"musk beetle",
+    "Name_alt":null,
+    "Familie":"Bockk\u00e4fer (Cerambycidae)",
+    "Gattung":"Aromia",
+    "Lebensraum":"Weichholzaue.Hartholzaue"
+  },
+  {
+    "Name":"Lederlaufk\u00e4fer",
+    "Typ":"Insekten-K\u00e4fer",
+    "Name_sci":"Carabus coriaceus",
+    "Name_eng":"leather beetle",
+    "Name_alt":null,
+    "Familie":"Laufk\u00e4fer (Carabidae)",
+    "Gattung":"Echte Laufk\u00e4fer (Carabus)",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Goldgl\u00e4nzender Rosenk\u00e4fer",
+    "Typ":"Insekten-K\u00e4fer",
+    "Name_sci":"Cetonia aurata",
+    "Name_eng":"flower chafer",
+    "Name_alt":"Rosenk\u00e4fer",
+    "Familie":"Blatthornk\u00e4fer (Scarabaeidae)",
+    "Gattung":"Cetonia",
+    "Lebensraum":"Hartholzaue.Magerwiesen"
+  },
+  {
+    "Name":"Pappel-Blattk\u00e4fer",
+    "Typ":"Insekten-K\u00e4fer",
+    "Name_sci":"Chrysomela populi",
+    "Name_eng":"poplar leaf beetle",
+    "Name_alt":null,
+    "Familie":"Blattk\u00e4fer (Chrysomelidae)",
+    "Gattung":"Chrysomela",
+    "Lebensraum":"Weichholzaue"
+  },
+  {
+    "Name":"Weiden-Blattk\u00e4fer",
+    "Typ":"Insekten-K\u00e4fer",
+    "Name_sci":"Phratora vulgatissima",
+    "Name_eng":"widow leaf beetle",
+    "Name_alt":null,
+    "Familie":null,
+    "Gattung":null,
+    "Lebensraum":"Weichholzaue"
+  },
+  {
+    "Name":"Eichenblattroller",
+    "Typ":"Insekten-K\u00e4fer",
+    "Name_sci":"Attelabus nitens",
+    "Name_eng":"oak roller weevil",
+    "Name_alt":"Roter Eichenkugelr\u00fcssler",
+    "Familie":null,
+    "Gattung":null,
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Gelbrandk\u00e4fer",
+    "Typ":"Insekten-K\u00e4fer",
+    "Name_sci":"Dytiscus marginalis",
+    "Name_eng":"great diving beetle",
+    "Name_alt":"Gemeine Gelbrand",
+    "Familie":"Schwimmk\u00e4fer (Dytiscidae)",
+    "Gattung":"Dytiscus",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Schwarzblauer \u00d6lk\u00e4fer",
+    "Typ":"Insekten-K\u00e4fer",
+    "Name_sci":"Meloe proscarabaeus",
+    "Name_eng":"blister beetle",
+    "Name_alt":"Schwarzer Maiwurm",
+    "Familie":"\u00d6lk\u00e4fer (Meloidae)",
+    "Gattung":"Meloe",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"D\u00fcnen-Sandlaufk\u00e4fer",
+    "Typ":"Insekten-K\u00e4fer",
+    "Name_sci":"Cicindela hybrida",
+    "Name_eng":"norther dune tiger beetle",
+    "Name_alt":"Kupferbrauner Sandlaufk\u00e4fer",
+    "Familie":"Laufk\u00e4fer (Carabidae)",
+    "Gattung":"Cicindela",
+    "Lebensraum":"Magerrasen"
+  },
+  {
+    "Name":"Hornisse",
+    "Typ":"Insekten-Hautfl\u00fcgler",
+    "Name_sci":"Vespa crabro",
+    "Name_eng":"european hornet",
+    "Name_alt":null,
+    "Familie":"Faltenwespen (Vespidae)",
+    "Gattung":"Hornissen (Vespa)",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Gemeine Sandbiene",
+    "Typ":"Insekten-Hautfl\u00fcgler",
+    "Name_sci":"Andrena flavipes",
+    "Name_eng":"sand bee",
+    "Name_alt":null,
+    "Familie":"Andrenidae",
+    "Gattung":"Sandbienen (Andrena)",
+    "Lebensraum":"Magerrasen.Hartholzaue"
+  },
+  {
+    "Name":"Gro\u00dfe Blaue Holzbiene",
+    "Typ":"Insekten-Hautfl\u00fcgler",
+    "Name_sci":"Xylocopa violacea",
+    "Name_eng":"carpenter bee",
+    "Name_alt":null,
+    "Familie":"Echte Bienen (Apidae)",
+    "Gattung":"Holzbienen (Xylocopa)",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Gelbe Kammschnake",
+    "Typ":"Insekten-Zweifl\u00fcgler",
+    "Name_sci":"Ctenophora ornata",
+    "Name_eng":"cranefly",
+    "Name_alt":null,
+    "Familie":null,
+    "Gattung":null,
+    "Lebensraum":"Hartholzaue.Weichholzaue"
+  },
+  {
+    "Name":"Stechm\u00fccke",
+    "Typ":"Insekten-Zweifl\u00fcgler",
+    "Name_sci":"Aedes vexans",
+    "Name_eng":"mosquito",
+    "Name_alt":"Rheinschnake",
+    "Familie":"Stechm\u00fccken (Culicidae)",
+    "Gattung":"Aedes",
+    "Lebensraum":"Weichholzaue.Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Regenbremse",
+    "Typ":"Insekten-Zweifl\u00fcgler",
+    "Name_sci":"Haematopota pluvialis",
+    "Name_eng":"common horse fly",
+    "Name_alt":"Blinde Fliege, Gewitterbremse, Faulstich, Regenbogenbremse",
+    "Familie":"Bremsen (Tabanidae)",
+    "Gattung":"Haematopota",
+    "Lebensraum":"Stillgew\u00e4sser.Feuchtwiesen"
+  },
+  {
+    "Name":"Sumpf-Schwebfliege",
+    "Typ":"Insekten-Zweifl\u00fcgler",
+    "Name_sci":"Helophilus trivittatus",
+    "Name_eng":"hover fly",
+    "Name_alt":"Gro\u00dfe Sumpfschwebfliege",
+    "Familie":"Schwebfliegen (Syrphidae)",
+    "Gattung":"Helophilus",
+    "Lebensraum":"Feuchtwiesen.Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Russischer B\u00e4r",
+    "Typ":"Insekten-Schmetterlinge",
+    "Name_sci":"Euplagia quadripunctaria",
+    "Name_eng":"spanish flag",
+    "Name_alt":"Spanische Flagge",
+    "Familie":"Eulenfalter (Erebidae)",
+    "Gattung":"Euplagia",
+    "Lebensraum":"Hartholzaue.Weichholzaue.Feuchtwiese.Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Heller Wiesenknopf-Ameisenbl\u00e4uling",
+    "Typ":"Insekten-Schmetterlinge",
+    "Name_sci":"Maculinea nausithous",
+    "Name_eng":"scarce large blue",
+    "Name_alt":null,
+    "Familie":"Bl\u00e4ulinge (Lycaenidae)",
+    "Gattung":"Phengaris",
+    "Lebensraum":"Feuchtwiesen"
+  },
+  {
+    "Name":"Dunkler Wiesenknopf-Ameisenbl\u00e4uling",
+    "Typ":"Insekten-Schmetterlinge",
+    "Name_sci":"Maculinea teleius",
+    "Name_eng":"dusky large blue",
+    "Name_alt":null,
+    "Familie":"Bl\u00e4ulinge (Lycaenidae)",
+    "Gattung":"Phengaris",
+    "Lebensraum":"Feuchtwiesen"
+  },
+  {
+    "Name":"Gro\u00dfer Feuerfalter",
+    "Typ":"Insekten-Schmetterlinge",
+    "Name_sci":"Lycaena dispar",
+    "Name_eng":"large copper",
+    "Name_alt":null,
+    "Familie":"Bl\u00e4ulinge (Lycaenidae)",
+    "Gattung":"Lycaena",
+    "Lebensraum":"Feuchwiesen"
+  },
+  {
+    "Name":"Zitronenfalter",
+    "Typ":"Insekten-Schmetterlinge",
+    "Name_sci":"Gonepteryx rhamni",
+    "Name_eng":"common brimstone",
+    "Name_alt":null,
+    "Familie":"Wei\u00dflinge (Pieridae)",
+    "Gattung":"Gonepteryx",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Kleiner Eisvogel",
+    "Typ":"Insekten-Schmetterlinge",
+    "Name_sci":"Limenitis populi",
+    "Name_eng":"white admiral",
+    "Name_alt":"Kleiner Eisfalter",
+    "Familie":"Edelfalter (Nymphalidae)",
+    "Gattung":"Limenitis",
+    "Lebensraum":"Hartholzaue.Weichholzaue"
+  },
+  {
+    "Name":"Gro\u00dfer Schillerfalter",
+    "Typ":"Insekten-Schmetterlinge",
+    "Name_sci":"Apatura iris",
+    "Name_eng":"purple emperor",
+    "Name_alt":null,
+    "Familie":"Edelfalter (Nymphalidae)",
+    "Gattung":"Apatura",
+    "Lebensraum":"Weichholzaue.Hartholzaue"
+  },
+  {
+    "Name":"Weidenbohrer",
+    "Typ":"Insekten-Schmetterlinge",
+    "Name_sci":"Cossus cossus",
+    "Name_eng":"goat moth",
+    "Name_alt":null,
+    "Familie":"Holzbohrer (Cossidae)",
+    "Gattung":"Cossus",
+    "Lebensraum":"Weichholzaue"
+  },
+  {
+    "Name":"Kupferglucke",
+    "Typ":"Insekten-Schmetterlinge",
+    "Name_sci":"Gastropacha quercifolia",
+    "Name_eng":"lappet",
+    "Name_alt":null,
+    "Familie":"Glucken (Lasiocampidae)",
+    "Gattung":"Gastropacha",
+    "Lebensraum":"Hartholzaue.Magerrasen"
+  },
+  {
+    "Name":"Nagelfleck",
+    "Typ":"Insekten-Schmetterlinge",
+    "Name_sci":"Aglia tau",
+    "Name_eng":"tau emperor",
+    "Name_alt":null,
+    "Familie":"Pfauenspinner (Saturniidae)",
+    "Gattung":"Aglia",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Pappelschw\u00e4rmer",
+    "Typ":"Insekten-Schmetterlinge",
+    "Name_sci":"Laothoe populi",
+    "Name_eng":"poplar hawk-moth",
+    "Name_alt":null,
+    "Familie":"Schw\u00e4rmer (Sphingidae)",
+    "Gattung":"Laothoe",
+    "Lebensraum":"Weichholzaue"
+  },
+  {
+    "Name":"Palpen-Zahnspinner",
+    "Typ":"Insekten-Schmetterlinge",
+    "Name_sci":"Pterostoma palpina",
+    "Name_eng":"satin moth",
+    "Name_alt":null,
+    "Familie":"Zahnspinner (Notodontidae)",
+    "Gattung":"Pterostoma",
+    "Lebensraum":"Weichholzaue"
+  },
+  {
+    "Name":"Gro\u00dfer Gabelschwanz",
+    "Typ":"Insekten-Schmetterlinge",
+    "Name_sci":"Cerura vinula",
+    "Name_eng":"forktail",
+    "Name_alt":null,
+    "Familie":"Zahnspinner (Notodontidae)",
+    "Gattung":"Cerura",
+    "Lebensraum":"Weichholzaue"
+  },
+  {
+    "Name":"Haseleule",
+    "Typ":"Insekten-Schmetterlinge",
+    "Name_sci":"Colocasia coryli",
+    "Name_eng":"nut-tree tussock",
+    "Name_alt":null,
+    "Familie":"Eulenfalter (Noctuidae)",
+    "Gattung":"Colocasia",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Eichen-Sichelfl\u00fcgler",
+    "Typ":"Insekten-Schmetterlinge",
+    "Name_sci":"Watsonalla binaria",
+    "Name_eng":"oak hook-tip",
+    "Name_alt":"Zweipunkt-Sichelfl\u00fcgler",
+    "Familie":"Eulenspinner und Sichelfl\u00fcgler (Drepanidae)",
+    "Gattung":"Watsonalla",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Eschen-Zackenrandspanner",
+    "Typ":"Insekten-Schmetterlinge",
+    "Name_sci":"Ennomos fuscantaria",
+    "Name_eng":"ash sphinx",
+    "Name_alt":"Eschen-Parkland-Zackenrandspanner",
+    "Familie":"Spanner (Geometridae)",
+    "Gattung":"Ennomos",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Gr\u00fcnes Blatt",
+    "Typ":"Insekten-Schmetterlinge",
+    "Name_sci":"Geometra papilionaria",
+    "Name_eng":"large emerald",
+    "Name_alt":null,
+    "Familie":"Spanner (Geometridae)",
+    "Gattung":"Geometra",
+    "Lebensraum":"Hartholzaue.Weichholzaue"
+  },
+  {
+    "Name":"Gemeine Schlammfliege",
+    "Typ":"Insekten-Netzfl\u00fcgler",
+    "Name_sci":"Sialis lutaria",
+    "Name_eng":"alderfly",
+    "Name_alt":"Gemeine Wasserflorfliege",
+    "Familie":"Schlammfliegen (Sialidae)",
+    "Gattung":"Sialis",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Gemeiner Teichl\u00e4ufer",
+    "Typ":"Insekten-Wanzen",
+    "Name_sci":"Hydrometra stagnorum",
+    "Name_eng":"marsh treaders",
+    "Name_alt":null,
+    "Familie":"Teichl\u00e4ufer (Hydrometridae)",
+    "Gattung":"Hydrometra (Gattung)",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Gemeiner Wasserl\u00e4ufer",
+    "Typ":"Insekten-Wanzen",
+    "Name_sci":"Gerris lacustris",
+    "Name_eng":"water skipper",
+    "Name_alt":"Wasserschneider",
+    "Familie":"Wasserl\u00e4ufer (Gerridae)",
+    "Gattung":"Gerris",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Wasserskorpion",
+    "Typ":"Insekten-Wanzen",
+    "Name_sci":"Nepa cinerea Syn. Nepa rubra",
+    "Name_eng":"water scorpion",
+    "Name_alt":null,
+    "Familie":"Skorpionswanzen (Nepidae)",
+    "Gattung":"Nepa",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Gemeiner R\u00fcckenschwimmer",
+    "Typ":"Insekten-Wanzen",
+    "Name_sci":"Notonecta glauca",
+    "Name_eng":"backswimmers",
+    "Name_alt":null,
+    "Familie":"R\u00fcckenschwimmer (Notonectidae)",
+    "Gattung":"Notonecta",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Gr\u00fcne Strandschrecke",
+    "Typ":"Insekten-Heuschrecken",
+    "Name_sci":"Aiolopus thalassinus",
+    "Name_eng":"slender green-winged grasshopper",
+    "Name_alt":null,
+    "Familie":"Feldheuschrecken (Acrididae)",
+    "Gattung":"Aiolopus",
+    "Lebensraum":"Stillgew\u00e4sser.Magerrasen"
+  },
+  {
+    "Name":"Lauchschrecke",
+    "Typ":"Insekten-Heuschrecken",
+    "Name_sci":"Mecostethus parapleurus",
+    "Name_eng":"leek grasshopper",
+    "Name_alt":null,
+    "Familie":"Acrididae",
+    "Gattung":"Mecostethus",
+    "Lebensraum":"Feuchtwiesen.Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Kurzfl\u00fcgelige Schwertschrecke",
+    "Typ":"Insekten-Heuschrecken",
+    "Name_sci":"Conocephalus dorsalis",
+    "Name_eng":"short-winged conehead",
+    "Name_alt":null,
+    "Familie":"Laubheuschrecken (Tettigoniidae)",
+    "Gattung":"Conocephalus",
+    "Lebensraum":"Feuchtwiesen.Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Sumpfschrecke",
+    "Typ":"Insekten-Heuschrecken",
+    "Name_sci":"Stethophyma grossum",
+    "Name_eng":"large marsh grasshopper",
+    "Name_alt":null,
+    "Familie":"Feldheuschrecken (Acrididae)",
+    "Gattung":"Stethophyma",
+    "Lebensraum":"Feuchtwiesen"
+  },
+  {
+    "Name":"Blaufl\u00fcgelige \u00d6dlandschrecke",
+    "Typ":"Insekten-Heuschrecken",
+    "Name_sci":"Oedipoda caerulescens",
+    "Name_eng":"blue-winged grasshopper",
+    "Name_alt":null,
+    "Familie":"Feldheuschrecken (Acrididae)",
+    "Gattung":"Oedipoda",
+    "Lebensraum":"Magerrasen"
+  },
+  {
+    "Name":"Geb\u00e4nderte Prachtlibelle",
+    "Typ":"Insekten-Libellen",
+    "Name_sci":"Calopteryx splendens",
+    "Name_eng":"banded demoiselle",
+    "Name_alt":null,
+    "Familie":"Prachtlibellen (Calopterygidae)",
+    "Gattung":"Calopteryx",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser.Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Gro\u00dfe Binsenjungfer",
+    "Typ":"Insekten-Libellen",
+    "Name_sci":"Chalcolestes viridis, Syn. Lestes viridis",
+    "Name_eng":"western willow spreadwing",
+    "Name_alt":"Westliche Weidenjungfer",
+    "Familie":"Teichjungfern (Lestidae)",
+    "Gattung":"Chalcolestes",
+    "Lebensraum":"Stillgew\u00e4sser.Weichholzaue"
+  },
+  {
+    "Name":"Blutrote Heidelibelle",
+    "Typ":"Insekten-Libellen",
+    "Name_sci":"Sympetrum sanguineum",
+    "Name_eng":"ruddy darter",
+    "Name_alt":null,
+    "Familie":"Segellibellen (Libellulidae)",
+    "Gattung":"Heidelibellen (Sympetrum)",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Hufeisen-Azurjungfer",
+    "Typ":"Insekten-Libellen",
+    "Name_sci":"Coenagrion puella",
+    "Name_eng":"azure damselfly",
+    "Name_alt":null,
+    "Familie":"Schlanklibellen (Coenagrionidae)",
+    "Gattung":"Azurjungfern (Coenagrion)",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Gro\u00dfe Pechlibelle",
+    "Typ":"Insekten-Libellen",
+    "Name_sci":"Ischnura elegans",
+    "Name_eng":"blue-tailed damselfly",
+    "Name_alt":null,
+    "Familie":"Schlanklibellen (Coenagrionidae)",
+    "Gattung":"Pechlibellen (Ischnura)",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser.Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Plattbauch",
+    "Typ":"Insekten-Libellen",
+    "Name_sci":"Libellula depressa",
+    "Name_eng":"broad-bodied chaser",
+    "Name_alt":null,
+    "Familie":"Segellibellen (Libellulidae)",
+    "Gattung":"Libellula",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Gro\u00dfer Blaupfeil",
+    "Typ":"Insekten-Libellen",
+    "Name_sci":"Orthetrum cancellatum",
+    "Name_eng":"black-tailed skimmer",
+    "Name_alt":null,
+    "Familie":"Segellibellen (Libellulidae)",
+    "Gattung":"Blaupfeile (Orthetrum)",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Blaugr\u00fcne Mosaikjungfer",
+    "Typ":"Insekten-Libellen",
+    "Name_sci":"Hydrometra stagnorum",
+    "Name_eng":"southern hawker",
+    "Name_alt":null,
+    "Familie":"Edellibellen (Aeshnidae)",
+    "Gattung":"Mosaikjungfern (Aeshna)",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Gr\u00fcne Flu\u00dfkeiljungfer",
+    "Typ":"Insekten-Libellen",
+    "Name_sci":"Ophiogomphus cecilia",
+    "Name_eng":null,
+    "Name_alt":"Gr\u00fcne Flussjungfer",
+    "Familie":"Flussjungfern",
+    "Gattung":"Ophiomophus",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Helm-Azurjungfer",
+    "Typ":"Insekten-Libellen",
+    "Name_sci":"Coenagrion mercuriale",
+    "Name_eng":null,
+    "Name_alt":null,
+    "Familie":"Schlanklibellen (Coenagrionidae)",
+    "Gattung":"Azurjungfern (Coenagrion)",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"S\u00fc\u00dfwassergarnele",
+    "Typ":"Krebstiere",
+    "Name_sci":"Atyaephyra desmaresti",
+    "Name_eng":"freshwater prawn",
+    "Name_alt":null,
+    "Familie":"S\u00fc\u00dfwassergarnelen",
+    "Gattung":null,
+    "Lebensraum":"Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Sommerschildkrebs",
+    "Typ":"Krebstiere",
+    "Name_sci":"Triops cancriformis",
+    "Name_eng":"european tadpole shrimp",
+    "Name_alt":null,
+    "Familie":"Triopsidae",
+    "Gattung":"Triops",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Gerandete Jagdspinne",
+    "Typ":"Spinnentiere",
+    "Name_sci":"Dolomedes fimbriatus",
+    "Name_eng":"raft spider",
+    "Name_alt":"Gerandete Listspinne",
+    "Familie":"Jagdspinnen (Pisauridae)",
+    "Gattung":"Uferj\u00e4ger (Dolomedes)",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser.Feuchtwiesen.Weichholzaue"
+  },
+  {
+    "Name":"Schilf-Radnetzspinne",
+    "Typ":"Spinnentiere",
+    "Name_sci":"Larinioides cornutus",
+    "Name_eng":"furrow weaver",
+    "Name_alt":"Schilfradspinne",
+    "Familie":"Echte Radnetzspinnen (Araneidae)",
+    "Gattung":"Larinioides",
+    "Lebensraum":"Feuchtwiesen.Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Wasserspinne",
+    "Typ":"Spinnentiere",
+    "Name_sci":"Argyroneta aquatica",
+    "Name_eng":"water spider",
+    "Name_alt":"Silberspinne",
+    "Familie":"Gebirgstrichterspinnen (Cybaeidae)",
+    "Gattung":"Wasserspinnen (Argyroneta)",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Gemeine Tapezierspinne",
+    "Typ":"Spinnentiere",
+    "Name_sci":"Atypus affinis",
+    "Name_eng":"purseweb spider",
+    "Name_alt":null,
+    "Familie":"Tapezierspinnen (Atypidae)",
+    "Gattung":"Atypus",
+    "Lebensraum":"Magerrasen"
+  },
+  {
+    "Name":"Piratenspinne",
+    "Typ":"Spinnentiere",
+    "Name_sci":"Pirata piraticus",
+    "Name_eng":"pirate wolf spider",
+    "Name_alt":null,
+    "Familie":"Wolfspinnen (Lycosidae)",
+    "Gattung":"Piratenspinnen (Pirata)",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Bachmuschel",
+    "Typ":"Weichtiere",
+    "Name_sci":"Unio crassus riparius",
+    "Name_eng":"thick shelled river mussel",
+    "Name_alt":"Gemeine oder  Kleine Flussmuschel",
+    "Familie":"Fluss- und Teichmuscheln (Unionidae)",
+    "Gattung":"Flussmuscheln (Unio)",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Grobgerippte K\u00f6rbchenmuschel",
+    "Typ":"Weichtiere",
+    "Name_sci":"Corbicula fluminea",
+    "Name_eng":"asian clam",
+    "Name_alt":null,
+    "Familie":"K\u00f6rbchenmuscheln (Corbiculidae)",
+    "Gattung":"K\u00f6rbchenmuscheln (Corbicula)",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Bauchige Windelschnecke",
+    "Typ":"Weichtiere",
+    "Name_sci":"Vertigo moulinsiana",
+    "Name_eng":"desmoulin's whorl snail",
+    "Name_alt":null,
+    "Familie":"Windelschnecken (Vertiginidae)",
+    "Gattung":"Vertigo",
+    "Lebensraum":"Feuchtwiesen"
+  },
+  {
+    "Name":"Zierliche Tellerschnecke",
+    "Typ":"Weichtiere",
+    "Name_sci":"Anisus vorticulus",
+    "Name_eng":"lesser ramshorn snail",
+    "Name_alt":null,
+    "Familie":"Tellerschnecken (Planorbidae)",
+    "Gattung":"Anisus",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Posthornschnecke",
+    "Typ":"Weichtiere",
+    "Name_sci":"Planorbarius corneus corneus",
+    "Name_eng":"great ramshorn",
+    "Name_alt":null,
+    "Familie":"Tellerschnecken (Planorbidae)",
+    "Gattung":"Planorbarius",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Sumpfdeckelschnecke",
+    "Typ":"Weichtiere",
+    "Name_sci":"Viviparus viviparus",
+    "Name_eng":"river snail",
+    "Name_alt":null,
+    "Familie":"Sumpfdeckelschnecken (Viviparidae)",
+    "Gattung":"Viviparus",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  }
+]

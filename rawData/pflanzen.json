@@ -1,0 +1,642 @@
+[
+  {
+    "Name":"Gro\u00dfe Brennnessel",
+    "Typ":"Krautige Pflanzen Wald",
+    "Name_sci":"Urtica dioica",
+    "Name_eng":"stinging nettle",
+    "Name_alt":"Scharfnessel",
+    "Familie":"Brennnesselgew\u00e4chse",
+    "Gattung":"Brennnesseln",
+    "Lebensraum":"Hartholzaue.Weichholzaue"
+  },
+  {
+    "Name":"Winter-Schachtelhalm",
+    "Typ":"Krautige Pflanzen Wald",
+    "Name_sci":"Equisetum hyemale",
+    "Name_eng":"winter horsetail",
+    "Name_alt":"Tischlerschachtelhalm",
+    "Familie":"Schachtelhalmgew\u00e4chse",
+    "Gattung":"Schachtelhalme",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Gew\u00f6hnliche Schuppenwurz",
+    "Typ":"Krautige Pflanzen Wald",
+    "Name_sci":"Lathraea squamaria",
+    "Name_eng":"common toothwort",
+    "Name_alt":null,
+    "Familie":"Sommerwurzgew\u00e4chse",
+    "Gattung":"Schuppenwurzen",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Gelbes Windr\u00f6schen",
+    "Typ":"Krautige Pflanzen Wald",
+    "Name_sci":"Anemone ranunculoides",
+    "Name_eng":"yellow anemone",
+    "Name_alt":"Gelbe Storchblume",
+    "Familie":"Hahnenfu\u00dfgew\u00e4chse",
+    "Gattung":"Windr\u00f6schen",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Busch-Windr\u00f6schen",
+    "Typ":"Krautige Pflanzen Wald",
+    "Name_sci":"Anemone nemorosa",
+    "Name_eng":"wood anemone",
+    "Name_alt":"Hexenblume",
+    "Familie":"Hahnenfu\u00dfgew\u00e4chse",
+    "Gattung":"Windr\u00f6schen",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Sumpf-Vergissmeinnicht",
+    "Typ":"Krautige Pflanzen Wald",
+    "Name_sci":"Myosotis scorpioides",
+    "Name_eng":"water forget-me-not",
+    "Name_alt":"Blauer Augentrost",
+    "Familie":"Raublattgew\u00e4chse",
+    "Gattung":"Vergissmeinnicht",
+    "Lebensraum":"Weichholzaue"
+  },
+  {
+    "Name":"B\u00e4rlauch",
+    "Typ":"Krautige Pflanzen Wald",
+    "Name_sci":"Allium ursinum",
+    "Name_eng":"wild garlic",
+    "Name_alt":null,
+    "Familie":"Amaryllisgew\u00e4chse",
+    "Gattung":"Lauch",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Gefleckter Aronstab",
+    "Typ":"Krautige Pflanzen Wald",
+    "Name_sci":"Arum maculatum",
+    "Name_eng":"arum lily, Lords and ladies",
+    "Name_alt":"Aronstab",
+    "Familie":"Aronstabgew\u00e4chse",
+    "Gattung":"Aronstab",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Einbeere",
+    "Typ":"Krautige Pflanzen Wald",
+    "Name_sci":"Paris quadrifolia",
+    "Name_eng":"herb Paris",
+    "Name_alt":null,
+    "Familie":"Germergew\u00e4chse",
+    "Gattung":"Einbeeren",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Scharbockskraut",
+    "Typ":"Krautige Pflanzen Wald",
+    "Name_sci":"Ranunulus ficaria",
+    "Name_eng":"lesser celandine",
+    "Name_alt":"Feigwurz, Fr\u00fchlings- Scharbockskraut",
+    "Familie":"Hahnenfu\u00dfgew\u00e4chse",
+    "Gattung":"Ficaria",
+    "Lebensraum":"Hartholzaue.Weichholzaue"
+  },
+  {
+    "Name":"Purpur-Knabenkraut",
+    "Typ":"Krautige Pflanzen Wald",
+    "Name_sci":"Orchis purpurea",
+    "Name_eng":"lady orchid",
+    "Name_alt":null,
+    "Familie":"Orchideen",
+    "Gattung":"Knabenkr\u00e4uter",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Gelbe Teichrose",
+    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Name_sci":"Nuphar lutea",
+    "Name_eng":"pond lily",
+    "Name_alt":"Gelbe Teichmummel, Mummel, Teichmummel oder Teichkandel",
+    "Familie":"Seerosengew\u00e4chse",
+    "Gattung":"Teichrosen",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Seerose",
+    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Name_sci":"Nymphaea alba",
+    "Name_eng":"water lily",
+    "Name_alt":"Wasserlilie",
+    "Familie":"Seerosengew\u00e4chse",
+    "Gattung":"Seerosen",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Wassernuss",
+    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Name_sci":"Trapa natans",
+    "Name_eng":"water nut",
+    "Name_alt":null,
+    "Familie":"Weiderichgew\u00e4chse",
+    "Gattung":"Trapa",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Gemeiner Schwimmfarn",
+    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Name_sci":"Salvinia natans",
+    "Name_eng":"floating watermoss",
+    "Name_alt":"Gew\u00f6hnlicher Schwimmfarn",
+    "Familie":"Schwimmfarngew\u00e4chse",
+    "Gattung":"Schwimmfarne",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Krebsschere",
+    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Name_sci":"Stratiotes aloides",
+    "Name_eng":"water soldier",
+    "Name_alt":"Agel, Wassersegel, Wassersichel",
+    "Familie":"Froschbissgew\u00e4chse",
+    "Gattung":"Stratiotes",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Gew\u00f6hnlicher Wasserhahnenfu\u00df",
+    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Name_sci":"Ranunculus aquatilis",
+    "Name_eng":"water crowfoot",
+    "Name_alt":null,
+    "Familie":"Hahnenfu\u00dfgew\u00e4chse",
+    "Gattung":"Hahnenfu\u00df",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Schlammling",
+    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Name_sci":"Limosella aquatica",
+    "Name_eng":"(water) mudwort",
+    "Name_alt":"Schlammkraut, Schlammgl\u00f6ckchen",
+    "Familie":"Braunwurzgew\u00e4chse",
+    "Gattung":"Limosella",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Braunes Zypergras",
+    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Name_sci":"Cyperus fuscus",
+    "Name_eng":"brown galingale",
+    "Name_alt":null,
+    "Familie":"Sauergrasgew\u00e4chse",
+    "Gattung":"Zypergr\u00e4ser",
+    "Lebensraum":"Stillgew\u00e4sser.Feuchtwiesen"
+  },
+  {
+    "Name":"Sumpf-Schwertlilie",
+    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Name_sci":"Iris pseudacorus",
+    "Name_eng":"yellow flag",
+    "Name_alt":"Gelbe Schwertlilie, Wasser- Schwertlilie",
+    "Familie":"Schwertliliengew\u00e4chse",
+    "Gattung":"Schwertlilien",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Schilf-Rohr",
+    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Name_sci":"Phragmites australis",
+    "Name_eng":"common reed",
+    "Name_alt":"Schilf",
+    "Familie":"S\u00fc\u00dfgr\u00e4ser",
+    "Gattung":"Schilfrohre",
+    "Lebensraum":"Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser.Weichholzaue"
+  },
+  {
+    "Name":"Blutweiderich",
+    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Name_sci":"Lythrum salicaria",
+    "Name_eng":"purple loosestrife",
+    "Name_alt":null,
+    "Familie":"Weiderichgew\u00e4chse",
+    "Gattung":"Blutweideriche",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser.Weichholzaue.Feuchtwiesen"
+  },
+  {
+    "Name":"Gilbweiderich",
+    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Name_sci":"Lysimachia vulgaris",
+    "Name_eng":"loosestrife",
+    "Name_alt":"Gelbweiderich, Feldberich",
+    "Familie":"Primelgew\u00e4chse",
+    "Gattung":"Gilbweiderich",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser.Hartholzaue.Feuchtwiesen"
+  },
+  {
+    "Name":"Sumpf-Wolfsmilch",
+    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Name_sci":"Euphorbia palustris",
+    "Name_eng":"marsh spurge",
+    "Name_alt":null,
+    "Familie":"Wolfsmilchgew\u00e4chse",
+    "Gattung":"Wolfsmilch",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser"
+  },
+  {
+    "Name":"Gemeiner Wasserdost",
+    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Name_sci":"Eupatorium cannabinum",
+    "Name_eng":"hemp agrimony",
+    "Name_alt":"Gemeiner Wasserdost, Wasserhanf, Kunigundenkraut",
+    "Familie":"Korbbl\u00fctler",
+    "Gattung":"Wasserdost",
+    "Lebensraum":"Flie\u00dfgew\u00e4sser.Stillgew\u00e4sser.Feuchtwiesen"
+  },
+  {
+    "Name":"Wasser-Sumpfkresse",
+    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Name_sci":"Rorippa amphibia",
+    "Name_eng":"great yellow-cress",
+    "Name_alt":"Teichkresse, Ufer-Sumpfkresse",
+    "Familie":"Kreuzbl\u00fctler",
+    "Gattung":"Sumpfkressen",
+    "Lebensraum":"Stillgew\u00e4sser"
+  },
+  {
+    "Name":"Sumpf-Haarstrang",
+    "Typ":"Krautige Pflanzen Feuchtwiesen",
+    "Name_sci":"Peucedanum palustre",
+    "Name_eng":"milk parsley",
+    "Name_alt":"\u00d6lsenich",
+    "Familie":"Doldenbl\u00fctler",
+    "Gattung":"Haarstrang",
+    "Lebensraum":"Feuchtwiesen"
+  },
+  {
+    "Name":"Gro\u00dfer Wiesenknopf",
+    "Typ":"Krautige Pflanzen Feuchtwiesen",
+    "Name_sci":"Sanguisorba officinalis",
+    "Name_eng":"great burnet",
+    "Name_alt":"Gro\u00df- Wiesenknopf, Blutstr\u00f6pfchen",
+    "Familie":"Rosengew\u00e4chse",
+    "Gattung":"Wiesenknopf",
+    "Lebensraum":"Feuchtwiesen"
+  },
+  {
+    "Name":"Kuckucks-Lichtnelke",
+    "Typ":"Krautige Pflanzen Feuchtwiesen",
+    "Name_sci":"Lychnis flos- cuculi",
+    "Name_eng":"ragged robin",
+    "Name_alt":null,
+    "Familie":"Nelkegew\u00e4chse",
+    "Gattung":"Leimkr\u00e4uter",
+    "Lebensraum":"Feuchtwiesen"
+  },
+  {
+    "Name":"Kanten-Lauch",
+    "Typ":"Krautige Pflanzen Feuchtwiesen",
+    "Name_sci":"Allium angulosum",
+    "Name_eng":"mouse garlic",
+    "Name_alt":"Kantiger Lauch",
+    "Familie":"Amaryllisgew\u00e4chse",
+    "Gattung":"Lauch",
+    "Lebensraum":"Feuchtwiesen"
+  },
+  {
+    "Name":"Rohr-Pfeifengras",
+    "Typ":"Krautige Pflanzen Feuchtwiesen",
+    "Name_sci":"Molinia arundinacea",
+    "Name_eng":"moorgrass",
+    "Name_alt":"Pfeifengras",
+    "Familie":"S\u00fc\u00dfgr\u00e4ser",
+    "Gattung":"Pfeifengr\u00e4ser",
+    "Lebensraum":"Feuchtwiesen"
+  },
+  {
+    "Name":"F\u00e4rber-Scharte",
+    "Typ":"Krautige Pflanzen Feuchtwiesen",
+    "Name_sci":"Serratula tinctoria",
+    "Name_eng":"saw- wort",
+    "Name_alt":null,
+    "Familie":"Korbbl\u00fctler",
+    "Gattung":"Scharten",
+    "Lebensraum":"Feuchtwiesen"
+  },
+  {
+    "Name":"Weiden-Alant",
+    "Typ":"Krautige Pflanzen Feuchtwiesen",
+    "Name_sci":"Pentanema salicinum",
+    "Name_eng":"Irish fleabane",
+    "Name_alt":"Weidenbl\u00e4ttriger- Alant",
+    "Familie":"Korbbl\u00fctler",
+    "Gattung":"Pentanema",
+    "Lebensraum":"Feuchtwiesen"
+  },
+  {
+    "Name":"Wiesen-Salbei",
+    "Typ":"Krautige Pflanzen Magerwiesen",
+    "Name_sci":"Salvia pratensis",
+    "Name_eng":"meadow clary",
+    "Name_alt":null,
+    "Familie":"Lippenbl\u00fctler",
+    "Gattung":"Salbei",
+    "Lebensraum":"Magerwiese"
+  },
+  {
+    "Name":"Zottiger Klappertopf",
+    "Typ":"Krautige Pflanzen Magerwiesen",
+    "Name_sci":"Rhinanthus alectorolophus",
+    "Name_eng":"European yellow rattle",
+    "Name_alt":null,
+    "Familie":"Sommerwurzgew\u00e4chse",
+    "Gattung":"Klappert\u00f6pfe",
+    "Lebensraum":"Magerwiese"
+  },
+  {
+    "Name":"Echte Schl\u00fcsselblume",
+    "Typ":"Krautige Pflanzen Magerwiesen",
+    "Name_sci":"Primula veris",
+    "Name_eng":"common cowslip",
+    "Name_alt":"Primel",
+    "Familie":"Primelgew\u00e4chse",
+    "Gattung":"Primeln",
+    "Lebensraum":"Magerwiese.Magerrasen.Hartholzaue"
+  },
+  {
+    "Name":"Gemeiner Hufeisenklee",
+    "Typ":"Krautige Pflanzen Magerrasen",
+    "Name_sci":"Hippocrepsis comosa",
+    "Name_eng":"horseshoe vetch",
+    "Name_alt":"Schopfiger- Hufeisenklee, Hufeisenklee",
+    "Familie":"H\u00fclsenfr\u00fcchtler",
+    "Gattung":"Hippocrepsis",
+    "Lebensraum":"Magerrasen"
+  },
+  {
+    "Name":"Helm-Knabenkraut",
+    "Typ":"Krautige Pflanzen Magerrasen",
+    "Name_sci":"Orchis militaris",
+    "Name_eng":"military orchid",
+    "Name_alt":null,
+    "Familie":"Orchideen",
+    "Gattung":"Knabenkr\u00e4uter",
+    "Lebensraum":"Magerrasen"
+  },
+  {
+    "Name":"Zypressen-Wolfsmilch",
+    "Typ":"Krautige Pflanzen Magerrasen",
+    "Name_sci":"Euphorbia cyparissias",
+    "Name_eng":"cypress spurge",
+    "Name_alt":null,
+    "Familie":"Wolfsmilchgew\u00e4chse",
+    "Gattung":"Wolfsmilch",
+    "Lebensraum":"Magerrasen"
+  },
+  {
+    "Name":"Milder Mauerpfeffer",
+    "Typ":"Krautige Pflanzen Magerrasen",
+    "Name_sci":"Sedum sexangulare",
+    "Name_eng":"tasteless stonecrop",
+    "Name_alt":null,
+    "Familie":"Dickblattgew\u00e4chse",
+    "Gattung":"Fetthennen",
+    "Lebensraum":"Magerrasen"
+  },
+  {
+    "Name":"Steppen-Wolfsmilch",
+    "Typ":"Krautige Pflanzen Magerrasen",
+    "Name_sci":"Euphorbia seguieriana",
+    "Name_eng":"Seguier's spurge",
+    "Name_alt":null,
+    "Familie":"Wolfsmilchgew\u00e4chse",
+    "Gattung":"Wolfsmilch",
+    "Lebensraum":"Magerrasen"
+  },
+  {
+    "Name":"Schopfiges Kreuzbl\u00fcmchen",
+    "Typ":"Krautige Pflanzen Magerrasen",
+    "Name_sci":"Polygala comosa",
+    "Name_eng":"tufted milkwort",
+    "Name_alt":"Schopf- Kreuzbl\u00fcmchen",
+    "Familie":"Kreuzblumengew\u00e4chse",
+    "Gattung":"Kreuzblume",
+    "Lebensraum":"Magerrasen"
+  },
+  {
+    "Name":"Eingriffeliger Wei\u00dfdorn",
+    "Typ":"Straucharten",
+    "Name_sci":"Crataegus  monogyna",
+    "Name_eng":"hawthorn",
+    "Name_alt":"Hagedorn",
+    "Familie":"Rosengew\u00e4chse",
+    "Gattung":"Wei\u00dfdorne",
+    "Lebensraum":"Hartholzaue.Weichholzaue"
+  },
+  {
+    "Name":"Pfaffenh\u00fctchen",
+    "Typ":"Straucharten",
+    "Name_sci":"Euonymus europaeus",
+    "Name_eng":"spindle tree",
+    "Name_alt":"Gew\u00f6hnlich Spindelstrauch, Spindelbaum",
+    "Familie":"Spindelbaumgew\u00e4chse",
+    "Gattung":"Spindelstr\u00e4ucher",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Roter Hartriegel",
+    "Typ":"Straucharten",
+    "Name_sci":"Cornus sanguinea",
+    "Name_eng":"common dogwood",
+    "Name_alt":"Rotes Beinholz, Hundsbeere, Roter Hornstrauch",
+    "Familie":"Hartriegelgew\u00e4chse",
+    "Gattung":"Hartriegel",
+    "Lebensraum":"Hartholzaue.Weichholzaue"
+  },
+  {
+    "Name":"Gemeiner Schneeball",
+    "Typ":"Straucharten",
+    "Name_sci":"Viburnum opulus",
+    "Name_eng":"guelder rose",
+    "Name_alt":"Herzbeer, Drosselbeerstrauch, Glasbeere",
+    "Familie":"Moschuskrautgew\u00e4chse",
+    "Gattung":"Schneeball",
+    "Lebensraum":"Hartholzaue.Weichholzaue"
+  },
+  {
+    "Name":"Gemeiner Liguster",
+    "Typ":"Straucharten",
+    "Name_sci":"Ligustrum vulgare",
+    "Name_eng":"common privet",
+    "Name_alt":"Rainweiden",
+    "Familie":"\u00d6lbaumgew\u00e4chse",
+    "Gattung":"Liguster",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Gemeine Heckenkirsche",
+    "Typ":"Straucharten",
+    "Name_sci":"Lonicera xylosteum",
+    "Name_eng":"\tEuropean fly honeysuckle",
+    "Name_alt":"Gei\u00dfbl\u00e4tter",
+    "Familie":"Gei\u00dfblattgew\u00e4chse",
+    "Gattung":"Heckenkirschen",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Haselstrauch",
+    "Typ":"Straucharten",
+    "Name_sci":"Corylus avellana",
+    "Name_eng":"hazel bush",
+    "Name_alt":"Gemeine Hasel",
+    "Familie":"Birkengew\u00e4chse",
+    "Gattung":"Haseln",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Schwarzer Holunder",
+    "Typ":"Straucharten",
+    "Name_sci":"Sambucus nigra",
+    "Name_eng":"black elderberry",
+    "Name_alt":null,
+    "Familie":"Moschuskrautgew\u00e4chse",
+    "Gattung":"Holunder",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Silberweide",
+    "Typ":"Baumarten",
+    "Name_sci":"Salix alba",
+    "Name_eng":"white willow",
+    "Name_alt":null,
+    "Familie":"Weidengew\u00e4chse",
+    "Gattung":"Weiden",
+    "Lebensraum":"Weichholzaue"
+  },
+  {
+    "Name":"Schwarzpappel",
+    "Typ":"Baumarten",
+    "Name_sci":"Populus nigra",
+    "Name_eng":"black poplar",
+    "Name_alt":"Saarbaum",
+    "Familie":"Weidengew\u00e4chse",
+    "Gattung":"Pappeln",
+    "Lebensraum":"Weichholzaue.Hartholzaue"
+  },
+  {
+    "Name":"Stieleiche",
+    "Typ":"Baumarten",
+    "Name_sci":"Quercus robur",
+    "Name_eng":"common oak",
+    "Name_alt":"Sommereiche, Deutsche Eiche",
+    "Familie":"Buchengew\u00e4chse",
+    "Gattung":"Eichen",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Feldulme",
+    "Typ":"Baumarten",
+    "Name_sci":"Ulmus minor",
+    "Name_eng":"small-leaved Elm",
+    "Name_alt":"Iper",
+    "Familie":"Ulmengew\u00e4chse",
+    "Gattung":"Ulmen",
+    "Lebensraum":"Hartholzaue.Weichholzaue"
+  },
+  {
+    "Name":"Flatterulme",
+    "Typ":"Baumarten",
+    "Name_sci":"Ulmus laevis",
+    "Name_eng":"European white elm",
+    "Name_alt":"Flatterr\u00fcster, Wei\u00dfr\u00fcster",
+    "Familie":"Ulmengew\u00e4chse",
+    "Gattung":"Ulmen",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Gemeine Esche",
+    "Typ":"Baumarten",
+    "Name_sci":"Fraxinus excelsior",
+    "Name_eng":"common ash",
+    "Name_alt":"Hohe Esche",
+    "Familie":"\u00d6lbaumgew\u00e4chse",
+    "Gattung":"Eschen",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Bergahorn",
+    "Typ":"Baumarten",
+    "Name_sci":"Acer pseudoplatanus",
+    "Name_eng":"sycamoe",
+    "Name_alt":null,
+    "Familie":"Seifenbaumgew\u00e4chse",
+    "Gattung":"Ahorne",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Hainbuche",
+    "Typ":"Baumarten",
+    "Name_sci":"Carpinus betulus",
+    "Name_eng":"(common) hornbeam",
+    "Name_alt":"Wei\u00dfbuche, Hagebuche, Hornbaum",
+    "Familie":"Birkengew\u00e4chse",
+    "Gattung":"Hainbuchen",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Holzapfel",
+    "Typ":"Baumarten",
+    "Name_sci":"Malus sylvestris",
+    "Name_eng":"crab apple",
+    "Name_alt":"Europ\u00e4ischer Wildapfel, Krabapfel",
+    "Familie":"Rosengew\u00e4chse",
+    "Gattung":"\u00c4pfel",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Wild-Birne",
+    "Typ":"Baumarten",
+    "Name_sci":"Pyrus pyraster",
+    "Name_eng":"wild pear",
+    "Name_alt":"Holzbirne",
+    "Familie":"Rosengew\u00e4chse",
+    "Gattung":"Birnen",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Efeu",
+    "Typ":"Schlingpflanzen",
+    "Name_sci":"Hedera helix",
+    "Name_eng":"common ivy",
+    "Name_alt":"Gemeiner Efeu",
+    "Familie":"Araliengew\u00e4chse",
+    "Gattung":"Efeu",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Gemeine Waldrebe",
+    "Typ":"Schlingpflanzen",
+    "Name_sci":"Clematis vitalba",
+    "Name_eng":"traveller's-joy",
+    "Name_alt":"Klematis",
+    "Familie":"Hahnenfu\u00dfgew\u00e4chse",
+    "Gattung":"Waldreben",
+    "Lebensraum":"Hartholzaue"
+  },
+  {
+    "Name":"Wilder Hopfen",
+    "Typ":"Schlingpflanzen",
+    "Name_sci":"Humulus lupulus",
+    "Name_eng":"wild hop",
+    "Name_alt":"Echter Hopfen",
+    "Familie":"Hanfgew\u00e4chse",
+    "Gattung":"Hopfen",
+    "Lebensraum":"Hartholzaue.Weichholzaue"
+  },
+  {
+    "Name":"Wilde Weinrebe",
+    "Typ":"Schlingpflanzen",
+    "Name_sci":"Vitis vinifera subsp. sylvestris",
+    "Name_eng":"wild grape",
+    "Name_alt":"Wilde Weinrebe, Wilder Weinstock",
+    "Familie":"Weinrebengew\u00e4chse",
+    "Gattung":"Weinreben",
+    "Lebensraum":"Hartholzaue"
+  }
+]
