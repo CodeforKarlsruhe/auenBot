@@ -14,7 +14,8 @@
     "Name_eng": "carpenter bee",
     "Familie": "Echte Bienen (Apidae)",
     "Gattung": "Holzbienen (Xylocopa)",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Insekten-Hautfl\u00fcgler"
   },
   {
     "Erkennungsmerkmale": "Die etwa 20mm lange Gelbe Kammschnake macht einen gef\u00e4hrlichen Eindruck: Brust und Beine sind gl\u00e4nzend rot und schwarz, der Hinterleib ist schwarzgelb geringelt. Die gelblich durchsichtigen Fl\u00fcgel tragen am Ende zwei dunkle Flecken. Doch trotz dieser auff\u00e4llig wespenartigen Warnfarbe ist die Kammschnake v\u00f6llig harmlos, sie kann nicht stechen.\n\nDie Geschlechter sind gut auseinanderhalten: Die M\u00e4nnchen haben lange kammartige F\u00fchler, w\u00e4hrend an den Weibchen der lange Legestachel am Hinterleib auff\u00e4llt.",
@@ -29,7 +30,8 @@
     ],
     "Name_sci": "Ctenophora ornata",
     "Name_eng": "cranefly",
-    "Lebensraum": "Hartholzaue.Weichholzaue"
+    "Lebensraum": "Hartholzaue.Weichholzaue",
+    "Klasse": "Insekten-Zweifl\u00fcgler"
   },
   {
     "Habitat": "Die feuchten sonnigen Wiesen in der Rheinniederung sind ein idealer Lebensraum f\u00fcr die Kurzfl\u00fcgelige Schwertschrecke.",
@@ -45,7 +47,8 @@
     "Name_eng": "short-winged conehead",
     "Familie": "Laubheuschrecken (Tettigoniidae)",
     "Gattung": "Conocephalus",
-    "Lebensraum": "Feuchtwiesen.Stillgew\u00e4sser"
+    "Lebensraum": "Feuchtwiesen.Stillgew\u00e4sser",
+    "Klasse": "Insekten-Heuschrecken"
   },
   {
     "Habitat": "Der Pappel- oder Weidenblattk\u00e4fer verr\u00e4t Dir gleich durch seinen Namen, welche B\u00e4ume er zur Eiablageaufsucht: Pappeln und Weiden.\n\nAuf Rappenw\u00f6rt wachsen viele Pappeln und Weiden. Deshalb siehst Du diese K\u00e4fer hier bestimmt mal, wenn Du darauf achtest!",
@@ -62,7 +65,8 @@
     "Name_eng": "poplar leaf beetle",
     "Familie": "Blattk\u00e4fer (Chrysomelidae)",
     "Gattung": "Chrysomela",
-    "Lebensraum": "Weichholzaue"
+    "Lebensraum": "Weichholzaue",
+    "Klasse": "Insekten-K\u00e4fer"
   },
   {
     "Erkennungsmerkmale": "Mit der Stechm\u00fccke (Aedes Vexans), die bei uns \u201eRheinschnake\u201d genannt wird, hat wohl jeder schon unliebsame Bekanntschaft gemacht. Die Stoffe, die sie beim Blutsaugen in die Einstichstelle spritzt, um die Blutgerinnung zu hemmen, jucken noch tagelang.",
@@ -78,7 +82,8 @@
     "Name_eng": "mosquito",
     "Familie": "Stechm\u00fccken (Culicidae)",
     "Gattung": "Aedes",
-    "Lebensraum": "Weichholzaue.Stillgew\u00e4sser"
+    "Lebensraum": "Weichholzaue.Stillgew\u00e4sser",
+    "Klasse": "Insekten-Zweifl\u00fcgler"
   },
   {
     "Nahrung": "Ausgewachsene Hornissen ern\u00e4hren sich vegetarisch von Baums\u00e4ften, Nektar und Fallobst. Die Brut wird mit Fliegen, Wespen, Bienen, Heuschrecken, K\u00e4fern, Raupen und sogar Libellen gef\u00fcttert!",
@@ -93,7 +98,8 @@
     "Name_eng": "european hornet",
     "Familie": "Faltenwespen (Vespidae)",
     "Gattung": "Hornissen (Vespa)",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Insekten-Hautfl\u00fcgler"
   },
   {
     "Habitat": "Die Gemeine Sandbiene ist in ganz Europa verbreitet und lebt in offenen Lebensr\u00e4umen mit sandigen oder lehmigen Stellen, etwa an Waldr\u00e4ndern, auf Wiesen und Heiden, in Sand- und Kiesgruben, aber auch in G\u00e4rten und Parks.",
@@ -110,7 +116,8 @@
     "Name_eng": "sand bee",
     "Familie": "Andrenidae",
     "Gattung": "Sandbienen (Andrena)",
-    "Lebensraum": "Magerrasen.Hartholzaue"
+    "Lebensraum": "Magerrasen.Hartholzaue",
+    "Klasse": "Insekten-Hautfl\u00fcgler"
   },
   {
     "Erkennungsmerkmale": "Der Kleine Eisvogel hat eine breite Binde aus wei\u00dfen Flecken auf seinen schwarzbraunen Fl\u00fcgeln.",
@@ -128,7 +135,8 @@
     "Name_eng": "common kingfisher",
     "Familie": "Eisv\u00f6gel (Alcedinidae)",
     "Gattung": "Alcedo",
-    "Lebensraum": "Flie\u00dfgew\u00e4sser.Weichholzaue"
+    "Lebensraum": "Flie\u00dfgew\u00e4sser.Weichholzaue",
+    "Klasse": "V\u00f6gel"
   },
   {
     "Erkennungsmerkmale": "Der nachtaktive Eschen-Zackenrandspanner hat \u2013 wie der Name sagt \u2013 wildgezackte Fl\u00fcgelr\u00e4nder. Das feine Muster mit dunklen Querbinden auf den hellbraunen Fl\u00fcgeln lassen ihn im trockenen Laub optisch fast verschwinden.\n\nIn Ruhestellung stehen die Fl\u00fcgel schr\u00e4g nach oben, die F\u00fchler liegen dabei eng nach hinten an den Leib geschmiegt.",
@@ -145,7 +153,8 @@
     "Name_alt": "Eschen-Parkland-Zackenrandspanner",
     "Familie": "Spanner (Geometridae)",
     "Gattung": "Ennomos",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Insekten-Schmetterlinge"
   },
   {
     "Erkennungsmerkmale": "Der nachtaktive hellbraune Pappelschw\u00e4rmer t\u00e4uscht mit seiner stark gezackten Fl\u00fcgelform \u00fcbereinanderliegende d\u00fcrre Bl\u00e4tter vor. So ist er auf dem Waldboden praktisch unsichtbar. Wenn er dennoch aufgest\u00f6rt wird, zeigt er zur Abschreckung die roten Flecken seiner Hinterfl\u00fcgel.",
@@ -160,7 +169,8 @@
     "Name_eng": "poplar hawk-moth",
     "Familie": "Schw\u00e4rmer (Sphingidae)",
     "Gattung": "Laothoe",
-    "Lebensraum": "Weichholzaue"
+    "Lebensraum": "Weichholzaue",
+    "Klasse": "Insekten-Schmetterlinge"
   },
   {
     "Fortpflanzung": "[Lebensweise] [Habitat] Der Dunkle Wiesenknopf-Ameisenbl\u00e4uling lebt in bl\u00fctenreichen feuchten Wiesen, auf denen der Gro\u00dfe Wiesenknopf w\u00e4chst: nur an seinen Bl\u00fcten legen die Weibchen im Hochsommer ihre Eier ab. Die hellrosa Raupen fressen sich in die roten Bl\u00fcten hinein und werden durch diese Kost selbst allm\u00e4hlich purpurrot. Nach der dritten H\u00e4utung geschieht etwas Spannendes: Die Raupen lassen sich auf den Boden fallen und warten\u2026\nWenn nun eine Trockenrasen-Knotenameise in der N\u00e4he der Raupe kommt, so str\u00f6mt ihr der Duft aus den Honigdr\u00fcsen der Raupen entgegen, der dem ihrer eigenen Brut sehr \u00e4hnelt. Um die T\u00e4uschung perfekt zu machen, kr\u00fcmmt die Raupe ihren K\u00f6rper und bl\u00e4ht ihr K\u00f6rperende auf: so wird sie einer Ameisenlarve immer \u00e4hnlicher. Die Ameise betrillert die Raupe nun pr\u00fcfend mit ihren F\u00fchlern und schleppt sie schlie\u00dflich in ihren Ameisenbau. Dort frisst die Schmetterlings-Raupe den ganzen Winter \u00fcber - gut gesch\u00fctzt im warmen Ameisenbau - von den Ameisenlarven, ohne als Fressfeind erkannt zu werden. Im sp\u00e4ten Fr\u00fchjahr verpuppt sich die Schmetterlingsraupe. Wenn schlie\u00dflich der Falter im Ameisenbau schl\u00fcpft, hat er keinen Duft mehr an sich. Er muss schnell den Ausgang finden, seine Fl\u00fcgel aufpumpen, sie aush\u00e4rten und davonfliegen, damit er jetzt nicht seinerseits von den Ameisen verspeist wird!",
@@ -175,7 +185,8 @@
     "Name_eng": "dusky large blue",
     "Familie": "Bl\u00e4ulinge (Lycaenidae)",
     "Gattung": "Phengaris",
-    "Lebensraum": "Feuchtwiesen"
+    "Lebensraum": "Feuchtwiesen",
+    "Klasse": "Insekten-Schmetterlinge"
   },
   {
     "Fortpflanzung": "[Lebensweise] [Habitat] Der lange Name des Hellen Wiesenknopf-Bl\u00e4ulings erz\u00e4hlt uns schon eine Menge \u00fcber den h\u00fcbschen silberblauen Tagfalter mit der spannenden Lebensweise: Er bewohnt feuchte Wiesen, auf denen der Gro\u00dfe Wiesenknopf w\u00e4chst, denn nur an dessen Bl\u00fcten legen die Weibchen im Hochsommer ihre Eier ab.  Die hellrosa Raupen fressen sich in die roten Bl\u00fcten hinein und werden durch diese Kost selbst immer purpurroter. Nach der dritten H\u00e4utung lassen sich die Raupen auf den Boden fallen und warten\u2026\nF\u00fcr Trockenrasen-Knotenameisen m\u00fcssen die Raupen wie die eigene Brut duften, denn wenn sie eine Bl\u00e4ulings-Raupe finden, tragen sie sie in ihren Ameisenbau und versorgen sie dort. Das wird ihnen schlecht gedankt, denn die Raupe frisst den ganzen Winter \u00fcber - gut gesch\u00fctzt im warmen Ameisenbau -  von den Larven der Ameisen, ohne behelligt zu werden. Im sp\u00e4ten Fr\u00fchjahr verpuppt sie sich. Wenn schlie\u00dflich der Falter im Ameisenbau schl\u00fcpft, muss er schnell den Ausgang finden, seine Fl\u00fcgel aufpumpen, sie aush\u00e4rten und davonfliegen, damit er jetzt nicht seinerseits von den Ameisen verspeist wird!",
@@ -191,7 +202,8 @@
     "Name_eng": "scarce large blue",
     "Familie": "Bl\u00e4ulinge (Lycaenidae)",
     "Gattung": "Phengaris",
-    "Lebensraum": "Feuchtwiesen"
+    "Lebensraum": "Feuchtwiesen",
+    "Klasse": "Insekten-Schmetterlinge"
   },
   {
     "Habitat": "Der Gro\u00dfe Feuerfalter flattert von Juni bis Mitte August \u00fcber nasse Wiesen und Moore.",
@@ -206,7 +218,8 @@
     "Name_eng": "large copper",
     "Familie": "Bl\u00e4ulinge (Lycaenidae)",
     "Gattung": "Lycaena",
-    "Lebensraum": "Feuchwiesen"
+    "Lebensraum": "Feuchwiesen",
+    "Klasse": "Insekten-Schmetterlinge"
   },
   {
     "Erkennungsmerkmale": "[Habitat] Den gelblich-braunen, fein gemusterten Palpen-Zahnspinner findest Du in lichten W\u00e4ldern mit Pappeln und Weiden.   Er erreicht eine Fl\u00fcgelspannweite von 35 bis 52 mm.  In Ruhestellung ragt ein dunkler, zahnartiger Fortsatz der Hinterfl\u00fcgel nach oben und die stark vergr\u00f6\u00dferten Kiefertaster sind nach vorne gestreckt. So erinnert die gesamte K\u00f6rperform eher an ein schmales St\u00f6ckchen als an einen Schmetterling.",
@@ -223,7 +236,8 @@
     "Name_eng": "satin moth",
     "Familie": "Zahnspinner (Notodontidae)",
     "Gattung": "Pterostoma",
-    "Lebensraum": "Weichholzaue"
+    "Lebensraum": "Weichholzaue",
+    "Klasse": "Insekten-Schmetterlinge"
   },
   {
     "Erkennungsmerkmale": "Der dunkel umrandete, nagelf\u00f6rmige Fleck auf allen vier Fl\u00fcgeln des orangefarbenen Falters gab dem Nagelfleck seinen Namen. Sein K\u00f6rper ist auffallend stark behaart, die gefiederten F\u00fchler sind eher d\u00fcnn.",
@@ -240,7 +254,8 @@
     "Name_eng": "tau emperor",
     "Familie": "Pfauenspinner (Saturniidae)",
     "Gattung": "Aglia",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Insekten-Schmetterlinge"
   },
   {
     "Lebensweise": "Haseleule? Woher kommt blo\u00df dieser Name? Nun, zum einen ern\u00e4hren sich die Raupen dieses Falters bevorzugt von den Bl\u00e4ttern des Haselstrauches. Zum anderen geh\u00f6rt er zu einer Gruppe von Schmetterlingen, die genauso wie Eulenv\u00f6gel nachts unterwegs sind.\n\nDie erste Generation fliegt von April bis Juni, die zweite von Juli bis September. [Erkennungsmerkmale] Die haarigen Raupen sind sehr unterschiedlich gef\u00e4rbt \u2013 das Farbspektrum reicht von beige \u00fcber rot bis schwarz. Sie tragen aber immer einen dunklen R\u00fcckenstreifen und dicke Haarb\u00fcschel auf dem zweiten, dritten und dem vorletzten K\u00f6rpersegment.  Die jungen Raupen kleben Bl\u00e4tter mit Spinnf\u00e4den zusammen, um sich dazwischen zu verstecken. \u00c4ltere Raupen sitzen auf der Unterseite der Bl\u00e4tter. Die Haseleule \u00fcberwintert als Puppe in einem Gespinst.",
@@ -255,7 +270,8 @@
     "Name_eng": "nut-tree tussock",
     "Familie": "Eulenfalter (Noctuidae)",
     "Gattung": "Colocasia",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Insekten-Schmetterlinge"
   },
   {
     "Erkennungsmerkmale": "Der Russische B\u00e4r - auch Spanische Flagge genannt - wird Dir gleich ins Auge fallen, sollte er im Juli oder August hier auf Rappenw\u00f6rt an Dir vorbeiflattern. Dann siehst Du nicht nur seine dunklen, gelb gestreiften Vorderfl\u00fcgel, sondern auch die orangeroten Hinterfl\u00fcgel mit den schwarzblauen Flecken. Diese entfaltet er auch im Sitzen als Warntracht, wenn er sich bedroht f\u00fchlt.\n\nDie schwarz-gelb gestreifte Raupen mit den roten Borstenb\u00fcndeln kannst Du im Herbst oder Fr\u00fchjahr an Brennnesseln, Weidenr\u00f6schen, Hasel- oder Himbeerstr\u00e4uchern finden.",
@@ -270,7 +286,8 @@
     "Name_eng": "spanish flag",
     "Familie": "Eulenfalter (Erebidae)",
     "Gattung": "Euplagia",
-    "Lebensraum": "Hartholzaue.Weichholzaue.Feuchtwiese.Stillgew\u00e4sser"
+    "Lebensraum": "Hartholzaue.Weichholzaue.Feuchtwiese.Stillgew\u00e4sser",
+    "Klasse": "Insekten-Schmetterlinge"
   },
   {
     "Erkennungsmerkmale": "Das leuchtend gelbe M\u00e4nnchen des Zitronenfalters kennt jedes Kind. Das Weibchen hingegen ist viel blasser, fast wei\u00dflich und wird oft mit dem Kohlwei\u00dfling verwechselt.",
@@ -285,7 +302,8 @@
     "Name_eng": "common brimstone",
     "Familie": "Wei\u00dflinge (Pieridae)",
     "Gattung": "Gonepteryx",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Insekten-Schmetterlinge"
   },
   {
     "Erkennungsmerkmale": "Die prachtvoll blaue F\u00e4rbung des Gro\u00dfen Schillerfalters kommt nicht von Farbpigmenten, sondern von winzigen Luftkammern in den Fl\u00fcgelschuppen, die den blauen Anteil des Lichts reflektieren. Deshalb wechseln und schillern die Fl\u00fcgel je nach Lichteinfall zwischen blau und schwarzbraun. Weitere Merkmale des Falters sind die wei\u00dfen B\u00e4nder und Flecken, die zwei orangenen unteren Fl\u00fcgelzipfel und die orangeger\u00e4nderten Augenmuster, die V\u00f6gel abschrecken sollen.",
@@ -303,7 +321,8 @@
     "Name_eng": "purple emperor",
     "Familie": "Edelfalter (Nymphalidae)",
     "Gattung": "Apatura",
-    "Lebensraum": "Weichholzaue.Hartholzaue"
+    "Lebensraum": "Weichholzaue.Hartholzaue",
+    "Klasse": "Insekten-Schmetterlinge"
   },
   {
     "Habitat": "Das Gr\u00fcne Blatt ist in fast ganz Europa verbreitet.\n\nDu findest ihn von Mai bis August in lichten Auen- und Bruchw\u00e4ldern oder in Birkenmooren.",
@@ -319,7 +338,8 @@
     "Name_eng": "large emerald",
     "Familie": "Spanner (Geometridae)",
     "Gattung": "Geometra",
-    "Lebensraum": "Hartholzaue.Weichholzaue"
+    "Lebensraum": "Hartholzaue.Weichholzaue",
+    "Klasse": "Insekten-Schmetterlinge"
   },
   {
     "Erkennungsmerkmale": "Ein Gabelschwanz? Woher kommt dieser Name? An den hellen, fein gemusterten Falter finden wir nichts, was darauf schlie\u00dfen l\u00e4sst. Auf Baumrinde ist er mit dieser Zeichnung aber bestens getarnt. Im Gegensatz dazu setzt die dicke gr\u00fcne Raupe auf Abschreckung: Sie zieht ihren dunklen Kopf ein und streckt dem Feind ihren roten Halsring mit zwei tiefschwarzen Scheinaugen entgegen. Ihr Hinterleib endet in einer Schwanzgabel mit zwei langen, dunkelgeringelten Spitzen, aus denen rote F\u00e4den ausgest\u00fclpt werden k\u00f6nnen. Reicht diese Warntracht noch nicht aus, um einen Feind zu verjagen, so verspritzt sie aus einer Dr\u00fcse an der Unterseite ihres Kopfes Ameisens\u00e4ure. Das verdirbt wohl den meisten V\u00f6geln endg\u00fcltig den Appetit!",
@@ -334,7 +354,8 @@
     "Name_eng": "forktail",
     "Familie": "Zahnspinner (Notodontidae)",
     "Gattung": "Cerura",
-    "Lebensraum": "Weichholzaue"
+    "Lebensraum": "Weichholzaue",
+    "Klasse": "Insekten-Schmetterlinge"
   },
   {
     "Erkennungsmerkmale": "Die Rotbraune Kupferglucke \u00e4hnelt mit dem gewellten Fl\u00fcgelrand in Form und Farbe einem trockenen Blatt. Ihre langgestreckte dunkle \u201eNase\u201d imitiert sogar den Blattstiel noch perfekt.",
@@ -351,7 +372,8 @@
     "Name_eng": "lappet",
     "Familie": "Glucken (Lasiocampidae)",
     "Gattung": "Gastropacha",
-    "Lebensraum": "Hartholzaue.Magerrasen"
+    "Lebensraum": "Hartholzaue.Magerrasen",
+    "Klasse": "Insekten-Schmetterlinge"
   },
   {
     "Erkennungsmerkmale": "Der nachtaktive Weidenbohrer ist auffallend gro\u00df und dick. Dank des Rindenmusters auf seinen Fl\u00fcgeln, die er in Ruhe dachf\u00f6rmig aufstellt, ist er am Baum sitzend kaum zu entdecken. [Nahrung] Der Saugr\u00fcssel des Falters ist verk\u00fcmmert. Er kann deshalb keine Nahrung aufnehmen und sich nur noch um die Fortpflanzung k\u00fcmmern.\n\nBei der weinrot gl\u00e4nzenden Raupe des Weidenbohrers sind Kopf und Nackenschild schwarz gef\u00e4rbt. Sie hat eine lange Entwicklungszeit und \u00fcberwintert zwei- bis viermal! Dabei wird sie fingerdick und bis zu 10 cm lang und ist damit die gr\u00f6\u00dfte Raupe in Deutschland.  Bei Gefahr kann sie ein nach Essig riechendes Sekret ausspr\u00fchen und unangenehm bei\u00dfen.",
@@ -366,7 +388,8 @@
     "Name_eng": "goat moth",
     "Familie": "Holzbohrer (Cossidae)",
     "Gattung": "Cossus",
-    "Lebensraum": "Weichholzaue"
+    "Lebensraum": "Weichholzaue",
+    "Klasse": "Insekten-Schmetterlinge"
   },
   {
     "Erkennungsmerkmale": "Der gelbbraune Eichen-Sichelfl\u00fcgler, auch Zweipunkt-Sichelfl\u00fcgler genannt, hat, wie Du Dir schon denken kannst - sichelartig gebogene Fl\u00fcgelenden und zwei kleine Punkte auf den Vorderfl\u00fcgeln.",
@@ -383,7 +406,8 @@
     "Name_alt": "Zweipunkt-Sichelfl\u00fcgler",
     "Familie": "Eulenspinner und Sichelfl\u00fcgler (Drepanidae)",
     "Gattung": "Watsonalla",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Insekten-Schmetterlinge"
   },
   {
     "Erkennungsmerkmale": "Die Grobgerippte K\u00f6rbchenmuschel besitzt zwei gleichgeformte, etwa 36 mm lange, braun bis olivgr\u00fcn gef\u00e4rbte Klappen.  Ihr Fu\u00df ist gro\u00df und beilf\u00f6rmig.",
@@ -400,7 +424,8 @@
     "Name_eng": "asian clam",
     "Familie": "K\u00f6rbchenmuscheln (Corbiculidae)",
     "Gattung": "K\u00f6rbchenmuscheln (Corbicula)",
-    "Lebensraum": "Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Flie\u00dfgew\u00e4sser",
+    "Klasse": "Weichtiere"
   },
   {
     "Erkennungsmerkmale": "Wie alle Muscheln besitzt die Bachmuschel eine Schale mit zwei Klappen und einem kr\u00e4ftigen Schlie\u00dfmuskel. Die braune Schale kann bis zu 7 cm lang werden.",
@@ -418,7 +443,8 @@
     "Name_alt": "Gemeine oder  Kleine Flussmuschel",
     "Familie": "Fluss- und Teichmuscheln (Unionidae)",
     "Gattung": "Flussmuscheln (Unio)",
-    "Lebensraum": "Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Flie\u00dfgew\u00e4sser",
+    "Klasse": "Weichtiere"
   },
   {
     "Erkennungsmerkmale": "Die 6 Windungen ihres gr\u00fcnlich-braunen Schneckenhauses sind mit rotbraunen B\u00e4ndern geschm\u00fcckt. Am Schneckenfu\u00df ist ein hornartiger Deckel angewachsen, mit dem die Geh\u00e4use\u00f6ffnung verschlossen werden kann \u2013 ein wichtiger Schutz bei der \u00dcberwinterung.",
@@ -435,7 +461,8 @@
     "Name_eng": "river snail",
     "Familie": "Sumpfdeckelschnecken (Viviparidae)",
     "Gattung": "Viviparus",
-    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser",
+    "Klasse": "Weichtiere"
   },
   {
     "Erkennungsmerkmale": "Das flach scheibenf\u00f6rmige, gl\u00e4nzend braune Geh\u00e4use der Zierlichen Tellerschnecke misst bis zu 6 mm im Durchmesser.  Es besteht aus 5 Umg\u00e4ngen. Das Unterscheidungsmerkmal zu anderen Tellerschnecken ist die stumpfe Kante auf dem letzten Umgang.",
@@ -455,7 +482,8 @@
     "Name_eng": "lesser ramshorn snail",
     "Familie": "Tellerschnecken (Planorbidae)",
     "Gattung": "Anisus",
-    "Lebensraum": "Stillgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser",
+    "Klasse": "Weichtiere"
   },
   {
     "Habitat": "Die Posthornschnecke bewohnt pflanzenreiche, stehende und langsam flie\u00dfende Gew\u00e4sser in bis zu 3 m Tiefe.",
@@ -472,7 +500,8 @@
     "Name_eng": "great ramshorn",
     "Familie": "Tellerschnecken (Planorbidae)",
     "Gattung": "Planorbarius",
-    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser",
+    "Klasse": "Weichtiere"
   },
   {
     "Habitat": "Sie\n\nsitzt gern an Gro\u00dfseggenb\u00fcscheln im sumpfigen Uferbereich stehender Gew\u00e4sser.",
@@ -490,7 +519,8 @@
     "Name_eng": "desmoulin's whorl snail",
     "Familie": "Windelschnecken (Vertiginidae)",
     "Gattung": "Vertigo",
-    "Lebensraum": "Feuchtwiesen"
+    "Lebensraum": "Feuchtwiesen",
+    "Klasse": "Weichtiere"
   },
   {
     "Habitat": "Der Gro\u00dfe Eichenbock oder auch Heldbock bewohnt Laubmischw\u00e4lder und alte Obstbaumkulturen.",
@@ -509,7 +539,8 @@
     "Name_alt": "Eichenbock, Riesenbock, Spie\u00dfbock",
     "Familie": "Bockk\u00e4fer(Cerambycidae)",
     "Gattung": "Cerambyx",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Insekten-K\u00e4fer"
   },
   {
     "Erkennungsmerkmale": "Die M\u00e4nnchen der Hirschk\u00e4fer sind mit ihren geweihartigen Oberkiefern wohl die auff\u00e4lligsten und gr\u00f6\u00dften K\u00e4fer Mitteleuropas! Die deutlich kleineren Weibchen tragen kein \u201eGeweih\u201c.",
@@ -526,7 +557,8 @@
     "Name_eng": "stag beetle",
     "Familie": "Schr\u00f6ter (Lucanidae)",
     "Gattung": "Lucanus",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Insekten-K\u00e4fer"
   },
   {
     "Erkennungsmerkmale": "Wie alle Bockk\u00e4fer tr\u00e4gt der schmale Moschusbock lange, gebogene F\u00fchler. Der 1,3 bis 4,5 cm gro\u00dfe K\u00e4fer schillert in der Sonne metallisch blau oder gr\u00fcn bis kupferrot!\n\nDie Salicyls\u00e4ure der Weiden wandeln sie in einen moschus\u00e4hnlichen Geruch um, den sie \u00fcber Duftdr\u00fcsen abgeben. Vielleicht findest Du im n\u00e4chsten Sommer ja Moschusb\u00f6cke im Auwald, indem Du Deiner feinen Nase folgst!",
@@ -542,7 +574,8 @@
     "Name_eng": "musk beetle",
     "Familie": "Bockk\u00e4fer (Cerambycidae)",
     "Gattung": "Aromia",
-    "Lebensraum": "Weichholzaue.Hartholzaue"
+    "Lebensraum": "Weichholzaue.Hartholzaue",
+    "Klasse": "Insekten-K\u00e4fer"
   },
   {
     "Erkennungsmerkmale": "Was f\u00fcr ein lauter Brummer kommt denn da angeflogen? Die Oberseite des bis zu 3,5 cm gro\u00dfen K\u00e4fers schimmert metall-gr\u00fcn, manchmal leicht golden- bis bronzefarben mit feinen wei\u00dfen Querb\u00e4ndern. Es ist der Rosenk\u00e4fer!\n\nDer Flug des Rosenk\u00e4fers hat eine Besonderheit: Anders als bei den meisten anderen K\u00e4ferarten bleiben beim Rosenk\u00e4fer die Fl\u00fcgeldecken geschlossen; er streckt die Hinterfl\u00fcgel darunter seitlich heraus! Sein Flug wirkt eher unbeholfen, und oft kann man sehr ruppige Landungen beobachten.\n\nBei St\u00f6rung drehen sie sich und robben auf dem R\u00fccken davon!",
@@ -557,7 +590,8 @@
     "Name_alt": "Rosenk\u00e4fer",
     "Familie": "Blatthornk\u00e4fer (Scarabaeidae)",
     "Gattung": "Cetonia",
-    "Lebensraum": "Hartholzaue.Magerwiesen"
+    "Lebensraum": "Hartholzaue.Magerwiesen",
+    "Klasse": "Insekten-K\u00e4fer"
   },
   {
     "Habitat": "Der Schwarzblaue \u00d6lk\u00e4fer ist von M\u00e4rz bis Juni an sandigen, offenen Stellen unterwegs.\n\nDu findest den K\u00e4fer von April bis Oktober \u00fcberall dort, wo es Weiden gibt.",
@@ -576,7 +610,8 @@
     "Name_alt": "Schwarzer Maiwurm",
     "Familie": "\u00d6lk\u00e4fer (Meloidae)",
     "Gattung": "Meloe",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Insekten-K\u00e4fer"
   },
   {
     "Erkennungsmerkmale": "Beim gr\u00fcnschillernden Gelbrandk\u00e4fer sind Kopf, Halsschild und Fl\u00fcgeldecken gelb umrandet.\n\n[Habitat] Den 4 cm gro\u00dfen schwarzen Lederlaufk\u00e4fer findest Du von April bis November in feuchten W\u00e4ldern, Hecken und naturnahen G\u00e4rten.\n\nSeinen Namen hat er wohl den lederartig gerunzelten Fl\u00fcgeldecken zu verdanken.\n\nLederlaufk\u00e4fer k\u00f6nnen, wie viele Laufk\u00e4fer, nicht fliegen. Die Fl\u00fcgeldecken sind an der Naht zusammengewachsen und die Hinterfl\u00fcgel fehlen ganz. Daf\u00fcr laufen sie aber schneller als man denkt!",
@@ -595,7 +630,8 @@
     "Name_eng": "leather beetle",
     "Familie": "Laufk\u00e4fer (Carabidae)",
     "Gattung": "Echte Laufk\u00e4fer (Carabus)",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Insekten-K\u00e4fer"
   },
   {
     "Habitat": "Der D\u00fcnen-Sandlaufk\u00e4fer mag es hei\u00df: Er bewohnt offene sandige Lebensr\u00e4ume, denn er braucht viel W\u00e4rme, um aktiv zu werden. Bei schlechtem Wetter vergr\u00e4bt er sich im Boden.\n\nEichenblattroller bewohnen warme Lebensr\u00e4ume mit Eichen.",
@@ -614,7 +650,8 @@
     "Name_alt": "Kupferbrauner Sandlaufk\u00e4fer",
     "Familie": "Laufk\u00e4fer (Carabidae)",
     "Gattung": "Cicindela",
-    "Lebensraum": "Magerrasen"
+    "Lebensraum": "Magerrasen",
+    "Klasse": "Insekten-K\u00e4fer"
   },
   {
     "Erkennungsmerkmale": "Teichfr\u00f6sche sind eine Kreuzung aus Seefrosch und Kleinem Wasserfrosch. Diese Artkreuzung entstand, als nach der Eiszeit die vorher durch Gletscher getrennten Elternarten wieder zusammenkommen konnten.\n Die M\u00e4nnchen der Teichfr\u00f6sche werden 6-10 cm, die Weibchen 7-12 cm gro\u00df.  Beide Geschlechter sind gr\u00fcn oder br\u00e4unlich gef\u00e4rbt mit dunklen Flecken, die an den Beinen zu einer Marmorierung zusammenflie\u00dfen. Sie haben deutlich erh\u00f6hte R\u00fcckendr\u00fcsenleisten zwischen Auge und H\u00fcfte.",
@@ -631,7 +668,8 @@
     "Name_alt": "Wasserfrosch oder Gr\u00fcnfrosch",
     "Familie": "Echte Fr\u00f6sche (Ranidae)",
     "Gattung": "Wasserfr\u00f6sche (Pelophylax)",
-    "Lebensraum": "Stillgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser",
+    "Klasse": "Amphibien"
   },
   {
     "Erkennungsmerkmale": "Die 5 cm gro\u00dfen oberseits graubraunen Gelbbauchunken verdanken ihren Namen der leuchtend gelben Unterseite. Bei Gefahr drehen sie sich um, biegen ihren R\u00fccken nach oben und drehen die Unterseite der Arme und Beine nach au\u00dfen. So kommt der gelbe Bauch als Abschreckung bestens zur Geltung.\n\nDer Ruf der Gelbbauchunke ist ein leises melodisches uuh-uuh-uuh in schneller Lautfolge. Wenn Du einer Gelbbauchunke begegnest, dann schau ihr mal in die Augen: Sie hat n\u00e4mlich bemerkenswerte, herzf\u00f6rmige Pupillen.",
@@ -649,7 +687,8 @@
     "Name_alt": "Bergunke",
     "Familie": "Unken und Barbourfr\u00f6sche (Bombinatoridae)",
     "Gattung": "Unken (Bombina)",
-    "Lebensraum": "Stillgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser",
+    "Klasse": "Amphibien"
   },
   {
     "Habitat": "Bergmolche f\u00fchlen sich vor allem in feuchten W\u00e4ldern am wohlsten. Sie bewohnen aber auch Moore und nasse Wiesen in H\u00f6hen bis zu 2000 m \u00fc. NN.\n\nIn der Wahl der Laichgew\u00e4sser, sind sie recht anspruchslos: Von Pf\u00fctzen \u00fcber Wildsuhlen, kleine Gr\u00e4ben bis hin zu Wald- oder Gartenteichen ist ihnen alles recht. Hauptsache es gibt gen\u00fcgend Versteckm\u00f6glichkeiten in der N\u00e4he und Pflanzen, um den Laich anzuheften.",
@@ -666,7 +705,8 @@
     "Name_alt": "Alpenmolch",
     "Familie": "Echte Salamander (Salamandridae)",
     "Gattung": "Ichthyosaura",
-    "Lebensraum": "Stillgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser",
+    "Klasse": "Amphibien"
   },
   {
     "Habitat": "Der w\u00e4rmeliebende Springfrosch lebt in lichten, gew\u00e4sserreichen Laubmischw\u00e4ldern.",
@@ -682,7 +722,8 @@
     "Name_eng": "agile frog",
     "Familie": "Echte Fr\u00f6sche (Ranidae)",
     "Gattung": "Echte Fr\u00f6sche (Rana)",
-    "Lebensraum": "Hartholzaue.Stillgew\u00e4sser.Feuchtwiesen.Weichholzaue"
+    "Lebensraum": "Hartholzaue.Stillgew\u00e4sser.Feuchtwiesen.Weichholzaue",
+    "Klasse": "Amphibien"
   },
   {
     "Erkennungsmerkmale": "Er ist oberseits gr\u00fcn gef\u00e4rbt mit dunklen Flecken und einem hellen Mittelstreifen entlang des R\u00fcckens. Seine Iris leuchtet goldgelb.",
@@ -701,7 +742,8 @@
     "Name_alt": "Gr\u00fcnfr\u00f6sche",
     "Familie": "Echte Fr\u00f6sche (Ranidae)",
     "Gattung": "Wasserfr\u00f6sche (Pelophylax)",
-    "Lebensraum": "Stillgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser",
+    "Klasse": "Amphibien"
   },
   {
     "Erkennungsmerkmale": "Der Moorfrosch erreicht eine Gr\u00f6\u00dfe von 7 Zentimetern  und tr\u00e4gt ein schlichtes graubraunes Kleid mit dunklen Flecken. So ist er im Laub oder auf dem Waldboden kaum zu entdecken. In der Paarungszeit \u00e4ndert sich das dramatisch: Unter der Einwirkung von Hormonen lagert die Haut der M\u00e4nnchen viel Fl\u00fcssigkeit ein und die Fr\u00f6sche erscheinen durch die ver\u00e4nderte Lichtbrechung in einem leuchtend blauen Prachtkleid.",
@@ -720,7 +762,8 @@
     "Name_eng": "moor frog",
     "Familie": "Echte Fr\u00f6sche (Ranidae)",
     "Gattung": "Echte Fr\u00f6sche (Rana)",
-    "Lebensraum": "Weichholzaue.Stillgew\u00e4sser.Feuchtwiesen"
+    "Lebensraum": "Weichholzaue.Stillgew\u00e4sser.Feuchtwiesen",
+    "Klasse": "Amphibien"
   },
   {
     "Erkennungsmerkmale": "Die vorwiegend nachtaktive Kreuzkr\u00f6te hat einen braunen bis olivgr\u00fcnen R\u00fccken mit dunklen Flecken auf der warzigen Haut. Die gr\u00f6\u00dften Warzen sind r\u00f6tlich gef\u00e4rbt und in der R\u00fcckenmitte verl\u00e4uft eine schmale gelbe Linie. Die Vorder- und Hinterbeine der Kreuzkr\u00f6te sind relativ kurz, so dass sie selten h\u00fcpft, sondern sich eher m\u00e4use\u00e4hnlich krabbelnd vorw\u00e4rts bewegt.\n\nDie M\u00e4nnchen rufen mit ihrer gro\u00dfen bl\u00e4ulichen Schallblase metallisch laut \u201e\u00c4rr-\u00e4rr-\u00e4rr\u201d: n\u00e4chtliche Kreuzkr\u00f6tenkonzerte sind manchmal 2 km weit zu h\u00f6ren.",
@@ -736,7 +779,8 @@
     "Name_eng": "natterjack toad",
     "Familie": "Kr\u00f6ten (Bufonidae)",
     "Gattung": "Epidalea",
-    "Lebensraum": "Magerrasen.Stillgew\u00e4sser"
+    "Lebensraum": "Magerrasen.Stillgew\u00e4sser",
+    "Klasse": "Amphibien"
   },
   {
     "Habitat": "Laubfr\u00f6sche bewohnen naturnahe Wiesen- und Auenlandschaften mit gut besonnten, m\u00f6glichst fischfreien, flachen Kleingew\u00e4ssern, aber auch \u00dcberschwemmungst\u00fcmpel, Fahrspuren und tiefe Pf\u00fctzen mit angrenzendem Geb\u00fcsch.",
@@ -753,7 +797,8 @@
     "Name_alt": "Europ\u00e4ischer Laubfrosch",
     "Familie": "Laubfr\u00f6sche i. w. S. (Hylidae)",
     "Gattung": "Laubfr\u00f6sche (Hyla)",
-    "Lebensraum": "Stillgew\u00e4sser.Weichholzaue"
+    "Lebensraum": "Stillgew\u00e4sser.Weichholzaue",
+    "Klasse": "Amphibien"
   },
   {
     "Erkennungsmerkmale": "W\u00e4hrend seiner Lebensphase an Land ist seine grobk\u00f6rnige Haut oberseits dunkelbraun, der orangefarbene Bauch schwarz gefleckt.\n\n[Fortpflanzung] In der Paarungszeit, von April bis Mai, bilden die M\u00e4nnchen ein pr\u00e4chtiges Balzkleid mit einem hohen, unregelm\u00e4\u00dfig gezackten Hautkamm aus. An den Flanken leuchten dann silbrige Punkte und der Schwanz ist beidseitig mit einem silbernen Streifen verziert.",
@@ -773,7 +818,8 @@
     "Name_alt": "n\u00f6rdlicher Kammmolch",
     "Familie": "Echte Salamander (Salamandridae)",
     "Gattung": "Triturus",
-    "Lebensraum": "Stillgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser",
+    "Klasse": "Amphibien"
   },
   {
     "Habitat": "Er lebt in offenen Gr\u00fcnlandgebieten mit B\u00fcschen und Waldr\u00e4ndern, aber auch in naturnahen G\u00e4rten und Parks.",
@@ -792,7 +838,8 @@
     "Name_alt": "Wasserfrosch oder Gr\u00fcnfrosch",
     "Familie": "Echte Fr\u00f6sche (Ranidae)",
     "Gattung": "Wasserfr\u00f6sche (Pelophylax)",
-    "Lebensraum": "Stillgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser",
+    "Klasse": "Amphibien"
   },
   {
     "Habitat": "Die Erdkr\u00f6te ist eine der h\u00e4ufigsten Amphibienarten Deutschland und lebt in krautreichen Laub- und Mischw\u00e4ldern.",
@@ -810,7 +857,8 @@
     "Name_eng": "common toad",
     "Familie": "Kr\u00f6ten (Bufonidae)",
     "Gattung": "Echte Kr\u00f6ten (Bufo)",
-    "Lebensraum": "Hartholzaue.Weichholzaue.Stillgew\u00e4sser"
+    "Lebensraum": "Hartholzaue.Weichholzaue.Stillgew\u00e4sser",
+    "Klasse": "Amphibien"
   },
   {
     "Lebensweise": "Sommerschildkrebse sind sogenannte \u201eUrzeitkrebse\u201c. Sie gelten als die \u00e4lteste heute noch lebende Tierart. Versteinerte Sommerschildkrebse wurden in einer mehr als 220 Mio. Jahre alten Gesteinsschicht in Franken gefunden sind damit \u00e4lter als die ersten Dinosaurier.\n\nMit ihren sogenannten \u201eDauereier\u201d k\u00f6nnen die Krebse viele Jahrzehnte im Bodensubstrat der Gew\u00e4sser \u00fcberdauern \u2013 eine geniale Anpassung an den unregelm\u00e4\u00dfig austrocknenden Lebensraum. [Fortpflanzung] Bei \u00dcberschwemmung und Lufttemperaturen um 20-24\u00b0C schl\u00fcpfen die Larven.",
@@ -827,7 +875,8 @@
     "Name_eng": "european tadpole shrimp",
     "Familie": "Triopsidae",
     "Gattung": "Triops",
-    "Lebensraum": "Stillgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser",
+    "Klasse": "Krebstiere"
   },
   {
     "Erkennungsmerkmale": "Die bis zu 30mm gro\u00dfen S\u00fc\u00dfwassergarnelen gleichen in Aussehen und K\u00f6rperbau den Garnelen der Meere.\n\nDas fast durchsichtige Au\u00dfenskelett ist abgeplattet. An der Stirn entspringt ein langer, mit 20 beweglichen Stacheln besetzter Dorn, das Rostrum. Am Kopf sind zwei gro\u00dfe, kurz gestielte Komplexaugen erkennbar.",
@@ -844,7 +893,8 @@
     "Name_sci": "Atyaephyra desmaresti",
     "Name_eng": "freshwater prawn",
     "Familie": "S\u00fc\u00dfwassergarnelen",
-    "Lebensraum": "Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Flie\u00dfgew\u00e4sser",
+    "Klasse": "Krebstiere"
   },
   {
     "Erkennungsmerkmale": "Die Blaufl\u00fcgelige \u00d6dlandschrecke ist kaum zu erkennen, wenn sie regungslos am Boden sitzt. Die dunklen und hellen Querb\u00e4nder an Beinen und Hinterfl\u00fcgeln tarnen sie perfekt. Erst wenn man ihr sehr nahe kommt, fliegt sie schnell mehrere Meter weit davon. Dabei leuchten die blauen Flecken ihrer Hinterfl\u00fcgel auf. Kurz vor der Landung schl\u00e4gt sie einen scharfen Haken und landet wenn m\u00f6glich auf einem Untergrund, der ihrer Grundf\u00e4rbung entspricht. Sobald sie ihre Fl\u00fcgel schlie\u00dft, ist sie dadurch wieder \u201eunsichtbar\u201d.",
@@ -860,7 +910,8 @@
     "Name_eng": "blue-winged grasshopper",
     "Familie": "Feldheuschrecken (Acrididae)",
     "Gattung": "Oedipoda",
-    "Lebensraum": "Magerrasen"
+    "Lebensraum": "Magerrasen",
+    "Klasse": "Insekten-Heuschrecken"
   },
   {
     "Erkennungsmerkmale": "Die Gr\u00fcne Strandschrecke geh\u00f6rt zu den \u00d6dlandschrecken. Wie der Name schon sagt, ist sie meist leuchtend hellgr\u00fcn, es gibt aber auch Populationen mit ausschlie\u00dflich braun-schwarzen Tieren.",
@@ -879,7 +930,8 @@
     "Name_eng": "slender green-winged grasshopper",
     "Familie": "Feldheuschrecken (Acrididae)",
     "Gattung": "Aiolopus",
-    "Lebensraum": "Stillgew\u00e4sser.Magerrasen"
+    "Lebensraum": "Stillgew\u00e4sser.Magerrasen",
+    "Klasse": "Insekten-Heuschrecken"
   },
   {
     "Habitat": "Sumpfschrecken findest Du in nassen Wiesen und an Gew\u00e4sserufern. Sie sind gute Flieger und erobern neue Lebensr\u00e4ume buchst\u00e4blich im Flug!",
@@ -895,7 +947,8 @@
     "Name_eng": "large marsh grasshopper",
     "Familie": "Feldheuschrecken (Acrididae)",
     "Gattung": "Stethophyma",
-    "Lebensraum": "Feuchtwiesen"
+    "Lebensraum": "Feuchtwiesen",
+    "Klasse": "Insekten-Heuschrecken"
   },
   {
     "Erkennungsmerkmale": "Die Lauchschrecke ist meist leuchtend hellgr\u00fcn, seltener br\u00e4unlich gef\u00e4rbt. Im Gegensatz zur verwandten Sumpfschrecke ist sie nur schwach gemustert. Daf\u00fcr verl\u00e4uft an beiden K\u00f6rperseiten ein breiter schwarzer Streifen von den Augen bis zur Fl\u00fcgelmitte.\n\nLauchschrecken sind stille Zeitgenossen. Lediglich bei der Balz meldet sich das M\u00e4nnchen manchmal leise zirpend zu Wort.",
@@ -912,7 +965,8 @@
     "Name_eng": "leek grasshopper",
     "Familie": "Acrididae",
     "Gattung": "Mecostethus",
-    "Lebensraum": "Feuchtwiesen.Stillgew\u00e4sser"
+    "Lebensraum": "Feuchtwiesen.Stillgew\u00e4sser",
+    "Klasse": "Insekten-Heuschrecken"
   },
   {
     "Name": "Bechsteinfledermaus",
@@ -921,7 +975,8 @@
     "Name_eng": "Bechstein's bat",
     "Familie": "Glattnasen (Vespertilionidae)",
     "Gattung": "Mausohren (Myotis)",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "S\u00e4ugetiere"
   },
   {
     "Wissenswertes": "Der Holzapfelbaum ist die Wildform unserer gez\u00fcchteten Apfelb\u00e4ume.",
@@ -942,7 +997,8 @@
     "Name_alt": "Europ\u00e4ischer Wildapfel, Krabapfel",
     "Familie": "Rosengew\u00e4chse",
     "Gattung": "\u00c4pfel",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Baumarten"
   },
   {
     "Vorkommen": "Der Milde Mauerpfeffer, auch bekannt als \"Hexenkraut\" oder \"F\u00fcnfeckiger Mauerpfeffer\", ist ein Dickblattgew\u00e4chs. In seinen saftigen, mit einer Wachsschicht umh\u00fcllten Bl\u00e4ttern, kann er Wasser speichern und ist deshalb f\u00e4hig, auf trockenen, sonnigen Standorten wie Felsen, Felsspalten, sandigen B\u00f6den und Mauern zu \u00fcberleben.",
@@ -959,7 +1015,8 @@
     "Name_eng": "tasteless stonecrop",
     "Familie": "Dickblattgew\u00e4chse",
     "Gattung": "Fetthennen",
-    "Lebensraum": "Magerrasen"
+    "Lebensraum": "Magerrasen",
+    "Klasse": "Krautige Pflanzen Magerrasen"
   },
   {
     "Erkennungsmerkmale": "[Vorkommen] Das 10-30 cm hohe Gelbe Windr\u00f6schen w\u00e4chst in Laubw\u00e4ldern, auf Waldlichtungen und in Geb\u00fcschen.",
@@ -979,7 +1036,8 @@
     "Name_alt": "Gelbe Storchblume",
     "Familie": "Hahnenfu\u00dfgew\u00e4chse",
     "Gattung": "Windr\u00f6schen",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Krautige Pflanzen Wald"
   },
   {
     "Erkennungsmerkmale": "Der 50-150 cm hohe Blutweiderich [Vorkommen]w\u00e4chst auf nassen B\u00f6den, z.B. auf Nasswiesen, im R\u00f6hricht, an Flussufern oder Gr\u00e4ben. [Bl\u00fctezeit] Seine auff\u00e4lligen rosa bis violetten Bl\u00fctenst\u00e4nde sieht man fast den ganzen Sommer hindurch von Juni bis September. Sie bestehen aus \u00fcber hundert Bl\u00fcten und k\u00f6nnen bis zu 30 Zentimeter lang werden.  [\u00d6kologische Bedeutung] Die sehr nektarreichen Bl\u00fcten bieten vielen Bienen und Schmetterlingen Nahrung.  Die l\u00e4nglichen, dunkelgr\u00fcnen Bl\u00e4tter des Blutweiderichs sind gegenst\u00e4ndig angeordnet. Der kr\u00e4ftige aufrechte St\u00e4ngel ist vierkantig und behaart.",
@@ -996,7 +1054,8 @@
     "Name_eng": "purple loosestrife",
     "Familie": "Weiderichgew\u00e4chse",
     "Gattung": "Blutweideriche",
-    "Lebensraum": "Flie\u00dfgew\u00e4sser.Weichholzaue.Feuchtwiesen"
+    "Lebensraum": "Flie\u00dfgew\u00e4sser.Weichholzaue.Feuchtwiesen",
+    "Klasse": "Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer"
   },
   {
     "Vorkommen": "Die Krebsschere ist eine frei schwimmende Wasserpflanze. Du findest sie in warmen, windgesch\u00fctzten, schlammigen, basenreichen, nicht verschmutzten und meist stehenden Gew\u00e4ssern, beispielsweise in Altw\u00e4ssern, Gr\u00e4ben und T\u00fcmpeln.",
@@ -1016,7 +1075,8 @@
     "Name_alt": "Agel, Wassersegel, Wassersichel",
     "Familie": "Froschbissgew\u00e4chse",
     "Gattung": "Stratiotes",
-    "Lebensraum": "Stillgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser",
+    "Klasse": "Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer"
   },
   {
     "Verwendung": "Im Namen der Hainbuche ist der Hain = Hag oder Einz\u00e4unung enthalten. Sie wurde schon immer gerne als Hecke und Windschutz verwendet.",
@@ -1036,7 +1096,8 @@
     "Name_alt": "Wei\u00dfbuche, Hagebuche, Hornbaum",
     "Familie": "Birkengew\u00e4chse",
     "Gattung": "Hainbuchen",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Baumarten"
   },
   {
     "Erkennungsmerkmale": "Den 15-40 cm hohen B\u00e4rlauch findest Du auf n\u00e4hrstoffreichen, feuchten B\u00f6den z.B. an Waldh\u00e4ngen, in Auw\u00e4ldern und unter Geb\u00fcschen. Hier treibt er im Fr\u00fchjahr oft in solchen Massen aus, dass er den Boden mit seinen langen Bl\u00e4ttern wie ein gr\u00fcner Teppich bedeckt. [Verwendung] Sein Knoblauchduft ist unverkennbar",
@@ -1051,7 +1112,8 @@
     "Name_eng": "wild garlic",
     "Familie": "Amaryllisgew\u00e4chse",
     "Gattung": "Lauch",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Krautige Pflanzen Wald"
   },
   {
     "Vorkommen": "[Erkennungsmerkmale] Die 30-60 cm gro\u00dfe Kuckucks-Lichtnelke gedeiht entlang von Gew\u00e4ssern, in feuchten, m\u00e4\u00dfig n\u00e4hrstoffreichen Wiesen, Mooren und sumpfigen Gebieten und wird deshalb auch als Sumpf-Lichtnelke bezeichnet.",
@@ -1067,7 +1129,8 @@
     "Name_eng": "ragged robin",
     "Familie": "Nelkegew\u00e4chse",
     "Gattung": "Leimkr\u00e4uter",
-    "Lebensraum": "Feuchtwiesen"
+    "Lebensraum": "Feuchtwiesen",
+    "Klasse": "Krautige Pflanzen Feuchtwiesen"
   },
   {
     "Erkennungsmerkmale": "[Vorkommen] Die Flatterulme ist ein bis zu 35 m hoher Baum\n\nIhre Bl\u00e4tter sind am Rand ges\u00e4gt und an der Blattbasis stark asymmetrisch. Sie werden im Herbst goldgelb.\n\nEinzigartig sind die Brettwurzeln der Flatterulme. Mit ihnen gleicht sie die mangelnde Sauerstoffzufuhr w\u00e4hrend der \u00dcberflutungen aus und gibt dem Baum mehr Halt im feucht-weichen Boden. Typisch f\u00fcr Flatterulmen sind die zahlreichen Stockausschl\u00e4ge und Wasserreiser, die aus dem Stamm austreiben.",
@@ -1086,7 +1149,8 @@
     "Name_alt": "Flatterr\u00fcster, Wei\u00dfr\u00fcster",
     "Familie": "Ulmengew\u00e4chse",
     "Gattung": "Ulmen",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Baumarten"
   },
   {
     "Erkennungsmerkmale": "Das Pfeifengras ist eine ausdauernde Grasart, die Wuchsh\u00f6hen von 30 bis 100 cm erreichen kann. Es bildet dichte Horste mit schlanken, aufrechten St\u00e4ngeln und lanzettlichen, gr\u00fcnen, oft rauen Bl\u00e4ttern.\n\nDie Bl\u00fctenst\u00e4nde tragen zahlreiche kleine, eingeschachtelte \u00c4hrchen mit winzigen Bl\u00fcten, die in der Farbe von violett \u00fcber r\u00f6tlich bis hin zu silbrig-grau variieren.",
@@ -1106,7 +1170,8 @@
     "Name_alt": "Pfeifengras",
     "Familie": "S\u00fc\u00dfgr\u00e4ser",
     "Gattung": "Pfeifengr\u00e4ser",
-    "Lebensraum": "Feuchtwiesen"
+    "Lebensraum": "Feuchtwiesen",
+    "Klasse": "Krautige Pflanzen Feuchtwiesen"
   },
   {
     "Erkennungsmerkmale": "[Fortpflanzung] Das etwa 20 cm gro\u00dfe Busch-Windr\u00f6schen ist eine der ersten Fr\u00fchlingsblumen im Wald. Schon lange, bevor die B\u00e4ume Bl\u00e4tter bekommen, zeigt es seine wei\u00dfen, zarten, sternf\u00f6rmigen Bl\u00fcten.",
@@ -1125,7 +1190,8 @@
     "Name_alt": "Hexenblume",
     "Familie": "Hahnenfu\u00dfgew\u00e4chse",
     "Gattung": "Windr\u00f6schen",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Krautige Pflanzen Wald"
   },
   {
     "Erkennungsmerkmale": "[Vorkommen] Die bis zu 150 cm gro\u00dfe Brennnessel w\u00e4chst auf stickstoffreichen B\u00f6den in W\u00e4ldern, Geb\u00fcschen und auf Schuttpl\u00e4tzen.",
@@ -1142,7 +1208,8 @@
     "Name_alt": "Scharfnessel",
     "Familie": "Brennnesselgew\u00e4chse",
     "Gattung": "Brennnesseln",
-    "Lebensraum": "Hartholzaue.Weichholzaue"
+    "Lebensraum": "Hartholzaue.Weichholzaue",
+    "Klasse": "Krautige Pflanzen Wald"
   },
   {
     "Erkennungsmerkmale": "Der Gew\u00f6hnliche Liguster werden bis zu 5 m hoch. [lateinischerName] Er hat elastische Zweige, die gut zu K\u00f6rben geflochten werden k\u00f6nnen. Daher der lateinische Name ligustrum= nachgiebig.  Die Bl\u00e4tter sind l\u00e4nglich spitz und sitzen gegenst\u00e4ndig. [Bl\u00fctezeit] Zwischen Mai und Juli entfalten sich die kleinen wei\u00dfen Bl\u00fcten in kegelf\u00f6rmigen Rispen. Sie verbreiten einen eigenartigen Geruch. [Bl\u00fctezeit]",
@@ -1161,7 +1228,8 @@
     "Name_eng": "common privet",
     "Familie": "\u00d6lbaumgew\u00e4chse",
     "Gattung": "Liguster",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Straucharten"
   },
   {
     "Vorkommen": "Der Gilbweiderich gedeiht in feuchten W\u00e4ldern, an Ufern von Gew\u00e4ssern und in sumpfigen Gebieten.",
@@ -1179,7 +1247,8 @@
     "Name_alt": "Gelbweiderich, Feldberich",
     "Familie": "Primelgew\u00e4chse",
     "Gattung": "Gilbweiderich",
-    "Lebensraum": "Flie\u00dfgew\u00e4sser.Hartholzaue.Feuchtwiesen"
+    "Lebensraum": "Flie\u00dfgew\u00e4sser.Hartholzaue.Feuchtwiesen",
+    "Klasse": "Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer"
   },
   {
     "Erkennungsmerkmale": "Du erkennst die Gemeine Esche schon im zeitigen Fr\u00fchjahr an ihren riesigen mattschwarzen, kreuzweise gegenst\u00e4ndigen Knospen. [Bl\u00fctezeit] Die gr\u00fcnlichen Bl\u00fcten-B\u00fcschel erscheinen ab Mai noch vor dem Austrieb der gefiederten Bl\u00e4tter.\n\nDer Baum z\u00e4hlt zu den gr\u00f6\u00dften heimischen Laubb\u00e4umen. [Alter] Er wird in gesch\u00fctzten Waldgesellschaften bis zu 40 m hoch und rund 200 Jahre alt.",
@@ -1201,7 +1270,8 @@
     "Name_alt": "Hohe Esche",
     "Familie": "\u00d6lbaumgew\u00e4chse",
     "Gattung": "Eschen",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Baumarten"
   },
   {
     "Erkennungsmerkmale": "Der 15-40 cm hohe Aronstab f\u00e4llt Dir bestimmt sofort ins Auge. Sein Bl\u00fctenstand ist von einem gro\u00dfen bleichgr\u00fcnen, t\u00fctenf\u00f6rmigen Hochblatt umgeben, das wie ein kleines Segel am Waldboden steht. Am unteren Ende verengt es sich und sch\u00fctzt die m\u00e4nnlichen und weiblichen Bl\u00fcten mit einem Haarkranz.",
@@ -1221,7 +1291,8 @@
     "Name_alt": "Aronstab",
     "Familie": "Aronstabgew\u00e4chse",
     "Gattung": "Aronstab",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Krautige Pflanzen Wald"
   },
   {
     "Erkennungsmerkmale": "[Bl\u00fctezeit] \u201eGemeiner Schneeball\u201c dazu f\u00e4llt mir Einiges ein! Aber nein, der Gemeine (= gew\u00f6hnliche) Schneeball hat seinen Namen von den runden wei\u00dfen Bl\u00fctenschirmen, die er im Mai in \u00fcppiger Pracht hervorbringt.  Am \u00e4u\u00dferen Kreis der Trugdolde sitzen gro\u00dfe duftende, sterile Randbl\u00fcten, die als Blickfang dienen. [\u00d6kologische Bedeutung] In der Mitte bieten die deutlich kleineren, nicht duftenden, fruchtbaren Bl\u00fcten ihren Nektar an.\n\nDie gegenst\u00e4ndig angeordneten Laubbl\u00e4tter weisen drei grob gez\u00e4hnte, nach vorne gerichtete Lappen auf.",
@@ -1240,7 +1311,8 @@
     "Name_alt": "Herzbeer, Drosselbeerstrauch, Glasbeere",
     "Familie": "Moschuskrautgew\u00e4chse",
     "Gattung": "Schneeball",
-    "Lebensraum": "Hartholzaue.Weichholzaue"
+    "Lebensraum": "Hartholzaue.Weichholzaue",
+    "Klasse": "Straucharten"
   },
   {
     "Erkennungsmerkmale": "Der Wei\u00dfdorn ist ein Strauch oder kleiner, bis 10 m hoher Baum mit dornigen Zweigen.\n\n[\u00d6kologische Bedeutung] Seine wei\u00dfen Bl\u00fcten sind die ersten Farbtupfer im Fr\u00fchlingswald und eine wichtige Futterquelle f\u00fcr Bienen, Hummeln und Falter. Ihr Geruch \u00e4hnelt dem von M\u00e4useurin. \nDie Bl\u00e4tter des Wei\u00dfdorns sind gl\u00e4nzend und stark gebuchtet. Sie dienen mehr als 50 Arten von Schmetterlingsraupen als Futter.",
@@ -1259,7 +1331,8 @@
     "Name_eng": "hawthorn",
     "Familie": "Rosengew\u00e4chse",
     "Gattung": "Wei\u00dfdorne",
-    "Lebensraum": "Hartholzaue.Weichholzaue"
+    "Lebensraum": "Hartholzaue.Weichholzaue",
+    "Klasse": "Straucharten"
   },
   {
     "Erkennungsmerkmale": "Die [Gr\u00f6\u00dfe]2-3 m[Gr\u00f6\u00dfe] hohe Rote Heckenkirsche w\u00e4chst \u00fcberall und wird doch meist \u00fcbersehen. Weder ihre gegenst\u00e4ndig angeordneten ovalen Bl\u00e4tter noch ihre kleinen wei\u00dfen Bl\u00fcten sind auf den ersten Blick spektakul\u00e4r. Doch bei n\u00e4herem Hinsehen wirken die Bl\u00fcten, die denen des Gei\u00dfblatts \u00e4hneln, geradezu exotisch. [\u00d6kologische Bedeutung] Sie duften s\u00fc\u00df und locken tags\u00fcber Hummeln und im Dunkeln verschiedene Nachtfalter an.",
@@ -1274,7 +1347,8 @@
     "Name_eng": "\tEuropean fly honeysuckle",
     "Familie": "Gei\u00dfblattgew\u00e4chse",
     "Gattung": "Heckenkirschen",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Straucharten"
   },
   {
     "Erkennungsmerkmale": "Die Feldulme ist ein w\u00e4rmeliebender etwa 35 m hoher Baum mit breiter Krone und kurzem Stamm.\n\n[Bl\u00fctezeit] Die Feld-Ulme bl\u00fcht ab M\u00e4rz, vor dem Laubaustrieb, in unauff\u00e4llig r\u00f6tlich-braun gef\u00e4rbten B\u00fcscheln.\n\nIm April reifen die frischgr\u00fcnen 1-2 cm gro\u00dfen gefl\u00fcgelten N\u00fcsschen, die oft irrt\u00fcmlich f\u00fcrs erste Laub gehalten werden. Die reifen, gefl\u00fcgelten Fr\u00fcchte werden vom Wind weit verbreitet. \nDie Bl\u00e4tter der Feldulme sind eif\u00f6rmig, doppelt gez\u00e4hnt und oberseits gl\u00e4nzend dunkelgr\u00fcn. Sie k\u00f6nnen bis zu 15 cm lang werden und f\u00e4rben sich im Herbst leuchtend gelb. Auf den kahlen Zweigen der Feldulme bildet sich an manchen Stellen eine Korkschicht aus.",
@@ -1295,7 +1369,8 @@
     "Name_alt": "Iper",
     "Familie": "Ulmengew\u00e4chse",
     "Gattung": "Ulmen",
-    "Lebensraum": "Hartholzaue.Weichholzaue"
+    "Lebensraum": "Hartholzaue.Weichholzaue",
+    "Klasse": "Baumarten"
   },
   {
     "Erkennungsmerkmale": "Der Blutrote Hartriegel ist ein bei uns weit verbreiteter Strauch mit roten Zweigen. Er wird bis zu 5 m hoch und [Alter]30 bis 40 Jahre alt. Die r\u00f6tlichbraune, feinrissige Rinde str\u00f6mt einen unangenehmen Geruch aus. Die ovalen glattrandigen Bl\u00e4tter sitzen gegenst\u00e4ndig und zeigen deutlich erhabene Seitennerven. [Bl\u00fctezeit] Nach dem Laubaustrieb im Mai entfalten sich die wei\u00dfen Bl\u00fctendolden mit bis zu 100 Einzelbl\u00fcten.\n\nDas Herbstlaub ist gelb bis tiefrot.",
@@ -1317,7 +1392,8 @@
     "Name_eng": "common dogwood",
     "Familie": "Hartriegelgew\u00e4chse",
     "Gattung": "Hartriegel",
-    "Lebensraum": "Hartholzaue.Weichholzaue"
+    "Lebensraum": "Hartholzaue.Weichholzaue",
+    "Klasse": "Straucharten"
   },
   {
     "Erkennungsmerkmale": "Der Kanten-Lauch ist eine mehrj\u00e4hrige, 20 bis 35, manchmal auch bis 50 cm hohe Pflanze. [Bl\u00fctezeit] Seine rosaroten Bl\u00fcten, die von Juli bis September zu sehen sind, \u00e4hneln denen des Schnittlauchs.  Die langgestreckten Bl\u00e4tter sind aber im Unterschied zum Schnittlauch an der Unterseite scharf gekielt. Sein St\u00e4ngel wird nach oben hin immer kantiger und sogar scharfkantig.",
@@ -1335,7 +1411,8 @@
     "Name_alt": "Kantiger Lauch",
     "Familie": "Amaryllisgew\u00e4chse",
     "Gattung": "Lauch",
-    "Lebensraum": "Feuchtwiesen"
+    "Lebensraum": "Feuchtwiesen",
+    "Klasse": "Krautige Pflanzen Feuchtwiesen"
   },
   {
     "Erkennungsmerkmale": "Der mehrj\u00e4hrige Gro\u00dfe Wiesenknopf ist eine krautige Pflanze und erreicht Wuchsh\u00f6hen bis etwa 1,20 m. [Vorkommen] An den feuchtesten Stellen von M\u00e4hwiesen, in Gr\u00e4ben und in Flachmooren fallen die tiefbraunroten kugeligen Bl\u00fctenst\u00e4nde den ganzen Sommer \u00fcber ins Auge.",
@@ -1351,7 +1428,8 @@
     "Name_alt": "Gro\u00df- Wiesenknopf, Blutstr\u00f6pfchen",
     "Familie": "Rosengew\u00e4chse",
     "Gattung": "Wiesenknopf",
-    "Lebensraum": "Feuchtwiesen"
+    "Lebensraum": "Feuchtwiesen",
+    "Klasse": "Krautige Pflanzen Feuchtwiesen"
   },
   {
     "Erkennungsmerkmale": "Der Haselstrauch kann mit seiner breiten, buschigen Krone bis zu 8 m hoch werden. Seine abwechselnd angeordneten, weichen, doppelt gez\u00e4hnten Bl\u00e4tter werden im Herbst goldgelb.",
@@ -1371,7 +1449,8 @@
     "Name_alt": "Gemeine Hasel",
     "Familie": "Birkengew\u00e4chse",
     "Gattung": "Haseln",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Straucharten"
   },
   {
     "lateinischerName": "Die Echte Schl\u00fcsselblume ist eine der ersten Fr\u00fchlingsblumen, die den Beginn der warmen Jahreszeit ank\u00fcndigen. In ihrem lateinischen Namen Primula veris versteckt sich Prima = die Erste.",
@@ -1390,7 +1469,8 @@
     "Name_alt": "Primel",
     "Familie": "Primelgew\u00e4chse",
     "Gattung": "Primeln",
-    "Lebensraum": "Magerwiese.Magerrasen.Hartholzaue"
+    "Lebensraum": "Magerwiese.Magerrasen.Hartholzaue",
+    "Klasse": "Krautige Pflanzen Magerwiesen"
   },
   {
     "Vorkommen": "Efeu ist eine immergr\u00fcne Kletterpflanze, die sich mit Haftwurzeln an B\u00e4umen, Mauern und Geb\u00e4uden festh\u00e4lt und so beeindruckende H\u00f6hen erklimmt. Er bevorzugt helle aber nicht besonnte bis sehr schattige, luftfeuchte Standorte.",
@@ -1410,7 +1490,8 @@
     "Name_alt": "Gemeiner Efeu",
     "Familie": "Araliengew\u00e4chse",
     "Gattung": "Efeu",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Schlingpflanzen"
   },
   {
     "Erkennungsmerkmale": "[Vorkommen] Das 10-30 cm hohe, ausdauernde Scharbockskraut ist eine der ersten Pflanzen, die im Fr\u00fchling entlang von Bachufern, in feuchten schattigen Wiesen und W\u00e4ldern bl\u00fchen.  Die leuchtend gelben, sternf\u00f6rmigen Bl\u00fctenbl\u00e4tter machen es zusammen mit den gezackt-herzf\u00f6rmigen, stark gl\u00e4nzenden Bl\u00e4ttern unverkennbar.",
@@ -1426,7 +1507,8 @@
     "Name_alt": "Feigwurz, Fr\u00fchlings- Scharbockskraut",
     "Familie": "Hahnenfu\u00dfgew\u00e4chse",
     "Gattung": "Ficaria",
-    "Lebensraum": "Hartholzaue.Weichholzaue"
+    "Lebensraum": "Hartholzaue.Weichholzaue",
+    "Klasse": "Krautige Pflanzen Wald"
   },
   {
     "Erkennungsmerkmale": "Das Braune Zypergras ist eine einj\u00e4hrige Pflanze mit schlanken, hohlen, dreikantigen St\u00e4ngeln. Es wird 3 bis maximal 25, selten bis zu 40 cm hoch und ist damit ein kleinw\u00fcchsiges Sauergras.\n\nAm unscheinbaren Bl\u00fctenstand sitzen an drei bis acht Strahlen viele seitlich zusammengedr\u00fcckte, braune \u00c4hrchen.\nUnter der Erde bildet das Braune Zypergras knollige Rhizome, die wie kleine Kartoffeln aussehen. Sie speichern N\u00e4hrstoffe und Wasser, so dass das Zypergras auch trockene Zeiten \u00fcberstehen kann. Die Wurzeln sind schwarzrot.",
@@ -1444,7 +1526,8 @@
     "Name_eng": "brown galingale",
     "Familie": "Sauergrasgew\u00e4chse",
     "Gattung": "Zypergr\u00e4ser",
-    "Lebensraum": "Stillgew\u00e4sser.Feuchtwiesen"
+    "Lebensraum": "Stillgew\u00e4sser.Feuchtwiesen",
+    "Klasse": "Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer"
   },
   {
     "Erkennungsmerkmale": "[Vorkommen] Der 8-25 cm hohe Gew\u00f6hnliche Hufeisenklee w\u00e4chst in h\u00fcbschen gelben Bl\u00fctenpolstern auf sonnigen Magerwiesen, Trockenrasen, in lichten Kiefernw\u00e4ldern und an Waldr\u00e4ndern.\n\nSeine Bl\u00e4tter sind gefiedert und bestehen aus zahlreichen kleinen Bl\u00e4ttchen.",
@@ -1462,7 +1545,8 @@
     "Name_alt": "Schopfiger- Hufeisenklee, Hufeisenklee",
     "Familie": "H\u00fclsenfr\u00fcchtler",
     "Gattung": "Hippocrepsis",
-    "Lebensraum": "Magerrasen"
+    "Lebensraum": "Magerrasen",
+    "Klasse": "Krautige Pflanzen Magerrasen"
   },
   {
     "Erkennungsmerkmale": "Das 20 - 40 cm hohe Helm-Knabenkraut ist eine Orchidee, die auf Magerrasen, sonnigen H\u00e4ngen und in lichten W\u00e4ldern mit kalkhaltigen B\u00f6den. Seine unbefleckten Bl\u00e4tter sind etwa 15 cm lang und bilden eine grundst\u00e4ndige Rosette. [Bl\u00fctezeit] Von April bis Juni zeigt das Knabenkraut seine prachtvollen dichten, \u00e4hrigen Bl\u00fctenst\u00e4nde.  Die drei oberen Bl\u00fctenbl\u00e4tter formen einen \u201eHelm\u201d, der au\u00dfen blassrosa und innen rosa-violett gef\u00e4rbt ist. Die wei\u00dfe Lippe ist dreilappig mit rosa-violetter Musterung. Die dunkelrosa Punkte in der Mitte bestehen aus feinen Haarb\u00fcscheln.",
@@ -1480,7 +1564,8 @@
     "Name_eng": "military orchid",
     "Familie": "Orchideen",
     "Gattung": "Knabenkr\u00e4uter",
-    "Lebensraum": "Magerrasen"
+    "Lebensraum": "Magerrasen",
+    "Klasse": "Krautige Pflanzen Magerrasen"
   },
   {
     "Erkennungsmerkmale": "Der Bergahorn kann bis zu 30 Meter hoch werden und [Vorkommen]w\u00e4chst am liebsten auf steinigem, feuchtem Untergrund. Er geh\u00f6rt in der Hartholzaue zu den dominierenden Baumarten. [Fortpflanzung] Er hat gro\u00dfe f\u00fcnflappige Bl\u00e4tter, die aber nie spitz auslaufen wie beim Spitzahorn und bildet im Fr\u00fchjahr gr\u00fcnlich-gelbe Bl\u00fctentrauben, die vom Wind best\u00e4ubt werden.",
@@ -1498,7 +1583,8 @@
     "Name_eng": "sycamoe",
     "Familie": "Seifenbaumgew\u00e4chse",
     "Gattung": "Ahorne",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Baumarten"
   },
   {
     "Erkennungsmerkmale": "Das 3 - 6 m hohe Pfaffenh\u00fctchen ist ein in Europa heimischer und weit verbreiteter kleiner Baum oder Strauch.\n\nBei genauem Hinsehen kann man das Pfaffenh\u00fctchen an den jungen 4-kantigen Zweigen erkennen. Die Bl\u00e4tter sind gegenst\u00e4ndig angeordnet, 4 - 6 cm lang, oval und gez\u00e4hnt. [Bl\u00fctezeit] Die gr\u00fcnlichgelben vierbl\u00e4ttrigen Bl\u00fcten stehen von April bis Juni unauff\u00e4llig in lockeren Trugdolden in den Blattachseln. \nSehr auff\u00e4llig sind dagegen die leuchtend roten, vierkammerigen Samenkapseln im Herbst. Diese Kapseln \u00f6ffnen sich noch am Strauch und pr\u00e4sentieren ihre orangefarbenen Samen.",
@@ -1519,7 +1605,8 @@
     "Name_alt": "Gew\u00f6hnlich Spindelstrauch, Spindelbaum",
     "Familie": "Spindelbaumgew\u00e4chse",
     "Gattung": "Spindelstr\u00e4ucher",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Straucharten"
   },
   {
     "Vorkommen": "Die Stieleiche ist eine anspruchslose, robuste Baumart, die ansteigendes Grundwasser bis zu einem Monat, aber auch Trockenheit vertr\u00e4gt. Sie kommt in den W\u00e4ldern der Hartholzaue vor und ist je nach Standort oft mit Hainbuche, Birke oder Kiefer vergesellschaftet.",
@@ -1542,7 +1629,8 @@
     "Name_alt": "Sommereiche, Deutsche Eiche",
     "Familie": "Buchengew\u00e4chse",
     "Gattung": "Eichen",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Baumarten"
   },
   {
     "Erkennungsmerkmale": "Das Purpur-Knabenkraut ist eine der gr\u00f6\u00dften heimischen Orchideen. Es erreicht Wuchsh\u00f6hen von 25 bis 80 cm und seine drei bis sechs Laubbl\u00e4tter sind bis zu 20 cm lang. Die dichte, reichbl\u00fctige Bl\u00fcten\u00e4hre ragt von Mai bis Juni weithin sichtbar aus der Wiese. Kelch und Kronbl\u00e4tter bilden einen br\u00e4unlich bis purpurfarbigen Helm, die dreilappige Lippe ist wei\u00df mit variabler purpurner Musterung. Die Punkte in der Mitte bestehen aus kleinen Haarb\u00fcscheln.",
@@ -1560,7 +1648,8 @@
     "Name_eng": "lady orchid",
     "Familie": "Orchideen",
     "Gattung": "Knabenkr\u00e4uter",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Krautige Pflanzen Wald"
   },
   {
     "Erkennungsmerkmale": "Die Schwarzpappel ist ein stattlicher bis zu 30 Meter hoher Laubbaum mit oft ausladender Krone. Sie hat eine auff\u00e4llig rissige, dunkle, grau-schwarze Rinde, die zur Namensgebung f\u00fchrte. Die Bl\u00e4tter sind oberseitig gl\u00e4nzend, herzf\u00f6rmig, gez\u00e4hnt und zugespitzt.",
@@ -1580,7 +1669,8 @@
     "Name_alt": "Saarbaum",
     "Familie": "Weidengew\u00e4chse",
     "Gattung": "Pappeln",
-    "Lebensraum": "Weichholzaue.Hartholzaue"
+    "Lebensraum": "Weichholzaue.Hartholzaue",
+    "Klasse": "Baumarten"
   },
   {
     "Erkennungsmerkmale": "Der mit Dornen bewehrte Wild-Birnenbaum ist eine der wilden \u201eAhnen\u201c unserer gez\u00fcchteten Birnensorten.\n\nIm Inneren eines Waldes entwickelt er sich oft strauchf\u00f6rmig und wird 3 bis 5 m hoch. Bei gen\u00fcgend Licht und wenig Konkurrenz durch andere B\u00e4ume kann die Wildbirne aber zu einem stattlichen Baum von 15 bis 20 m H\u00f6he heranwachsen.",
@@ -1601,7 +1691,8 @@
     "Name_alt": "Holzbirne",
     "Familie": "Rosengew\u00e4chse",
     "Gattung": "Birnen",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Baumarten"
   },
   {
     "Erkennungsmerkmale": "Die F\u00e4rber-Scharte ist ein ausdauernder Korbbl\u00fctler, der bis zu 100 cm hoch wird.\n\nDer Name Scharte kommt von der Form der Bl\u00e4tter, die \u201emit kleinen scharfen Scharten wie eine Sichel zerkerft sind\u201c, wie es in einer alten Schrift hei\u00dft.",
@@ -1620,7 +1711,8 @@
     "Name_eng": "saw- wort",
     "Familie": "Korbbl\u00fctler",
     "Gattung": "Scharten",
-    "Lebensraum": "Feuchtwiesen"
+    "Lebensraum": "Feuchtwiesen",
+    "Klasse": "Krautige Pflanzen Feuchtwiesen"
   },
   {
     "Erkennungsmerkmale": "Die 10-30 cm hohe Einbeere hat vier tiefgr\u00fcne, lanzettliche Bl\u00e4tter, die in einer Krone angeordnet sind. Dieses Merkmal ist einzigartig und unterscheidet sie von den meisten anderen Pflanzen. \u00dcber dieser Krone erhebt sich [Bl\u00fctezeit]von Mai bis Juli die gestielte, gr\u00fcnlichgelbe Bl\u00fcte, aus der sich eine bittere, fast kirschgro\u00dfe, schwarze Beere entwickelt.",
@@ -1640,7 +1732,8 @@
     "Name_eng": "herb Paris",
     "Familie": "Germergew\u00e4chse",
     "Gattung": "Einbeeren",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Krautige Pflanzen Wald"
   },
   {
     "Erkennungsmerkmale": "Der Schwarze Holunder wird bis zu 6 m hoch und breit. Seine gefiederten Bl\u00e4tter sind gegenst\u00e4ndig angeordnet. [Bl\u00fctezeit] [\u00d6kologische Bedeutung] Im Mai \u00f6ffnen sich die cremewei\u00dfen, flachen Bl\u00fctendolden, die reichlich Pollen, aber wenig Nektar produzieren.",
@@ -1659,7 +1752,8 @@
     "Name_eng": "black elderberry",
     "Familie": "Moschuskrautgew\u00e4chse",
     "Gattung": "Holunder",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Straucharten"
   },
   {
     "Erkennungsmerkmale": "[Alter] Die Silberweide kann eine stattliche H\u00f6he von 15 bis 25 Metern und an guten Standorten ein Alter von 120 Jahren erreichen.  J\u00fcngere Zweige sind gr\u00fcnlichgelb, kurz anliegend behaart und biegsam.\n\n\u00c4ltere Zweige verkahlen. Die Bl\u00e4tter sind l\u00e4nglich und tragen eine silbrig-wei\u00dfe Behaarung, die zur Artbezeichnung gef\u00fchrt hat. Dr\u00fcsen entlang der Blattr\u00e4nder verstr\u00f6men einen leicht aromatischen Duft. \n[Bl\u00fctezeit] Im Mai erscheinen an der Silberweide, je nach Geschlecht des Baums, die gelben m\u00e4nnlichen oder gr\u00fcn-wei\u00dflichen weiblichen, nektarreichen K\u00e4tzchenbl\u00fcten.",
@@ -1679,7 +1773,8 @@
     "Name_eng": "white willow",
     "Familie": "Weidengew\u00e4chse",
     "Gattung": "Weiden",
-    "Lebensraum": "Weichholzaue"
+    "Lebensraum": "Weichholzaue",
+    "Klasse": "Baumarten"
   },
   {
     "Vorkommen": "Der Zottige Klappertopf w\u00e4chst auf Magerrasen, in Getreidefeldern und m\u00e4\u00dfig frischen Fettwiesen. Er gedeiht am besten auf frischen, n\u00e4hrstoffreichen und eher kalkhaltigen B\u00f6den.",
@@ -1695,7 +1790,8 @@
     "Name_eng": "European yellow rattle",
     "Familie": "Sommerwurzgew\u00e4chse",
     "Gattung": "Klappert\u00f6pfe",
-    "Lebensraum": "Magerwiese"
+    "Lebensraum": "Magerwiese",
+    "Klasse": "Krautige Pflanzen Magerwiesen"
   },
   {
     "Erkennungsmerkmale": "Die dunkelbraun gef\u00e4rbten Tiere haben wei\u00dfe Punktreihen und einen wei\u00dfbehaarten Rand am Hinterleib.",
@@ -1712,7 +1808,8 @@
     "Name_eng": "pirate wolf spider",
     "Familie": "Wolfspinnen (Lycosidae)",
     "Gattung": "Piratenspinnen (Pirata)",
-    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser",
+    "Klasse": "Spinnentiere"
   },
   {
     "Habitat": "Sie leben in Magerrasen und an sonnigen Waldr\u00e4ndern, wie wir sie in den randigen Kiefernw\u00e4ldern des Rhein-Hochgestades finden.",
@@ -1726,7 +1823,8 @@
     "Name_eng": "purseweb spider",
     "Familie": "Tapezierspinnen (Atypidae)",
     "Gattung": "Atypus",
-    "Lebensraum": "Magerrasen"
+    "Lebensraum": "Magerrasen",
+    "Klasse": "Spinnentiere"
   },
   {
     "Habitat": "Die Wasserspinne ist die einzige europ\u00e4ische Spinnenart, die ganz unter Wasser lebt. Die Tiere bevorzugen pflanzenreiche, stehende oder langsam flie\u00dfende, saubere Gew\u00e4sser, am liebsten Moorweiher.",
@@ -1744,7 +1842,8 @@
     "Name_alt": "Silberspinne",
     "Familie": "Gebirgstrichterspinnen (Cybaeidae)",
     "Gattung": "Wasserspinnen (Argyroneta)",
-    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser",
+    "Klasse": "Spinnentiere"
   },
   {
     "Erkennungsmerkmale": "Ihr dunkler Vorderk\u00f6rper ist hell behaart. Die Farbpalette des stark gemusterten Hinterk\u00f6rpers reicht von schwarz-wei\u00df bis zu verschiedensten Braunt\u00f6nen.",
@@ -1761,7 +1860,8 @@
     "Name_alt": "Schilfradspinne",
     "Familie": "Echte Radnetzspinnen (Araneidae)",
     "Gattung": "Larinioides",
-    "Lebensraum": "Feuchtwiesen.Stillgew\u00e4sser"
+    "Lebensraum": "Feuchtwiesen.Stillgew\u00e4sser",
+    "Klasse": "Spinnentiere"
   },
   {
     "Habitat": "Die Gerandete Jagdspinne lebt an den Ufern stehender oder langsam flie\u00dfender Gew\u00e4sser, aber auch in lichten Bruchw\u00e4ldern und auf Feuchtwiesen.",
@@ -1779,7 +1879,8 @@
     "Name_alt": "Gerandete Listspinne",
     "Familie": "Jagdspinnen (Pisauridae)",
     "Gattung": "Uferj\u00e4ger (Dolomedes)",
-    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser.Feuchtwiesen.Weichholzaue"
+    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser.Feuchtwiesen.Weichholzaue",
+    "Klasse": "Spinnentiere"
   },
   {
     "Erkennungsmerkmale": "Der Wilde Hopfen ist eine sommergr\u00fcne, schnellw\u00fcchsige Kletterpflanze mit rauen St\u00e4ngeln, an denen ankerartige Kletterhaare sitzen, die eine erstaunliche Haftf\u00e4higkeit besitzen. Der wilde Hopfen windet sich rechtsdrehend um seine St\u00fctzpflanzen. Die oberirdischen Triebe sind einj\u00e4hrig und sterben nach der Samenreife ab. Diese Triebe werden wie beim Wein als Reben bezeichnet und wachsen im Durchschnitt 10 cm pro Tag.\n\nDie Bl\u00e4tter sind mittelgr\u00fcn, rundlich, gegenst\u00e4ndig und gelappt.",
@@ -1795,7 +1896,8 @@
     "Name_eng": "wild hop",
     "Familie": "Hanfgew\u00e4chse",
     "Gattung": "Hopfen",
-    "Lebensraum": "Hartholzaue.Weichholzaue"
+    "Lebensraum": "Hartholzaue.Weichholzaue",
+    "Klasse": "Schlingpflanzen"
   },
   {
     "Erkennungsmerkmale": "Das Sumpf-Vergissmeinnicht geh\u00f6rt zur Familie der Raublattgew\u00e4chse, was sich in der charakteristischen Behaarung der Bl\u00e4tter und St\u00e4ngel zeigt.\n\nDie dicht bebl\u00e4tterten, bogig aufsteigenden St\u00e4ngel\u00a0sind abgerundet bis schwach kantig.\n\n[\u00d6kologische Bedeutung] Sie hat f\u00fcnf blau bis violett, selten wei\u00df oder rosa gef\u00e4rbte Kronbl\u00e4tter und eine wei\u00df-gelbe Mitte die als Saftmalring f\u00fcr bl\u00fctenbesuchende Insekten dient.",
@@ -1815,7 +1917,8 @@
     "Name_alt": "Blauer Augentrost",
     "Familie": "Raublattgew\u00e4chse",
     "Gattung": "Vergissmeinnicht",
-    "Lebensraum": "Weichholzaue"
+    "Lebensraum": "Weichholzaue",
+    "Klasse": "Krautige Pflanzen Wald"
   },
   {
     "Erkennungsmerkmale": "Die Schopfige Kreuzblume, auch Schopf-Kreuzbl\u00fcmchen genannt, ist eine sommergr\u00fcne krautige Pflanze, die zwischen 5 und 30 cm hoch werden kann. An den aufrechten St\u00e4ngeln wachsen die gr\u00fcnen, spatelf\u00f6rmigen Bl\u00e4tter in wechselst\u00e4ndiger Anordnung. \nDank ihres auff\u00e4lligen Bl\u00fctenstands, der aus kr\u00e4ftig-violetten (selten auch blauen oder wei\u00dfen) Bl\u00fcten besteht, ist die Schopfige Kreuzblume trotz ihrer geringen Gr\u00f6\u00dfe leicht zu erkennen.",
@@ -1834,7 +1937,8 @@
     "Name_eng": "tufted milkwort",
     "Familie": "Kreuzblumengew\u00e4chse",
     "Gattung": "Kreuzblume",
-    "Lebensraum": "Magerrasen"
+    "Lebensraum": "Magerrasen",
+    "Klasse": "Krautige Pflanzen Magerrasen"
   },
   {
     "Bl\u00fctezeit": "Seine blauvioletten Bl\u00fcten sieht man fast den ganzen Sommer hindurch von Mai bis September.",
@@ -1854,7 +1958,8 @@
     "Name_eng": "meadow clary",
     "Familie": "Lippenbl\u00fctler",
     "Gattung": "Salbei",
-    "Lebensraum": "Magerwiese"
+    "Lebensraum": "Magerwiese",
+    "Klasse": "Krautige Pflanzen Magerwiesen"
   },
   {
     "Vorkommen": "Der Wasserdost ist eine Pflanzenart innerhalb der Familie der Korbbl\u00fctler. Er w\u00e4chst auf feuchten und n\u00e4hrstoffreichen B\u00f6den, auf feuchten Wiesen, an den Ufern von Fl\u00fcssen, Teichen und in anderen Feuchtgebieten. Daher der Name \u201eWasser\u201c-Dost. Auffallend ist seine schnelle Verbreitung als Pionierpflanze: Fallen in feuchten W\u00e4ldern B\u00e4ume oder werden sie geschlagen, geh\u00f6rt der Gew\u00f6hnliche Wasserdost zu den ersten Besiedlern der Lichtungen.",
@@ -1875,7 +1980,8 @@
     "Name_eng": "hemp agrimony",
     "Familie": "Korbbl\u00fctler",
     "Gattung": "Wasserdost",
-    "Lebensraum": "Flie\u00dfgew\u00e4sser.Stillgew\u00e4sser.Feuchtwiesen"
+    "Lebensraum": "Flie\u00dfgew\u00e4sser.Stillgew\u00e4sser.Feuchtwiesen",
+    "Klasse": "Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer"
   },
   {
     "Erkennungsmerkmale": "Das Schilf-Rohr ist eine Sumpfpflanze, mit einer Wuchsh\u00f6he von bis zu 4 Metern und geh\u00f6rt zur Familie der S\u00fc\u00dfgr\u00e4ser.\n\nDie wechselst\u00e4ndig am Halm angeordneten, langen schmalen Bl\u00e4tter sind 1 bis 4 cm breit und haben eine h\u00fcbsche blaugr\u00fcne F\u00e4rbung.\n\nOft bestehen ganze Schilfbest\u00e4nde nur aus einer einzelnen, weit verzweigten Pflanze!",
@@ -1892,7 +1998,8 @@
     "Name_alt": "Schilf",
     "Familie": "S\u00fc\u00dfgr\u00e4ser",
     "Gattung": "Schilfrohre",
-    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser.Weichholzaue"
+    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser.Weichholzaue",
+    "Klasse": "Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer"
   },
   {
     "\u00d6kologische Bedeutung": "Sie bildet ein dickes, waagerecht kriechendes Rhizom (\u201eWurzelstock\u201c) und ihr kr\u00e4ftiges Wurzelgeflecht befestigt ganze Uferb\u00f6schungen.\n\nWenn du genau hinschaust, kannst du auf den Fr\u00fcchten im Sommer den auff\u00e4lligen Wei\u00dfpunktigen Schwertlilienr\u00fcssler treffen. Die Larven dieses kleinen K\u00e4fers entwickeln sich in den Fr\u00fcchten der Schwertlilie.",
@@ -1914,7 +2021,8 @@
     "Name_alt": "Gelbe Schwertlilie, Wasser- Schwertlilie",
     "Familie": "Schwertliliengew\u00e4chse",
     "Gattung": "Schwertlilien",
-    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser",
+    "Klasse": "Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer"
   },
   {
     "Vorkommen": "Schwimmfarne sind \u00fcberwiegend in tropischen und subtropischen Gebieten beheimatet, aber es gibt eine Ausnahme: den Gemeinen Schwimmfarn, der auch bei uns in stehenden oder langsam flie\u00dfenden Gew\u00e4ssern vorkommt.\n\nDer Gew\u00f6hnliche Schwimmfarn liebt Licht und W\u00e4rme und bevorzugt eher kalkreiches Wasser sowie eine gute N\u00e4hrstoffversorgung.",
@@ -1929,7 +2037,8 @@
     "Name_alt": "Gew\u00f6hnlicher Schwimmfarn",
     "Familie": "Schwimmfarngew\u00e4chse",
     "Gattung": "Schwimmfarne",
-    "Lebensraum": "Stillgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser",
+    "Klasse": "Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer"
   },
   {
     "Vorkommen": "Die Waldrebe, auch Klematis genannt, ist eine Pflanzengattung innerhalb der Familie der Hahnenfu\u00dfgew\u00e4chse. Alle Clematis-Arten wachsen an mehr oder weniger schattigen Waldr\u00e4ndern. Diese sollten humusreich, durchl\u00e4ssig und gleichbleibend feucht sein.",
@@ -1948,7 +2057,8 @@
     "Name_eng": "traveller's-joy",
     "Familie": "Hahnenfu\u00dfgew\u00e4chse",
     "Gattung": "Waldreben",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Schlingpflanzen"
   },
   {
     "Erkennungsmerkmale": "Die Teichrose ist eine mehrj\u00e4hrige Pflanze, welche durch ihre gro\u00dfen goldgelben, einfachen Bl\u00fcten und die ovalen, herzf\u00f6rmig eingeschnittenen gl\u00e4nzend gr\u00fcnen Schwimmbl\u00e4tter auff\u00e4llt.",
@@ -1969,7 +2079,8 @@
     "Name_eng": "pond lily",
     "Familie": "Seerosengew\u00e4chse",
     "Gattung": "Teichrosen",
-    "Lebensraum": "Stillgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser",
+    "Klasse": "Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer"
   },
   {
     "Erkennungsmerkmale": "Er bildet eine Pfahlwurzel aus und hat gr\u00fcne, dreifach gefiederte Bl\u00e4tter. Zumindest im Fr\u00fchjahr enthalten die jungen, kantigen und hohlen St\u00e4ngel einen wei\u00dflichen Milchsaft.\n\nVon Juli bis August kannst Du den Sumpf-Haarstrang an seinen aufrechten Bl\u00fctenst\u00e4ngeln mit den wei\u00dfen Doldenbl\u00fcten erkennen",
@@ -1987,7 +2098,8 @@
     "Name_alt": "\u00d6lsenich",
     "Familie": "Doldenbl\u00fctler",
     "Gattung": "Haarstrang",
-    "Lebensraum": "Feuchtwiesen"
+    "Lebensraum": "Feuchtwiesen",
+    "Klasse": "Krautige Pflanzen Feuchtwiesen"
   },
   {
     "Vorkommen": "Die Zypressen-Wolfsmilch ist eine 15 \u2013 50 cm hohe bl\u00e4ulichgr\u00fcne, mehrj\u00e4hrige, krautige Pflanze, die an trockenen und sonnigen Standorten in Magerrasen, Schafweiden, an Bahnd\u00e4mmen und auf felsigen Standorten w\u00e4chst.",
@@ -2007,7 +2119,8 @@
     "Name_eng": "cypress spurge",
     "Familie": "Wolfsmilchgew\u00e4chse",
     "Gattung": "Wolfsmilch",
-    "Lebensraum": "Magerrasen"
+    "Lebensraum": "Magerrasen",
+    "Klasse": "Krautige Pflanzen Magerrasen"
   },
   {
     "Vorkommen": "Der Wasser-Hahnenfu\u00df ist eine mehrj\u00e4hrige immergr\u00fcne Wasserpflanze und w\u00e4chst bevorzugt in sonnigen bis halbschattigen Bereichen von Wildteichen, T\u00fcmpeln und in langsam flie\u00dfenden Gew\u00e4ssern. Er bildet je nach Wasserverh\u00e4ltnissen eine niedrigw\u00fcchsige Landform am Ufer oder eine Wasserform aus, deren freischwimmende und im Grund wurzelnde Triebe bis zu zwei Meter lang werden.",
@@ -2029,7 +2142,8 @@
     "Name_eng": "water crowfoot",
     "Familie": "Hahnenfu\u00dfgew\u00e4chse",
     "Gattung": "Hahnenfu\u00df",
-    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser",
+    "Klasse": "Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer"
   },
   {
     "Vorkommen": "Die Wassernuss, auch als Wasserkastanie bekannt, ist eine sommergr\u00fcne, einj\u00e4hrige Schwimmblattpflanze. Sie ist \u00fcber mit einen 1 bis 3 Meter langen Haupttrieb mit den Widerhaken der Frucht im Boden verankert. Ihr bevorzugter Lebensraum sind kalkarme, aber n\u00e4hrstoffreiche und sommerwarme Altw\u00e4sser, Humus-Schlammseen und Teiche.",
@@ -2049,7 +2163,8 @@
     "Name_eng": "water nut",
     "Familie": "Weiderichgew\u00e4chse",
     "Gattung": "Trapa",
-    "Lebensraum": "Stillgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser",
+    "Klasse": "Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer"
   },
   {
     "Alter": "Die Wei\u00dfe Seerose ist eine mehrj\u00e4hrige Wasserpflanze.",
@@ -2069,7 +2184,8 @@
     "Name_eng": "water lily",
     "Familie": "Seerosengew\u00e4chse",
     "Gattung": "Seerosen",
-    "Lebensraum": "Stillgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser",
+    "Klasse": "Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer"
   },
   {
     "Erkennungsmerkmale": "Die Steppen-Wolfsmilch ist eine mehrj\u00e4hrige, krautige Pflanze und kann eine H\u00f6he von 15 bis 40 cm erreichen.  Meist stehen mehrere aufrechte St\u00e4ngel buschig beisammen. Die\u00a0blaugr\u00fcnen lanzettlichen Laubbl\u00e4tter sind ledrig und durch einen wachsartigen \u00dcberzug vor starker Verdunstung gesch\u00fctzt.",
@@ -2087,7 +2203,8 @@
     "Name_eng": "Seguier's spurge",
     "Familie": "Wolfsmilchgew\u00e4chse",
     "Gattung": "Wolfsmilch",
-    "Lebensraum": "Magerrasen"
+    "Lebensraum": "Magerrasen",
+    "Klasse": "Krautige Pflanzen Magerrasen"
   },
   {
     "Vorkommen": "Der Winter-Schachtelhalm braucht feuchten Untergrund und findet diesen in Auenw\u00e4ldern, Quellmooren und in wechselfeuchten W\u00e4ldern, die von Grund- oder Sickerwasser gepr\u00e4gt sind.",
@@ -2108,7 +2225,8 @@
     "Name_alt": "Tischlerschachtelhalm",
     "Familie": "Schachtelhalmgew\u00e4chse",
     "Gattung": "Schachtelhalme",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Krautige Pflanzen Wald"
   },
   {
     "Vorkommen": "Die Schuppenwurz z\u00e4hlt zu den \u201eheimlichen Bewohnern\u201c unserer W\u00e4lder und f\u00fchlt sich am wohlsten an sehr schattigen Standorten mit m\u00e4\u00dfig wechselnder Feuchtigkeit.\n\nSie hat keine Bl\u00e4tter und lebt unterirdisch auf den Wurzeln von Haselnussstr\u00e4uchern, Pappeln, Erlen, Buchen oder anderen Wirtspflanzen.",
@@ -2126,7 +2244,8 @@
     "Name_eng": "common toothwort",
     "Familie": "Sommerwurzgew\u00e4chse",
     "Gattung": "Schuppenwurzen",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Krautige Pflanzen Wald"
   },
   {
     "Alter": "Die Sumpf-Wolfsmilch ist eine krautige Pflanze, die mehrere Jahrzehnte alt werden kann",
@@ -2146,7 +2265,8 @@
     "Name_eng": "marsh spurge",
     "Familie": "Wolfsmilchgew\u00e4chse",
     "Gattung": "Wolfsmilch",
-    "Lebensraum": "Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Flie\u00dfgew\u00e4sser",
+    "Klasse": "Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer"
   },
   {
     "Vorkommen": "Die Wasser-Sumpfkresse, auch als Ufer-Sumpfkresse bekannt, geh\u00f6rt zu den Kreuzbl\u00fctengew\u00e4chsen. Sie siedelt bevorzugt in feuchten, sumpfigen Gebieten wie lichten Auw\u00e4ldern und an den Ufern langsam flie\u00dfender Gew\u00e4sser sowie Seen und T\u00fcmpeln. Gerne werden auch n\u00e4hrstoffreiche Abw\u00e4sserkan\u00e4le besiedelt oder zeitweise trocken fallende Fl\u00e4chen.",
@@ -2167,7 +2287,8 @@
     "Name_alt": "Teichkresse, Ufer-Sumpfkresse",
     "Familie": "Kreuzbl\u00fctler",
     "Gattung": "Sumpfkressen",
-    "Lebensraum": "Stillgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser",
+    "Klasse": "Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer"
   },
   {
     "Vorkommen": "Der Schlammling ist eine einj\u00e4hrige Pionierpflanze offener, zeitweise \u00fcbersp\u00fclter und n\u00e4hrstoffreicher Sand- und Schlammfl\u00e4chen in Ufergebieten.",
@@ -2186,7 +2307,8 @@
     "Name_alt": "Schlammkraut, Schlammgl\u00f6ckchen",
     "Familie": "Braunwurzgew\u00e4chse",
     "Gattung": "Limosella",
-    "Lebensraum": "Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Flie\u00dfgew\u00e4sser",
+    "Klasse": "Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer"
   },
   {
     "Vorkommen": "Sie besiedelte urspr\u00fcnglich bevorzugt Flussufer und Auw\u00e4lder entlang gr\u00f6\u00dferer Fl\u00fcsse, so auch am Rhein.",
@@ -2207,7 +2329,8 @@
     "Name_alt": "Wilde Weinrebe, Wilder Weinstock",
     "Familie": "Weinrebengew\u00e4chse",
     "Gattung": "Weinreben",
-    "Lebensraum": "Hartholzaue"
+    "Lebensraum": "Hartholzaue",
+    "Klasse": "Schlingpflanzen"
   },
   {
     "Vorkommen": "Er w\u00e4chst auf Moorwiesen, Halbtrockenrasen und Feuchtwiesen, an Wegr\u00e4ndern oder auf Brachfl\u00e4chen in sonnigen bis halbschattigen Bereichen.",
@@ -2226,7 +2349,8 @@
     "Name_alt": "Weidenbl\u00e4ttriger- Alant",
     "Familie": "Korbbl\u00fctler",
     "Gattung": "Pentanema",
-    "Lebensraum": "Feuchtwiesen"
+    "Lebensraum": "Feuchtwiesen",
+    "Klasse": "Krautige Pflanzen Feuchtwiesen"
   },
   {
     "Nahrung": "Der etwa 2 cm gro\u00dfe Wasserskorpion verdankt seinen bedrohlichen Namen den dicken, klauenartig ausgebildeten Vorderbeinen. Mit diesen Fangbeinen ergreift er - im Schlamm oder zwischen Pflanzen versteckt - Wasserfl\u00f6he, Insektenlarven, Kaulquappen und manchmal sogar winzige Fische. Die Beute wird angestochen und ausgesaugt. Aber keine Angst: F\u00fcr Menschen ist der Wasserskorpion harmlos. Er ist nicht giftig.",
@@ -2244,7 +2368,8 @@
     "Name_eng": "water scorpion",
     "Familie": "Skorpionswanzen (Nepidae)",
     "Gattung": "Nepa",
-    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser",
+    "Klasse": "Insekten-Wanzen"
   },
   {
     "Erkennungsmerkmale": "Eintagsfliegen sind eine sehr urspr\u00fcnglichste Gruppe unter den Fluginsekten. Du erkennst sie an ihren 3 langen Schwanzborsten. In Deutschland leben derzeit \u00fcber 100 verschieden Arten.",
@@ -2264,7 +2389,8 @@
     "Name_alt": "Wasserschneider",
     "Familie": "Wasserl\u00e4ufer (Gerridae)",
     "Gattung": "Gerris",
-    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser",
+    "Klasse": "Insekten-Wanzen"
   },
   {
     "Habitat": "[Erkennungsmerkmale] Die braunen, etwa 10-20 mm langen Gemeinen Schlammfliegen oder Wasserflorfliegen bewohnen die Ufer von B\u00e4chen, Teichen und n\u00e4hrstoffreichen Seen.",
@@ -2278,7 +2404,8 @@
     "Name_eng": "alderfly",
     "Familie": "Schlammfliegen (Sialidae)",
     "Gattung": "Sialis",
-    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser",
+    "Klasse": "Insekten-Netzfl\u00fcgler"
   },
   {
     "Erkennungsmerkmale": "Der Gemeine Teichl\u00e4ufer geh\u00f6rt zu den Wanzen. Er kann sich, genau wie der Wasserl\u00e4ufer \u00fcber die Oberfl\u00e4che ruhiger Gew\u00e4sser bewegen, ohne einzusinken. Das feine H\u00e4utchen der Wasseroberfl\u00e4che tr\u00e4gt ihn. Im Vergleich zum Wasserl\u00e4ufer haben Teichl\u00e4ufer einen sehr langen, nach vorn gezogenen Kopf und einen stabf\u00f6rmigen K\u00f6rper, der von extrem langen Beinen waagrecht gehalten wird. Teichl\u00e4ufer k\u00f6nnen sich aber auch an Land recht gut fortbewegen.",
@@ -2291,7 +2418,8 @@
     "Name_eng": "marsh treaders",
     "Familie": "Teichl\u00e4ufer (Hydrometridae)",
     "Gattung": "Hydrometra (Gattung)",
-    "Lebensraum": "Stillgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser",
+    "Klasse": "Insekten-Wanzen"
   },
   {
     "Fortpflanzung": "Die unscheinbar braunen 2-3 cm langen Steinfliegen sind zwischen Mai und Juli an flie\u00dfenden, sauerstoffreichen Gew\u00e4ssern unterwegs, um einen Partner zu finden. Dabei fliegen sie in gro\u00dfen Schw\u00e4rmen dicht \u00fcber der Wasseroberfl\u00e4che. Sie stellen - auch als Larve -  eine wichtige Nahrungsquelle f\u00fcr Fische dar. Kurz nach der Paarung taucht das Weibchen den Hinterleib kurz ins Wasser und streift dabei kleine Eipakete ab, die auf den Flussboden sinken.\nDie daraus schl\u00fcpfenden Larven tragen 2 lange Schwanzf\u00e4den und 4 kurze Fl\u00fcgelanlagen. Mit ihrem flachen K\u00f6rper klammern sie sich an Steinen oder Totholz fest, so dass die Str\u00f6mung sie nicht wegtragen kann.\n[Nahrung] Die Larven der kleineren Steinfliegenarten fressen Algen und Pflanzen. Gr\u00f6\u00dfere Arten leben r\u00e4uberisch von anderen Insektenlarven.  Nach etwa drei Jahren und mehreren H\u00e4utungen klettern die Larven auf Uferpflanzen, um sich zu verpuppen. Wenn die erwachsenen Tiere schl\u00fcpfen, beginnt der Kreislauf von Neuem.",
@@ -2313,7 +2441,8 @@
     "Name_alt": "Gro\u00dfe Sumpfschwebfliege",
     "Familie": "Schwebfliegen (Syrphidae)",
     "Gattung": "Helophilus",
-    "Lebensraum": "Feuchtwiesen.Stillgew\u00e4sser"
+    "Lebensraum": "Feuchtwiesen.Stillgew\u00e4sser",
+    "Klasse": "Insekten-Zweifl\u00fcgler"
   },
   {
     "Lebensweise": "[Erkennungsmerkmale] Der Gemeine R\u00fcckenschwimmer ist eine Wanzenart, die sich hervorragend ans Leben im Wasser angepasst hat. Mit ihren langen Ruderbeinen bewegt sie sich in kr\u00e4ftigen St\u00f6\u00dfen vorw\u00e4rts. Der luftgef\u00fcllte Bauch zeigt dabei nach oben. Der helle R\u00fccken vermindert, von unten gesehen, den Kontrast zum Himmel, so dass das Tier von Feinden schlechter gesehen wird.",
@@ -2329,7 +2458,8 @@
     "Name_eng": "backswimmers",
     "Familie": "R\u00fcckenschwimmer (Notonectidae)",
     "Gattung": "Notonecta",
-    "Lebensraum": "Stillgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser",
+    "Klasse": "Insekten-Wanzen"
   },
   {
     "Erkennungsmerkmale": "Die etwa h\u00fchnergro\u00dfe, graubraune Wasserralle erkennst Du an ihrem langen, roten, leicht nach unten gebogenen Schnabel und den roten Augen.",
@@ -2347,7 +2477,8 @@
     "Name_eng": "water rail",
     "Familie": "Rallen (Rallidae)",
     "Gattung": "Rallus",
-    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser",
+    "Klasse": "V\u00f6gel"
   },
   {
     "Habitat": "[Erkennungsmerkmale] Die unscheinbaren hell- bis schwarzbraunen K\u00f6cherfliegen bewohnen alle Arten von Gew\u00e4ssern.\n\nSie ist in der N\u00e4he von Kleingew\u00e4ssern und Feuchtwiesen zu finden.",
@@ -2367,7 +2498,8 @@
     "Name_alt": "Blinde Fliege, Gewitterbremse, Faulstich, Regenbogenbremse",
     "Familie": "Bremsen (Tabanidae)",
     "Gattung": "Haematopota",
-    "Lebensraum": "Stillgew\u00e4sser.Feuchtwiesen"
+    "Lebensraum": "Stillgew\u00e4sser.Feuchtwiesen",
+    "Klasse": "Insekten-Zweifl\u00fcgler"
   },
   {
     "Erkennungsmerkmale": "Flussneunaugen haben in Wirklichkeit keine neun Augen, aber an jeder K\u00f6rperseite sieben runde Kiemen\u00f6ffnungen. Wenn man das Nasenloch und das echte Auge dazuz\u00e4hlt, kommt man auf \u201eneun Augen\u201d. \nNeunaugen sind sehr urt\u00fcmliche Tiere. Ihre Vorfahren lebten schon vor Millionen von Jahren. \n Ihr braungrauer aalf\u00f6rmiger K\u00f6rper ist bis 32 cm lang und von einer schleimigen Haut umgeben. Ihr Skelett besteht aus Knorpel und sie haben keine Schuppen. Sie sind also keine echten Fische. Ihre R\u00fccken-, After- und Schwanzflosse bilden einen langen Flossensaum.",
@@ -2384,7 +2516,8 @@
     "Name_eng": "european river lamprey",
     "Familie": "Petromyzontidae",
     "Gattung": "Lampetra",
-    "Lebensraum": "Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Flie\u00dfgew\u00e4sser",
+    "Klasse": "Fische"
   },
   {
     "Habitat": "Bachneunaugen bewohnen Mittelsgebirgs- und Tieflandb\u00e4che mit Feinsand und Tonb\u00e4nken.",
@@ -2400,7 +2533,8 @@
     "Name_eng": "European brook lamprey",
     "Familie": "Petromyzontidae",
     "Gattung": "Lampetra",
-    "Lebensraum": "Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Flie\u00dfgew\u00e4sser",
+    "Klasse": "Fische"
   },
   {
     "Habitat": "Die hochr\u00fcckige Karausche ist eine typische Art der Flussauen und lebt dort vorwiegend in Stillgew\u00e4ssern.",
@@ -2419,7 +2553,8 @@
     "Name_eng": "crucian carp",
     "Familie": "Karpfenfische (Cyprinidae)",
     "Gattung": "Carassius",
-    "Lebensraum": "Stillgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser",
+    "Klasse": "Fische"
   },
   {
     "Nahrung": "Der 8 bis 10 cm lange Steinbei\u00dfer tastet sich mit seinen sechs kurzen Bartf\u00e4den an Steinen entlang und w\u00fchlt im Sand. Dabei bei\u00dft er aber nicht in Steine, wie der Name vermuten l\u00e4sst, sondern filtert den feinen Sand nach Kleinkrebsen, W\u00fcrmern und abgestorbenem Pflanzenmaterial durch.",
@@ -2436,7 +2571,8 @@
     "Name_alt": "Dorngrundel",
     "Familie": "Steinbei\u00dfer (Cobitidae)",
     "Gattung": "Cobitis",
-    "Lebensraum": "Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Flie\u00dfgew\u00e4sser",
+    "Klasse": "Fische"
   },
   {
     "Lebensweise": "Der Atlantische Lachs ist ein erstaunlicher Fisch! Mit seinem spindelf\u00f6rmigen K\u00f6rper kann er bis zu 30 km in der Stunde zur\u00fccklegen und 3 m hoch \u00fcber Hindernisse springen. Er wandert in seinem Leben mehrere tausend Kilometer weit und wechselt dabei vom S\u00fc\u00df- ins Salzwasser und wieder zur\u00fcck! \nDas Leben der Lachse beginnt im Oberlauf der Fl\u00fcsse. Hier schl\u00fcpfen im zeitigen Fr\u00fchjahr Larven aus den Eiern. In den ein bis zwei Jahren, die der dunkel gef\u00e4rbte Junglachs im S\u00fc\u00dfwasser verbringt, ern\u00e4hrt er sich von Insektenlarven und kleinen Fischchen. Ab einer K\u00f6rperl\u00e4nge von 16 cm wird er silbern und es dr\u00e4ngt ihn ins Meer zu wandern. Die M\u00fche lohnt sich, denn im planktonreichen Atlantik ist der Tisch reich gedeckt, so dass der Lachs sehr schnell bis zu 20 kg K\u00f6rpergewicht erreicht! Nach drei bis vier Jahren im Meer, zieht es den Lachs wieder zur\u00fcck zu den Laichpl\u00e4tzen. Er folgt mit seinem au\u00dferordentlichen Geruchssinn der vertrauten Duftspur seines Heimatgew\u00e4ssers, stellt seine Nahrungsaufnahme ein und beginnt den kr\u00e4ftezehrenden Kampf gegen die Str\u00f6mung.",
@@ -2452,7 +2588,8 @@
     "Name_alt": "Salm",
     "Familie": "Lachsfische (Salmonidae)",
     "Gattung": "Salmo",
-    "Lebensraum": "Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Flie\u00dfgew\u00e4sser",
+    "Klasse": "Fische"
   },
   {
     "Habitat": "Der l\u00e4ngsgestreifte Schlammpeitzger bewohnt flache, stehende oder langsam flie\u00dfende Gew\u00e4sser mit schlammigem Grund und reichem Pflanzenbewuchs. Hier kann er sich tags\u00fcber gut verstecken.",
@@ -2470,7 +2607,8 @@
     "Name_alt": "Schlammbei\u00dfer",
     "Familie": "Steinbei\u00dfer (Cobitidae)",
     "Gattung": "Schlammpeitzger",
-    "Lebensraum": "Flie\u00dfgew\u00e4sser.Stillgew\u00e4sser"
+    "Lebensraum": "Flie\u00dfgew\u00e4sser.Stillgew\u00e4sser",
+    "Klasse": "Fische"
   },
   {
     "Erkennungsmerkmale": "Groppen sind \u201eurige Typen\u201d. Ihre Augen sitzen hoch auf dem flachen Kopf. Ihr dicklippiges, breites Maul wirkt immer ein bisschen griesgr\u00e4mig und befl\u00fcgelt unsere Phantasie. Vielleicht haben sie deshalb noch zahlreiche andere Namen wie Kaulkopf, Rotzkopf, Koppe, M\u00fchlkoppe oder Dickkopf.",
@@ -2487,7 +2625,8 @@
     "Name_alt": "Kaulkopf, Rotzkopf, Westgroppe, Koppe, M\u00fchlkoppe, Dickkopf oder Dolm",
     "Familie": "Groppen",
     "Gattung": "Cottus",
-    "Lebensraum": "Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Flie\u00dfgew\u00e4sser",
+    "Klasse": "Fische"
   },
   {
     "Habitat": "Bitterlinge sind kleine silbrige Karpfenfische und leben in pflanzenreichen, flachen, langsam flie\u00dfenden oder stehenden Gew\u00e4ssern mit sandigem oder schlammigem Grund.",
@@ -2501,7 +2640,8 @@
     "Name_sci": "Rhodeus amarus",
     "Name_eng": "european bitterling",
     "Familie": "Bitterlinge",
-    "Lebensraum": "Stillgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser",
+    "Klasse": "Fische"
   },
   {
     "Erkennungsmerkmale": "Auf den ersten Blick k\u00f6nnte man die scheue Wildkatze mit einer getigerten Hauskatze verwechseln, doch das dichte Fell ist bis auf wenige dunkle Streifen an Schwanz und Beinen sehr hell gemustert. Die Wildkatze hat einen ausgepr\u00e4gt breiten Sch\u00e4del und einen buschigen, stumpf endenden Schwanz. Wildkatzen miauen wie Hauskatzen, nur viel dunkler und tiefer.",
@@ -2519,7 +2659,8 @@
     "Name_eng": "european wildcat",
     "Name_alt": "Europ\u00e4ische Wildkatze, Waldkatze",
     "Familie": "Katzen (Felidae)",
-    "Gattung": "Echte Katzen (Felis)"
+    "Gattung": "Echte Katzen (Felis)",
+    "Klasse": "S\u00e4ugetiere"
   },
   {
     "Nahrung": "Der Biber ist eines der gr\u00f6\u00dften Nagetiere der Welt und frisst ausschlie\u00dflich Pflanzen. Er mag Kr\u00e4uter, Gr\u00e4ser, Wasserpflanzen und Str\u00e4ucher, aber auch gro\u00dfe Laubb\u00e4ume wie Espen, Erlen und Pappeln.",
@@ -2536,7 +2677,8 @@
     "Name_alt": "Eurasischer Biber",
     "Familie": "Biber (Castoridae)",
     "Gattung": "Castor",
-    "Lebensraum": "Weichholzaue.Stillgew\u00e4sser"
+    "Lebensraum": "Weichholzaue.Stillgew\u00e4sser",
+    "Klasse": "S\u00e4ugetiere"
   },
   {
     "Lebensraum": "Der Baummarder ist selten geworden. Im Gegensatz zum Steinmarder meidet er besiedelte Gegenden und liebt abgeschiedene gro\u00dfe Laub- und Mischw\u00e4lder mit alten B\u00e4umen.",
@@ -2554,7 +2696,8 @@
     ],
     "Name_eng": "pine marten",
     "Familie": "Marder (Mustelidae)",
-    "Gattung": "Echte Marder (Martes)"
+    "Gattung": "Echte Marder (Martes)",
+    "Klasse": "S\u00e4ugetiere"
   },
   {
     "Habitat": "[Lebensraum] Die Wasserfledermaus lebt in W\u00e4ldern mit angrenzenden Seen, Fl\u00fcssen und Altwasserarmen.",
@@ -2572,7 +2715,8 @@
     "Name_sci": "Myotis daubentonii",
     "Name_eng": "daubenton\u2019s bat",
     "Familie": "Glattnasen (Vespertilionidae)",
-    "Gattung": "Mausohren (Myotis)"
+    "Gattung": "Mausohren (Myotis)",
+    "Klasse": "S\u00e4ugetiere"
   },
   {
     "Lebensraum": "Als Kulturfolger bewohnt es ruhige warme Dachst\u00fchle, oft in Kirchen.",
@@ -2588,7 +2732,8 @@
     ],
     "Name_sci": "Myotis myotis",
     "Familie": "Glattnasen (Vespertilionidae)",
-    "Gattung": "Mausohren (Myotis)"
+    "Gattung": "Mausohren (Myotis)",
+    "Klasse": "S\u00e4ugetiere"
   },
   {
     "Verhalten": "Das Bild r\u00f6hrenden Hirsches schm\u00fcckt unz\u00e4hlige Dekoartikel. Einen lebenden Hirsch bekommst Du aber selten im Wald zusehen, denn die scheuen Tiere verstecken sich tags\u00fcber im Dickicht und kommen erst in der D\u00e4mmerung auf freie Waldlichtungen.\n\nIm Gegensatz zu Rehen w\u00e4lzen sich Rothirsche gerne im Schlamm um sich abzuk\u00fchlen und Hautparasiten loszuwerden. Vielleicht findest Du an einer solchen Suhle die zweiteiligen Hufspuren der Hirsche im weichen Boden.",
@@ -2602,7 +2747,8 @@
     "Name_alt": "Edelhirsch",
     "Familie": "Hirsche (Cervidae)",
     "Gattung": "Edelhirsche (Cervus)",
-    "Lebensraum": "Hartholzaue.Weichholzaue"
+    "Lebensraum": "Hartholzaue.Weichholzaue",
+    "Klasse": "S\u00e4ugetiere"
   },
   {
     "Lebensraum": "Im Sommer lebt es als Einzelg\u00e4nger in lichten W\u00e4ldern. Im Winter sieht man oft kleine Gruppen auf freiem Feld.",
@@ -2620,7 +2766,8 @@
     "Name_eng": "roe deer",
     "Name_alt": "Europ\u00e4isches Reh",
     "Familie": "Hirsche (Cervidae)",
-    "Gattung": "Rehe (Capreolus)"
+    "Gattung": "Rehe (Capreolus)",
+    "Klasse": "S\u00e4ugetiere"
   },
   {
     "Nahrung": "Der Rotfuchs ist ein \u00dcberlebensk\u00fcnstler mit gro\u00dfem Beutespektrum: M\u00e4use, Bodenv\u00f6gel, Kaninchen, Fr\u00f6sche, Heuschrecken und K\u00e4fer aber auch Aas stehen auf seinem Speiseplan. Im Sommer frisst er gerne Kirschen und Heidelbeeren. Sein Kot \u2013 den er gerne auff\u00e4llig auf erh\u00f6hten Pl\u00e4tzen, z.B. einem gro\u00dfen Stein, platziert \u2013verf\u00e4rbt sich dann stark. In mageren Zeiten greift er in die Trickkiste: Es wurde beobachtet, wie er sich totstellt, um V\u00f6gel anzulocken.",
@@ -2637,7 +2784,8 @@
     "Name_eng": "red fox",
     "Familie": "Hunde (Canidae)",
     "Gattung": "Vulpes",
-    "Lebensraum": "Hartholzaue.Weichholzaue.Feuchtwiesen.Magerrasen"
+    "Lebensraum": "Hartholzaue.Weichholzaue.Feuchtwiesen.Magerrasen",
+    "Klasse": "S\u00e4ugetiere"
   },
   {
     "Verhalten": "Das tagaktive Eichh\u00f6rnchen ist ein quirliger Baumakrobat. Es klettert kopfabw\u00e4rts fast so schnell wie aufw\u00e4rts. Im Mittelalter glaubte man deshalb, dass Frauen, die Eichh\u00f6rnchenbraten essen, schwindelfreie Kinder zur Welt bringen.\n\nSie halten Winterruhe. \nIm Herbst sind sie emsig damit besch\u00e4ftigt, Nahrungsvorr\u00e4te f\u00fcr den Winter zu sammeln und Eicheln und Bucheckern im Erdboden zu vergraben. Viele dieser Verstecke finden sie nicht wieder und aus den Samen w\u00e4chst im Fr\u00fchling die n\u00e4chste Waldgeneration.",
@@ -2654,7 +2802,8 @@
     "Name_alt": "Eurasisches Eichh\u00f6rnchen",
     "Familie": "H\u00f6rnchen (Sciuridae)",
     "Gattung": "Eichh\u00f6rnchen (Sciurus)",
-    "Lebensraum": "Hartholzaue.Weichholzaue.Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Hartholzaue.Weichholzaue.Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser",
+    "Klasse": "S\u00e4ugetiere"
   },
   {
     "Lebensraum": "[Habitat] Das Wildschwein ist die Urform unseres Hausschweins. Es hat drei W\u00fcnsche an seinen Lebensraum: dichtes Unterholz als Tagesversteck, feuchte Stellen zum Schlammbaden und viele Eichen und Buchen, die im Herbst Fr\u00fcchte f\u00fcr den Winterspeck liefern.",
@@ -2671,7 +2820,8 @@
     "Name_eng": "wild boar",
     "Name_alt": "Schwarzwild",
     "Familie": "Echte Schweine (Suidae)",
-    "Gattung": "Sus"
+    "Gattung": "Sus",
+    "Klasse": "S\u00e4ugetiere"
   },
   {
     "Lebensraum": "Die kleine Bechsteinfledermaus lebt in Hartholzauenw\u00e4ldern und Parks mit hohen B\u00e4umen.",
@@ -2685,7 +2835,8 @@
     "Name_sci": "Myotis bechsteinii",
     "Name_eng": "Bechstein's bat",
     "Familie": "Glattnasen (Vespertilionidae)",
-    "Gattung": "Mausohren (Myotis)"
+    "Gattung": "Mausohren (Myotis)",
+    "Klasse": "S\u00e4ugetiere"
   },
   {
     "Erkennungsmerkmale": "Die M\u00e4nnchen der Geb\u00e4nderten Prachtlibelle schillern metallisch blaugr\u00fcn in der Sonne. Ihre gr\u00fcnlichen Fl\u00fcgel tragen ein auff\u00e4llig breites schwarzblaues Band. Die Weibchen sind mit ihrem gr\u00fcnen K\u00f6rper und den durchscheinenden Fl\u00fcgeln unscheinbarer. Der Flug der Prachtlibellen ist nicht so schnell und ruckartig wie bei anderen Libellen, sondern eher gaukelnd wie bei Schmetterlingen.",
@@ -2701,7 +2852,8 @@
     "Name_eng": "banded demoiselle",
     "Familie": "Prachtlibellen (Calopterygidae)",
     "Gattung": "Calopteryx",
-    "Lebensraum": "Flie\u00dfgew\u00e4sser.Stillgew\u00e4sser"
+    "Lebensraum": "Flie\u00dfgew\u00e4sser.Stillgew\u00e4sser",
+    "Klasse": "Insekten-Libellen"
   },
   {
     "Erkennungsmerkmale": "Die 4-5 cm lange Gro\u00dfe Binsenjungfer schimmert gr\u00fcnmetallisch und wird mit zunehmendem Alter bronzefarben.",
@@ -2717,7 +2869,8 @@
     "Name_alt": "Westliche Weidenjungfer",
     "Familie": "Teichjungfern (Lestidae)",
     "Gattung": "Chalcolestes",
-    "Lebensraum": "Stillgew\u00e4sser.Weichholzaue"
+    "Lebensraum": "Stillgew\u00e4sser.Weichholzaue",
+    "Klasse": "Insekten-Libellen"
   },
   {
     "Lebensweise": "Du hast sie vielleicht schon einmal ganz nah vorbeisirren sehen, denn sie ist wenig menschenscheu und fliegt auf ihren ausgedehnten Beutefl\u00fcgen auch weitab von ihrem Heimatgew\u00e4sser mitten durch die Stadt. Mosaikjungfern sind nicht so temperaturempfindlich wie unsere Kleinlibellen und auch in k\u00fchleren Abendstunden und bis in den November hinein unterwegs.",
@@ -2734,7 +2887,8 @@
     "Name_eng": "southern hawker",
     "Familie": "Edellibellen (Aeshnidae)",
     "Gattung": "Mosaikjungfern (Aeshna)",
-    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser",
+    "Klasse": "Insekten-Libellen"
   },
   {
     "Erkennungsmerkmale": "Der Plattbauch unterscheidet sich von anderen Gro\u00dflibellen durch seinen auff\u00e4llig breiten Hinterleib. Dieses ist beim M\u00e4nnchen hellblau, beim Weibchen goldbraun gef\u00e4rbt und l\u00e4uft in einem dunklen Ende aus. Alle Fl\u00fcgel tragen einen auff\u00e4llig gro\u00dfen dunklen Fleck am Fl\u00fcgelansatz.",
@@ -2749,7 +2903,8 @@
     "Name_eng": "broad-bodied chaser",
     "Familie": "Segellibellen (Libellulidae)",
     "Gattung": "Libellula",
-    "Lebensraum": "Stillgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser",
+    "Klasse": "Insekten-Libellen"
   },
   {
     "Erkennungsmerkmale": "Der etwa 5 cm lange Gro\u00dfe Blaupfeil ist leicht an seinem kr\u00e4ftigen, leuchtend blauen Hinterleib zu bestimmen. Dieser ist von einer d\u00fcnnen Wachsschicht bedeckt. Im Gegensatz zum \u00e4hnlichen Plattbauch oder zur Spitzenflecklibelle hat er keine dunklen Flecken am Fl\u00fcgelansatz. Junge Tiere sind anfangs gelblich gef\u00e4rbt.",
@@ -2766,7 +2921,8 @@
     "Name_eng": "broad-bodied chaser",
     "Familie": "Segellibellen (Libellulidae)",
     "Gattung": "Libellula",
-    "Lebensraum": "Stillgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser",
+    "Klasse": "Insekten-Libellen"
   },
   {
     "Erkennungsmerkmale": "Es ist nicht ganz einfach, die 12 Arten europ\u00e4ischer Azurjungfern auseinanderzuhalten. Die Hufeisen-Azurjungfer mit ihren 5 cm Fl\u00fcgelspannweite ist an einem hufeisen- oder U-f\u00f6rmigen schwarzen Muster auf dem zweiten Hinterleibsring des M\u00e4nnchens zu erkennen.",
@@ -2782,7 +2938,8 @@
     "Name_eng": "azure damselfly",
     "Familie": "Schlanklibellen (Coenagrionidae)",
     "Gattung": "Azurjungfern (Coenagrion)",
-    "Lebensraum": "Stillgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser",
+    "Klasse": "Insekten-Libellen"
   },
   {
     "Erkennungsmerkmale": "Die Gr\u00fcne Flussjungfer hat eine unverwechselbare F\u00e4rbung: K\u00f6rper und Kopf sind leuchtend gr\u00fcn, der Hinterleib schwarz mit gelben Flecken. Damit ist sie in der gr\u00fcnen Vegetation perfekt getarnt.",
@@ -2796,7 +2953,8 @@
     "Name_alt": "Gr\u00fcne Flussjungfer",
     "Familie": "Flussjungfern",
     "Gattung": "Ophiomophus",
-    "Lebensraum": "Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Flie\u00dfgew\u00e4sser",
+    "Klasse": "Insekten-Libellen"
   },
   {
     "Habitat": "Die Helm-Azurjungfer bewohnt besonnte Bachl\u00e4ufe und Gr\u00e4ben mit sauberem kalkhaltigem und langsam flie\u00dfendem Wasser und dichtem Pflanzenbewuchs.",
@@ -2811,7 +2969,8 @@
     "Name_sci": "Coenagrion mercuriale",
     "Familie": "Schlanklibellen (Coenagrionidae)",
     "Gattung": "Azurjungfern (Coenagrion)",
-    "Lebensraum": "Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Flie\u00dfgew\u00e4sser",
+    "Klasse": "Insekten-Libellen"
   },
   {
     "Erkennungsmerkmale": "Die Gro\u00dfe Pechlibelle ist eine der h\u00e4ufigsten Kleinlibellen in Deutschland. Sie zeigt eine gro\u00dfe Bandbreite an Farben: Zwar ist der Hinterleib pechschwarz (Name!), die Unterseite und das achte K\u00f6rpersegment sind aber beim ausgewachsenen Tier leuchtend blau, t\u00fcrkis, gr\u00fcn, lila oder bronzefarben.",
@@ -2828,7 +2987,8 @@
     "Name_eng": "blue-tailed damselfly",
     "Familie": "Schlanklibellen (Coenagrionidae)",
     "Gattung": "Pechlibellen (Ischnura)",
-    "Lebensraum": "Flie\u00dfgew\u00e4sser.Stillgew\u00e4sser"
+    "Lebensraum": "Flie\u00dfgew\u00e4sser.Stillgew\u00e4sser",
+    "Klasse": "Insekten-Libellen"
   },
   {
     "Erkennungsmerkmale": "Das M\u00e4nnchen der Blutroten Heidelibelle macht seinem Namen alle Ehre: Stirn und Hinterleib sind intensiv rot gef\u00e4rbt. Das Weibchen dagegen tr\u00e4gt ein gelbliches Braun.",
@@ -2845,7 +3005,8 @@
     "Name_eng": "ruddy darter",
     "Familie": "Segellibellen (Libellulidae)",
     "Gattung": "Heidelibellen (Sympetrum)",
-    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser"
+    "Lebensraum": "Stillgew\u00e4sser.Flie\u00dfgew\u00e4sser",
+    "Klasse": "Insekten-Libellen"
   },
   {
     "Name": "Rheinaue",

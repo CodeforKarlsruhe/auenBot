@@ -1,7 +1,7 @@
 [
   {
     "Name":"Gro\u00dfe Brennnessel",
-    "Typ":"Krautige Pflanzen Wald",
+    "Klasse":"Krautige Pflanzen Wald",
     "Name_sci":"Urtica dioica",
     "Name_eng":"stinging nettle",
     "Name_alt":"Scharfnessel",
@@ -11,7 +11,7 @@
   },
   {
     "Name":"Winter-Schachtelhalm",
-    "Typ":"Krautige Pflanzen Wald",
+    "Klasse":"Krautige Pflanzen Wald",
     "Name_sci":"Equisetum hyemale",
     "Name_eng":"winter horsetail",
     "Name_alt":"Tischlerschachtelhalm",
@@ -21,7 +21,7 @@
   },
   {
     "Name":"Gemeine Schuppenwurz",
-    "Typ":"Krautige Pflanzen Wald",
+    "Klasse":"Krautige Pflanzen Wald",
     "Name_sci":"Lathraea squamaria",
     "Name_eng":"common toothwort",
     "Name_alt":null,
@@ -31,7 +31,7 @@
   },
   {
     "Name":"Gelbes Windr\u00f6schen",
-    "Typ":"Krautige Pflanzen Wald",
+    "Klasse":"Krautige Pflanzen Wald",
     "Name_sci":"Anemone ranunculoides",
     "Name_eng":"yellow anemone",
     "Name_alt":"Gelbe Storchblume",
@@ -41,7 +41,7 @@
   },
   {
     "Name":"Busch-Windr\u00f6schen",
-    "Typ":"Krautige Pflanzen Wald",
+    "Klasse":"Krautige Pflanzen Wald",
     "Name_sci":"Anemone nemorosa",
     "Name_eng":"wood anemone",
     "Name_alt":"Hexenblume",
@@ -51,7 +51,7 @@
   },
   {
     "Name":"Sumpf-Vergissmeinnicht",
-    "Typ":"Krautige Pflanzen Wald",
+    "Klasse":"Krautige Pflanzen Wald",
     "Name_sci":"Myosotis scorpioides",
     "Name_eng":"water forget-me-not",
     "Name_alt":"Blauer Augentrost",
@@ -61,7 +61,7 @@
   },
   {
     "Name":"B\u00e4rlauch",
-    "Typ":"Krautige Pflanzen Wald",
+    "Klasse":"Krautige Pflanzen Wald",
     "Name_sci":"Allium ursinum",
     "Name_eng":"wild garlic",
     "Name_alt":null,
@@ -71,7 +71,7 @@
   },
   {
     "Name":"Gefleckter Aronstab",
-    "Typ":"Krautige Pflanzen Wald",
+    "Klasse":"Krautige Pflanzen Wald",
     "Name_sci":"Arum maculatum",
     "Name_eng":"arum lily, Lords and ladies",
     "Name_alt":"Aronstab",
@@ -81,7 +81,7 @@
   },
   {
     "Name":"Einbeere",
-    "Typ":"Krautige Pflanzen Wald",
+    "Klasse":"Krautige Pflanzen Wald",
     "Name_sci":"Paris quadrifolia",
     "Name_eng":"herb Paris",
     "Name_alt":null,
@@ -91,7 +91,7 @@
   },
   {
     "Name":"Scharbockskraut",
-    "Typ":"Krautige Pflanzen Wald",
+    "Klasse":"Krautige Pflanzen Wald",
     "Name_sci":"Ranunulus ficaria",
     "Name_eng":"lesser celandine",
     "Name_alt":"Feigwurz, Fr\u00fchlings- Scharbockskraut",
@@ -101,7 +101,7 @@
   },
   {
     "Name":"Purpur-Knabenkraut",
-    "Typ":"Krautige Pflanzen Wald",
+    "Klasse":"Krautige Pflanzen Wald",
     "Name_sci":"Orchis purpurea",
     "Name_eng":"lady orchid",
     "Name_alt":null,
@@ -111,7 +111,7 @@
   },
   {
     "Name":"Gelbe Teichrose",
-    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Klasse":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
     "Name_sci":"Nuphar lutea",
     "Name_eng":"pond lily",
     "Name_alt":"Gelbe Teichmummel, Mummel, Teichmummel oder Teichkandel",
@@ -121,7 +121,7 @@
   },
   {
     "Name":"Seerose",
-    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Klasse":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
     "Name_sci":"Nymphaea alba",
     "Name_eng":"water lily",
     "Name_alt":"Wasserlilie",
@@ -131,7 +131,7 @@
   },
   {
     "Name":"Wassernuss",
-    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Klasse":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
     "Name_sci":"Trapa natans",
     "Name_eng":"water nut",
     "Name_alt":null,
@@ -141,7 +141,7 @@
   },
   {
     "Name":"Gemeiner Schwimmfarn",
-    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Klasse":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
     "Name_sci":"Salvinia natans",
     "Name_eng":"floating watermoss",
     "Name_alt":"Gew\u00f6hnlicher Schwimmfarn",
@@ -151,7 +151,7 @@
   },
   {
     "Name":"Krebsschere",
-    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Klasse":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
     "Name_sci":"Stratiotes aloides",
     "Name_eng":"water soldier",
     "Name_alt":"Agel, Wassersegel, Wassersichel",
@@ -161,7 +161,7 @@
   },
   {
     "Name":"Gew\u00f6hnlicher Wasserhahnenfu\u00df",
-    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Klasse":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
     "Name_sci":"Ranunculus aquatilis",
     "Name_eng":"water crowfoot",
     "Name_alt":null,
@@ -171,7 +171,7 @@
   },
   {
     "Name":"Schlammling",
-    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Klasse":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
     "Name_sci":"Limosella aquatica",
     "Name_eng":"(water) mudwort",
     "Name_alt":"Schlammkraut, Schlammgl\u00f6ckchen",
@@ -181,7 +181,7 @@
   },
   {
     "Name":"Braunes Zypergras",
-    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Klasse":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
     "Name_sci":"Cyperus fuscus",
     "Name_eng":"brown galingale",
     "Name_alt":null,
@@ -191,7 +191,7 @@
   },
   {
     "Name":"Sumpf-Schwertlilie",
-    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Klasse":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
     "Name_sci":"Iris pseudacorus",
     "Name_eng":"yellow flag",
     "Name_alt":"Gelbe Schwertlilie, Wasser- Schwertlilie",
@@ -201,7 +201,7 @@
   },
   {
     "Name":"Schilf-Rohr",
-    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Klasse":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
     "Name_sci":"Phragmites australis",
     "Name_eng":"common reed",
     "Name_alt":"Schilf",
@@ -211,7 +211,7 @@
   },
   {
     "Name":"Blutweiderich",
-    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Klasse":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
     "Name_sci":"Lythrum salicaria",
     "Name_eng":"purple loosestrife",
     "Name_alt":null,
@@ -221,7 +221,7 @@
   },
   {
     "Name":"Gilbweiderich",
-    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Klasse":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
     "Name_sci":"Lysimachia vulgaris",
     "Name_eng":"loosestrife",
     "Name_alt":"Gelbweiderich, Feldberich",
@@ -231,7 +231,7 @@
   },
   {
     "Name":"Sumpf-Wolfsmilch",
-    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Klasse":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
     "Name_sci":"Euphorbia palustris",
     "Name_eng":"marsh spurge",
     "Name_alt":null,
@@ -241,7 +241,7 @@
   },
   {
     "Name":"Gemeiner Wasserdost",
-    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Klasse":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
     "Name_sci":"Eupatorium cannabinum",
     "Name_eng":"hemp agrimony",
     "Name_alt":"Gemeiner Wasserdost, Wasserhanf, Kunigundenkraut",
@@ -251,7 +251,7 @@
   },
   {
     "Name":"Wasser-Sumpfkresse",
-    "Typ":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
+    "Klasse":"Krautige Pflanzen Gew\u00e4sser und Gew\u00e4sserufer",
     "Name_sci":"Rorippa amphibia",
     "Name_eng":"great yellow-cress",
     "Name_alt":"Teichkresse, Ufer-Sumpfkresse",
@@ -261,7 +261,7 @@
   },
   {
     "Name":"Sumpf-Haarstrang",
-    "Typ":"Krautige Pflanzen Feuchtwiesen",
+    "Klasse":"Krautige Pflanzen Feuchtwiesen",
     "Name_sci":"Peucedanum palustre",
     "Name_eng":"milk parsley",
     "Name_alt":"\u00d6lsenich",
@@ -271,7 +271,7 @@
   },
   {
     "Name":"Gro\u00dfer Wiesenknopf",
-    "Typ":"Krautige Pflanzen Feuchtwiesen",
+    "Klasse":"Krautige Pflanzen Feuchtwiesen",
     "Name_sci":"Sanguisorba officinalis",
     "Name_eng":"great burnet",
     "Name_alt":"Gro\u00df- Wiesenknopf, Blutstr\u00f6pfchen",
@@ -281,7 +281,7 @@
   },
   {
     "Name":"Kuckucks-Lichtnelke",
-    "Typ":"Krautige Pflanzen Feuchtwiesen",
+    "Klasse":"Krautige Pflanzen Feuchtwiesen",
     "Name_sci":"Lychnis flos- cuculi",
     "Name_eng":"ragged robin",
     "Name_alt":null,
@@ -291,7 +291,7 @@
   },
   {
     "Name":"Kanten-Lauch",
-    "Typ":"Krautige Pflanzen Feuchtwiesen",
+    "Klasse":"Krautige Pflanzen Feuchtwiesen",
     "Name_sci":"Allium angulosum",
     "Name_eng":"mouse garlic",
     "Name_alt":"Kantiger Lauch",
@@ -301,7 +301,7 @@
   },
   {
     "Name":"Rohr-Pfeifengras",
-    "Typ":"Krautige Pflanzen Feuchtwiesen",
+    "Klasse":"Krautige Pflanzen Feuchtwiesen",
     "Name_sci":"Molinia arundinacea",
     "Name_eng":"moorgrass",
     "Name_alt":"Pfeifengras",
@@ -311,7 +311,7 @@
   },
   {
     "Name":"F\u00e4rber-Scharte",
-    "Typ":"Krautige Pflanzen Feuchtwiesen",
+    "Klasse":"Krautige Pflanzen Feuchtwiesen",
     "Name_sci":"Serratula tinctoria",
     "Name_eng":"saw- wort",
     "Name_alt":null,
@@ -321,7 +321,7 @@
   },
   {
     "Name":"Weiden-Alant",
-    "Typ":"Krautige Pflanzen Feuchtwiesen",
+    "Klasse":"Krautige Pflanzen Feuchtwiesen",
     "Name_sci":"Pentanema salicinum",
     "Name_eng":"Irish fleabane",
     "Name_alt":"Weidenbl\u00e4ttriger- Alant",
@@ -331,7 +331,7 @@
   },
   {
     "Name":"Wiesen-Salbei",
-    "Typ":"Krautige Pflanzen Magerwiesen",
+    "Klasse":"Krautige Pflanzen Magerwiesen",
     "Name_sci":"Salvia pratensis",
     "Name_eng":"meadow clary",
     "Name_alt":null,
@@ -341,7 +341,7 @@
   },
   {
     "Name":"Zottiger Klappertopf",
-    "Typ":"Krautige Pflanzen Magerwiesen",
+    "Klasse":"Krautige Pflanzen Magerwiesen",
     "Name_sci":"Rhinanthus alectorolophus",
     "Name_eng":"European yellow rattle",
     "Name_alt":null,
@@ -351,7 +351,7 @@
   },
   {
     "Name":"Echte Schl\u00fcsselblume",
-    "Typ":"Krautige Pflanzen Magerwiesen",
+    "Klasse":"Krautige Pflanzen Magerwiesen",
     "Name_sci":"Primula veris",
     "Name_eng":"common cowslip",
     "Name_alt":"Primel",
@@ -361,7 +361,7 @@
   },
   {
     "Name":"Gemeiner Hufeisenklee",
-    "Typ":"Krautige Pflanzen Magerrasen",
+    "Klasse":"Krautige Pflanzen Magerrasen",
     "Name_sci":"Hippocrepsis comosa",
     "Name_eng":"horseshoe vetch",
     "Name_alt":"Schopfiger- Hufeisenklee, Hufeisenklee",
@@ -371,7 +371,7 @@
   },
   {
     "Name":"Helm-Knabenkraut",
-    "Typ":"Krautige Pflanzen Magerrasen",
+    "Klasse":"Krautige Pflanzen Magerrasen",
     "Name_sci":"Orchis militaris",
     "Name_eng":"military orchid",
     "Name_alt":null,
@@ -381,7 +381,7 @@
   },
   {
     "Name":"Zypressen-Wolfsmilch",
-    "Typ":"Krautige Pflanzen Magerrasen",
+    "Klasse":"Krautige Pflanzen Magerrasen",
     "Name_sci":"Euphorbia cyparissias",
     "Name_eng":"cypress spurge",
     "Name_alt":null,
@@ -391,7 +391,7 @@
   },
   {
     "Name":"Milder Mauerpfeffer",
-    "Typ":"Krautige Pflanzen Magerrasen",
+    "Klasse":"Krautige Pflanzen Magerrasen",
     "Name_sci":"Sedum sexangulare",
     "Name_eng":"tasteless stonecrop",
     "Name_alt":null,
@@ -401,7 +401,7 @@
   },
   {
     "Name":"Steppen-Wolfsmilch",
-    "Typ":"Krautige Pflanzen Magerrasen",
+    "Klasse":"Krautige Pflanzen Magerrasen",
     "Name_sci":"Euphorbia seguieriana",
     "Name_eng":"Seguier's spurge",
     "Name_alt":null,
@@ -411,7 +411,7 @@
   },
   {
     "Name":"Schopfiges Kreuzbl\u00fcmchen",
-    "Typ":"Krautige Pflanzen Magerrasen",
+    "Klasse":"Krautige Pflanzen Magerrasen",
     "Name_sci":"Polygala comosa",
     "Name_eng":"tufted milkwort",
     "Name_alt":"Schopf- Kreuzbl\u00fcmchen",
@@ -421,7 +421,7 @@
   },
   {
     "Name":"Eingriffeliger Wei\u00dfdorn",
-    "Typ":"Straucharten",
+    "Klasse":"Straucharten",
     "Name_sci":"Crataegus  monogyna",
     "Name_eng":"hawthorn",
     "Name_alt":"Hagedorn",
@@ -431,7 +431,7 @@
   },
   {
     "Name":"Pfaffenh\u00fctchen",
-    "Typ":"Straucharten",
+    "Klasse":"Straucharten",
     "Name_sci":"Euonymus europaeus",
     "Name_eng":"spindle tree",
     "Name_alt":"Gew\u00f6hnlich Spindelstrauch, Spindelbaum",
@@ -441,7 +441,7 @@
   },
   {
     "Name":"Roter Hartriegel",
-    "Typ":"Straucharten",
+    "Klasse":"Straucharten",
     "Name_sci":"Cornus sanguinea",
     "Name_eng":"common dogwood",
     "Name_alt":"Rotes Beinholz, Hundsbeere, Roter Hornstrauch",
@@ -451,7 +451,7 @@
   },
   {
     "Name":"Gemeiner Schneeball",
-    "Typ":"Straucharten",
+    "Klasse":"Straucharten",
     "Name_sci":"Viburnum opulus",
     "Name_eng":"guelder rose",
     "Name_alt":"Herzbeer, Drosselbeerstrauch, Glasbeere",
@@ -461,7 +461,7 @@
   },
   {
     "Name":"Gemeiner Liguster",
-    "Typ":"Straucharten",
+    "Klasse":"Straucharten",
     "Name_sci":"Ligustrum vulgare",
     "Name_eng":"common privet",
     "Name_alt":"Rainweiden",
@@ -471,7 +471,7 @@
   },
   {
     "Name":"Gemeine Heckenkirsche",
-    "Typ":"Straucharten",
+    "Klasse":"Straucharten",
     "Name_sci":"Lonicera xylosteum",
     "Name_eng":"\tEuropean fly honeysuckle",
     "Name_alt":"Gei\u00dfbl\u00e4tter",
@@ -481,7 +481,7 @@
   },
   {
     "Name":"Haselstrauch",
-    "Typ":"Straucharten",
+    "Klasse":"Straucharten",
     "Name_sci":"Corylus avellana",
     "Name_eng":"hazel bush",
     "Name_alt":"Gemeine Hasel",
@@ -491,7 +491,7 @@
   },
   {
     "Name":"Schwarzer Holunder",
-    "Typ":"Straucharten",
+    "Klasse":"Straucharten",
     "Name_sci":"Sambucus nigra",
     "Name_eng":"black elderberry",
     "Name_alt":null,
@@ -501,7 +501,7 @@
   },
   {
     "Name":"Silberweide",
-    "Typ":"Baumarten",
+    "Klasse":"Baumarten",
     "Name_sci":"Salix alba",
     "Name_eng":"white willow",
     "Name_alt":null,
@@ -511,7 +511,7 @@
   },
   {
     "Name":"Schwarzpappel",
-    "Typ":"Baumarten",
+    "Klasse":"Baumarten",
     "Name_sci":"Populus nigra",
     "Name_eng":"black poplar",
     "Name_alt":"Saarbaum",
@@ -521,7 +521,7 @@
   },
   {
     "Name":"Stieleiche",
-    "Typ":"Baumarten",
+    "Klasse":"Baumarten",
     "Name_sci":"Quercus robur",
     "Name_eng":"common oak",
     "Name_alt":"Sommereiche, Deutsche Eiche",
@@ -531,7 +531,7 @@
   },
   {
     "Name":"Feldulme",
-    "Typ":"Baumarten",
+    "Klasse":"Baumarten",
     "Name_sci":"Ulmus minor",
     "Name_eng":"small-leaved Elm",
     "Name_alt":"Iper",
@@ -541,7 +541,7 @@
   },
   {
     "Name":"Flatterulme",
-    "Typ":"Baumarten",
+    "Klasse":"Baumarten",
     "Name_sci":"Ulmus laevis",
     "Name_eng":"European white elm",
     "Name_alt":"Flatterr\u00fcster, Wei\u00dfr\u00fcster",
@@ -551,7 +551,7 @@
   },
   {
     "Name":"Gemeine Esche",
-    "Typ":"Baumarten",
+    "Klasse":"Baumarten",
     "Name_sci":"Fraxinus excelsior",
     "Name_eng":"common ash",
     "Name_alt":"Hohe Esche",
@@ -561,7 +561,7 @@
   },
   {
     "Name":"Bergahorn",
-    "Typ":"Baumarten",
+    "Klasse":"Baumarten",
     "Name_sci":"Acer pseudoplatanus",
     "Name_eng":"sycamoe",
     "Name_alt":null,
@@ -571,7 +571,7 @@
   },
   {
     "Name":"Hainbuche",
-    "Typ":"Baumarten",
+    "Klasse":"Baumarten",
     "Name_sci":"Carpinus betulus",
     "Name_eng":"(common) hornbeam",
     "Name_alt":"Wei\u00dfbuche, Hagebuche, Hornbaum",
@@ -581,7 +581,7 @@
   },
   {
     "Name":"Holzapfel",
-    "Typ":"Baumarten",
+    "Klasse":"Baumarten",
     "Name_sci":"Malus sylvestris",
     "Name_eng":"crab apple",
     "Name_alt":"Europ\u00e4ischer Wildapfel, Krabapfel",
@@ -591,7 +591,7 @@
   },
   {
     "Name":"Wild-Birne",
-    "Typ":"Baumarten",
+    "Klasse":"Baumarten",
     "Name_sci":"Pyrus pyraster",
     "Name_eng":"wild pear",
     "Name_alt":"Holzbirne",
@@ -601,7 +601,7 @@
   },
   {
     "Name":"Efeu",
-    "Typ":"Schlingpflanzen",
+    "Klasse":"Schlingpflanzen",
     "Name_sci":"Hedera helix",
     "Name_eng":"common ivy",
     "Name_alt":"Gemeiner Efeu",
@@ -611,7 +611,7 @@
   },
   {
     "Name":"Gemeine Waldrebe",
-    "Typ":"Schlingpflanzen",
+    "Klasse":"Schlingpflanzen",
     "Name_sci":"Clematis vitalba",
     "Name_eng":"traveller's-joy",
     "Name_alt":"Klematis",
@@ -621,7 +621,7 @@
   },
   {
     "Name":"Wilder Hopfen",
-    "Typ":"Schlingpflanzen",
+    "Klasse":"Schlingpflanzen",
     "Name_sci":"Humulus lupulus",
     "Name_eng":"wild hop",
     "Name_alt":"Echter Hopfen",
@@ -631,7 +631,7 @@
   },
   {
     "Name":"Wilde Weinrebe",
-    "Typ":"Schlingpflanzen",
+    "Klasse":"Schlingpflanzen",
     "Name_sci":"Vitis vinifera subsp. sylvestris",
     "Name_eng":"wild grape",
     "Name_alt":"Wilde Weinrebe, Wilder Weinstock",
