@@ -30,29 +30,44 @@ def generate_image(prompt, size="512x512", model="black-forest-labs/FLUX-1-schne
 with open("../rawData/tiere_pflanzen_auen.json", "r") as f:
     data = json.load(f)
 
-img_dir = Path("fakeImgs")
+img_dir = Path("fantasyImages")
 img_dir.mkdir(parents=True, exist_ok=True)
     
 for item in data:
     name = item["Name"]
+    name_eng = item.get("Name_Eng", name)
     classType = item.get("Klasse", "")
     if item["Typ"] == "Tier":
         if "Erkennungsmerkmale" in item:
-            description = item["Erkennungsmerkmale"]
+            description = item.get("Erkennungsmerkmale", "")
         elif "Habitat" in item:
-            description = item["Habitat"]
+            description = item.get("Habitat", "")
         elif "Lebensweise" in item:
-            description = item["Lebensweise"]  
+            description = item.get("Lebensweise", "")  
         else:
             description = ""
-        prompt = f"Tier der Klasse {classType}, Spezies {name} aus der Familie {item.get('Familie', '')}, Foto in natürlicher Umgebung. {description}."
+        # bats and grasshopper need special prompts with flux-1
+        if "fledermaus" in name.lower():
+            description = item.get("Erkennungsmerkmale", "")
+            prompt = f"Darstellung einer Fledermaus (bat, {name_eng}), Foto in natürlicher Umgebung. {description}."
+        elif "schrecke" in name.lower():
+            description = item.get("Erkennungsmerkmale", "")
+            prompt = f"Darstellung eines Grashüpfers (grasshopper, {name_eng}) , Foto in natürlicher Umgebung. {description}."
+        elif "muschel" in name.lower():
+            description = item.get("Erkennungsmerkmale", "")
+            prompt = f"Darstellung einer Muschel (mussel, {name_eng}) , Foto in natürlicher Umgebung. {description}."
+        elif "schnake" in name.lower():
+            description = item.get("Erkennungsmerkmale", "")
+            prompt = f"Darstellung einer Schnake (cranefly, {name_eng}) , Foto in natürlicher Umgebung. {description}."
+        else:            
+            prompt = f"Tier der Klasse {classType}, Spezies {name} ({name_eng}) aus der Familie {item.get('Familie', '')}, Foto in natürlicher Umgebung. {description}."
     elif item["Typ"] == "Pflanze":
         if "Erkennungsmerkmale" in item:
-            description = item["Erkennungsmerkmale"]
+            description = item.get("Erkennungsmerkmale", "")
         elif "Vorkommen" in item:
-            description = item["Vorkommen"]
+            description = item.get("Vorkommen", "")
         elif "Wissenswertes" in item:
-            description = item["Wissenswertes"]  
+            description = item.get("Wissenswertes", "")  
         else:
             description = ""
         prompt = f"Pflanze der Klasse {classType}, Spezies {name}, Foto in natürlicher Umgebung. {description}."
