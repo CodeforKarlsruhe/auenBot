@@ -1,7 +1,7 @@
 [
   {
     "Name":"Reh",
-    "Typ":"S\u00e4ugetiere",
+    "Klasse":"S\u00e4ugetiere",
     "Name_sci":"Capreolus capreolus",
     "Name_eng":"roe deer",
     "Name_alt":"Europ\u00e4isches Reh",
@@ -11,7 +11,7 @@
   },
   {
     "Name":"Rothirsch",
-    "Typ":"S\u00e4ugetiere",
+    "Klasse":"S\u00e4ugetiere",
     "Name_sci":"Cervus elaphus",
     "Name_eng":"red deer",
     "Name_alt":"Edelhirsch",
@@ -21,7 +21,7 @@
   },
   {
     "Name":"Wildschwein",
-    "Typ":"S\u00e4ugetiere",
+    "Klasse":"S\u00e4ugetiere",
     "Name_sci":"Sus scrofa",
     "Name_eng":"wild boar",
     "Name_alt":"Schwarzwild",
@@ -31,7 +31,7 @@
   },
   {
     "Name":"Baummarder",
-    "Typ":"S\u00e4ugetiere",
+    "Klasse":"S\u00e4ugetiere",
     "Name_sci":"Martes martes",
     "Name_eng":"pine marten",
     "Name_alt":"Edelmarder",
@@ -41,7 +41,7 @@
   },
   {
     "Name":"Rotfuchs",
-    "Typ":"S\u00e4ugetiere",
+    "Klasse":"S\u00e4ugetiere",
     "Name_sci":"Vulpes vulpes",
     "Name_eng":"red fox",
     "Name_alt":null,
@@ -51,7 +51,7 @@
   },
   {
     "Name":"Wildkatze",
-    "Typ":"S\u00e4ugetiere",
+    "Klasse":"S\u00e4ugetiere",
     "Name_sci":"Felis silvestris",
     "Name_eng":"european wildcat",
     "Name_alt":"Europ\u00e4ische Wildkatze, Waldkatze",
@@ -61,7 +61,7 @@
   },
   {
     "Name":"Eichh\u00f6rnchen",
-    "Typ":"S\u00e4ugetiere",
+    "Klasse":"S\u00e4ugetiere",
     "Name_sci":"Sciurus vulgaris",
     "Name_eng":"red squirrel",
     "Name_alt":"Eurasisches Eichh\u00f6rnchen",
@@ -71,7 +71,7 @@
   },
   {
     "Name":"Biber",
-    "Typ":"S\u00e4ugetiere",
+    "Klasse":"S\u00e4ugetiere",
     "Name_sci":"Castor fiber",
     "Name_eng":"european beaver",
     "Name_alt":"Eurasischer Biber",
@@ -81,7 +81,7 @@
   },
   {
     "Name":"Wasserfledermaus",
-    "Typ":"S\u00e4ugetiere",
+    "Klasse":"S\u00e4ugetiere",
     "Name_sci":"Myotis daubentonii",
     "Name_eng":"daubenton\u2019s bat",
     "Name_alt":null,
@@ -91,7 +91,7 @@
   },
   {
     "Name":"Bechsteinfledermaus",
-    "Typ":"S\u00e4ugetiere",
+    "Klasse":"S\u00e4ugetiere",
     "Name_sci":"Myotis bechsteinii",
     "Name_eng":"Bechstein's bat",
     "Name_alt":null,
@@ -101,7 +101,7 @@
   },
   {
     "Name":"Gro\u00dfes Mausohr",
-    "Typ":"S\u00e4ugetiere",
+    "Klasse":"S\u00e4ugetiere",
     "Name_sci":"Myotis myotis",
     "Name_eng":null,
     "Name_alt":null,
@@ -111,7 +111,7 @@
   },
   {
     "Name":"Eisvogel",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Alcedo atthis",
     "Name_eng":"common kingfisher",
     "Name_alt":null,
@@ -121,7 +121,7 @@
   },
   {
     "Name":"Pirol",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Oriolus oriolus",
     "Name_eng":"eurasian golden oriole",
     "Name_alt":null,
@@ -131,7 +131,7 @@
   },
   {
     "Name":"Haubentaucher",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Podiceps cristatus",
     "Name_eng":"great crested grebe",
     "Name_alt":null,
@@ -141,7 +141,7 @@
   },
   {
     "Name":"Schwarzspecht",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Dryocopus martius",
     "Name_eng":"black woodpecker",
     "Name_alt":null,
@@ -151,7 +151,7 @@
   },
   {
     "Name":"Graureiher",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Aredea cinerea",
     "Name_eng":"grey heron",
     "Name_alt":"Fischreiher",
@@ -161,7 +161,7 @@
   },
   {
     "Name":"Wei\u00dfstorch",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Ciconia ciconia",
     "Name_eng":"white stork",
     "Name_alt":"Klapperstorch",
@@ -171,7 +171,7 @@
   },
   {
     "Name":"Schwarzmilan",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Milvus migrans",
     "Name_eng":"black kite",
     "Name_alt":"Schwarze Milan",
@@ -181,7 +181,7 @@
   },
   {
     "Name":"Flussregenpfeifer",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Charadrius dubius",
     "Name_eng":"little ringed plover",
     "Name_alt":null,
@@ -191,7 +191,7 @@
   },
   {
     "Name":"Teichrohrs\u00e4nger",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Acrocephalus scirpaceus",
     "Name_eng":"common reed warbler",
     "Name_alt":null,
@@ -201,7 +201,7 @@
   },
   {
     "Name":"Kuckuck",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Cuculus canorus",
     "Name_eng":"common cuckoo",
     "Name_alt":null,
@@ -211,7 +211,7 @@
   },
   {
     "Name":"Krickente",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Anas crecca",
     "Name_eng":"common teal",
     "Name_alt":"Kriekente",
@@ -221,7 +221,7 @@
   },
   {
     "Name":"Schnatterente",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Anas strepera",
     "Name_eng":"gadwall",
     "Name_alt":"Mittelente, Knarrente",
@@ -231,7 +231,7 @@
   },
   {
     "Name":"Schellente",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Bucephala clangula",
     "Name_eng":"common goldeneye",
     "Name_alt":null,
@@ -241,7 +241,7 @@
   },
   {
     "Name":"Reiherente",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Aythya fuligula",
     "Name_eng":"tufted duck",
     "Name_alt":null,
@@ -251,7 +251,7 @@
   },
   {
     "Name":"Tafelente",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Aythya ferina",
     "Name_eng":"common porchard",
     "Name_alt":null,
@@ -261,7 +261,7 @@
   },
   {
     "Name":"Zwergtaucher",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Tachybaptus ruficollis",
     "Name_eng":"call duck",
     "Name_alt":null,
@@ -271,7 +271,7 @@
   },
   {
     "Name":"Kormoran",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Phalacrocorax carbo",
     "Name_eng":"great cormorant",
     "Name_alt":null,
@@ -281,7 +281,7 @@
   },
   {
     "Name":"Wasserralle",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Rallus aquaticus",
     "Name_eng":"water rail",
     "Name_alt":null,
@@ -291,7 +291,7 @@
   },
   {
     "Name":"Bekassine",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Gallinago gallinago",
     "Name_eng":"common snipe",
     "Name_alt":null,
@@ -301,7 +301,7 @@
   },
   {
     "Name":"Lachm\u00f6we",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Larus ridibundus",
     "Name_eng":"Black-headed gull",
     "Name_alt":null,
@@ -311,7 +311,7 @@
   },
   {
     "Name":"Flussseeschwalbe",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Sterna hirundo",
     "Name_eng":"common tern",
     "Name_alt":null,
@@ -321,7 +321,7 @@
   },
   {
     "Name":"Uferschwalbe",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Riparia riparia",
     "Name_eng":"sand martin",
     "Name_alt":null,
@@ -331,7 +331,7 @@
   },
   {
     "Name":"Rohrammer",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Emberiza schoeniclus",
     "Name_eng":"common reed bunting",
     "Name_alt":"Rohrspatz",
@@ -341,7 +341,7 @@
   },
   {
     "Name":"Kiebitz",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Vanellus vanellus",
     "Name_eng":"northern lapwing",
     "Name_alt":null,
@@ -351,7 +351,7 @@
   },
   {
     "Name":"Mittelspecht",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Dendrocopos medius",
     "Name_eng":"middle spotted woodpecker",
     "Name_alt":null,
@@ -361,7 +361,7 @@
   },
   {
     "Name":"Kleinspecht",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Dedrocopos minor",
     "Name_eng":"lesser spotted woodpecker",
     "Name_alt":null,
@@ -371,7 +371,7 @@
   },
   {
     "Name":"Grauspecht",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Picus canus",
     "Name_eng":"grey-headed woodpecker",
     "Name_alt":null,
@@ -381,7 +381,7 @@
   },
   {
     "Name":"Gr\u00fcnspecht",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Picus viridis",
     "Name_eng":"european green woodpecker",
     "Name_alt":"Grasspecht, Erdspecht",
@@ -391,7 +391,7 @@
   },
   {
     "Name":"Turteltaube",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Streptopelia turtur",
     "Name_eng":"european turtle dove",
     "Name_alt":null,
@@ -401,7 +401,7 @@
   },
   {
     "Name":"Waldkauz",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Strix aluco",
     "Name_eng":"tawny owl",
     "Name_alt":null,
@@ -411,7 +411,7 @@
   },
   {
     "Name":"Baumfalke",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Falco subbuteo",
     "Name_eng":"eurasian hobby",
     "Name_alt":null,
@@ -421,7 +421,7 @@
   },
   {
     "Name":"Waldlaubs\u00e4nger",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Phylloscopus sibilatrix",
     "Name_eng":"wood warbler",
     "Name_alt":null,
@@ -431,7 +431,7 @@
   },
   {
     "Name":"Feldschwirl",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Locustella naevia",
     "Name_eng":"common grasshopper warbler",
     "Name_alt":null,
@@ -441,7 +441,7 @@
   },
   {
     "Name":"M\u00f6nchsgrasm\u00fccke",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Sylvia atricapilla",
     "Name_eng":"eurasian blackcap",
     "Name_alt":null,
@@ -451,7 +451,7 @@
   },
   {
     "Name":"Singdrossel",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Turdus philomelos",
     "Name_eng":"song thrush",
     "Name_alt":null,
@@ -461,7 +461,7 @@
   },
   {
     "Name":"Nachtigall",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Luscinia megarhynchos",
     "Name_eng":"nightingale",
     "Name_alt":null,
@@ -471,7 +471,7 @@
   },
   {
     "Name":"Flussuferl\u00e4ufer",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Actitis hypoleucos",
     "Name_eng":"Common Sandpiper",
     "Name_alt":null,
@@ -481,7 +481,7 @@
   },
   {
     "Name":"Hohltaube",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Columba oenas",
     "Name_eng":"Stock Dove",
     "Name_alt":null,
@@ -491,7 +491,7 @@
   },
   {
     "Name":"Blaukelchen",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Luscinia svecica",
     "Name_eng":"Bluethroat",
     "Name_alt":null,
@@ -501,7 +501,7 @@
   },
   {
     "Name":"Neunt\u00f6ter",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Lanius collurio",
     "Name_eng":"Red-backed Shrike",
     "Name_alt":null,
@@ -511,7 +511,7 @@
   },
   {
     "Name":"Wendehals",
-    "Typ":"V\u00f6gel",
+    "Klasse":"V\u00f6gel",
     "Name_sci":"Jynx torquilla",
     "Name_eng":"Eurasian Wryneck",
     "Name_alt":null,
@@ -521,7 +521,7 @@
   },
   {
     "Name":"Springfrosch",
-    "Typ":"Amphibien",
+    "Klasse":"Amphibien",
     "Name_sci":"Rana dalmatina",
     "Name_eng":"agile frog",
     "Name_alt":null,
@@ -531,7 +531,7 @@
   },
   {
     "Name":"Kleiner Wasserfrosch",
-    "Typ":"Amphibien",
+    "Klasse":"Amphibien",
     "Name_sci":"Rana lessonae",
     "Name_eng":"water frog",
     "Name_alt":"Gr\u00fcnfr\u00f6sche",
@@ -541,7 +541,7 @@
   },
   {
     "Name":"Teichfrosch",
-    "Typ":"Amphibien",
+    "Klasse":"Amphibien",
     "Name_sci":"Rana kl. Esculenta",
     "Name_eng":"edible frog",
     "Name_alt":"Wasserfrosch oder Gr\u00fcnfrosch",
@@ -551,7 +551,7 @@
   },
   {
     "Name":"Erdkr\u00f6te",
-    "Typ":"Amphibien",
+    "Klasse":"Amphibien",
     "Name_sci":"Bufo bufo",
     "Name_eng":"common toad",
     "Name_alt":null,
@@ -561,7 +561,7 @@
   },
   {
     "Name":"Teichmolch",
-    "Typ":"Amphibien",
+    "Klasse":"Amphibien",
     "Name_sci":"Triturus vulgaris",
     "Name_eng":"smooth newt",
     "Name_alt":null,
@@ -571,7 +571,7 @@
   },
   {
     "Name":"Bergmolch",
-    "Typ":"Amphibien",
+    "Klasse":"Amphibien",
     "Name_sci":"Ichthyosaura alpestris;  Triturus alpestris",
     "Name_eng":"alpine newt",
     "Name_alt":"Alpenmolch",
@@ -581,7 +581,7 @@
   },
   {
     "Name":"Gelbbauchunke",
-    "Typ":"Amphibien",
+    "Klasse":"Amphibien",
     "Name_sci":"Bombina variegata",
     "Name_eng":"yellow-bellied toad",
     "Name_alt":"Bergunke",
@@ -591,7 +591,7 @@
   },
   {
     "Name":"Laubfrosch",
-    "Typ":"Amphibien",
+    "Klasse":"Amphibien",
     "Name_sci":"Hyla arborea",
     "Name_eng":"european tree frog",
     "Name_alt":"Europ\u00e4ischer Laubfrosch",
@@ -601,7 +601,7 @@
   },
   {
     "Name":"Kammmolch",
-    "Typ":"Amphibien",
+    "Klasse":"Amphibien",
     "Name_sci":"Triturus cristatus",
     "Name_eng":"northern crested newt",
     "Name_alt":"n\u00f6rdlicher Kammmolch",
@@ -611,7 +611,7 @@
   },
   {
     "Name":"Moorfrosch",
-    "Typ":"Amphibien",
+    "Klasse":"Amphibien",
     "Name_sci":"Rana arvalis",
     "Name_eng":"moor frog",
     "Name_alt":null,
@@ -621,7 +621,7 @@
   },
   {
     "Name":"Kreuzkr\u00f6te",
-    "Typ":"Amphibien",
+    "Klasse":"Amphibien",
     "Name_sci":"Bufo calamita",
     "Name_eng":"natterjack toad",
     "Name_alt":null,
@@ -631,7 +631,7 @@
   },
   {
     "Name":"Blindschleiche",
-    "Typ":"Reptilien",
+    "Klasse":"Reptilien",
     "Name_sci":"Anguis fragilis",
     "Name_eng":"slow worm",
     "Name_alt":"Westliche Blindschleiche",
@@ -641,7 +641,7 @@
   },
   {
     "Name":"Ringelnatter",
-    "Typ":"Reptilien",
+    "Klasse":"Reptilien",
     "Name_sci":"Natrix natrix",
     "Name_eng":"grass snake",
     "Name_alt":null,
@@ -651,7 +651,7 @@
   },
   {
     "Name":"Zauneidechse",
-    "Typ":"Reptilien",
+    "Klasse":"Reptilien",
     "Name_sci":"Lacerta agilis",
     "Name_eng":"sand lizard",
     "Name_alt":null,
@@ -661,7 +661,7 @@
   },
   {
     "Name":"Sumpf-Schildkr\u00f6te",
-    "Typ":"Reptilien",
+    "Klasse":"Reptilien",
     "Name_sci":"Emys orbicularis",
     "Name_eng":"european pond turtle",
     "Name_alt":null,
@@ -671,7 +671,7 @@
   },
   {
     "Name":"Flussneunauge",
-    "Typ":"Fische",
+    "Klasse":"Fische",
     "Name_sci":"Lampetra fluviatilis",
     "Name_eng":"european river lamprey",
     "Name_alt":null,
@@ -681,7 +681,7 @@
   },
   {
     "Name":"Bachneunauge",
-    "Typ":"Fische",
+    "Klasse":"Fische",
     "Name_sci":"Lampetra planeri",
     "Name_eng":"European brook lamprey",
     "Name_alt":null,
@@ -691,7 +691,7 @@
   },
   {
     "Name":"Atlantischer Lachs",
-    "Typ":"Fische",
+    "Klasse":"Fische",
     "Name_sci":"Salmo salar",
     "Name_eng":"salmon",
     "Name_alt":"Salm",
@@ -701,7 +701,7 @@
   },
   {
     "Name":"Bitterling",
-    "Typ":"Fische",
+    "Klasse":"Fische",
     "Name_sci":"Rhodeus amarus",
     "Name_eng":"european bitterling",
     "Name_alt":null,
@@ -711,7 +711,7 @@
   },
   {
     "Name":"Schlammpeitzger",
-    "Typ":"Fische",
+    "Klasse":"Fische",
     "Name_sci":"Misgurnus fossilis",
     "Name_eng":"pond loach",
     "Name_alt":"Schlammbei\u00dfer",
@@ -721,7 +721,7 @@
   },
   {
     "Name":"Steinbei\u00dfer",
-    "Typ":"Fische",
+    "Klasse":"Fische",
     "Name_sci":"Cobitis taenia",
     "Name_eng":"spined loach",
     "Name_alt":"Dorngrundel",
@@ -731,7 +731,7 @@
   },
   {
     "Name":"Karausche",
-    "Typ":"Fische",
+    "Klasse":"Fische",
     "Name_sci":"Carassius carassius",
     "Name_eng":"crucian carp",
     "Name_alt":null,
@@ -741,7 +741,7 @@
   },
   {
     "Name":"Groppe",
-    "Typ":"Fische",
+    "Klasse":"Fische",
     "Name_sci":"Cottus gobio",
     "Name_eng":null,
     "Name_alt":"Kaulkopf, Rotzkopf, Westgroppe, Koppe, M\u00fchlkoppe, Dickkopf oder Dolm",
@@ -751,7 +751,7 @@
   },
   {
     "Name":"Hirschk\u00e4fer",
-    "Typ":"Insekten-K\u00e4fer",
+    "Klasse":"Insekten-K\u00e4fer",
     "Name_sci":"Lucanus cervus",
     "Name_eng":"stag beetle",
     "Name_alt":null,
@@ -761,7 +761,7 @@
   },
   {
     "Name":"Gro\u00dfer Eichenbock",
-    "Typ":"Insekten-K\u00e4fer",
+    "Klasse":"Insekten-K\u00e4fer",
     "Name_sci":"Cerambyx cerdo",
     "Name_eng":"great capricorn beetle",
     "Name_alt":"Eichenbock, Riesenbock, Spie\u00dfbock",
@@ -771,7 +771,7 @@
   },
   {
     "Name":"Moschusbock",
-    "Typ":"Insekten-K\u00e4fer",
+    "Klasse":"Insekten-K\u00e4fer",
     "Name_sci":"Aromia moschata",
     "Name_eng":"musk beetle",
     "Name_alt":null,
@@ -781,7 +781,7 @@
   },
   {
     "Name":"Lederlaufk\u00e4fer",
-    "Typ":"Insekten-K\u00e4fer",
+    "Klasse":"Insekten-K\u00e4fer",
     "Name_sci":"Carabus coriaceus",
     "Name_eng":"leather beetle",
     "Name_alt":null,
@@ -791,7 +791,7 @@
   },
   {
     "Name":"Goldgl\u00e4nzender Rosenk\u00e4fer",
-    "Typ":"Insekten-K\u00e4fer",
+    "Klasse":"Insekten-K\u00e4fer",
     "Name_sci":"Cetonia aurata",
     "Name_eng":"flower chafer",
     "Name_alt":"Rosenk\u00e4fer",
@@ -801,7 +801,7 @@
   },
   {
     "Name":"Pappel-Blattk\u00e4fer",
-    "Typ":"Insekten-K\u00e4fer",
+    "Klasse":"Insekten-K\u00e4fer",
     "Name_sci":"Chrysomela populi",
     "Name_eng":"poplar leaf beetle",
     "Name_alt":null,
@@ -811,7 +811,7 @@
   },
   {
     "Name":"Weiden-Blattk\u00e4fer",
-    "Typ":"Insekten-K\u00e4fer",
+    "Klasse":"Insekten-K\u00e4fer",
     "Name_sci":"Phratora vulgatissima",
     "Name_eng":"widow leaf beetle",
     "Name_alt":null,
@@ -821,7 +821,7 @@
   },
   {
     "Name":"Eichenblattroller",
-    "Typ":"Insekten-K\u00e4fer",
+    "Klasse":"Insekten-K\u00e4fer",
     "Name_sci":"Attelabus nitens",
     "Name_eng":"oak roller weevil",
     "Name_alt":"Roter Eichenkugelr\u00fcssler",
@@ -831,7 +831,7 @@
   },
   {
     "Name":"Gelbrandk\u00e4fer",
-    "Typ":"Insekten-K\u00e4fer",
+    "Klasse":"Insekten-K\u00e4fer",
     "Name_sci":"Dytiscus marginalis",
     "Name_eng":"great diving beetle",
     "Name_alt":"Gemeine Gelbrand",
@@ -841,7 +841,7 @@
   },
   {
     "Name":"Schwarzblauer \u00d6lk\u00e4fer",
-    "Typ":"Insekten-K\u00e4fer",
+    "Klasse":"Insekten-K\u00e4fer",
     "Name_sci":"Meloe proscarabaeus",
     "Name_eng":"blister beetle",
     "Name_alt":"Schwarzer Maiwurm",
@@ -851,7 +851,7 @@
   },
   {
     "Name":"D\u00fcnen-Sandlaufk\u00e4fer",
-    "Typ":"Insekten-K\u00e4fer",
+    "Klasse":"Insekten-K\u00e4fer",
     "Name_sci":"Cicindela hybrida",
     "Name_eng":"norther dune tiger beetle",
     "Name_alt":"Kupferbrauner Sandlaufk\u00e4fer",
@@ -861,7 +861,7 @@
   },
   {
     "Name":"Hornisse",
-    "Typ":"Insekten-Hautfl\u00fcgler",
+    "Klasse":"Insekten-Hautfl\u00fcgler",
     "Name_sci":"Vespa crabro",
     "Name_eng":"european hornet",
     "Name_alt":null,
@@ -871,7 +871,7 @@
   },
   {
     "Name":"Gemeine Sandbiene",
-    "Typ":"Insekten-Hautfl\u00fcgler",
+    "Klasse":"Insekten-Hautfl\u00fcgler",
     "Name_sci":"Andrena flavipes",
     "Name_eng":"sand bee",
     "Name_alt":null,
@@ -881,7 +881,7 @@
   },
   {
     "Name":"Gro\u00dfe Blaue Holzbiene",
-    "Typ":"Insekten-Hautfl\u00fcgler",
+    "Klasse":"Insekten-Hautfl\u00fcgler",
     "Name_sci":"Xylocopa violacea",
     "Name_eng":"carpenter bee",
     "Name_alt":null,
@@ -891,7 +891,7 @@
   },
   {
     "Name":"Gelbe Kammschnake",
-    "Typ":"Insekten-Zweifl\u00fcgler",
+    "Klasse":"Insekten-Zweifl\u00fcgler",
     "Name_sci":"Ctenophora ornata",
     "Name_eng":"cranefly",
     "Name_alt":null,
@@ -901,7 +901,7 @@
   },
   {
     "Name":"Stechm\u00fccke",
-    "Typ":"Insekten-Zweifl\u00fcgler",
+    "Klasse":"Insekten-Zweifl\u00fcgler",
     "Name_sci":"Aedes vexans",
     "Name_eng":"mosquito",
     "Name_alt":"Rheinschnake",
@@ -911,7 +911,7 @@
   },
   {
     "Name":"Regenbremse",
-    "Typ":"Insekten-Zweifl\u00fcgler",
+    "Klasse":"Insekten-Zweifl\u00fcgler",
     "Name_sci":"Haematopota pluvialis",
     "Name_eng":"common horse fly",
     "Name_alt":"Blinde Fliege, Gewitterbremse, Faulstich, Regenbogenbremse",
@@ -921,7 +921,7 @@
   },
   {
     "Name":"Sumpf-Schwebfliege",
-    "Typ":"Insekten-Zweifl\u00fcgler",
+    "Klasse":"Insekten-Zweifl\u00fcgler",
     "Name_sci":"Helophilus trivittatus",
     "Name_eng":"hover fly",
     "Name_alt":"Gro\u00dfe Sumpfschwebfliege",
@@ -931,7 +931,7 @@
   },
   {
     "Name":"Russischer B\u00e4r",
-    "Typ":"Insekten-Schmetterlinge",
+    "Klasse":"Insekten-Schmetterlinge",
     "Name_sci":"Euplagia quadripunctaria",
     "Name_eng":"spanish flag",
     "Name_alt":"Spanische Flagge",
@@ -941,7 +941,7 @@
   },
   {
     "Name":"Heller Wiesenknopf-Ameisenbl\u00e4uling",
-    "Typ":"Insekten-Schmetterlinge",
+    "Klasse":"Insekten-Schmetterlinge",
     "Name_sci":"Maculinea nausithous",
     "Name_eng":"scarce large blue",
     "Name_alt":null,
@@ -951,7 +951,7 @@
   },
   {
     "Name":"Dunkler Wiesenknopf-Ameisenbl\u00e4uling",
-    "Typ":"Insekten-Schmetterlinge",
+    "Klasse":"Insekten-Schmetterlinge",
     "Name_sci":"Maculinea teleius",
     "Name_eng":"dusky large blue",
     "Name_alt":null,
@@ -961,7 +961,7 @@
   },
   {
     "Name":"Gro\u00dfer Feuerfalter",
-    "Typ":"Insekten-Schmetterlinge",
+    "Klasse":"Insekten-Schmetterlinge",
     "Name_sci":"Lycaena dispar",
     "Name_eng":"large copper",
     "Name_alt":null,
@@ -971,7 +971,7 @@
   },
   {
     "Name":"Zitronenfalter",
-    "Typ":"Insekten-Schmetterlinge",
+    "Klasse":"Insekten-Schmetterlinge",
     "Name_sci":"Gonepteryx rhamni",
     "Name_eng":"common brimstone",
     "Name_alt":null,
@@ -981,7 +981,7 @@
   },
   {
     "Name":"Kleiner Eisvogel",
-    "Typ":"Insekten-Schmetterlinge",
+    "Klasse":"Insekten-Schmetterlinge",
     "Name_sci":"Limenitis populi",
     "Name_eng":"white admiral",
     "Name_alt":"Kleiner Eisfalter",
@@ -991,7 +991,7 @@
   },
   {
     "Name":"Gro\u00dfer Schillerfalter",
-    "Typ":"Insekten-Schmetterlinge",
+    "Klasse":"Insekten-Schmetterlinge",
     "Name_sci":"Apatura iris",
     "Name_eng":"purple emperor",
     "Name_alt":null,
@@ -1001,7 +1001,7 @@
   },
   {
     "Name":"Weidenbohrer",
-    "Typ":"Insekten-Schmetterlinge",
+    "Klasse":"Insekten-Schmetterlinge",
     "Name_sci":"Cossus cossus",
     "Name_eng":"goat moth",
     "Name_alt":null,
@@ -1011,7 +1011,7 @@
   },
   {
     "Name":"Kupferglucke",
-    "Typ":"Insekten-Schmetterlinge",
+    "Klasse":"Insekten-Schmetterlinge",
     "Name_sci":"Gastropacha quercifolia",
     "Name_eng":"lappet",
     "Name_alt":null,
@@ -1021,7 +1021,7 @@
   },
   {
     "Name":"Nagelfleck",
-    "Typ":"Insekten-Schmetterlinge",
+    "Klasse":"Insekten-Schmetterlinge",
     "Name_sci":"Aglia tau",
     "Name_eng":"tau emperor",
     "Name_alt":null,
@@ -1031,7 +1031,7 @@
   },
   {
     "Name":"Pappelschw\u00e4rmer",
-    "Typ":"Insekten-Schmetterlinge",
+    "Klasse":"Insekten-Schmetterlinge",
     "Name_sci":"Laothoe populi",
     "Name_eng":"poplar hawk-moth",
     "Name_alt":null,
@@ -1041,7 +1041,7 @@
   },
   {
     "Name":"Palpen-Zahnspinner",
-    "Typ":"Insekten-Schmetterlinge",
+    "Klasse":"Insekten-Schmetterlinge",
     "Name_sci":"Pterostoma palpina",
     "Name_eng":"satin moth",
     "Name_alt":null,
@@ -1051,7 +1051,7 @@
   },
   {
     "Name":"Gro\u00dfer Gabelschwanz",
-    "Typ":"Insekten-Schmetterlinge",
+    "Klasse":"Insekten-Schmetterlinge",
     "Name_sci":"Cerura vinula",
     "Name_eng":"forktail",
     "Name_alt":null,
@@ -1061,7 +1061,7 @@
   },
   {
     "Name":"Haseleule",
-    "Typ":"Insekten-Schmetterlinge",
+    "Klasse":"Insekten-Schmetterlinge",
     "Name_sci":"Colocasia coryli",
     "Name_eng":"nut-tree tussock",
     "Name_alt":null,
@@ -1071,7 +1071,7 @@
   },
   {
     "Name":"Eichen-Sichelfl\u00fcgler",
-    "Typ":"Insekten-Schmetterlinge",
+    "Klasse":"Insekten-Schmetterlinge",
     "Name_sci":"Watsonalla binaria",
     "Name_eng":"oak hook-tip",
     "Name_alt":"Zweipunkt-Sichelfl\u00fcgler",
@@ -1081,7 +1081,7 @@
   },
   {
     "Name":"Eschen-Zackenrandspanner",
-    "Typ":"Insekten-Schmetterlinge",
+    "Klasse":"Insekten-Schmetterlinge",
     "Name_sci":"Ennomos fuscantaria",
     "Name_eng":"ash sphinx",
     "Name_alt":"Eschen-Parkland-Zackenrandspanner",
@@ -1091,7 +1091,7 @@
   },
   {
     "Name":"Gr\u00fcnes Blatt",
-    "Typ":"Insekten-Schmetterlinge",
+    "Klasse":"Insekten-Schmetterlinge",
     "Name_sci":"Geometra papilionaria",
     "Name_eng":"large emerald",
     "Name_alt":null,
@@ -1101,7 +1101,7 @@
   },
   {
     "Name":"Gemeine Schlammfliege",
-    "Typ":"Insekten-Netzfl\u00fcgler",
+    "Klasse":"Insekten-Netzfl\u00fcgler",
     "Name_sci":"Sialis lutaria",
     "Name_eng":"alderfly",
     "Name_alt":"Gemeine Wasserflorfliege",
@@ -1111,7 +1111,7 @@
   },
   {
     "Name":"Gemeiner Teichl\u00e4ufer",
-    "Typ":"Insekten-Wanzen",
+    "Klasse":"Insekten-Wanzen",
     "Name_sci":"Hydrometra stagnorum",
     "Name_eng":"marsh treaders",
     "Name_alt":null,
@@ -1121,7 +1121,7 @@
   },
   {
     "Name":"Gemeiner Wasserl\u00e4ufer",
-    "Typ":"Insekten-Wanzen",
+    "Klasse":"Insekten-Wanzen",
     "Name_sci":"Gerris lacustris",
     "Name_eng":"water skipper",
     "Name_alt":"Wasserschneider",
@@ -1131,7 +1131,7 @@
   },
   {
     "Name":"Wasserskorpion",
-    "Typ":"Insekten-Wanzen",
+    "Klasse":"Insekten-Wanzen",
     "Name_sci":"Nepa cinerea Syn. Nepa rubra",
     "Name_eng":"water scorpion",
     "Name_alt":null,
@@ -1141,7 +1141,7 @@
   },
   {
     "Name":"Gemeiner R\u00fcckenschwimmer",
-    "Typ":"Insekten-Wanzen",
+    "Klasse":"Insekten-Wanzen",
     "Name_sci":"Notonecta glauca",
     "Name_eng":"backswimmers",
     "Name_alt":null,
@@ -1151,7 +1151,7 @@
   },
   {
     "Name":"Gr\u00fcne Strandschrecke",
-    "Typ":"Insekten-Heuschrecken",
+    "Klasse":"Insekten-Heuschrecken",
     "Name_sci":"Aiolopus thalassinus",
     "Name_eng":"slender green-winged grasshopper",
     "Name_alt":null,
@@ -1161,7 +1161,7 @@
   },
   {
     "Name":"Lauchschrecke",
-    "Typ":"Insekten-Heuschrecken",
+    "Klasse":"Insekten-Heuschrecken",
     "Name_sci":"Mecostethus parapleurus",
     "Name_eng":"leek grasshopper",
     "Name_alt":null,
@@ -1171,7 +1171,7 @@
   },
   {
     "Name":"Kurzfl\u00fcgelige Schwertschrecke",
-    "Typ":"Insekten-Heuschrecken",
+    "Klasse":"Insekten-Heuschrecken",
     "Name_sci":"Conocephalus dorsalis",
     "Name_eng":"short-winged conehead",
     "Name_alt":null,
@@ -1181,7 +1181,7 @@
   },
   {
     "Name":"Sumpfschrecke",
-    "Typ":"Insekten-Heuschrecken",
+    "Klasse":"Insekten-Heuschrecken",
     "Name_sci":"Stethophyma grossum",
     "Name_eng":"large marsh grasshopper",
     "Name_alt":null,
@@ -1191,7 +1191,7 @@
   },
   {
     "Name":"Blaufl\u00fcgelige \u00d6dlandschrecke",
-    "Typ":"Insekten-Heuschrecken",
+    "Klasse":"Insekten-Heuschrecken",
     "Name_sci":"Oedipoda caerulescens",
     "Name_eng":"blue-winged grasshopper",
     "Name_alt":null,
@@ -1201,7 +1201,7 @@
   },
   {
     "Name":"Geb\u00e4nderte Prachtlibelle",
-    "Typ":"Insekten-Libellen",
+    "Klasse":"Insekten-Libellen",
     "Name_sci":"Calopteryx splendens",
     "Name_eng":"banded demoiselle",
     "Name_alt":null,
@@ -1211,7 +1211,7 @@
   },
   {
     "Name":"Gro\u00dfe Binsenjungfer",
-    "Typ":"Insekten-Libellen",
+    "Klasse":"Insekten-Libellen",
     "Name_sci":"Chalcolestes viridis, Syn. Lestes viridis",
     "Name_eng":"western willow spreadwing",
     "Name_alt":"Westliche Weidenjungfer",
@@ -1221,7 +1221,7 @@
   },
   {
     "Name":"Blutrote Heidelibelle",
-    "Typ":"Insekten-Libellen",
+    "Klasse":"Insekten-Libellen",
     "Name_sci":"Sympetrum sanguineum",
     "Name_eng":"ruddy darter",
     "Name_alt":null,
@@ -1231,7 +1231,7 @@
   },
   {
     "Name":"Hufeisen-Azurjungfer",
-    "Typ":"Insekten-Libellen",
+    "Klasse":"Insekten-Libellen",
     "Name_sci":"Coenagrion puella",
     "Name_eng":"azure damselfly",
     "Name_alt":null,
@@ -1241,7 +1241,7 @@
   },
   {
     "Name":"Gro\u00dfe Pechlibelle",
-    "Typ":"Insekten-Libellen",
+    "Klasse":"Insekten-Libellen",
     "Name_sci":"Ischnura elegans",
     "Name_eng":"blue-tailed damselfly",
     "Name_alt":null,
@@ -1251,7 +1251,7 @@
   },
   {
     "Name":"Plattbauch",
-    "Typ":"Insekten-Libellen",
+    "Klasse":"Insekten-Libellen",
     "Name_sci":"Libellula depressa",
     "Name_eng":"broad-bodied chaser",
     "Name_alt":null,
@@ -1261,7 +1261,7 @@
   },
   {
     "Name":"Gro\u00dfer Blaupfeil",
-    "Typ":"Insekten-Libellen",
+    "Klasse":"Insekten-Libellen",
     "Name_sci":"Orthetrum cancellatum",
     "Name_eng":"black-tailed skimmer",
     "Name_alt":null,
@@ -1271,7 +1271,7 @@
   },
   {
     "Name":"Blaugr\u00fcne Mosaikjungfer",
-    "Typ":"Insekten-Libellen",
+    "Klasse":"Insekten-Libellen",
     "Name_sci":"Hydrometra stagnorum",
     "Name_eng":"southern hawker",
     "Name_alt":null,
@@ -1281,7 +1281,7 @@
   },
   {
     "Name":"Gr\u00fcne Flu\u00dfkeiljungfer",
-    "Typ":"Insekten-Libellen",
+    "Klasse":"Insekten-Libellen",
     "Name_sci":"Ophiogomphus cecilia",
     "Name_eng":null,
     "Name_alt":"Gr\u00fcne Flussjungfer",
@@ -1291,7 +1291,7 @@
   },
   {
     "Name":"Helm-Azurjungfer",
-    "Typ":"Insekten-Libellen",
+    "Klasse":"Insekten-Libellen",
     "Name_sci":"Coenagrion mercuriale",
     "Name_eng":null,
     "Name_alt":null,
@@ -1301,7 +1301,7 @@
   },
   {
     "Name":"S\u00fc\u00dfwassergarnele",
-    "Typ":"Krebstiere",
+    "Klasse":"Krebstiere",
     "Name_sci":"Atyaephyra desmaresti",
     "Name_eng":"freshwater prawn",
     "Name_alt":null,
@@ -1311,7 +1311,7 @@
   },
   {
     "Name":"Sommerschildkrebs",
-    "Typ":"Krebstiere",
+    "Klasse":"Krebstiere",
     "Name_sci":"Triops cancriformis",
     "Name_eng":"european tadpole shrimp",
     "Name_alt":null,
@@ -1321,7 +1321,7 @@
   },
   {
     "Name":"Gerandete Jagdspinne",
-    "Typ":"Spinnentiere",
+    "Klasse":"Spinnentiere",
     "Name_sci":"Dolomedes fimbriatus",
     "Name_eng":"raft spider",
     "Name_alt":"Gerandete Listspinne",
@@ -1331,7 +1331,7 @@
   },
   {
     "Name":"Schilf-Radnetzspinne",
-    "Typ":"Spinnentiere",
+    "Klasse":"Spinnentiere",
     "Name_sci":"Larinioides cornutus",
     "Name_eng":"furrow weaver",
     "Name_alt":"Schilfradspinne",
@@ -1341,7 +1341,7 @@
   },
   {
     "Name":"Wasserspinne",
-    "Typ":"Spinnentiere",
+    "Klasse":"Spinnentiere",
     "Name_sci":"Argyroneta aquatica",
     "Name_eng":"water spider",
     "Name_alt":"Silberspinne",
@@ -1351,7 +1351,7 @@
   },
   {
     "Name":"Gemeine Tapezierspinne",
-    "Typ":"Spinnentiere",
+    "Klasse":"Spinnentiere",
     "Name_sci":"Atypus affinis",
     "Name_eng":"purseweb spider",
     "Name_alt":null,
@@ -1361,7 +1361,7 @@
   },
   {
     "Name":"Piratenspinne",
-    "Typ":"Spinnentiere",
+    "Klasse":"Spinnentiere",
     "Name_sci":"Pirata piraticus",
     "Name_eng":"pirate wolf spider",
     "Name_alt":null,
@@ -1371,7 +1371,7 @@
   },
   {
     "Name":"Bachmuschel",
-    "Typ":"Weichtiere",
+    "Klasse":"Weichtiere",
     "Name_sci":"Unio crassus riparius",
     "Name_eng":"thick shelled river mussel",
     "Name_alt":"Gemeine oder  Kleine Flussmuschel",
@@ -1381,7 +1381,7 @@
   },
   {
     "Name":"Grobgerippte K\u00f6rbchenmuschel",
-    "Typ":"Weichtiere",
+    "Klasse":"Weichtiere",
     "Name_sci":"Corbicula fluminea",
     "Name_eng":"asian clam",
     "Name_alt":null,
@@ -1391,7 +1391,7 @@
   },
   {
     "Name":"Bauchige Windelschnecke",
-    "Typ":"Weichtiere",
+    "Klasse":"Weichtiere",
     "Name_sci":"Vertigo moulinsiana",
     "Name_eng":"desmoulin's whorl snail",
     "Name_alt":null,
@@ -1401,7 +1401,7 @@
   },
   {
     "Name":"Zierliche Tellerschnecke",
-    "Typ":"Weichtiere",
+    "Klasse":"Weichtiere",
     "Name_sci":"Anisus vorticulus",
     "Name_eng":"lesser ramshorn snail",
     "Name_alt":null,
@@ -1411,7 +1411,7 @@
   },
   {
     "Name":"Posthornschnecke",
-    "Typ":"Weichtiere",
+    "Klasse":"Weichtiere",
     "Name_sci":"Planorbarius corneus corneus",
     "Name_eng":"great ramshorn",
     "Name_alt":null,
@@ -1421,7 +1421,7 @@
   },
   {
     "Name":"Sumpfdeckelschnecke",
-    "Typ":"Weichtiere",
+    "Klasse":"Weichtiere",
     "Name_sci":"Viviparus viviparus",
     "Name_eng":"river snail",
     "Name_alt":null,
