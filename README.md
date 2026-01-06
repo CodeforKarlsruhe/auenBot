@@ -22,7 +22,7 @@ Options for vector-search but initial version with BM25 not very helpfull. Futur
 ### Primary files
   * tiere_pflanzen_auen.json: knowledge base. dataset for animals, plants and some Rheinauen types.
   * intents.json: intents with sample texts and utterance (if any)
-  * intent_vectors.json: vectorized (bge-m3 embeddings) text samples and corresponding intent_id 
+  * intent_vectors.json: vectorized (bge-m3 embeddings) text samples and corresponding intent_id. **Needs git lfs**
 
 ### Original bot
   * tagsAndInstructions.json: additional info for original bot decoding and routing
