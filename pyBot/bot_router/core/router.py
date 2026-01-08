@@ -9,6 +9,7 @@ from .knowledge_index import KnowledgeIndex
 from .intent_index import IntentIndex
 from .llm_client import OpenAICompatClient
 
+import json
 
 class Router:
     """
@@ -537,10 +538,12 @@ class Router:
             "(b) ein Intent aus der Kandidatenliste, oder (c) eine Rückfrage benötigt. "
             "Antworte ausschließlich als JSON."
         )
-        user = __import__("json").dumps({"text": text, "intent_candidates": top_ids}, ensure_ascii=False)
+        #user = __import__("json").dumps({"text": text, "intent_candidates": top_ids}, ensure_ascii=False)
+        user = json.dumps({"text": text, "intent_candidates": top_ids}, ensure_ascii=False)
+        print(f"DEBUG - LLM fallback input: {user}")
         schema_hint = 'Return JSON like {"decision":"intent|clarify|smalltalk","intent_id":"...","question":"..."}'
         out = self.llm.chat_json(system, user, schema_hint=schema_hint, temperature=0.0)
-
+        print(f"DEBUG - LLM fallback output: {out}")
         if out.get("decision") == "intent" and out.get("intent_id") in top_ids:
             intent_name = next((x["intent_name"] for x in intent_top if x["intent_id"] == out["intent_id"]), None)
             return RouteResult(route="intent", data={"intent_id": out["intent_id"], "intent_name": intent_name, "confidence": score, "llm": True})  
@@ -548,6 +551,7 @@ class Router:
             return RouteResult(route="clarify", data={"type": "llm", "question": out["question"]})
         if out.get("decision") == "smalltalk":
             return RouteResult(route="intent", data={"intent_id": "smalltalk", "confidence": 0.0, "llm": True})
+        print("DEBUG - LLM fallback could not make a decision.")
         return None
 
     def strip_common_question_phrases(self, text: str) -> str:

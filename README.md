@@ -27,6 +27,48 @@ Options for vector-search but initial version with BM25 not very helpfull. Futur
 ### Original bot
   * tagsAndInstructions.json: additional info for original bot decoding and routing
 
+### Intent detection
+
+  1) Find "simple" intents, which ,ap to one specific answer, like *wo gibt es etwas zu essen?*
+  2) Find "simple" intents which require function calling, like *wie ist der CO2 Gehalt?*
+  3) Find intents which require specific information, usually acquired during multiple steps using a more or less complex context. 
+    * Travel information with from,to,date
+    * Entity (Tiere, Pflanzen, Auen) information using various key parameters (properties, class, type), like so (from original):
+
+```python
+    > tp_generell_extract_information(latest_msg):result_matching = process.extractOne(latest_msg, animal_categories)
+  if result_matching[1] > 80
+      result[0] = result_matching[0]
+  else result_matching = process.extractOne(latest_msg, ["Tiere", "Pflanzen", "B\u00e4ume", "Blumen"])
+      if result_matching[1] > 80
+          if result_matching[0] == "Tiere":result[0] = "Tiere" 
+          else result[0] = "Pflanzen" result_matching = process.extractOne(latest_msg, lr_categories)
+              if result_matching[1] > 80
+                  result[1] = result_matching[0]
+                      current_lr = result[1]
+                      return result
+                      
+  def tp_generell_generate_answer(entities):
+  result = []
+  if entities[0] == "Tiere":
+      for animal in ANIMAL.keys():
+          if not entities[1] or lr_categories.index(entities[1]) in ANIMAL[animal][4]:
+              result.append(animal)
+          elif entities[0] == "Pflanzen"
+              for plant in PLANT.keys()
+                  if not entities[1] or lr_categories.index(entities[1]) in PLANT[plant][4]:
+                      result.append(plant)
+                  else:
+                      for animal in ANIMAL.keys()
+                          if ANIMAL[animal][3] == str(animal_categories.index(entities[0])):
+                              if not entities[1] or lr_categories.index(entities[1]) in ANIMAL[animal][4]:
+                                  result.append(animal)
+  return result
+
+```
+
+
+
 ### Auxiliary, input or leftover files
   * pflanzenKeys.json: Parameters for plant descriptions 
   * tiereKeys.json: Parameters for animal descriptions 
