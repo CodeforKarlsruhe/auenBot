@@ -54,6 +54,12 @@ class OpenAICompatClient:
         content: str = data["choices"][0]["message"]["content"]
         print(f"DEBUG (chat) - LLM response content: {content}")
         # Best effort JSON parsing
+        if content.startswith("```json"):
+            content = content[6:].strip()
+        elif content.startswith("```"):
+            content = content[3:].strip()
+        if content.endswith("```"):
+            content = content[:-3].strip()
         try:
             return json.loads(content)
         except Exception:

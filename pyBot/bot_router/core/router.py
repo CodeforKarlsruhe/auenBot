@@ -549,7 +549,7 @@ class Router:
         #user = __import__("json").dumps({"text": text, "intent_candidates": top_ids}, ensure_ascii=False)
         user = json.dumps({"text": text, "intent_candidates (intent_id|intent_name)": list(zip(top_ids, top_names))}, ensure_ascii=False)
         print(f"DEBUG - LLM fallback input: {user}")
-        schema_hint = 'Return JSON like {"decision":"intent|clarify|smalltalk","intent_id":"...","question":"..."}'
+        schema_hint = 'Return pure JSON without markdown wrapping like {"decision":"intent|clarify|smalltalk","intent_id":"...","question":"..."}'
         out = self.llm.chat_json("".join(system), user, schema_hint=schema_hint, temperature=0.0)
         print(f"DEBUG - LLM fallback output: {out}")
         if out.get("decision") == "intent" and out.get("intent_id") in top_ids:

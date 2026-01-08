@@ -50,7 +50,7 @@ def main() -> None:
         print("No private config found for LLM.")
         private = None
 
-    router = build_router(intents_path, context_path, llm_threshold=0.25, private=private,ranking = None) #["bm25"])
+    router = build_router(intents_path, context_path, llm_threshold=0.20, private=private,ranking = None) #["bm25"])
     dispatcher = DemoDispatcher()
 
 
@@ -82,7 +82,13 @@ def main() -> None:
             print("Name:", intent_name)
             print("Confidence:", intent_score)
             print("LLM used for detection:", llm_used)
-            print("\n",utter)
+            if utter:
+                print("\n",utter)
+            elif intent_name == "tp_generell":
+                print("\n(Beispiel-Antwort für tp_generell)")
+                print("Tiere und Pflanzen in Auen sind faszinierende Lebewesen, die in diesen einzigartigen Lebensräumen gedeihen. Auen bieten eine Vielzahl von ökologischen Nischen, die es verschiedenen Arten ermöglichen, zu überleben und zu gedeihen. Einige typische Tiere, die in Auen vorkommen, sind Vögel wie der Eisvogel und der Graureiher, während Pflanzen wie die Weide und die Sumpfdotterblume häufig anzutreffen sind. Diese Arten sind an die besonderen Bedingungen der Auenlandschaften angepasst, wie z.B. periodische Überschwemmungen und feuchte Böden.")
+            else:                
+                print("(Kein Utterance-Text gefunden)")
 
         if rr.route == "function":
             out = dispatcher.call(rr.data["function"], rr.data["slots"])
