@@ -72,12 +72,12 @@ def query_vectors(vectors, query, num_neighbors=5):
         - indices (numpy.ndarray): The indices of the nearest neighbors in the dataset.
         - distances (numpy.ndarray): The distances of the nearest neighbors from the query vector.
     """
+    # Normalize the query vector
     query_norm = np.linalg.norm(query) + 1e-9
     query_normalized = query / query_norm
 
     query = query_normalized.flatten()
     similarities = [compute_cosine_similarity(query, v) for v in vectors]
-    
     # Sort by similarity descending
     sorted_indices = np.argsort(similarities)[::-1]
     sorted_sims = [similarities[i] for i in sorted_indices]

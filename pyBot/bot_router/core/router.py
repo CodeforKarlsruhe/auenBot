@@ -8,8 +8,9 @@ from .text_utils import normalize, tokenize_simple, contains_any, count_trigger_
 from .knowledge_index import KnowledgeIndex
 from .intent_index import IntentIndex
 from .llm_client import OpenAICompatClient
-
+from .vector_search import load_vectors, query_vectors
 import json
+import numpy as np
 
 class Router:
     """
@@ -33,6 +34,7 @@ class Router:
         intent_gating: Dict[str, Any],
         llm_client: Optional[OpenAICompatClient] = None,
         llm_fallback_threshold: float = 0.45,
+        vector_file: Optional[str] = None,
         state: Optional[DialogState] = None
     ):
         self.intent_index = intent_index
@@ -43,6 +45,13 @@ class Router:
         self.gating = intent_gating
         self.llm = llm_client
         self.llm_fallback_threshold = llm_fallback_threshold
+        try:
+            print(f"DEBUG - Loading vectors from {vector_file}")
+            self.vectors, self.vector_intents = load_vectors(vector_file) if vector_file else (None, None)
+            print(f"DEBUG - Loaded {len(self.vectors) if self.vectors is not None else 0} vectors.")
+        except Exception as e:
+            print(f"DEBUG - Failed to load vectors: {e}")
+            self.vectors, self.vector_intents = None, None
         self.state = state or DialogState()
 
         # Alias -> Canonical (zur Normalisierung von Keys)
@@ -432,6 +441,18 @@ class Router:
     # Intent classification
     # -----------------------------
     def _handle_intent(self, text: str) -> Optional[RouteResult]:
+        # check if llm.embedding is available 
+        if self.llm is not None and self.vectors is not None:
+            try:
+                queryVector = self.llm.embed([text])  # type: ignore
+                queryVector_np = np.array(queryVector[0], dtype=np.float32)
+                indices, sims = query_vectors(self.vectors, queryVector_np, num_neighbors=5)
+                intents = [self.vector_intents[i] for i in indices]
+                print(f"DEBUG - Vector search sims: {sims}, indices: {indices}, intents: {intents}")
+            except Exception as e:
+                print(f"DEBUG - Vector search failed: {e}")
+        
+        
         # try basic tfidf callsification first
         intent_top = self.intent_index.topk(text, k=5)
         if not intent_top:

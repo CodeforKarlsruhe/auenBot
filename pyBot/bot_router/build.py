@@ -17,6 +17,7 @@ def build_router(
     index_path: Optional[str] = "intent_tfidf.joblib",
     config_dir: Optional[str] = None,
     llm_threshold: float = 0.45,
+    vector_file: Optional[str] = None,
     private: Optional[dict] = None,
     ranking: Optional[list[str]] = None,
 ) -> Router:
@@ -85,5 +86,6 @@ def build_router(
         key_canonicalization=key_canon,
         intent_gating=intent_gating,
         llm_client=llm,
-        llm_fallback_threshold=llm_threshold
+        llm_fallback_threshold=llm_threshold,
+        vector_file=vector_file
     )

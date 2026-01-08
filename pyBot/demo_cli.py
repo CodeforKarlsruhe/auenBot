@@ -30,6 +30,7 @@ class DemoDispatcher(FunctionDispatcher):
 def main() -> None:
     intents_path = "../rawData/intents.json"
     context_path = "../rawData/tiere_pflanzen_auen.json"
+    vectors_path = "../rawData/intent_vectors.json"
     # read intents here already
     with open(intents_path, "r", encoding="utf-8") as f:
         intents_ = json.load(f)
@@ -50,7 +51,7 @@ def main() -> None:
         print("No private config found for LLM.")
         private = None
 
-    router = build_router(intents_path, context_path, llm_threshold=0.20, private=private,ranking = None) #["bm25"])
+    router = build_router(intents_path, context_path, llm_threshold=0.20, private=private,vector_file=vectors_path, ranking = None) #["bm25"])
     dispatcher = DemoDispatcher()
 
 
