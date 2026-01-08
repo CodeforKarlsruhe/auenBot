@@ -71,13 +71,17 @@ def main() -> None:
         if rr.route == "intent":
             print("\nIntent detected")
             candidate = rr.data.get("candidates", [{}])[0]
+            intent_name = candidate.get("intent_name")
             intent_id = candidate.get("intent_id")
             intent_score = candidate.get("score")
             utter = intents.get(intent_id, {}).get("utter", "")
+            llm_used = candidate.get("llm", False)
             
             print("\n(Erkannter Intent)")
-            print("Intent:", candidate.get("intent_id"))
-            print("Confidence:", candidate.get("score"))
+            print("Intent:", intent_id)
+            print("Name:", intent_name)
+            print("Confidence:", intent_score)
+            print("LLM used for detection:", llm_used)
             print("\n",utter)
 
         if rr.route == "function":

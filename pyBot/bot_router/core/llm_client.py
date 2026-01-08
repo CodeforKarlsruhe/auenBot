@@ -47,12 +47,12 @@ class OpenAICompatClient:
             payload["messages"].append({"role": "system", "content": f"Output must be valid JSON. {schema_hint}"})
 
         url = f"{self.base_url}/v1/chat/completions"
-
+        print(f"DEBUG - LLM request payload: {json.dumps(payload, ensure_ascii=False)}")
         r = requests.post(url, headers=self._headers(), data=json.dumps(payload), timeout=self.timeout_s)
         r.raise_for_status()
         data = r.json()
         content: str = data["choices"][0]["message"]["content"]
-
+        print(f"DEBUG (chat) - LLM response content: {content}")
         # Best effort JSON parsing
         try:
             return json.loads(content)

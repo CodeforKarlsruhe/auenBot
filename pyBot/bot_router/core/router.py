@@ -432,6 +432,7 @@ class Router:
     # Intent classification
     # -----------------------------
     def _handle_intent(self, text: str) -> Optional[RouteResult]:
+        # try basic tfidf callsification first
         intent_top = self.intent_index.topk(text, k=5)
         if not intent_top:
             return None
@@ -533,20 +534,27 @@ class Router:
             return None
 
         top_ids = [x["intent_id"] for x in intent_top[: self.mx["confidence"].get("llm_fallback_topk", 3)]]
+        top_names = [x["intent_name"] for x in intent_top[: self.mx["confidence"].get("llm_fallback_topk", 3)]]
         system = (
-            "Du bist ein Routing-Modul. Entscheide, ob der Text (a) Smalltalk/Meta, "
+            "Du bist ein Routing-Modul.", 
+            "Dein Umfeld ist das Naturschutzzentrum Rheinauen in Karlsruhe (NAZKA).",
+            "Du hilfst dabei, Benutzeranfragen zu klassifizieren.",
+            "Typische Fragen beziehen sich auf Tiere, Pflanzen, Wetter, Anreise, Öffnungszeiten und allgemeine Informationen über die Rheinauen.",
+            "Fragen zu Tieren und Pflanzen können allgemein sein, dies wird mit dem intent tp_generell angegeben, oder sich auf einzelne Arten beziehen.",
+            "Es können auch Ausdrücke zur Begrüßung, Verabschiedung, Höflichkeit oder Beleidigungen vorkommen (Smalltalk).",
+            "Entscheide, ob der Text (a) Smalltalk/Meta, "
             "(b) ein Intent aus der Kandidatenliste, oder (c) eine Rückfrage benötigt. "
             "Antworte ausschließlich als JSON."
         )
         #user = __import__("json").dumps({"text": text, "intent_candidates": top_ids}, ensure_ascii=False)
-        user = json.dumps({"text": text, "intent_candidates": top_ids}, ensure_ascii=False)
+        user = json.dumps({"text": text, "intent_candidates (intent_id|intent_name)": list(zip(top_ids, top_names))}, ensure_ascii=False)
         print(f"DEBUG - LLM fallback input: {user}")
         schema_hint = 'Return JSON like {"decision":"intent|clarify|smalltalk","intent_id":"...","question":"..."}'
-        out = self.llm.chat_json(system, user, schema_hint=schema_hint, temperature=0.0)
+        out = self.llm.chat_json("".join(system), user, schema_hint=schema_hint, temperature=0.0)
         print(f"DEBUG - LLM fallback output: {out}")
         if out.get("decision") == "intent" and out.get("intent_id") in top_ids:
             intent_name = next((x["intent_name"] for x in intent_top if x["intent_id"] == out["intent_id"]), None)
-            return RouteResult(route="intent", data={"intent_id": out["intent_id"], "intent_name": intent_name, "confidence": score, "llm": True})  
+            return RouteResult(route="intent", data={"candidates":[{"intent_id": out["intent_id"], "intent_name": intent_name, "score": score, "llm": True}]})  
         if out.get("decision") == "clarify" and out.get("question"):
             return RouteResult(route="clarify", data={"type": "llm", "question": out["question"]})
         if out.get("decision") == "smalltalk":
