@@ -17,6 +17,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict
 
+import os
+
 from flask import Flask, jsonify, request, abort, make_response
 from jsonschema import Draft7Validator, ValidationError
 from sqlalchemy import (
@@ -29,6 +31,8 @@ from sqlalchemy import (
     create_engine,
 )
 from sqlalchemy.orm import declarative_base, Session, sessionmaker
+
+from botStates import StateMachine,demo_embedding_similarity
 
 # ----------------------------------------------------------------------
 # 0️⃣ Flask app
@@ -102,6 +106,11 @@ Base.metadata.create_all(engine)
 # Session factory for request‑scoped DB interactions
 SessionLocal = sessionmaker(bind=engine, expire_on_commit=False, future=True)
 
+# create state machine
+transition_file = os.path.join(".","transitions.json")
+sm = StateMachine(transition_file, debug=True, embedding_similarity=demo_embedding_similarity, log_file=None)
+sm.set_context({"lang": "de"})
+
 
 # ----------------------------------------------------------------------
 # 3️⃣ Placeholder state‑machine implementation
@@ -114,29 +123,33 @@ def process_state_machine(validated: Dict[str, Any]) -> Dict[str, Any]:
         * {"delay": True, "delay_id": "..."}   → caller will send 202
         * {"delay": False, "context": {...}}   → caller will send 200
     """
-    intent = validated["intent"]
-    
-    input_text = validated.get("input", "")
-    # Simulate a step that needs asynchronous work
 
-    # Normal flow – fabricate a simple context record
+    input_text = validated.get("input", "")
     ctx_in = validated.get("context", {})
-    seq = ctx_in.get("sequence", 0) + 1
-    new_context = {
-        "language": ctx_in.get("language", "de"),
-        "sequence": seq,
-        "origin": ctx_in.get("origin"),
-        "entity": ctx_in.get("entity"),
-        "input": input_text,
-        "output": f"Handled intent '{intent}' at {datetime.now(timezone.utc).isoformat()}Z",
-        "options": ["continue", "restart"],
-        "labels": ["Continue", "Restart"],
-        "values": {"info": "demo"},
-    }
+    session = validated.get("session","" )
+    if session == "":
+        session = str(uuid.uuid4())
+        # initialize new context
+        ctx = {
+            "origin": sm.current_state,
+            "output": ""
+        }
+    else:
+        # Normal flow – fabricate a simple context record
+        ctx = ctx_in
+
     repeat = validated.get("repeat", False)
     delay = True if repeat == False  and "wait" in input_text.lower() else False
-    print(f"repeat={repeat}, input_text='{input_text}', delay={delay}" )
-    return {"delay": delay, "context": new_context}
+
+    sm.set_context(ctx)
+
+    next_state, cands, trace = sm.step(input_text)
+    print("=>", next_state, [(c.state, round(c.probability, 3)) for c in cands])
+
+    new_context = sm.get_context()
+    new_context["session"] = session
+    new_context["trace"] = [t.__dict__ for t in trace]
+    return {"delay": delay, "context": new_context, "session": session, "output": next_state}
 
 
 # ----------------------------------------------------------------------
@@ -212,7 +225,7 @@ def route_handler():
 # ----------------------------------------------------------------------
 # 6️⃣ Optional health‑check endpoint
 # ----------------------------------------------------------------------
-@app.route("/healthz", methods=["GET"])
+@app.route("/health", methods=["GET"])
 def health_check():
     return jsonify(status="ok"), 200
 

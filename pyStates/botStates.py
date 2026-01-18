@@ -48,7 +48,7 @@ class StateMachine:
         self.transitions: List[Dict[str, Any]] = data.get("transitions", [])
         self.states = self._infer_states(self.transitions, self.start_state)
 
-        self.current_state = self.start_state
+        self._current_state = self.start_state
         self.context: Dict[str, Any] = {}
 
         self.debug = debug
@@ -60,6 +60,11 @@ class StateMachine:
 
         self.matcher_aggregator = matcher_aggregator
 
+    # ---- internal state ----
+    @property
+    def current_state(self):
+        return self._current_state
+
     # ---- context ----
     def set_context(self, updates: Dict[str, Any]) -> None:
         self.context.update(updates)
@@ -68,18 +73,18 @@ class StateMachine:
         return dict(self.context)
 
     def reset(self) -> None:
-        self.current_state = self.start_state
+        self._current_state = self.start_state
         self.context = {}
 
     # ---- main step ----
     def step(self, user_input: str) -> Tuple[str, List[Candidate], List[TraceLine]]:
-        candidates, trace = self.get_candidates(self.current_state, user_input, self.context, with_trace=True)
-        next_state = candidates[0].state if candidates else self.current_state
+        candidates, trace = self.get_candidates(self._current_state, user_input, self.context, with_trace=True)
+        next_state = candidates[0].state if candidates else self._current_state
 
         if self.debug:
-            self._log_debug(self.current_state, user_input, candidates, trace, chosen=next_state)
+            self._log_debug(self._current_state, user_input, candidates, trace, chosen=next_state)
 
-        self.current_state = next_state
+        self._current_state = next_state
         return next_state, candidates, trace
 
     def get_candidates(
