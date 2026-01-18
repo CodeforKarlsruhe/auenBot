@@ -87,16 +87,16 @@ class HistoryRecord(Base):
     # input field
     input = Column(Text, nullable=False)
     
-    # Store the raw JSON payload for audit / debugging
-    payload = Column(Text, nullable=False)
-
     # Store the raw JSON context for audit / debugging
-    context = Column(Text, nullable=False)
+    context = Column(Text, nullable=True)
+
+    # Handy columns for querying
+    state = Column(String, nullable=True)
+    intent = Column(String, nullable=True)
+    lang = Column(String, nullable=False)
 
     # Handy indexed columns for quick look‑ups
     session_id = Column(String, index=True, nullable=False)
-    state = Column(String, nullable=False)
-    intent = Column(String, nullable=False)
 
 
 
@@ -125,47 +125,58 @@ def process_state_machine(validated: Dict[str, Any]) -> Dict[str, Any]:
     """
 
     input_text = validated.get("input", "")
-    ctx_in = validated.get("context", {})
     session = validated.get("session","" )
+    lang = validated.get("lang","en" )
     if session == "":
         session = str(uuid.uuid4())
-        # initialize new context
-        ctx = {
-            "origin": sm.current_state,
-            "output": ""
-        }
+        # reset
+        sm.reset()
     else:
         # Normal flow – fabricate a simple context record
-        ctx = ctx_in
+        ctx = {
+            "type" : validated.get("type", None),
+            "entity" : validated.get("entity", None),
+            "key" : validated.get("key", None),
+            "options" : validated.get("options", []),
+            "values"  : validated.get("values", []),
+        }
+        sm.set_context(ctx)
+        if (validated.get("state", None) is not None) and (validated.get("intent", None) is not None):
+            sm.resetTo(validated.get("state", None), ctx)
 
     repeat = validated.get("repeat", False)
     delay = True if repeat == False  and "wait" in input_text.lower() else False
-
-    sm.set_context(ctx)
 
     next_state, cands, trace = sm.step(input_text)
     print("=>", next_state, [(c.state, round(c.probability, 3)) for c in cands])
 
     new_context = sm.get_context()
+    new_context["intent"] = "decoded intent"
+    new_context["state"] = next_state
     new_context["session"] = session
+    new_context["lang"] = lang
+    new_context["options"] = [{"state": c.state, "probability": c.probability} for c in cands]
+    new_context["output"] = "output from state"
     new_context["trace"] = [t.__dict__ for t in trace]
-    return {"delay": delay, "context": new_context, "session": session, "output": next_state}
+    return {"delay": delay, "context": new_context }
 
 
 # ----------------------------------------------------------------------
 # 4️⃣ Helper: store a step in the DB
 # ----------------------------------------------------------------------
 def store_history(
-    raw_payload: Dict[str, Any], context: Dict[str, Any]
+    #raw_payload: Dict[str, Any], context: Dict[str, Any]
+    context: Dict[str, Any]
 ) -> None:
     """Insert a row into the history table."""
     record = HistoryRecord(
-        payload=json.dumps(raw_payload, ensure_ascii=False),
+        #payload=json.dumps(raw_payload, ensure_ascii=False),
         context=json.dumps(context, ensure_ascii=False),
-        session_id=raw_payload["session"],
-        state=raw_payload["state"],
-        intent=raw_payload["intent"],
-        input=raw_payload.get("input", "")
+        session_id=context["session"],
+        state=context["state"],
+        intent=context["intent"],
+        input=context.get("input", ""),
+        lang=context["lang"],
     )
     with SessionLocal() as db:
         db.add(record)
@@ -215,7 +226,7 @@ def route_handler():
         return jsonify(result.get("context")), 202
     else:
         store_history(
-            raw_payload=json_payload,
+            #raw_payload=json_payload,
             context = result.get("context")
         )
         # 200 OK – final context record

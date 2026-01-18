@@ -76,6 +76,10 @@ class StateMachine:
         self._current_state = self.start_state
         self.context = {}
 
+    def resetTo(self, state: str, ctx: Dict[str, Any]) -> None:
+        self._current_state = state
+        self.context = ctx
+
     # ---- main step ----
     def step(self, user_input: str) -> Tuple[str, List[Candidate], List[TraceLine]]:
         candidates, trace = self.get_candidates(self._current_state, user_input, self.context, with_trace=True)
