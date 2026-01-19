@@ -117,8 +117,8 @@
     ],
     "utter":"Hey, schade, dass ich dir nicht helfen konnte. Bitte habe etwas Verst\u00e4ndnis... Ich bin noch recht neu und lerne deshalb noch dazu. \nKannst du deine Frage bitte anders formulieren\ud83d\ude00? Vielleicht verstehe ich sie dann. Falls ich deine Frage trotzdem nicht verstehen sollte, kann das daran liegen, dass ich noch nichts zu dem Thema gelernt habe.",
     "intent_en":"decline",
-    "intent_fr":"d\u00e9cliner",
-    "intent_de":"decline",
+    "intent_fr":"refuser",
+    "intent_de":"ablehnen",
     "utter_de":"Hey, schade, dass ich dir nicht helfen konnte. Bitte habe etwas Verst\u00e4ndnis... Ich bin noch recht neu und lerne deshalb noch dazu. \nKannst du deine Frage bitte anders formulieren\ud83d\ude00? Vielleicht verstehe ich sie dann. Falls ich deine Frage trotzdem nicht verstehen sollte, kann das daran liegen, dass ich noch nichts zu dem Thema gelernt habe.",
     "utter_en":"Hey, it's a shame I couldn't help you. Please have some understanding... I'm still quite new and therefore still learning. Could you please rephrase your question?\ud83d\ude00 Maybe then I can understand it. If I still can't understand your question despite that, it might be because I haven't learned anything about the topic yet.",
     "utter_fr":"Salut, je suis d\u00e9sol\u00e9 que je ne puisse pas vous aider. Veuillez avoir un peu de compr\u00e9hension... Je suis encore relativement nouveau et apprends donc encore sur ce sujet.\nPourriez-vous reformuler votre question s'il vous pla\u00eet ?\ud83d\ude00 Peut-\u00eatre que je pourrai alors la comprendre. Si je ne devais pas tout de m\u00eame comprendre votre question, cela pourrait \u00eatre d\u00fb au fait que je n'ai rien appris sur ce sujet."
@@ -207,7 +207,7 @@
     "utter":"Freut mich, dass ich dir helfen konnte! Stelle mir gerne noch weitere Fragen. Ich lausche\ud83d\ude09.",
     "intent_en":"confirm",
     "intent_fr":"confirmer",
-    "intent_de":"confirm",
+    "intent_de":"bestätigen",
     "utter_de":"Freut mich, dass ich dir helfen konnte! Stelle mir gerne noch weitere Fragen. Ich lausche\ud83d\ude09.",
     "utter_en":"I'm glad I could help you! Feel free to ask me more questions. I'm listening\ud83d\ude09.",
     "utter_fr":"Je suis ravi de vous avoir aid\u00e9 ! N'h\u00e9sitez pas \u00e0 me poser d'autres questions. J'\u00e9coute."
