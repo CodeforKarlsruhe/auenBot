@@ -85,7 +85,7 @@ system_prompt_check_intent_en = """You are an intent classification system for a
                         "The current user language is English."""
 
 
-intents_path = "../rawData/intents_translated.json"
+intents_path = "../rawData/intents.json" # _translated.json"
 context_path = "../rawData/tiere_pflanzen_auen.json"
 vectors_path = "../rawData/intent_vectors.json"
 
@@ -275,17 +275,21 @@ def route_handler():
             print(
                 f"Best intent id: {best_intent_id}, intent: {best_intent}, score: {best_score}"
             )
+
             # very low confidence, use fallback
             if best_score <= 0.25:
                 fallback = intents.get_intent_by_id("63b6a1f6d9d1941218c5c7d2")
                 result["context"]["intent"] = fallback.get("name", None)
-                result["context"]["output"] = fallback.get("output", None)
+                result["context"]["output"] = {"text":fallback.get("output", None)}
                 target_intent = fallback.get("name", None)
+
             # high confidence
             elif best_score >= 0.75:
-                result["context"]["intent"] = best_intent.get("name", None)
-                result["context"]["output"] = best_intent.get("output", None)
                 target_intent = best_intent.get("name", None)
+                result["context"]["intent"] = target_intent
+                result["context"]["output"] = {"text":best_intent.get("output", None)}
+                print("Selected best intent:", target_intent)
+            # intermediate confidence. check with LLM
             else:
                 target_intent = None
                 # low confidence, return options
@@ -338,7 +342,7 @@ def route_handler():
                             intent_id = vector_intents[idx]
                             best_intent = intents.get_intent_by_id(intent_id)
                             result["context"]["intent"] = best_intent.get("name", None)
-                            result["context"]["output"] = best_intent.get("output", None)
+                            result["context"]["output"] = {"text": best_intent.get("output", None)}
                             result["context"]["LLM"] = True
                             target_intent = best_intent.get("name", None)
                             print("Selected intent from LLM:", target_intent)
@@ -362,8 +366,8 @@ def route_handler():
     # 5.4 Check actions
     # --------------------------------------------------------------
     if target_intent is not None:
-        if result["context"]["output"] is None or result["context"]["output"] == "":
-            result["context"]["output"] = "Hier muss noch eine Aktion kommen ..."
+        if result["context"]["output"] is None or result["context"]["output"].get("text", "") == "":
+            result["context"]["output"] = {"text": "Hier muss noch eine Aktion kommen ..."}
             if target_intent.lower() == "tp_generell":
                 entity_result = actions.tp_generell_extract_information(
                     json_payload.get("input", "")
@@ -378,9 +382,11 @@ def route_handler():
                     output_parts = []
                     if features.get("text", []):
                         output_parts.append("\n".join(features.get("text", [])))
-                    if features.get("image", []):             
-                        output_parts.append(
-                            "\n".join([f"Bild: {img}" for img in features.get("image", [])])
+                        result["context"]["output"] = {"text": "\n\n".join(output_parts)}
+                    if features.get("image", []):
+                        result["context"]["output"]["image"] = []
+                        result["context"]["output"]["image"].append(
+                            ([img for img in features.get("image", [])])
                         )       
 
             elif target_intent.lower() == "tp_definition":
@@ -397,15 +403,17 @@ def route_handler():
                     output_parts = []
                     if features.get("text", []):
                         output_parts.append("\n".join(features.get("text", [])))
-                    if features.get("image", []):             
-                        output_parts.append(
-                            "\n".join([f"Bild: {img}" for img in features.get("image", [])])
+                        result["context"]["output"] = {"text": "\n\n".join(output_parts)}
+                        print("TP definition feature:", features, output_parts)
+                    if features.get("image", []):
+                        result["context"]["output"]["image"] = []
+                        result["context"]["output"]["image"].append(
+                            ([img for img in features.get("image", [])])
                         )       
-                    result["context"]["output"] = "\n\n".join(output_parts)
                 else:
                     result["context"][
                         "output"
-                    ] = "Leider habe ich dazu keine Informationen gefunden."
+                    ] = {"text": "Leider habe ich dazu keine Informationen gefunden."}
 
             elif target_intent.lower().startswith("tp_"):
                 feature = target_intent[3:].capitalize()
@@ -421,23 +429,23 @@ def route_handler():
                     output_parts = []
                     if features.get("text", []):
                         output_parts.append("\n".join(features.get("text", [])))
-                    if features.get("image", []):
-                        output_parts.append(
-                            "\n".join([f"Bild: {img}" for img in features.get("image", [])])
-                        )
-                    print("Tiere,Pflanzen entity result:", entity_result, features, output_parts)
+                    if len(features.get("image", [])) > 0:
+                        print("Features images:", features.get("image"))
+                        result["context"]["output"]["image"] = features.get("image")[0]
+                        
+                    print("Tiere,Pflanzen entity result:", entity_result, features, result["context"]["output"])
                     result["context"]["entity"] = name
                     result["context"]["type"] = entity_result[0].get("Typ", None)
                     if output_parts and len(output_parts) > 0:
-                        result["context"]["output"] = "\n\n".join(output_parts)
+                        result["context"]["output"]["text"] = "\n\n".join(output_parts)
                     else:
-                        result["context"]["output"] = "Leider habe ich für diese Eigenschaft keine Informationen."
+                        result["context"]["output"]["text"] = "Leider habe ich für diese Eigenschaft keine Informationen."
                     
                     
                 else:
                     result["context"][
                         "output"
-                    ] = "Leider habe ich dazu keine Informationen gefunden."
+                    ] = {"text": "Leider habe ich dazu keine Informationen gefunden."}
                     
             elif target_intent.lower().startswith("tiere_"):
                 feature = target_intent[6:].capitalize()
@@ -454,22 +462,24 @@ def route_handler():
                     output_parts = []
                     if features.get("text", []):
                         output_parts.append("\n".join(features.get("text", [])))
+                        result["context"]["output"] = {"text": "\n\n".join(output_parts)}
                     if features.get("image", []):
-                        output_parts.append(
-                            "\n".join([f"Bild: {img}" for img in features.get("image", [])])
-                        )
+                        result["context"]["output"]["image"] = []
+                        result["context"]["output"]["image"].append(
+                            ([img for img in features.get("image", [])])
+                        )       
+
                     print("Tier entity result:", entity_result, features, output_parts)
                     result["context"]["entity"] = name
                     result["context"]["type"] = entity_result[0].get("Typ", None)
                     if output_parts and len(output_parts) > 0:
-                        result["context"]["output"] = "\n\n".join(output_parts)
+                        result["context"]["output"] = {"text": "\n\n".join(output_parts)}
                     else:
-                        result["context"]["output"] = "Leider habe ich für diese Eigenschaft keine Informationen."
+                        result["context"]["output"] = {"text": "Leider habe ich für diese Eigenschaft keine Informationen."}
                 else:
                     result["context"][
                         "output"
-                    ] = "Leider habe ich für dieses Tier keine Informationen gefunden."
-
+                    ] = {"text": "Leider habe ich für dieses Tier keine Informationen gefunden."}
             elif target_intent.lower().startswith("pflanzen_"):
                 feature = target_intent[8:].capitalize()
                 entity_result = actions.find_entity(
@@ -484,28 +494,30 @@ def route_handler():
                     output_parts = []
                     if features.get("text", []):
                         output_parts.append("\n".join(features.get("text", [])))
+                        result["context"]["output"] = {"text": "\n\n".join(output_parts)}
                     if features.get("image", []):
-                        output_parts.append(
-                            "\n".join([f"Bild: {img}" for img in features.get("image", [])])
-                        )
+                        result["context"]["output"]["image"] = []
+                        result["context"]["output"]["image"].append(
+                            ([img for img in features.get("image", [])])
+                        )       
+
                     print("Pflanzen feature:", feature, "entity result:", entity_result, features, output_parts)
                     result["context"]["entity"] = name
                     result["context"]["type"] = entity_result[0].get("Typ", None)
                     if output_parts and len(output_parts) > 0:
-                        result["context"]["output"] = "\n\n".join(output_parts)
+                        result["context"]["output"] = {"text": "\n\n".join(output_parts)}
                     else:
-                        result["context"]["output"] = "Leider habe ich für diese Eigenschaft keine Informationen."
+                        result["context"]["output"] = {"text": "Leider habe ich für diese Eigenschaft keine Informationen."}
                 else:
                     result["context"][
                         "output"
-                    ] = "Leider habe ich für diese Pflanze keine Informationen gefunden."
-
+                    ] = {"text": "Leider habe ich für diese Pflanze keine Informationen gefunden."}
 
     # --------------------------------------------------------------
     # 5.5 Persist the step (always store the original payload)
     # --------------------------------------------------------------
     target = target_intent
-    output = result.get("context", {}).get("output", "Da fehlt noch eine Antwort...")
+    output = result.get("context", {}).get("output",{}).get("text","Da fehlt noch eine Antwort...")
     session = result.get("session")
     payload = result.get("context")
     payload["intent"] = target
