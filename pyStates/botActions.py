@@ -54,22 +54,24 @@ class BotAction:
                 term = term.strip()
                 if not term:
                     continue
+                print(f"Searching for term '{term}' and type '{entity_type}'")
                 if entity_type is None:
-                    ents = [e for e in self.data if term.lower() in (e.get('Name') or '').lower()]
+                    ents = [e for e in self.data if term.lower() == (e.get('Name') or '').lower()]
                     if ents:
                         # determine type from first hit and restrict to that type
                         inferred = ents[0].get('Typ')
                         ents = [e for e in ents if e.get('Typ') == inferred]
                 elif entity_type == "Tier":
-                    ents = [e for e in self.tiere if term.lower() in (e.get('Name') or '').lower()]
+                    ents = [e for e in self.tiere if term.lower() == (e.get('Name') or '').lower()]
                 elif entity_type == "Pflanze":
-                    ents = [e for e in self.pflanzen if term.lower() in (e.get('Name') or '').lower()]
+                    ents = [e for e in self.pflanzen if term.lower() == (e.get('Name') or '').lower()]
                 elif entity_type == "Auen":
-                    ents = [e for e in self.auen if term.lower() in (e.get('Name') or '').lower()]
+                    ents = [e for e in self.auen if term.lower() == (e.get('Name') or '').lower()]
                 else:
-                    ents = [e for e in self.data if term.lower() in (e.get('Name') or '').lower() and e.get('Typ') == entity_type]
+                    ents = [e for e in self.data if term.lower() == (e.get('Name') or '').lower() and e.get('Typ') == entity_type]
 
                 if ents:
+                    print(f"Found {len(ents)} entities for term '{term}' and type '{entity_type}'")
                     return ents
                 else:
                     print("No matching entity found for:", term)
@@ -137,9 +139,9 @@ class BotAction:
         try:
             items = [e for e in self.data if name.lower() == (e.get('Name') or '').lower()]
             if items:
-                values = []
+                values = {"text": [], "image": [],"audio": [], "video": [], "link": []}
                 for key in searchKeys:
-                    values.extend([f.get(key) for f in items if key in f and f.get(key)])
+                    values["text"].extend([f.get(key) for f in items if key in f and f.get(key)])
                 if searchImages:
                     # also collect image links if available
                     for f in items:
@@ -147,7 +149,7 @@ class BotAction:
                             for l in f['Links']:
                                 img = l.get("img",None)
                                 if img:
-                                    values.append(img)
+                                    values["image"].append(img)
                                     break
                 return values
             else:
@@ -167,7 +169,7 @@ if __name__ == "__main__":
                 name = result[0].get('Name')
                 features = action.get_entity_features(name,f)
                 if features:
-                    print(f"{name}   Feature '{f}':", features)
+                    print(f"1: {name}   Feature '{f}':", features)
                     
         else:
             print("1: No results found.\n-----\n")

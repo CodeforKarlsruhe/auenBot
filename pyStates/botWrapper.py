@@ -73,7 +73,7 @@ system_prompt_check_intent_de = """Du bist ein Intent‑Klassifizierungssystem f
     "Für den Chatbot sind mehrere Intents definiert.
     "Basierend auf der Benutzereingabe wählen den am besten passenden Intent aus den bereitgestellten Optionen aus.
     "Beachten Sie, dass Verweise auf Tiere oder Pflanzen in der Regel nicht mit Ernährung, sondern mit biologischen Aspekten zusammenhängen.
-    "Wenn keiner passt, antworte mit ‚None‘.
+    "Wenn keiner passt, gebe als Index -1 zurück. Antworte nur mit dem Index. Gibt keinen weiteren Text zurück.
     "Die aktuelle Benutzersprache ist Deutsch."""
 
 system_prompt_check_intent_en = """You are an intent classification system for a chatbot. 
@@ -253,6 +253,10 @@ def route_handler():
     # 5.3 Run the state‑machine logic
     # --------------------------------------------------------------
     result = check_input(json_payload)
+    if result.get("status", "error") == "error":
+        # 400 Bad Request – error in processing
+        return jsonify(error="Error processing input"), 400
+
     # check if we need to delay for llm usage ...
     repeat = result.get("repeat", False)
     ctx = result.get("context", {})
@@ -284,9 +288,9 @@ def route_handler():
                 target_intent = best_intent.get("name", None)
             else:
                 target_intent = None
-                # low confidence, return error
+                # low confidence, return options
                 intent_options = []
-                for i in range(1, len(candidates[0])):
+                for i in range(0, len(candidates[0])):
                     idx = candidates[0][i]
                     intent_id = vector_intents[idx]
                     score = candidates[1][i].astype(float)
@@ -307,29 +311,29 @@ def route_handler():
                 else:
                     print("Call llm to find better intent ...")
                     # overwrite intent with alias if available
-                    intent_options = []
-                    for i in range(1, len(candidates[0])):
+                    intent_descriptions = []
+                    for i in range(0, len(candidates[0])):
                         idx = candidates[0][i]
                         intent_id = vector_intents[idx]
                         intent = intents.get_intent_by_id(intent_id)
                         if intent.get("alias",None):
-                            intent_options.append(intent.get("alias",None))
+                            intent_descriptions.append(intent.get("alias",None))
+                            print("Using alias for intent:", intent.get("alias",None))
                         else:
-                            intent_options.append(intent.get("name",None))
-                    print("Intent options with alias:", intent_options)
+                            intent_descriptions.append(intent.get("name",None))
+                    print("Intent options with alias:", intent_descriptions)
 
                     llmResult = llm.chat_json(
                         temperature=0.0,
                         system=system_prompt_check_intent_de,
                         user=f"Nutzereingabe: '{json_payload.get('input','')}'. "
-                        f"Verfügbare Intents: {', '.join(intent_options)}. "
-                        "Antworten mit dem Index des am besten passenden Intents oder 'None', wenn keine Übereinstimmung vorliegt .",
+                        f"Verfügbare Intents: {', '.join(intent_descriptions)}. "
                     )
                     print("LLM intent result:", llmResult)
                     if llmResult is not None:
                         if isinstance(llmResult, str):
                             llmResult = int(llmResult.strip())
-                        if isinstance(llmResult, int):
+                        if isinstance(llmResult, int) and llmResult >= 0 and llmResult < len(candidates[0]):
                             idx = candidates[0][llmResult]
                             intent_id = vector_intents[idx]
                             best_intent = intents.get_intent_by_id(intent_id)
@@ -338,6 +342,9 @@ def route_handler():
                             result["context"]["LLM"] = True
                             target_intent = best_intent.get("name", None)
                             print("Selected intent from LLM:", target_intent)
+                            # clear options
+                            if "options" in result["context"]:
+                                del result["context"]["options"]
 
                         
                     # selected_intent = llmResult.get("intent", "None")
@@ -347,38 +354,155 @@ def route_handler():
             # no intent found, return error
             return jsonify(error="No intent found"), 400
 
+    else:
+        target_intent = intent
+        print("Target intent from request:", target_intent)
+
     # --------------------------------------------------------------
-    # 5.4 Create intent / options
+    # 5.4 Check actions
     # --------------------------------------------------------------
+    if target_intent is not None:
+        if result["context"]["output"] is None or result["context"]["output"] == "":
+            result["context"]["output"] = "Hier muss noch eine Aktion kommen ..."
+            if target_intent.lower() == "tp_generell":
+                entity_result = actions.tp_generell_extract_information(
+                    json_payload.get("input", "")
+                )
+                if entity_result:
+                    print("Generell entity result:", entity_result)
+                    name = entity_result[0].get("Name", None)
+                    features = actions.get_entity_features(
+                        name,
+                        "Merkmale"
+                    )
+                    output_parts = []
+                    if features.get("text", []):
+                        output_parts.append("\n".join(features.get("text", [])))
+                    if features.get("image", []):             
+                        output_parts.append(
+                            "\n".join([f"Bild: {img}" for img in features.get("image", [])])
+                        )       
+
+            elif target_intent.lower() == "tp_definition":
+                entity_result = actions.tp_generell_extract_information(
+                    json_payload.get("input", "")
+                )
+                if entity_result:
+                    print("Generell entity result:", entity_result)
+                    name = entity_result[0].get("Name", None)
+                    features = actions.get_entity_features(
+                        name,
+                        "Merkmale"
+                    )
+                    output_parts = []
+                    if features.get("text", []):
+                        output_parts.append("\n".join(features.get("text", [])))
+                    if features.get("image", []):             
+                        output_parts.append(
+                            "\n".join([f"Bild: {img}" for img in features.get("image", [])])
+                        )       
+                    result["context"]["output"] = "\n\n".join(output_parts)
+                else:
+                    result["context"][
+                        "output"
+                    ] = "Leider habe ich dazu keine Informationen gefunden."
+
+            elif target_intent.lower().startswith("tp_"):
+                feature = target_intent[3:].capitalize()
+                entity_result = actions.extract_animal_or_plant(
+                    json_payload.get("input", "")
+                )
+                if entity_result:
+                    name = entity_result[0].get("Name", None)
+                    features = actions.get_entity_features(
+                        name, feature
+                    )
+                    output_parts = []
+                    if features.get("text", []):
+                        output_parts.append("\n".join(features.get("text", [])))
+                    if features.get("image", []):
+                        output_parts.append(
+                            "\n".join([f"Bild: {img}" for img in features.get("image", [])])
+                        )
+                    result["context"]["output"] = "\n\n".join(output_parts)
+                else:
+                    result["context"][
+                        "output"
+                    ] = "Leider habe ich dazu keine Informationen gefunden."
+                    
+            elif target_intent.lower().startswith("tiere_"):
+                feature = target_intent[6:].capitalize()
+                entity_result = actions.find_entity(
+                    json_payload.get("input", ""),
+                    "Tier"
+                )
+                if entity_result:
+                    name = entity_result[0].get("Name", None)
+                    features = actions.get_entity_features(
+                        name, feature
+                    )
+                    output_parts = []
+                    if features.get("text", []):
+                        output_parts.append("\n".join(features.get("text", [])))
+                    if features.get("image", []):
+                        output_parts.append(
+                            "\n".join([f"Bild: {img}" for img in features.get("image", [])])
+                        )
+                    result["context"]["output"] = "\n\n".join(output_parts)
+                else:
+                    result["context"][
+                        "output"
+                    ] = "Leider habe ich dazu keine Informationen gefunden."
+
+            elif target_intent.lower().startswith("pflanzen_"):
+                feature = target_intent[8:].capitalize()
+                entity_result = actions.find_entity(
+                    json_payload.get("input", ""),
+                    "Pflanze"
+                )
+                if entity_result:
+                    name = entity_result[0].get("Name", None)
+                    features = actions.get_entity_features(
+                        name, feature
+                    )
+                    output_parts = []
+                    if features.get("text", []):
+                        output_parts.append("\n".join(features.get("text", [])))
+                    if features.get("image", []):
+                        output_parts.append(
+                            "\n".join([f"Bild: {img}" for img in features.get("image", [])])
+                        )
+                    result["context"]["output"] = "\n\n".join(output_parts)
+                else:
+                    result["context"][
+                        "output"
+                    ] = "Leider habe ich dazu keine Informationen gefunden."
+
 
     # --------------------------------------------------------------
     # 5.5 Persist the step (always store the original payload)
     # --------------------------------------------------------------
-    if result.get("status", "error") == "error":
-        # 400 Bad Request – error in processing
-        return jsonify(error="Error processing input"), 400
-    else:
-        target = target_intent
-        output = result.get("context", {}).get("output", "This is a dummy response.")
-        session = result.get("session")
-        payload = result.get("context")
-        payload["intent"] = target
-        store_history(
-            # raw_payload=json_payload,
-            user_input=json_payload.get("input", ""),
-            session=session,
-            output=output,
-            payload=payload,
-            lang=json_payload.get("context", {}).get("lang", "de"),
-            intent=target,
-        )
-        # 200 OK – final context record
-        return (
-            jsonify(
-                {"context": result.get("context"), "session": result.get("session")}
-            ),
-            200,
-        )
+    target = target_intent
+    output = result.get("context", {}).get("output", "Da fehlt noch eine Antwort...")
+    session = result.get("session")
+    payload = result.get("context")
+    payload["intent"] = target
+    store_history(
+        # raw_payload=json_payload,
+        user_input=json_payload.get("input", ""),
+        session=session,
+        output=output,
+        payload=payload,
+        lang=json_payload.get("context", {}).get("lang", "de"),
+        intent=target,
+    )
+    # 200 OK – final context record
+    return (
+        jsonify(
+            {"context": result.get("context"), "session": result.get("session")}
+        ),
+        200,
+    )
 
 
 # ----------------------------------------------------------------------
