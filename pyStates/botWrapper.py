@@ -86,7 +86,7 @@ system_prompt_check_intent_en = """You are an intent classification system for a
                         "The current user language is English."""
 
 
-intents_path = "../rawData/intents.json" # _translated.json"
+intents_path = "../rawData/intents.json"  # _translated.json"
 context_path = "../rawData/tiere_pflanzen_auen.json"
 vectors_path = "../rawData/intent_vectors.json"
 
@@ -280,14 +280,14 @@ def route_handler():
             if best_score <= 0.25:
                 fallback = intents.get_intent_by_id("63b6a1f6d9d1941218c5c7d2")
                 result["context"]["intent"] = fallback.get("name", None)
-                result["context"]["output"] = {"text":fallback.get("output", None)}
+                result["context"]["output"] = {"text": fallback.get("output", None)}
                 target_intent = fallback.get("name", None)
 
             # high confidence
             elif best_score >= 0.75:
                 target_intent = best_intent.get("name", None)
                 result["context"]["intent"] = target_intent
-                result["context"]["output"] = {"text":best_intent.get("output", None)}
+                result["context"]["output"] = {"text": best_intent.get("output", None)}
                 print("Selected best intent:", target_intent)
             # intermediate confidence. check with LLM
             else:
@@ -295,26 +295,37 @@ def route_handler():
                 # low confidence, return options
                 # first scan through candidate list. keep only the first candidate (with the best score) for each intent_id
                 intent_options = []
+                intent_aliases = []
                 seen = set()
                 for i in range(0, len(candidates[0])):
                     idx = candidates[0][i]
                     intent_id = vector_intents[idx]
                     score = candidates[1][i].astype(float)
                     intent_name = intents.get_intent_by_id(intent_id).get("name")
+                    intent_alias = intents.get_intent_by_id(intent_id).get("alias", None)
+                    if not intent_alias or intent_alias == "":
+                        intent_alias = intent_name
                     print(f" Next intent: intent: {intent_name}, score: {score}")
                     if intent_name in seen:
                         print("Skipping duplicate intent:", intent_name)
                         continue
                     seen.add(intent_name)
                     intent_options.append(intent_name)
-                    
-                # check if only one left after deduplication
+                    intent_aliases.append(intent_alias)
+
+                # check if only one left after deduplication. this must be the best one already
                 if len(intent_options) == 1:
                     target_intent = best_intent.get("name", None)
                     result["context"]["intent"] = target_intent
-                    result["context"]["output"] = {"text":best_intent.get("output", None)}
-                    print("Selected lower score best intent after deduping:", target_intent)
+                    result["context"]["output"] = {
+                        "text": best_intent.get("output", None)
+                    }
+                    print(
+                        "Selected lower score best intent after deduping:",
+                        target_intent,
+                    )
                 else:
+                    print("Remaining intent options:", intent_options)
                     result["context"]["options"] = intent_options
                     if repeat == False:
                         return (
@@ -328,35 +339,33 @@ def route_handler():
                         )
                     else:
                         print("Call llm to find better intent ...")
-                        # overwrite intent with alias if available
-                        intent_descriptions = []
-                        for i in range(0, len(candidates[0])):
-                            idx = candidates[0][i]
-                            intent_id = vector_intents[idx]
-                            intent = intents.get_intent_by_id(intent_id)
-                            if intent.get("alias",None):
-                                intent_descriptions.append(intent.get("alias",None))
-                                print("Using alias for intent:", intent.get("alias",None))
-                            else:
-                                intent_descriptions.append(intent.get("name",None))
-                        print("Intent options with alias:", intent_descriptions)
+                        # we have the aliases already 
+                        print("Intent options with alias:", intent_aliases)
 
                         llmResult = llm.chat_json(
                             temperature=0.0,
                             system=system_prompt_check_intent_de,
                             user=f"Nutzereingabe: '{json_payload.get('input','')}'. "
-                            f"Verfügbare Intents: {', '.join(intent_descriptions)}. "
+                            f"Verfügbare Intents: {', '.join(intent_aliases)}. ",
                         )
                         print("LLM intent result:", llmResult)
                         if llmResult is not None:
                             if isinstance(llmResult, str):
                                 llmResult = int(llmResult.strip())
-                            if isinstance(llmResult, int) and llmResult >= 0 and llmResult < len(candidates[0]):
+                            if (
+                                isinstance(llmResult, int)
+                                and llmResult >= 0
+                                and llmResult < len(candidates[0])
+                            ):
                                 idx = candidates[0][llmResult]
                                 intent_id = vector_intents[idx]
                                 best_intent = intents.get_intent_by_id(intent_id)
-                                result["context"]["intent"] = best_intent.get("name", None)
-                                result["context"]["output"] = {"text": best_intent.get("output", None)}
+                                result["context"]["intent"] = best_intent.get(
+                                    "name", None
+                                )
+                                result["context"]["output"] = {
+                                    "text": best_intent.get("output", None)
+                                }
                                 result["context"]["LLM"] = True
                                 target_intent = best_intent.get("name", None)
                                 print("Selected intent from LLM:", target_intent)
@@ -364,7 +373,6 @@ def route_handler():
                                 if "options" in result["context"]:
                                     del result["context"]["options"]
 
-                            
                         # selected_intent = llmResult.get("intent", "None")
                         # return jsonify({"context": result.get("context"), "session": result.get("session")}), 200
 
@@ -380,8 +388,13 @@ def route_handler():
     # 5.4 Check actions
     # --------------------------------------------------------------
     if target_intent is not None:
-        if result["context"]["output"] is None or result["context"]["output"].get("text", "") == "":
-            result["context"]["output"] = {"text": "Hier muss noch eine Aktion kommen ..."}
+        if (
+            result["context"]["output"] is None
+            or result["context"]["output"].get("text", "") == ""
+        ):
+            result["context"]["output"] = {
+                "text": "Hier muss noch eine Aktion kommen ..."
+            }
             if target_intent.lower() == "tp_generell":
                 entity_result = actions.tp_generell_extract_information(
                     json_payload.get("input", "")
@@ -389,20 +402,24 @@ def route_handler():
                 if entity_result:
                     print("Generell entity result:", entity_result)
                     name = entity_result[0].get("Name", None)
-                    features = actions.get_entity_features(
-                        name,
-                        "Merkmale"
-                    )
+                    feature = "Merkmale"
+                    features = actions.get_entity_features(name, feature)
                     output_parts = []
                     if features.get("text", []):
                         output_parts.append("\n".join(features.get("text", [])))
-                        result["context"]["output"] = {"text": "\n\n".join(output_parts)}
+                        result["context"]["output"] = {
+                            "text": "\n\n".join(output_parts)
+                        }
                         if len(features.get("image", [])) > 0:
                             print("Features images:", features.get("image"))
-                            result["context"]["output"]["image"] = features.get("image")[0]
+                            result["context"]["output"]["image"] = features.get(
+                                "image"
+                            )[0]
                         if len(features.get("audio", [])) > 0:
                             print("Features audio:", features.get("audio"))
-                            result["context"]["output"]["audio"] = features.get("audio")[0]
+                            result["context"]["output"]["audio"] = features.get(
+                                "audio"
+                            )[0]
 
             elif target_intent.lower() == "tp_definition":
                 entity_result = actions.tp_generell_extract_information(
@@ -411,25 +428,31 @@ def route_handler():
                 if entity_result:
                     print("Generell entity result:", entity_result)
                     name = entity_result[0].get("Name", None)
-                    features = actions.get_entity_features(
-                        name,
-                        "Merkmale"
-                    )
+                    feature = "Merkmale"
+                    features = actions.get_entity_features(name, feature)
+                    result["context"]["entity"] = name
+                    result["context"]["feature"] = feature
                     output_parts = []
                     if features.get("text", []):
                         output_parts.append("\n".join(features.get("text", [])))
-                        result["context"]["output"] = {"text": "\n\n".join(output_parts)}
+                        result["context"]["output"] = {
+                            "text": "\n\n".join(output_parts)
+                        }
                         print("TP definition feature:", features, output_parts)
                         if len(features.get("image", [])) > 0:
                             print("Features images:", features.get("image"))
-                            result["context"]["output"]["image"] = features.get("image")[0]
+                            result["context"]["output"]["image"] = features.get(
+                                "image"
+                            )[0]
                         if len(features.get("audio", [])) > 0:
                             print("Features audio:", features.get("audio"))
-                            result["context"]["output"]["audio"] = features.get("audio")[0]
+                            result["context"]["output"]["audio"] = features.get(
+                                "audio"
+                            )[0]
                 else:
-                    result["context"][
-                        "output"
-                    ] = {"text": "Leider habe ich dazu keine Informationen gefunden."}
+                    result["context"]["output"] = {
+                        "text": "Leider habe ich dazu keine Informationen gefunden."
+                    }
 
             elif target_intent.lower().startswith("tp_"):
                 feature = target_intent[3:].capitalize()
@@ -439,9 +462,7 @@ def route_handler():
                 )
                 if entity_result:
                     name = entity_result[0].get("Name", None)
-                    features = actions.get_entity_features(
-                        name, feature
-                    )
+                    features = actions.get_entity_features(name, feature)
                     output_parts = []
                     if features.get("text", []):
                         output_parts.append("\n".join(features.get("text", [])))
@@ -451,37 +472,43 @@ def route_handler():
                     if len(features.get("audio", [])) > 0:
                         print("Features audio:", features.get("audio"))
                         result["context"]["output"]["audio"] = features.get("audio")[0]
-                        
-                    print("Tiere,Pflanzen entity result:", entity_result, features, result["context"]["output"])
+
+                    print(
+                        "Tiere,Pflanzen entity result:",
+                        entity_result,
+                        features,
+                        result["context"]["output"],
+                    )
                     result["context"]["entity"] = name
+                    result["context"]["feature"] = feature
                     result["context"]["type"] = entity_result[0].get("Typ", None)
                     if output_parts and len(output_parts) > 0:
                         result["context"]["output"]["text"] = "\n\n".join(output_parts)
                     else:
-                        result["context"]["output"]["text"] = "Leider habe ich für diese Eigenschaft keine Beschreibung."
-                    
-                    
+                        result["context"]["output"][
+                            "text"
+                        ] = "Leider habe ich für diese Eigenschaft keine Beschreibung."
+
                 else:
-                    result["context"][
-                        "output"
-                    ] = {"text": "Leider habe ich dazu keine Informationen gefunden."}
-                    
+                    result["context"]["output"] = {
+                        "text": "Leider habe ich dazu keine Informationen gefunden."
+                    }
+
             elif target_intent.lower().startswith("tiere_"):
                 feature = target_intent[6:].capitalize()
                 print("Tiere feature:", feature)
                 entity_result = actions.find_entity(
-                    json_payload.get("input", ""),
-                    "Tier"
+                    json_payload.get("input", ""), "Tier"
                 )
                 if entity_result and len(entity_result) > 0:
                     name = entity_result[0].get("Name", None)
-                    features = actions.get_entity_features(
-                        name, feature
-                    )
+                    features = actions.get_entity_features(name, feature)
                     output_parts = []
                     if features.get("text", []):
                         output_parts.append("\n".join(features.get("text", [])))
-                        result["context"]["output"] = {"text": "\n\n".join(output_parts)}
+                        result["context"]["output"] = {
+                            "text": "\n\n".join(output_parts)
+                        }
                     if len(features.get("image", [])) > 0:
                         print("Features images:", features.get("image"))
                         result["context"]["output"]["image"] = features.get("image")[0]
@@ -489,32 +516,40 @@ def route_handler():
                         print("Features audio:", features.get("audio"))
                         result["context"]["output"]["audio"] = features.get("audio")[0]
 
-                    print("Tier entity result:", entity_result, features, result["context"]["output"])
+                    print(
+                        "Tier entity result:",
+                        entity_result,
+                        features,
+                        result["context"]["output"],
+                    )
                     result["context"]["entity"] = name
+                    result["context"]["feature"] = feature
                     result["context"]["type"] = entity_result[0].get("Typ", None)
                     if output_parts and len(output_parts) > 0:
                         result["context"]["output"]["text"] = "\n\n".join(output_parts)
                     else:
-                        result["context"]["output"]["text"] = "Leider habe ich für diese Eigenschaft keine Beschreibung."
+                        result["context"]["output"][
+                            "text"
+                        ] = "Leider habe ich für diese Eigenschaft keine Beschreibung."
                 else:
-                    result["context"][
-                        "output"
-                    ] = {"text": "Leider habe ich für dieses Tier keine Informationen gefunden."}
+                    result["context"]["output"] = {
+                        "text": "Leider habe ich für dieses Tier keine Informationen gefunden."
+                    }
+
             elif target_intent.lower().startswith("pflanzen_"):
-                feature = target_intent[8:].capitalize()
+                feature = target_intent[9:].capitalize()
                 entity_result = actions.find_entity(
-                    json_payload.get("input", ""),
-                    "Pflanze"
+                    json_payload.get("input", ""), "Pflanze"
                 )
                 if entity_result:
                     name = entity_result[0].get("Name", None)
-                    features = actions.get_entity_features(
-                        name, feature
-                    )
+                    features = actions.get_entity_features(name, feature)
                     output_parts = []
                     if features.get("text", []):
                         output_parts.append("\n".join(features.get("text", [])))
-                        result["context"]["output"] = {"text": "\n\n".join(output_parts)}
+                        result["context"]["output"] = {
+                            "text": "\n\n".join(output_parts)
+                        }
                     if len(features.get("image", [])) > 0:
                         print("Features images:", features.get("image"))
                         result["context"]["output"]["image"] = features.get("image")[0]
@@ -522,22 +557,37 @@ def route_handler():
                         print("Features audio:", features.get("audio"))
                         result["context"]["output"]["audio"] = features.get("audio")[0]
 
-                    print("Pflanzen feature:", feature, "entity result:", entity_result, features, output_parts)
+                    print(
+                        "Pflanzen feature:",
+                        feature,
+                        "entity result:",
+                        entity_result,
+                        features,
+                        output_parts,
+                    )
                     result["context"]["entity"] = name
+                    result["context"]["feature"] = feature
                     result["context"]["type"] = entity_result[0].get("Typ", None)
                     if output_parts and len(output_parts) > 0:
                         result["context"]["output"]["text"] = "\n\n".join(output_parts)
                     else:
-                        result["context"]["output"]["text"] = "Leider habe ich für diese Eigenschaft keine Beschreibung."
+                        result["context"]["output"][
+                            "text"
+                        ] = "Leider habe ich für diese Eigenschaft keine Beschreibung."
                 else:
-                    result["context"][
-                        "output"
-                    ] = {"text": "Leider habe ich für diese Pflanze keine Beschreibung."}
+                    result["context"]["output"] = {
+                        "text": "Leider habe ich für diese Pflanze keine Beschreibung."
+                    }
+
     # --------------------------------------------------------------
     # 5.5 Persist the step (always store the original payload)
     # --------------------------------------------------------------
     target = target_intent
-    output = result.get("context", {}).get("output",{}).get("text","Da fehlt noch eine Antwort...")
+    output = (
+        result.get("context", {})
+        .get("output", {})
+        .get("text", "Da fehlt noch eine Antwort...")
+    )
     session = result.get("session")
     payload = result.get("context")
     payload["intent"] = target
@@ -552,9 +602,7 @@ def route_handler():
     )
     # 200 OK – final context record
     return (
-        jsonify(
-            {"context": result.get("context"), "session": result.get("session")}
-        ),
+        jsonify({"context": result.get("context"), "session": result.get("session")}),
         200,
     )
 

@@ -50,7 +50,7 @@
                     "value": null,
                     "comment": "Specifier for specific species (e.g wasserfrosch)"
                 },
-                "key": {
+                "feature": {
                     "type": "string",
                     "value": null,
                     "comment": "Specifier for specific key of entity (e.g habitat)"
