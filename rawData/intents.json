@@ -3126,7 +3126,7 @@
     "utter_de": "",
     "utter_en": "",
     "utter_fr": "",
-    "action": "bio_groesse"
+    "action": "bio_feature"
   },
   {
     "id": "6470946b8ef7ef3b45d4ee96",
@@ -3200,7 +3200,7 @@
     "utter_de": "",
     "utter_en": "",
     "utter_fr": "",
-    "action": "bio_habitat"
+    "action": "bio_feature"
   },
   {
     "id": "64709a278ef7ef3b45d4fa03",
@@ -3285,7 +3285,7 @@
     "utter_de": "",
     "utter_en": "",
     "utter_fr": "",
-    "action": "bio_erkennungsmerkmale"
+    "action": "bio_feature"
   },
   {
     "id": "64709ac68ef7ef3b45d4fa93",
@@ -3342,7 +3342,7 @@
     "utter_de": "",
     "utter_en": "",
     "utter_fr": "",
-    "action": "bio_feinde"
+    "action": "bio_feature"
   },
   {
     "id": "64709a148ef7ef3b45d4f9f6",
@@ -3380,7 +3380,7 @@
     "utter_de": "",
     "utter_en": "",
     "utter_fr": "",
-    "action": "bio_geschlechtsreife"
+    "action": "bio_feature"
   },
   {
     "id": "64709abd8ef7ef3b45d4fa86",
@@ -3424,7 +3424,7 @@
     "utter_de": "",
     "utter_en": "",
     "utter_fr": "",
-    "action": "bio_geschwindigkeit"
+    "action": "bio_feature"
   },
   {
     "id": "64709aa78ef7ef3b45d4fa79",
@@ -3465,7 +3465,7 @@
     "utter_de": "",
     "utter_en": "",
     "utter_fr": "",
-    "action": "bio_gewicht"
+    "action": "bio_feature"
   },
   {
     "id": "64709d358ef7ef3b45d507e2",
@@ -3526,7 +3526,7 @@
     "utter_de": "",
     "utter_en": "",
     "utter_fr": "",
-    "action": "bio_lateinischername"
+    "action": "bio_feature"
   },
   {
     "id": "647095348ef7ef3b45d4f4d4",
@@ -3646,7 +3646,7 @@
     "utter_de": "",
     "utter_en": "",
     "utter_fr": "",
-    "action": "bio_lebenserwartung"
+    "action": "bio_feature"
   },
   {
     "id": "64709a5f8ef7ef3b45d4fa2e",
@@ -3737,7 +3737,7 @@
     "utter_de": "",
     "utter_en": "",
     "utter_fr": "",
-    "action": "bio_nahrung"
+    "action": "bio_feature"
   },
   {
     "id": "64709a448ef7ef3b45d4fa21",
@@ -3774,7 +3774,7 @@
     "utter_de": "",
     "utter_en": "",
     "utter_fr": "",
-    "action": "bio_tragzeit"
+    "action": "bio_feature"
   },
   {
     "id": "647f0af71f6e331e53e851ca",
@@ -4210,7 +4210,7 @@
     "utter_de": "",
     "utter_en": "",
     "utter_fr": "",
-    "action": "bio_blütezeit"
+    "action": "bio_feature"
   },
   {
     "id": "66546aa2ef5fae3c7f524b25",
@@ -4278,7 +4278,7 @@
     "utter_de": "",
     "utter_en": "",
     "utter_fr": "",
-    "action": "bio_frucht"
+    "action": "bio_feature"
   },
   {
     "id": "66546acfef5fae3c7f524b45",
@@ -4347,7 +4347,7 @@
     "utter_de": "",
     "utter_en": "",
     "utter_fr": "",
-    "action": "bio_genießbarkeit"
+    "action": "bio_feature"
   },
   {
     "id": "66546ab5ef5fae3c7f524b35",
@@ -4415,7 +4415,7 @@
     "utter_de": "",
     "utter_en": "",
     "utter_fr": "",
-    "action": "bio_verwendung"
+    "action": "bio_feature"
   },
   {
     "id": "66546ae8ef5fae3c7f524b55",
@@ -4485,7 +4485,7 @@
     "utter_de": "",
     "utter_en": "",
     "utter_fr": "",
-    "action": "bio_ökologischebedeutung"
+    "action": "bio_feature"
   },
   {
     "id": "66546afbef5fae3c7f524b73",
@@ -4554,7 +4554,7 @@
     "utter_de": "",
     "utter_en": "",
     "utter_fr": "",
-    "action": "bio_wissenswertes"
+    "action": "bio_feature"
   },
   {
     "id": "66545a30ef5fae3c7f52471b",
@@ -4621,7 +4621,7 @@
     "utter_de": "",
     "utter_en": "",
     "utter_fr": "",
-    "action": "bio_lebensweise"
+    "action": "bio_feature"
   },
   {
     "id": "66545cd6ef5fae3c7f524928",
@@ -4702,7 +4702,7 @@
     "utter_de": "",
     "utter_en": "",
     "utter_fr": "",
-    "action": "bio_fortpflanzung"
+    "action": "bio_feature"
   },
   {
     "id": "66546fd8ef5fae3c7f525710",
@@ -4813,7 +4813,7 @@
     "utter_de": "",
     "utter_en": "",
     "utter_fr": "",
-    "action": "bio_aussehen"
+    "action": "bio_feature"
   },
   {
     "id": "666fe30340e45337a5db1a4c",
@@ -5103,6 +5103,6 @@
     "utter_de": "",
     "utter_en": "",
     "utter_fr": "",
-    "action": "bio_rufe"
+    "action": "bio_feature"
   }
 ]
