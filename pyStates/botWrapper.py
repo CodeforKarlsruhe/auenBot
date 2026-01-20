@@ -223,7 +223,7 @@ def store_history(
 # ----------------------------------------------------------------------
 # 5️⃣ Flask route – /
 # ----------------------------------------------------------------------
-@app.route("/", methods=["POST"])
+@app.route("/api", methods=["POST"])
 def route_handler():
     # --------------------------------------------------------------
     # 5.1 Parse JSON body
@@ -610,7 +610,7 @@ def route_handler():
 # ----------------------------------------------------------------------
 # 6️⃣ Optional health‑check endpoint
 # ----------------------------------------------------------------------
-@app.route("/", methods=["GET"])
+@app.route("/api", methods=["GET"])
 def health_check():
     return jsonify(status="ok"), 200
 
