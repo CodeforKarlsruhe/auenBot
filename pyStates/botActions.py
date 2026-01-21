@@ -247,7 +247,7 @@ def old_action_TP_Generell(api, tracker, bot_action):
 def old_get_lr_text(auen_name):
     return BotAction.get_entity_features_static(auen_name, "Erkennungsmerkmale")
 
-
+###############
 
 # ----------------------------------------------------------------------
 # Bot utterances and options
@@ -260,11 +260,34 @@ bot_utters = {
     "error": "Da ist leider etwas schiefgelaufen. Entschuldigung",
     "measurement_unclear": "Entschuldigung, ich habe nicht verstanden, welchen Messwert du abfragen möchtest.",
     "measurement_prompt": "Welchen Messwert möchtest du wissen? Du kannst mich nach Ozon, Feinstaub PM10, Feinstaub PM2,5 oder Stickstoff-Dioxid fragen.",
-    "measurement_unavail": "Hm... die Messstation liefert mir aktuell keine Zahlenwerte für diesen Messwert. Versuche es doch später noch einmal!"
+    "measurement_unavail": "Hm... die Messstation liefert mir aktuell keine Zahlenwerte für diesen Messwert. Versuche es doch später noch einmal!",
+    "expertise_prompt": "Hier findest du ein paar ausgewählte Themen, über die ich dir mehr erzählen kann 😃:",
     
 }
 
 bot_options = {
+    "expertise": [
+                    {
+                        "title": "Aue Definition",
+                        "label": "Rheinauen"
+                    },
+                    {
+                        "title": "Angebote"
+                    },
+                    {
+                        "title": "Kinder"
+                    },
+                    {
+                        "title": "Wandern"
+                    },
+                    {
+                        "title": "PAMINA Radweg"
+                    },
+                    {
+                        "title": "TP_Definition",
+                        "label": "Tiere und Pflanzen"
+                    }
+    ],
     "anreise": [
         {
             "title": "ÖPNV",
@@ -352,7 +375,11 @@ class BotAction:
         print(f"Loaded data for action '{self.name}' with {len(self.data)} entries.")
         print(f"Available keys: {self.keys}")
 
+        self.DEBUG = True
 
+
+    def setDebug(self, debug):
+        self.DEBUG = debug
 
     @staticmethod
     def measurement_retrieval(type):
@@ -451,7 +478,6 @@ class BotAction:
         else:
             return None
 
-    @staticmethod
     def extract_animal_or_plant(self, user_input):
         """ " Try to find an entity matching the user input, first as animal,
         then as plant.
@@ -461,7 +487,6 @@ class BotAction:
             ents = self.find_entity(user_input, "Pflanze")
         return ents
 
-    @staticmethod
     def tp_generell_extract_information(self, user_input):
         """ " Try to find an entity matching the user input, first as animal,
         then as plant.
@@ -480,7 +505,6 @@ class BotAction:
         """
         return self.find_entity(user_input)
 
-    @staticmethod
     def find_entity(self, user_input, entity_type=None):
         try:
             terms = [user_input] + user_input.split(" ")
@@ -538,7 +562,6 @@ class BotAction:
             return []
 
 
-    @staticmethod
     def find_entity_key(self, user_input):
         try:
             terms = [user_input] + user_input.split(" ")
@@ -555,7 +578,6 @@ class BotAction:
             print(f"Error finding keys: {e}")
             return []
 
-    @staticmethod
     def get_entity_features(self, name, key):
         # check synonyms
         #'Erkennungsmerkmale', 'Habitat', 'Fortpflanzung', 'Größe', 'Links', 'Familie',
@@ -567,11 +589,17 @@ class BotAction:
         # key from intent:
         # tp_groesse, tp_habitat, tp_erkennungsmerkmale, tp_lateinischername,
         # tp_lebenserwartung, tp_fortpflanzung, tp_aussehen
+        # tp_definition is basically all together
         searchImage = False
         searchAudio = False
 
         if "habitat" in key.lower():
             searchKeys_ = ["Lebensraum", "Habitat"]
+        elif "definition" in key.lower():
+            # everything
+            searchKeys_ = self.keys
+            searchImage = True
+            searchAudio = True
         elif "lebensraum" in key.lower():
             searchKeys_ = ["Lebensraum", "Habitat"]
         elif "merkmale" in key.lower():
@@ -611,8 +639,10 @@ class BotAction:
                 e for e in self.data if name.lower() == (e.get("Name") or "").lower()
             ]
             if items:
-                values = {"text": [], "image": [], "audio": [], "video": [], "link": []}
+                values = {"text": [], "image": [], "audio": []} #, "video": [], "link": []}
                 for key in searchKeys:
+                    if key == "Links":
+                        continue  # skip Links here
                     values["text"].extend(
                         [f.get(key) for f in items if key in f and f.get(key)]
                     )
@@ -634,14 +664,21 @@ class BotAction:
                                 if audio:
                                     values["audio"].append(audio)
                                     break
+                if self.DEBUG:
+                    print(
+                        f"Found features for entity '{name}', keys '{searchKeys}':",
+                        values,"Text:",values["text"]
+                    )
+                if values["text"] == [] and values["image"] == [] and values["audio"] == []:
+                    #return {}
+                    values["text"] = ["Zu dieser Eigenschaft sind für " + name + " leider keine Informationen vorhanden."]
                 return values
             else:
                 print("No matching entity found for features:", name)
-                return []
+                return {}
         except Exception as e:
             print(f"Error getting features: {e}")
-            return []
-
+            return {}
 
 if __name__ == "__main__":
     action = BotAction("../rawData/tiere_pflanzen_auen.json")

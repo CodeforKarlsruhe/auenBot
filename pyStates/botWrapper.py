@@ -18,12 +18,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict
 
-import os
-
 from flask import Flask, jsonify, request, abort, make_response
 from jsonschema import Draft7Validator, ValidationError
 from sqlalchemy import (
-    Boolean,
     Column,
     DateTime,
     Integer,
@@ -33,11 +30,15 @@ from sqlalchemy import (
 )
 from sqlalchemy.orm import declarative_base, Session, sessionmaker
 
+import signal
+import sys
+
+DEBUG =True
+
 from botIntents import BotIntent
 from botActions import BotAction
 from botLlm import OpenAICompatClient
 from botVectors import load_vectors, query_vectors
-import numpy as np
 
 try:
     import private as pr  # type: ignore
@@ -262,8 +263,9 @@ def route_handler():
     repeat = result.get("repeat", False)
     ctx = result.get("context", {})
     intent = ctx.get("intent", None)
+    user_input = json_payload.get("input", "")
     if intent is None:
-        search = llm.embed([json_payload.get("input", "")])
+        search = llm.embed([user_input])
         # print("Input embedding:", search[0])
         candidates = query_vectors(vectors, search[0])
         print("Intent candidates:", candidates)
@@ -388,196 +390,73 @@ def route_handler():
     # 5.4 Check actions
     # --------------------------------------------------------------
     if target_intent is not None:
+        # check intents without output first. these require some action, normally
         if (
             result["context"]["output"] is None
             or result["context"]["output"].get("text", "") == ""
         ):
-            result["context"]["output"] = {
-                "text": "Hier muss noch eine Aktion kommen ..."
-            }
-            if target_intent.lower() == "tp_generell":
-                entity_result = actions.tp_generell_extract_information(
-                    json_payload.get("input", "")
-                )
-                if entity_result:
-                    print("Generell entity result:", entity_result)
-                    name = entity_result[0].get("Name", None)
-                    feature = "Merkmale"
-                    features = actions.get_entity_features(name, feature)
-                    output_parts = []
-                    if features.get("text", []):
-                        output_parts.append("\n".join(features.get("text", [])))
-                        result["context"]["output"] = {
-                            "text": "\n\n".join(output_parts)
-                        }
-                        if len(features.get("image", [])) > 0:
-                            print("Features images:", features.get("image"))
-                            result["context"]["output"]["image"] = features.get(
-                                "image"
-                            )[0]
-                        if len(features.get("audio", [])) > 0:
-                            print("Features audio:", features.get("audio"))
-                            result["context"]["output"]["audio"] = features.get(
-                                "audio"
-                            )[0]
-
-            elif target_intent.lower() == "tp_definition":
-                entity_result = actions.tp_generell_extract_information(
-                    json_payload.get("input", "")
-                )
-                if entity_result:
-                    print("Generell entity result:", entity_result)
-                    name = entity_result[0].get("Name", None)
-                    feature = "Merkmale"
-                    features = actions.get_entity_features(name, feature)
-                    result["context"]["entity"] = name
-                    result["context"]["feature"] = feature
-                    output_parts = []
-                    if features.get("text", []):
-                        output_parts.append("\n".join(features.get("text", [])))
-                        result["context"]["output"] = {
-                            "text": "\n\n".join(output_parts)
-                        }
-                        print("TP definition feature:", features, output_parts)
-                        if len(features.get("image", [])) > 0:
-                            print("Features images:", features.get("image"))
-                            result["context"]["output"]["image"] = features.get(
-                                "image"
-                            )[0]
-                        if len(features.get("audio", [])) > 0:
-                            print("Features audio:", features.get("audio"))
-                            result["context"]["output"]["audio"] = features.get(
-                                "audio"
-                            )[0]
-                else:
-                    result["context"]["output"] = {
-                        "text": "Leider habe ich dazu keine Informationen gefunden."
-                    }
-
-            elif target_intent.lower().startswith("tp_"):
-                feature = target_intent[3:].capitalize()
-                print("TP feature:", feature)
-                entity_result = actions.extract_animal_or_plant(
-                    json_payload.get("input", "")
-                )
-                if entity_result:
-                    name = entity_result[0].get("Name", None)
-                    features = actions.get_entity_features(name, feature)
-                    output_parts = []
-                    if features.get("text", []):
-                        output_parts.append("\n".join(features.get("text", [])))
-                    if len(features.get("image", [])) > 0:
-                        print("Features images:", features.get("image"))
-                        result["context"]["output"]["image"] = features.get("image")[0]
-                    if len(features.get("audio", [])) > 0:
-                        print("Features audio:", features.get("audio"))
-                        result["context"]["output"]["audio"] = features.get("audio")[0]
-
-                    print(
-                        "Tiere,Pflanzen entity result:",
-                        entity_result,
-                        features,
-                        result["context"]["output"],
-                    )
-                    result["context"]["entity"] = name
-                    result["context"]["feature"] = feature
-                    result["context"]["type"] = entity_result[0].get("Typ", None)
-                    if output_parts and len(output_parts) > 0:
-                        result["context"]["output"]["text"] = "\n\n".join(output_parts)
+            bio_intent = intents.bio_intents(target_intent)
+            if not "Typ" in bio_intent:
+                # we don't have a bio intent
+                if DEBUG: print("Non-bio intent, no action required.")
+            else:
+                if DEBUG: print("Bio intent:", bio_intent, " from input:", user_input)
+                if bio_intent.get("Typ", None) is not None:
+                    if bio_intent["Typ"] == "Any" and bio_intent["Feature"] is None:
+                        if DEBUG: print("General TP intent action required.")
+                        entity_result = actions.tp_generell_extract_information(user_input=user_input
+                        )
+                        if entity_result:
+                            if DEBUG: print("Generell entity result:", entity_result)
+                            bio_intent["Entity"] = entity_result[0].get("Name", None)
+                            bio_intent["Feature"] = "Merkmale"
+                        else:
+                            result["context"]["output"] = {
+                                "text": "Leider habe ich dazu keine Informationen gefunden."
+                            }
+                            bio_intent = {}
                     else:
-                        result["context"]["output"][
-                            "text"
-                        ] = "Leider habe ich für diese Eigenschaft keine Beschreibung."
+                        if DEBUG: print("TP feature intent action required.")
+                        entity_result = actions.extract_animal_or_plant(user_input)
+                        if entity_result:
+                            bio_intent["Entity"] = entity_result[0].get("Name", None)
+                            if DEBUG: print("Found entity:", bio_intent["Entity"])
+                        else:
+                            result["context"]["output"] = {
+                                "text": "Leider habe ich dazu keine Informationen gefunden."
+                            }
+                            bio_intent = {}
 
-                else:
-                    result["context"]["output"] = {
-                        "text": "Leider habe ich dazu keine Informationen gefunden."
-                    }
-
-            elif target_intent.lower().startswith("tiere_"):
-                feature = target_intent[6:].capitalize()
-                print("Tiere feature:", feature)
-                entity_result = actions.find_entity(
-                    json_payload.get("input", ""), "Tier"
-                )
-                if entity_result and len(entity_result) > 0:
-                    name = entity_result[0].get("Name", None)
-                    features = actions.get_entity_features(name, feature)
-                    output_parts = []
-                    if features.get("text", []):
-                        output_parts.append("\n".join(features.get("text", [])))
-                        result["context"]["output"] = {
-                            "text": "\n\n".join(output_parts)
-                        }
-                    if len(features.get("image", [])) > 0:
-                        print("Features images:", features.get("image"))
-                        result["context"]["output"]["image"] = features.get("image")[0]
-                    if len(features.get("audio", [])) > 0:
-                        print("Features audio:", features.get("audio"))
-                        result["context"]["output"]["audio"] = features.get("audio")[0]
-
-                    print(
-                        "Tier entity result:",
-                        entity_result,
-                        features,
-                        result["context"]["output"],
-                    )
-                    result["context"]["entity"] = name
-                    result["context"]["feature"] = feature
-                    result["context"]["type"] = entity_result[0].get("Typ", None)
-                    if output_parts and len(output_parts) > 0:
-                        result["context"]["output"]["text"] = "\n\n".join(output_parts)
+                    if ("Entity" in bio_intent and bio_intent["Entity"] is not None) and ("Feature" in bio_intent and bio_intent["Feature"] is not None):
+                        name = bio_intent["Entity"]
+                        feature = bio_intent["Feature"]
+                        if DEBUG: print("Get features for:", name, feature)
+                        result["context"]["entity"] = name
+                        result["context"]["feature"] = feature  
+                        features = actions.get_entity_features(name, feature)
+                        output_parts = []
+                        if features.get("text", []):
+                            output_parts.append("\n".join(features.get("text", [])))
+                            result["context"]["output"] = {
+                                "text": "\n\n".join(output_parts)
+                            }
+                            if len(features.get("image", [])) > 0:
+                                print("Features images:", features.get("image"))
+                                result["context"]["output"]["image"] = features.get(
+                                    "image"
+                                )[0]
+                            if len(features.get("audio", [])) > 0:
+                                print("Features audio:", features.get("audio"))
+                                result["context"]["output"]["audio"] = features.get(
+                                    "audio"
+                                )[0]
                     else:
-                        result["context"]["output"][
-                            "text"
-                        ] = "Leider habe ich für diese Eigenschaft keine Beschreibung."
-                else:
-                    result["context"]["output"] = {
-                        "text": "Leider habe ich für dieses Tier keine Informationen gefunden."
-                    }
-
-            elif target_intent.lower().startswith("pflanzen_"):
-                feature = target_intent[9:].capitalize()
-                entity_result = actions.find_entity(
-                    json_payload.get("input", ""), "Pflanze"
-                )
-                if entity_result:
-                    name = entity_result[0].get("Name", None)
-                    features = actions.get_entity_features(name, feature)
-                    output_parts = []
-                    if features.get("text", []):
-                        output_parts.append("\n".join(features.get("text", [])))
+                        if DEBUG: print("Bio intent incomplete, no action taken.")
                         result["context"]["output"] = {
-                            "text": "\n\n".join(output_parts)
+                            "text": "Leider habe ich dazu keine Informationen gefunden. Versuche es mit einem anderen Begriff."
                         }
-                    if len(features.get("image", [])) > 0:
-                        print("Features images:", features.get("image"))
-                        result["context"]["output"]["image"] = features.get("image")[0]
-                    if len(features.get("audio", [])) > 0:
-                        print("Features audio:", features.get("audio"))
-                        result["context"]["output"]["audio"] = features.get("audio")[0]
+                        
 
-                    print(
-                        "Pflanzen feature:",
-                        feature,
-                        "entity result:",
-                        entity_result,
-                        features,
-                        output_parts,
-                    )
-                    result["context"]["entity"] = name
-                    result["context"]["feature"] = feature
-                    result["context"]["type"] = entity_result[0].get("Typ", None)
-                    if output_parts and len(output_parts) > 0:
-                        result["context"]["output"]["text"] = "\n\n".join(output_parts)
-                    else:
-                        result["context"]["output"][
-                            "text"
-                        ] = "Leider habe ich für diese Eigenschaft keine Beschreibung."
-                else:
-                    result["context"]["output"] = {
-                        "text": "Leider habe ich für diese Pflanze keine Beschreibung."
-                    }
 
     # --------------------------------------------------------------
     # 5.5 Persist the step (always store the original payload)
@@ -620,4 +499,19 @@ def health_check():
 # ----------------------------------------------------------------------
 if __name__ == "__main__":
     # In production you would run behind gunicorn/uwsgi.
-    app.run(host="0.0.0.0", port=11354, debug=True)
+    def _graceful_shutdown(signum=None, frame=None):
+        print(f"Received signal {signum}, shutting down...")
+        try:
+            engine.dispose()
+        except Exception:
+            pass
+        sys.exit(0)
+
+    # handle Ctrl-C and termination signals
+    signal.signal(signal.SIGINT, _graceful_shutdown)
+    signal.signal(signal.SIGTERM, _graceful_shutdown)
+
+    try:
+        app.run(host="0.0.0.0", port=11354, debug=True)
+    except KeyboardInterrupt:
+        _graceful_shutdown()
