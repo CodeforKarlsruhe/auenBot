@@ -5741,7 +5741,7 @@
         "img":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/0\/0b\/Capreolus_%28js%2911.jpg\/220px-Capreolus_%28js%2911.jpg"
       },
       {
-        "audio":"https:\/\/www.deutsche-digitale-bibliothek.de\/item\/QKJZL6JN5JSYVJIZKNMYQCTMRPIYWVB4?isThumbnailFiltered=true&query=Tonaufnahme+reh&rows=20&offset=0&viewType=list&hitNumber=9",
+        "audio":"https://api.deutsche-digitale-bibliothek.de/binary/6ff7dccf-2374-4e28-ad4c-0efd8f9fe95d.mpeg",
         "type":"Bellen Rehbock"
       }
     ],
