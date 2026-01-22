@@ -35,10 +35,15 @@
                     "value": null,
                     "comment": "Detected user intent name"
                 },
-                "history": {
+                "last_intent": {
                     "type": "string",
                     "value": null,
-                    "comment": "Conversation history or previous interactions"
+                    "comment": "Conversation history: intent"
+                },
+                "last_input": {
+                    "type": "string",
+                    "value": null,
+                    "comment": "Conversation history: input text"
                 },
                 "sequence": {
                     "type": "number",

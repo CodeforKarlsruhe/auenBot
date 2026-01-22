@@ -33,7 +33,7 @@ from sqlalchemy.orm import declarative_base, Session, sessionmaker
 import signal
 import sys
 
-DEBUG =True
+DEBUG = True
 
 from botIntents import BotIntent
 from botActions import BotAction
@@ -195,6 +195,15 @@ def check_input(validated: Dict[str, Any]) -> Dict[str, Any]:
     # ok process input
     return {"status": "ok", "context": ctx, "session": session, "repeat": repeat}
 
+def checkOptions(input_text: str, options: list) -> int | None:
+    """Check if the input_text matches one of the options.
+    Returns the index of the matched option, or None if no match.
+    """
+    input_lower = input_text.lower()
+    for idx, option in enumerate(options):
+        if option.lower() in input_lower:
+            return idx
+    return None
 
 # ----------------------------------------------------------------------
 # 4️⃣ Helper: store a step in the DB
@@ -235,7 +244,7 @@ def route_handler():
         abort(make_response(jsonify(error="Invalid JSON body"), 400))
 
     # --------------------------------------------------------------
-    # 5.2 Validate against the loaded JSON‑Schema
+    # Validate against the loaded JSON‑Schema
     # --------------------------------------------------------------
     try:
         validate_payload(json_payload)
@@ -252,33 +261,76 @@ def route_handler():
         )
 
     # --------------------------------------------------------------
-    # 5.3 Run the state‑machine logic
+    # Check what's up next
     # --------------------------------------------------------------
     result = check_input(json_payload)
     if result.get("status", "error") == "error":
         # 400 Bad Request – error in processing
         return jsonify(error="Error processing input"), 400
 
+    # extract context info
+    ctx = result.get("context", {})
+    if DEBUG: print("Current context:", ctx)
+    user_intent = ctx.get("intent", None)
+    if DEBUG: print("User intent:", user_intent)
+    user_input = json_payload.get("input", "")
+    if DEBUG: print("User input:", user_input)
+
+    options = ctx.get("options", [])
+    if DEBUG: print("Options:", options)
+
+    user_input_history = ctx.get("last_input", None)
+    if DEBUG: print("User input history:", user_input_history)
+    result["context"]["last_input"] = user_input
+
+    user_intent_history = ctx.get("last_intent", None)
+    if DEBUG: print("User intent history:", user_intent_history)
+    result["context"]["last_intent"] = user_intent
+
+    user_entity = ctx.get("entity", None)
+    if DEBUG: print("User entity:", user_entity)
+
+    user_feature = ctx.get("feature", None)
+    if DEBUG: print("User feature:", user_feature)
+
+    # --------------------------------------------------------------
+    # Check options, if any
+    # --------------------------------------------------------------
+    if "options" in options and len(options) > 0:
+        if DEBUG: print("Checking user input against options:", user_input, options)
+        selected_idx = checkOptions(user_input, [opt["title"] for opt in options])
+        if selected_idx is not None:
+            if DEBUG: print("User selected option index:", selected_idx)
+            selection = options[selected_idx]
+            if DEBUG: print("User selected option:", selection)
+
+            # check if we are missing intent or entity here 
+            if (user_intent is None or user_intent == "") and "intent" in selection:
+                user_intent = selection["title"]
+                if DEBUG: print("Mapped selected option to intent:", user_intent)
+            elif (user_entity is None or user_entity == "") and "entity" in selection:
+                user_entity = selection["title"]
+                if DEBUG: print("Mapped selected option to entity:", user_entity)
+        # not found. clear options and continue
+        else:
+            if DEBUG: print("No option matched user input yet, start over")
+            target_intent = None
+    
+
     # check if we need to delay for llm usage ...
     repeat = result.get("repeat", False)
-    ctx = result.get("context", {})
-    user_intent = ctx.get("intent", None)
-    user_input = json_payload.get("input", "")
-    user_history = ctx.get("history", None)
-    user_entity = ctx.get("entity", None)
-    user_feature = ctx.get("feature", None)
     # default / fallback: no intent yet
     if user_intent is None:
         search = llm.embed([user_input])
         # print("Input embedding:", search[0])
         candidates = query_vectors(vectors, search[0])
-        print("Intent candidates:", candidates)
+        if DEBUG: print("Intent candidates:", candidates)
         if candidates:
             best_intent_idx = candidates[0][0]  # ["intent_id"]
             best_intent_id = vector_intents[best_intent_idx]
             best_score = candidates[1][0].astype(float)  # ["intent_id"]
             best_intent = intents.get_intent_by_id(best_intent_id)
-            print(
+            if DEBUG: print(
                 f"Best intent id: {best_intent_id}, intent: {best_intent}, score: {best_score}"
             )
 
@@ -294,7 +346,7 @@ def route_handler():
                 target_intent = best_intent.get("name", None)
                 result["context"]["intent"] = target_intent
                 result["context"]["output"] = {"text": best_intent.get("output", None)}
-                print("Selected best intent:", target_intent)
+                if DEBUG: print("Selected best intent:", target_intent)
             # intermediate confidence. check with LLM
             else:
                 target_intent = None
@@ -311,9 +363,9 @@ def route_handler():
                     intent_alias = intents.get_intent_by_id(intent_id).get("alias", None)
                     if not intent_alias or intent_alias == "":
                         intent_alias = intent_name
-                    print(f" Next intent: intent: {intent_name}, score: {score}")
+                    if DEBUG: print(f" Next intent: intent: {intent_name}, score: {score}")
                     if intent_name in seen:
-                        print("Skipping duplicate intent:", intent_name)
+                        if DEBUG: print("Skipping duplicate intent:", intent_name)
                         continue
                     seen.add(intent_name)
                     intent_options.append(intent_name)
@@ -326,12 +378,12 @@ def route_handler():
                     result["context"]["output"] = {
                         "text": best_intent.get("output", None)
                     }
-                    print(
+                    if DEBUG: print(
                         "Selected lower score best intent after deduping:",
                         target_intent,
                     )
                 else:
-                    print("Remaining intent options:", intent_options)
+                    if DEBUG: print("Remaining intent options:", intent_options)
                     options = []
                     for o in range(len(intent_options)):
                         options.append({"title": intent_options[o],"label":intent_aliases[o]})
@@ -348,9 +400,9 @@ def route_handler():
                             202,
                         )
                     else:
-                        print("Call llm to find better intent ...")
+                        if DEBUG: print("Call llm to find better intent ...")
                         # we have the aliases already 
-                        print("Intent options with alias:", intent_aliases)
+                        if DEBUG: print("Intent options with alias:", intent_aliases)
 
                         llmResult = llm.chat_json(
                             temperature=0.0,
@@ -358,7 +410,7 @@ def route_handler():
                             user=f"Nutzereingabe: '{json_payload.get('input','')}'. "
                             f"Verfügbare Intents: {', '.join(intent_aliases)}. ",
                         )
-                        print("LLM intent result:", llmResult)
+                        if DEBUG: print("LLM intent result:", llmResult)
                         if llmResult is not None:
                             if isinstance(llmResult, str):
                                 llmResult = int(llmResult.strip())
@@ -378,7 +430,7 @@ def route_handler():
                                 }
                                 result["context"]["LLM"] = True
                                 target_intent = best_intent.get("name", None)
-                                print("Selected intent from LLM:", target_intent)
+                                if DEBUG: print("Selected intent from LLM:", target_intent)
                                 # clear options
                                 if "options" in result["context"]:
                                     del result["context"]["options"]
@@ -392,15 +444,15 @@ def route_handler():
 
     else:
         target_intent = user_intent
-        print("Target intent from request:", target_intent)
+        if DEBUG: print("Target intent from request:", target_intent)
 
     # --------------------------------------------------------------
-    # 5.4 Check actions
+    # Check actions
     # --------------------------------------------------------------
     if target_intent is not None:
         # check intents without output first. these require some action, normally
         if (
-            result["context"]["output"] is None
+            result["context"].get("output") is None
             or result["context"]["output"].get("text", "") == ""
         ):
             bio_intent = intents.bio_intents(target_intent)
@@ -450,12 +502,12 @@ def route_handler():
                                 "text": "\n\n".join(output_parts)
                             }
                         if len(features.get("image", [])) > 0:
-                            print("Features images:", features.get("image"))
+                            if DEBUG: print("Features images:", features.get("image"))
                             result["context"]["output"]["image"] = features.get(
                                 "image"
                             )[0]
                         if len(features.get("audio", [])) > 0:
-                            print("Features audio:", features.get("audio"))
+                            if DEBUG: print("Features audio:", features.get("audio"))
                             result["context"]["output"]["audio"] = features.get(
                                 "audio"
                             )[0]
@@ -509,7 +561,7 @@ def health_check():
 if __name__ == "__main__":
     # In production you would run behind gunicorn/uwsgi.
     def _graceful_shutdown(signum=None, frame=None):
-        print(f"Received signal {signum}, shutting down...")
+        if DEBUG: print(f"Received signal {signum}, shutting down...")
         try:
             engine.dispose()
         except Exception:
