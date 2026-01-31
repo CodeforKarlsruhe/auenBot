@@ -1,0 +1,22 @@
+[
+        {
+                "title": "LQI",
+                "text": "Wie hoch ist der Luftqualitätsindex (LQI)?"
+        },
+        {
+                "title": "O3",
+                "text": "Wie hoch ist Ozon (O3)?"
+        },
+        {
+                "title": "NO2",
+                "text": "Wie hoch ist Stickstoff-Dioxid (NO2)?"
+        },
+        {
+                "title": "PM2,5",
+                "text": "Wie hoch ist Feinstaub PM2,5?"
+        },
+        {
+                "title": "PM10",
+                "text": "Wie hoch ist Feinstaub PM10?"
+        }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "title": "ÖPNV",
+        "text": "Ich möchte mit dem ÖPNV anreisen."
+    },
+    {
+        "title": "Auto",
+        "text": "Ich möchte mit dem Auto anreisen"
+    },
+    {
+        "title": "Fahrrad",
+        "text": "Ich möchte mit dem Fahrrad anreisen"
+    },
+    {
+        "title": "Zu Fuß",
+        "text": "Ich möchte zu Fuß anreisen"
+    }
+]
