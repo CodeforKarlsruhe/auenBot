@@ -64,16 +64,6 @@
                     "type": "array",
                     "items": {},
                     "comment": "Optional list of selectable options or suggestions"
-                },
-                "labels": {
-                    "type": "array",
-                    "items": {},
-                    "comment": "Optional list of labels or tags associated with the options. Same order as options"
-                },
-                "values": {
-                    "type": "array",
-                    "items": {},
-                    "comment": "Optional list of values. Same order as options"
                 }
             }
         }

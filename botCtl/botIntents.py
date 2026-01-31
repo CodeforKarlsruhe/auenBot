@@ -460,7 +460,7 @@ class BotIntent:
         ctx = dict(context)
         ctx.pop("options", None)
         # insert input as last_input in context
-        context["last_input"] = input_text
+        # context["last_input"] = input_text
 
         # Check for target routing
         if "target" in requirements and "target" in context:
@@ -519,7 +519,7 @@ class BotIntent:
                     output[key] = (output[key] + " " + value).strip()
 
         # insert input as last_input in context
-        context["last_input"] = input
+        # context["last_input"] = input
         return {"output": output, "context": context,"completed": True}
 
     def __completeHandler(self, intent, input=None, context=None, lang="de"):
@@ -549,7 +549,7 @@ class BotIntent:
         # Handle options presentation or input matching
         ctx_opts = context.get("options")
         # insert input as last_input in context
-        context["last_input"] = input
+        # context["last_input"] = input
         
         if ctx_opts is None:
             return self._handle_no_options(intent, input, context, reqs, intent_base, lang)

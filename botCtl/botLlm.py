@@ -23,6 +23,10 @@ class OpenAICompatClient:
         self.chat_model = chat_model
         self.embed_model = embed_model
         self.timeout_s = timeout_s
+        self.DEBUG = False
+
+    def setDebug(self,debug):
+        self.DEBUG = debug
 
     def _headers(self) -> Dict[str, str]:
         return {"Authorization": f"Bearer {self.api_key}", "Content-Type": "application/json"}
@@ -47,12 +51,14 @@ class OpenAICompatClient:
             payload["messages"].append({"role": "system", "content": f"Output must be valid JSON. {schema_hint}"})
 
         url = f"{self.base_url}/v1/chat/completions"
-        print(f"DEBUG - LLM request payload: {json.dumps(payload, ensure_ascii=False)}")
+        if self.DEBUG: print(f"DEBUG - LLM request payload: {json.dumps(payload, ensure_ascii=False)}")
         r = requests.post(url, headers=self._headers(), data=json.dumps(payload), timeout=self.timeout_s)
+        if self.DEBUG: print("LLM status:",r.status_code)
         r.raise_for_status()
         data = r.json()
+        if self.DEBUG: print(f"DEBUG (chat) - LLM response: {data}")
         content: str = data["choices"][0]["message"]["content"]
-        print(f"DEBUG (chat) - LLM response content: {content}")
+        # if self.DEBUG: print(f"DEBUG (chat) - LLM response content: {content}")
         # Best effort JSON parsing
         if content.startswith("```json"):
             content = content[6:].strip()
@@ -71,4 +77,5 @@ class OpenAICompatClient:
         r = requests.post(url, headers=self._headers(), data=json.dumps(payload), timeout=self.timeout_s)
         r.raise_for_status()
         data = r.json()
+        # if self.DEBUG: print("Embedding: ",data)
         return [item["embedding"] for item in data["data"]]
