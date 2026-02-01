@@ -370,7 +370,12 @@ class BotIntent:
                 print("No match found (extractOne returned None).")
             return None
 
-        _, score, idx = match
+        # fuzzywuzzy returns (match, score), rapidfuzz returns (match, score, index)
+        if len(match) > 2:
+            _, score, idx = match
+        else:
+            score, idx = match
+            
         if self.DEBUG:
             print("Match result:", match)
         
