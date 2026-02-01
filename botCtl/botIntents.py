@@ -143,7 +143,7 @@ class BotIntent:
         if not lang or lang not in INTENT_MESSAGES:
             lang = "de"
         msgs = INTENT_MESSAGES.get(lang, INTENT_MESSAGES["de"])
-        return msgs.get(key, f"{msgs.get("invalid_key", "")} ({key})")
+        return msgs.get(key, f"{msgs.get('invalid_key', '')} ({key})")
 
     @staticmethod
     def dummyAction(name, input=None, lang="de"):
