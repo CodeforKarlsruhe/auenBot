@@ -373,14 +373,16 @@ class BotIntent:
         # fuzzywuzzy returns (match, score), rapidfuzz returns (match, score, index)
         if len(match) > 2:
             _, score, idx = match
+            term = choices[idx]
         else:
-            score, idx = match
+            term_, score = match
+            term = [t for t in choices if t.lower() == term_.lower()][0]
             
         if self.DEBUG:
-            print("Match result:", match)
+            print("Match result:", match, term)
         
         if score >= self.matchThreshold:
-            return choices[idx]
+            return term
         
         if self.DEBUG:
             print(f"Input '{input_text}' did not match any item (score {score}).")
