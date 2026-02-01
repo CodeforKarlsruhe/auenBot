@@ -351,9 +351,19 @@ class BotAction:
                     )
                     if self.DEBUG:
                         print(f"Matches found: {matches}")
-                        
+                    # limit matches to those above threshold
+                    matches = [match for match in matches if match[1] >= self.matchThreshold]
+                    try:
+                        idxs = [targets.index(match[0]) for match in matches]
+                    except:
+                        idxs = []
+                    if self.DEBUG:
+                        print(f"Matches above threshold: {matches}")
+                    ents = [self.data[idx] for idx in idxs]
                     #ents = [self.data[match[2]] for match in matches]
-                    ents = [self.data[match[0]]  for match in matches if match[1] >= self.matchThreshold]
+                    if self.DEBUG:
+                        print(f"Entities found: {ents}")
+                        
                     # determine type from first hit and restrict to that type
                     if ents:
                         inferred = ents[0].get("Typ")
@@ -370,9 +380,15 @@ class BotAction:
                         limit=5,
                     )
                     if self.DEBUG:
-                        print(f"Matches found: {matches}")
-                    #ents = [self.tiere[match[2]] for match in matches]
-                    ents = [self.tiere[match[0]] for match in matches if match[1] >= self.matchThreshold]
+                        print(f"Tiere found: {matches}")
+                    matches = [match for match in matches if match[1] >= self.matchThreshold]
+                    try:
+                        idxs = [targets.index(match[0]) for match in matches]
+                    except:
+                        idxs = []
+                    if self.DEBUG:
+                        print(f"Matches above threshold: {matches}")
+                    ents = [self.tiere[idx] for idx in idxs]
 
                 elif entity_type == "Pflanze":
                     targets = [(e.get("Name", "") or "").lower() for e in self.pflanzen]
@@ -385,9 +401,18 @@ class BotAction:
                         limit=5,
                     )
                     if self.DEBUG:
-                        print(f"Matches found: {matches}")
-                    #ents = [self.pflanzen[match[2]] for match in matches]
-                    ents = [self.pflanzen[match[0]] for match in matches if match[1] >= self.matchThreshold]
+                        print(f"Pflanzen found: {matches}")
+                    # limit matches to those above threshold
+                    matches = [match for match in matches if match[1] >= self.matchThreshold]
+                    if self.DEBUG:
+                        print(f"Matches above threshold: {matches}")
+                    try:
+                        idxs = [targets.index(match[0]) for match in matches]
+                    except:
+                        idxs = []
+                    if self.DEBUG:
+                        print(f"Matches above threshold: {matches}")
+                    ents = [self.pflanzen[idx] for idx in idxs]
 
                 elif entity_type == "Auen":
                     targets = [(e.get("Name", "") or "").lower() for e in self.auen]
@@ -400,12 +425,21 @@ class BotAction:
                         limit=5,
                     )
                     if self.DEBUG:
-                        print(f"Matches found: {matches}")
-                    # ents = [self.auen[match[2]] for match in matches]
-                    ents = [self.auen[match[0]] for match in matches if match[1] >= self.matchThreshold]
+                        print(f"Auen found: {matches}")
+                    # limit matches to those above threshold
+                    matches = [match for match in matches if match[1] >= self.matchThreshold]
+                    if self.DEBUG:
+                        print(f"Matches above threshold: {matches}")
+                    try:
+                        idxs = [targets.index(match[0]) for match in matches]
+                    except:
+                        idxs = []
+                    if self.DEBUG:
+                        print(f"Matches above threshold: {matches}")
+                    ents = [self.auen[idx] for idx in idxs]
 
                 if self.DEBUG:
-                    if ents:
+                    if ents and len(ents) > 0:
                         print(
                             f"Found {len(ents)} entities for term '{term}' and type '{entity_type}'"
                         )
