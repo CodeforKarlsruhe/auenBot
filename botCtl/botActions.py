@@ -2,11 +2,14 @@ import json
 import os
 import random
 import requests
+
 try:
     from rapidfuzz import process, fuzz, utils
+    matchProcessor = utils.default_process
 except ImportError:
     # ubuntu 20.04 LTS compatibility
     from fuzzywuzzy import process, fuzz, utils
+    matchProcessor = utils.full_process
 
 
 

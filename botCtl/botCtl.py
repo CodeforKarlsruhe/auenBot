@@ -103,6 +103,8 @@ for i in intents.data[:5]:
 # load actions to intents
 intents.setActions(context_path)
 
+intents.setThreshold(65)  # set fuzzy match threshold
+
 if DEBUG: 
     print("Intents with actions loaded.")
     intents.setDebug(True)

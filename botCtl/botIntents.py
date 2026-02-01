@@ -3,9 +3,11 @@ import os
 
 try:
     from rapidfuzz import process, fuzz, utils
+    matchProcessor = utils.default_process
 except ImportError:
     # ubuntu 20.04 LTS compatibility
     from fuzzywuzzy import process, fuzz, utils
+    matchProcessor = utils.full_process
 
 import random
 
@@ -114,6 +116,7 @@ class BotIntent:
         self.parameters = parameters or {}
         self.actionCtl = None
         self.actionNames = []
+        self.matchThreshold = 75  # default fuzzy match threshold
 
         # load data file (accept list, dict-of-dicts or single dict)
         try:
@@ -179,6 +182,14 @@ class BotIntent:
         self.DEBUG = bool(debug)
         if self.actionCtl is not None:
             self.actionCtl.setDebug(self.DEBUG)
+
+    def setThreshold(self, threshold: int):
+        """Set the fuzzy match threshold (0-100)."""
+        self.matchThreshold = int(threshold)
+
+    def getThreshold(self):
+        """Get the fuzzy match threshold (0-100)."""
+        return self.matchThreshold
 
     def setActions(self, definition_file):
         """Set a BotActions instance to use for action processing."""
@@ -334,7 +345,7 @@ class BotIntent:
                 return req
         return None
 
-    def _match_input_to_items(self, input_text, items, threshold=75):
+    def _match_input_to_items(self, input_text, items):
         """
         Match user input against a list of items using fuzzy matching.
         
@@ -353,7 +364,7 @@ class BotIntent:
             print(f"Matching input '{input_text}' against items (count={len(choices)})")
 
         match = process.extractOne(input_text.lower(), [c.lower() for c in choices], 
-                                   scorer=fuzz.WRatio, processor=utils.default_process)
+                                   scorer=fuzz.WRatio, processor=matchProcessor)
         if not match:
             if self.DEBUG:
                 print("No match found (extractOne returned None).")
@@ -363,7 +374,7 @@ class BotIntent:
         if self.DEBUG:
             print("Match result:", match)
         
-        if score >= threshold:
+        if score >= self.matchThreshold:
             return choices[idx]
         
         if self.DEBUG:
@@ -387,7 +398,7 @@ class BotIntent:
         if self.DEBUG:
             print("Options: ", option_titles)
 
-        return self._match_input_to_items(input_text, option_titles, threshold=75)
+        return self._match_input_to_items(input_text, option_titles)
 
     def _process_action(self, intent, input_text, context={}, lang="de"):
         """
