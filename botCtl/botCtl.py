@@ -28,7 +28,7 @@ from sqlalchemy import (
     Text,
     create_engine,
 )
-from sqlalchemy.orm import declarative_base, Session, sessionmaker
+from sqlalchemy.orm import declarative_base, Session, session, sessionmaker
 
 import signal
 import sys
@@ -177,7 +177,7 @@ class HistoryRecord(Base):
     # Handy columns for querying
     intent = Column(String, nullable=True)
     lang = Column(String, nullable=False)
-    msg_text = Column(Text, nullable=True)
+    message_text = Column(Text, nullable=True)
 
     # Handy indexed columns for quick look‑ups
     session_id = Column(String, index=True, nullable=False)
@@ -197,6 +197,7 @@ SessionLocal = sessionmaker(bind=engine, expire_on_commit=False, future=True)
 # 3️⃣ Placeholder state‑machine implementation
 # ----------------------------------------------------------------------
 def check_input(validated: Dict[str, Any]) -> Dict[str, Any]:
+    if DEBUG: print("Check input on: ",validated)
     message = validated.get("message", {})
     lang = validated.get("lang", "de")
     session = validated.get("session", "")
@@ -231,7 +232,7 @@ def check_input(validated: Dict[str, Any]) -> Dict[str, Any]:
             if DEBUG: print("Could not start startModels.sh:", e)
 
     else:
-        ctx = validated.get("context", None)
+        ctx = validated.get("context", {})
         if not isinstance(ctx, dict):
             return {"status": "error", "context": {}}
 
@@ -248,11 +249,158 @@ def checkOptions(input_text: str, options: list) -> int | None:
             return idx
     return None
 
+def intentOptions(input_text: str, options: list) -> str:
+    """Check if the input_text matches one of the options.
+    Returns the index of the matched option, or None if no match.
+    """
+    if DEBUG: print("Checking user input for intent options:", input_text, options)
+    selected_idx = checkOptions(input_text, [opt["title"] for opt in options])
+    if selected_idx is not None:
+        if DEBUG: print("User selected option index:", selected_idx)
+        selection = options[selected_idx]
+        if DEBUG: print("User selected option:", selection)
+
+        # check if we are missing intent or entity here 
+        # use title as intent first
+        if "title" in selection:
+            user_intent = selection["title"]
+            if DEBUG: print("Mapped selected option to intent:", user_intent)
+            return user_intent
+
+    # not found. clear options and continue
+    if DEBUG: print("No option matched user input yet, start over")
+    fallback = intents.get_intent_by_id("63b6a1f6d9d1941218c5c7d2")
+    target_intent = fallback["intent"]
+    if DEBUG: print("Using fallback")
+    return target_intent        
+
+
 def clrOutput(ctx: dict) -> dict:
     """Clear output from context."""
     for i in ["intent","type","entity","feature","options"]:
         ctx.pop(i,None)
     return ctx
+
+# ------------------------------------------------------
+# intent detection function
+# ------------------------------------------------------
+def detectIntent(user_input: str, lang="de") -> str | list:
+    search = llm.embed([user_input])
+    # print("Input embedding:", search[0])
+    candidates = query_vectors(vectors, search[0])
+    if DEBUG: print("Intent candidates:", candidates)
+    if not candidates or len(candidates[0]) == 0:
+        # no intent found, return error
+        fallback = intents.get_intent_by_id("63b6a1f6d9d1941218c5c7d2")
+        target_intent = fallback["intent"]
+        if DEBUG: print("No candidates found, using fallback")
+        return target_intent
+
+    # find best intent    
+    best_intent_idx = candidates[0][0]  # ["intent_id"]
+    best_intent_id = vector_intents[best_intent_idx]
+    best_score = candidates[1][0].astype(float)  # ["intent_id"]
+    best_intent = intents.get_intent_by_id(best_intent_id)
+    if DEBUG: print(
+        f"Best intent id: {best_intent_id}, intent: {best_intent}, score: {best_score}"
+    )
+
+    # very low confidence, use fallback
+    if best_score <= 0.25:
+        if DEBUG: print("Low score: Using fallback")
+        fallback = intents.get_intent_by_id("63b6a1f6d9d1941218c5c7d2")
+        target_intent = fallback["intent"]
+        return target_intent
+
+    # high confidence
+    elif best_score >= 0.75:
+        target_intent = best_intent.get("intent", None)
+        if DEBUG: print("Selected high score best intent:", best_intent)
+        return target_intent
+
+    # intermediate confidence. check with LLM
+    else:
+        # medium confidence, return options
+        # first scan through candidate list. keep only the first candidate (with the best score) for each intent_id
+        intent_options = []
+        intent_aliases = []
+        seen = set()
+        for i in range(0, len(candidates[0])):
+            idx = candidates[0][i]
+            intent_id = vector_intents[idx]
+            score = candidates[1][i].astype(float)
+            intent_name = intents.get_intent_by_id(intent_id).get("intent")
+            intent_alias = intents.get_intent_by_id(intent_id).get(f"alias_{lang}", None)
+            if not intent_alias or intent_alias == "":
+                intent_alias = intent_name
+            if DEBUG: print(f" Next intent: intent: {intent_name}, score: {score}")
+            if intent_name in seen:
+                if DEBUG: print("Skipping duplicate intent:", intent_name)
+                continue
+            seen.add(intent_name)
+            intent_options.append(intent_name)
+            intent_aliases.append(intent_alias)
+
+        if DEBUG:
+            print("Intent aliases:",intent_aliases)
+
+        # check if only one left after deduplication. this must be the best one already
+        if len(intent_options) == 1:
+            target_intent = best_intent.get("intent", None)
+            if DEBUG: print(
+                "Selected lower score best intent after deduping:",
+                target_intent
+            )
+            return target_intent
+                
+        else:
+            if DEBUG: print("Remaining intent options:", intent_options)
+            options = []
+            for o in range(len(intent_options)):
+                options.append({"title": intent_options[o],"text":intent_aliases[o]})
+            
+            if DEBUG: print("Call llm to find better intent ...")
+            # we have the aliases already 
+            if DEBUG: print("Intent options with alias:", intent_aliases)
+
+            try:
+                llmResult = llm.chat_json(
+                    temperature=0.0,
+                    system=system_prompt_check_intent_de,
+                    user=f"Nutzereingabe: '{user_input}'. "
+                    f"Verfügbare Intents: {', '.join(intent_aliases)}. ",
+                )
+                if DEBUG: print("LLM intent result:", llmResult)
+            except:
+                if DEBUG: print("LLM execution failed")
+                llmResult = -1
+
+            if llmResult is None:
+                llmResult = -1
+
+            if isinstance(llmResult, str):
+                llmResult = int(llmResult.strip())
+
+            if (
+                isinstance(llmResult, int)
+                and llmResult >= 0
+                and llmResult < len(candidates[0])
+            ):
+                idx = candidates[0][llmResult]
+                intent_id = vector_intents[idx]
+                best_intent = intents.get_intent_by_id(intent_id)
+                if DEBUG: print("Selected high score best intent from LLM:", best_intent)
+                target_intent = best_intent.get("intent", None)
+                if DEBUG: print("Selected intent from LLM:", target_intent)
+                # done with llm: intent found
+                return target_intent
+
+            else:
+                # need to notify user to select intent
+                if DEBUG: print("No valid LLM result, asking user to select intent")
+                return options
+
+
 
 # ----------------------------------------------------------------------
 # 4️⃣ Helper: store a step in the DB
@@ -273,7 +421,7 @@ def store_history(
         session_id=session,
         sequence=sequence,
         message_type=type,
-        msg_text=message.get("text", None),
+        message_text=message.get("text", None),
         message=json.dumps(message, ensure_ascii=False),
         context=json.dumps(ctx, ensure_ascii=False),
         intent=message.get("intent", None),
@@ -319,6 +467,7 @@ def route_handler():
     # Check what's up next
     # --------------------------------------------------------------
     result = check_input(json_payload)
+    if DEBUG: print("Check input returned:",result)
     if result.get("status", "error") == "error":
         # 400 Bad Request – error in processing
         return jsonify(error="Error processing input"), 400
@@ -330,7 +479,7 @@ def route_handler():
         type="RX",
         session=result["session"],
         sequence=result["sequence"],
-        lang=result.get("context", {}).get("lang","de"),
+        lang=result.get("lang","de"),
         ctx=result.get("context", {}),
     )
 
@@ -341,7 +490,7 @@ def route_handler():
 
     session = result["session"]
     sequence = result["sequence"]
-    lang = result["lang"]
+    lang = result.get("lang","de")
 
     # output is not in context. only options is
     # so we don't get this here
@@ -374,180 +523,82 @@ def route_handler():
     user_feature = ctx.get("feature", None)
     if DEBUG: print("User feature:", user_feature)
 
+    # ----------------------------------------------
+    # Initial decoding 
+    # if message text is empty, abort with 400, invalid message text
+    # if message text.lower() is in ["nein, non, non, stop, halt,"restart","reset"] set intent to "decline/"63b6a1f6d9d1941218c5c7c7"
+    # if intent is none and options are present, check if message text matches one of the options. if yes, set intent to that option title
+    # if intent is none and no options, use vector search to find best intent
+    # if intent is set, execute intent action
+    # ----------------------------------------------
+    target_intent = None
+    if user_input == "" or user_input is None:
+        return jsonify(error="Invalid message text"), 400 
+    elif user_input.lower() in ["nein","no","non","stop","halt","restart","reset"]:
+        if DEBUG: print("User input indicates decline/reset:", user_input)
+        decline_intent = intents.get_intent_by_id("63b6a1f6d9d1941218c5c7c7")
+        target_intent = decline_intent["intent"]
+        if DEBUG: print("User declined/reset, setting intent to:", target_intent)
+    elif (user_intent is None or user_intent == "") and len(options) > 0:
+        if DEBUG: print("Checking user input against options:", user_input, options)
+        target_intent = intentOptions(user_input, options)
+        # remove options from ctx, if any
+        ctx.pop("options",None)
+        if DEBUG: print("Mapped user input to intent from options:", target_intent)
+    elif (user_intent is None or user_intent == "") and len(options) == 0:
+        if DEBUG: print("No intent and no options, checking for continue:", user_input)
+        # remove options from ctx, if any
+        ctx.pop("options",None)
+        detection = detectIntent(user_input)  # will be determined below
+        if isinstance(detection, str):
+            target_intent = detection
+            if DEBUG: print("Detected intent from input:", target_intent)
+        elif isinstance(detection, list):
+            if DEBUG: print("Need user to select intent from options:", detection)
+            ctx["options"] = detection
+            # make sure we clear intent
+            ctx.pop("intent",None)
+            output = {
+                "text": "Bitte wähle eine der folgenden Optionen aus:"
+                }
+            sequence = sequence + 1
+            store_history(
+                status="ok",
+                message=output,
+                type="TX",
+                session=session,
+                sequence=sequence,
+                lang=lang,
+                ctx=ctx
+            )
 
-    # --------------------------------------------------------------
-    # Check options without intent, if any
-    # --------------------------------------------------------------
-    if user_intent is None:
-        if len(options) > 0:
-            if DEBUG: print("Checking user input for intent options:", user_input, options)
-            selected_idx = checkOptions(user_input, [opt["title"] for opt in options])
-            if selected_idx is not None:
-                if DEBUG: print("User selected option index:", selected_idx)
-                selection = options[selected_idx]
-                if DEBUG: print("User selected option:", selection)
-
-                # check if we are missing intent or entity here 
-                # use title as intent first
-                if "title" in selection:
-                    user_intent = selection["title"]
-                    if DEBUG: print("Mapped selected option to intent:", user_intent)
-
-            # not found. clear options and continue
-            else:
-                if DEBUG: print("No option matched user input yet, start over")
-                fallback = intents.get_intent_by_id("63b6a1f6d9d1941218c5c7d2")
-                target_intent = fallback["intent"]
-                if DEBUG: print("Using fallback")
-                # remove options, if any
-                result["context"].pop("options",None)
-
-        # --------------------------------------------------------------
-        # 5.4 Check / determine intent
-        # --------------------------------------------------------------
-        # default / fallback: no intent yet
+            return (
+                jsonify(
+                    {
+                        "context": ctx,
+                        "message": output,
+                        "session": session,
+                        "sequence": sequence,
+                    }
+                ),
+                200,
+            )
         else:
-            search = llm.embed([user_input])
-            # print("Input embedding:", search[0])
-            candidates = query_vectors(vectors, search[0])
-            if DEBUG: print("Intent candidates:", candidates)
-            if candidates:
-                best_intent_idx = candidates[0][0]  # ["intent_id"]
-                best_intent_id = vector_intents[best_intent_idx]
-                best_score = candidates[1][0].astype(float)  # ["intent_id"]
-                best_intent = intents.get_intent_by_id(best_intent_id)
-                if DEBUG: print(
-                    f"Best intent id: {best_intent_id}, intent: {best_intent}, score: {best_score}"
-                )
+            if DEBUG: print("No intent detected, using fallback")
+            fallback = intents.get_intent_by_id("63b6a1f6d9d1941218c5c7d2")
+            target_intent = fallback["intent"]
 
-                # very low confidence, use fallback
-                if best_score <= 0.25:
-                    fallback = intents.get_intent_by_id("63b6a1f6d9d1941218c5c7d2")
-                    target_intent = fallback["intent"]
-                    if DEBUG: print("Using fallback")
-                    # remove options, if any
-                    result["context"].pop("options",None)
-
-                # high confidence
-                elif best_score >= 0.75:
-                    target_intent = best_intent.get("intent", None)
-                    if DEBUG: print("Selected high score best intent:", best_intent)
-                    # remove options, if any
-                    result["context"].pop("options",None)
-
-                # intermediate confidence. check with LLM
-                else:
-                    target_intent = None
-                    # low confidence, return options
-                    # first scan through candidate list. keep only the first candidate (with the best score) for each intent_id
-                    intent_options = []
-                    intent_aliases = []
-                    seen = set()
-                    for i in range(0, len(candidates[0])):
-                        idx = candidates[0][i]
-                        intent_id = vector_intents[idx]
-                        score = candidates[1][i].astype(float)
-                        intent_name = intents.get_intent_by_id(intent_id).get("intent")
-                        intent_alias = intents.get_intent_by_id(intent_id).get(f"alias_{lang}", None)
-                        if not intent_alias or intent_alias == "":
-                            intent_alias = intent_name
-                        if DEBUG: print(f" Next intent: intent: {intent_name}, score: {score}")
-                        if intent_name in seen:
-                            if DEBUG: print("Skipping duplicate intent:", intent_name)
-                            continue
-                        seen.add(intent_name)
-                        intent_options.append(intent_name)
-                        intent_aliases.append(intent_alias)
-
-                    if DEBUG:
-                        print("Intent aliases:",intent_aliases)
-
-                    # check if only one left after deduplication. this must be the best one already
-                    if len(intent_options) == 1:
-                        target_intent = best_intent.get("intent", None)
-                        if DEBUG: print(
-                            "Selected lower score best intent after deduping:",
-                            target_intent
-                        )
-                            
-                    else:
-                        if DEBUG: print("Remaining intent options:", intent_options)
-                        options = []
-                        for o in range(len(intent_options)):
-                            options.append({"title": intent_options[o],"label":intent_aliases[o]})
-                        
-                        if DEBUG: print("Call llm to find better intent ...")
-                        # we have the aliases already 
-                        if DEBUG: print("Intent options with alias:", intent_aliases)
-
-                        try:
-                            llmResult = llm.chat_json(
-                                temperature=0.0,
-                                system=system_prompt_check_intent_de,
-                                user=f"Nutzereingabe: '{json_payload.get('input','')}'. "
-                                f"Verfügbare Intents: {', '.join(intent_aliases)}. ",
-                            )
-                            if DEBUG: print("LLM intent result:", llmResult)
-                        except:
-                            if DEBUG: print("LLM execution failed")
-                            llmResult = -1
-
-                        if llmResult is None:
-                            llmResult = -1
-
-                        if isinstance(llmResult, str):
-                            llmResult = int(llmResult.strip())
-
-                        if (
-                            isinstance(llmResult, int)
-                            and llmResult >= 0
-                            and llmResult < len(candidates[0])
-                        ):
-                            idx = candidates[0][llmResult]
-                            intent_id = vector_intents[idx]
-                            best_intent = intents.get_intent_by_id(intent_id)
-                            if DEBUG: print("Selected high score best intent from LLM:", best_intent)
-                            target_intent = best_intent.get("intent", None)
-                            # remove options, if any
-                            result["context"].pop("options",None)
-                            if DEBUG: print("Selected intent from LLM:", target_intent)
-
-                        else:
-                            # need to notify user to select intent
-                            ctx = clrOutput(ctx)
-                            ctx["options"] = options
-                            output = {
-                                "text": "Bitte wähle eine der folgenden Optionen aus:"
-                                }
-                            return (
-                                jsonify(
-                                    {
-                                        "context": ctx,
-                                        "output": output,
-                                        "session": session,
-                                        "sequence": sequence + 1,
-                                    }
-                                ),
-                                200,
-                            )
-
-                            fallback = intents.get_intent_by_id("63b6a1f6d9d1941218c5c7d2")
-                            target_intent = fallback["intent"]
-                            # remove options, if any
-                            result["context"].pop("options",None)
-                            if DEBUG: print("Using fallback due to missing/invalid LLM info")
-                        
-                        # selected_intent = llmResult.get("intent", "None")
-                        # return jsonify({"context": result.get("context"), "session": result.get("session")}), 200
-
-            else:
-                # no intent found, return error
-                return jsonify(error="No intent found"), 400
-
-    # we have a user intent
-    else:
+    elif user_intent is not None and user_intent != "":
+        if DEBUG: print("User intent already set, checking for continue:", user_input)
         target_intent = user_intent
-        if DEBUG: print("Target intent from request:", target_intent)
+    else:
+        if DEBUG: print("Unhandled case in intent decoding.")
+        return jsonify(error="Decoding failed"), 500
+
+
+    # proceed with target_intent
+    if DEBUG: print("Proceed with target intent from request:", target_intent)
+    ctx["intent"] = target_intent
 
     # --------------------------------------------------------------
     # Check actions
@@ -586,13 +637,13 @@ def route_handler():
         # 200 OK – final context record
         # FIXME copy output into content to satsify auenlaend app
         return (
-            jsonify({"context": ctx,"message":message, "session": session, "sequence":sequence + 1}, lang=lang),
+            jsonify({"context": ctx,"message":message, "session": session, "sequence":sequence + 1, lang:lang}),
             200,
         )
 
     else:
         # no intent found, return error
-        return jsonify(error="No intent found"), 400
+        return jsonify(error="No intent found"), 500
 
 
 

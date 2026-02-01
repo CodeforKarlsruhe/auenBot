@@ -22,13 +22,23 @@
             "value": "de",
             "comment": "Language code for the conversation (default: 'de')"
         },
+        "message":{
+            "type": "object",
+            "value": null,
+            "comment": "Message content",
+            "properties": {
+                "text":{
+                    "type":"string",
+                    "value":"not null",
+                    "comment":"Required text, in or out"
+                }
+            },
+            "required": ["text"]
+        },
         "context": {
             "type": "object",
             "value": null,
             "comment": "Contextual information for the conversation",
-            "required": [
-                "lang"
-            ],
             "properties": {
                 "intent": {
                     "type": "string",
@@ -69,10 +79,9 @@
         }
     },
     "required": [
-        "input",
         "session",
         "sequence",
         "lang",
-        "context"
+        "message"
     ]
 }
