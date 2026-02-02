@@ -141,3 +141,63 @@ vite.config.ts.timestamp-*
 # Python private files
 private.py
 **/private.py
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+
+# Virtual environments
+.venv
+venv/
+ENV/
+env/
+.env
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Temporary files and directories
+temp/
+tmp/
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# all files ending with ":Zone.Identifier"
+*:Zone.Identifier

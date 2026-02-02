@@ -1,0 +1,87 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "input": {
+            "type": "string",
+            "value": null,
+            "comment": "User input text"
+        },
+        "session": {
+            "type": "string",
+            "value": null,
+            "comment": "Session identifier for the conversation"
+        },
+        "sequence": {
+            "type": "number",
+            "value": null,
+            "comment": "Sequence number within the session or conversation"
+        },
+        "lang": {
+            "type": "string",
+            "value": "de",
+            "comment": "Language code for the conversation (default: 'de')"
+        },
+        "message":{
+            "type": "object",
+            "value": null,
+            "comment": "Message content",
+            "properties": {
+                "text":{
+                    "type":"string",
+                    "value":"not null",
+                    "comment":"Required text, in or out"
+                }
+            },
+            "required": ["text"]
+        },
+        "context": {
+            "type": "object",
+            "value": null,
+            "comment": "Contextual information for the conversation",
+            "properties": {
+                "intent": {
+                    "type": "string",
+                    "value": null,
+                    "comment": "Detected user intent name"
+                },
+                "last_intent": {
+                    "type": "string",
+                    "value": null,
+                    "comment": "Conversation history: intent"
+                },
+                "last_input": {
+                    "type": "string",
+                    "value": null,
+                    "comment": "Conversation history: input text"
+                },
+                "type": {
+                    "type": "string",
+                    "value": null,
+                    "comment": "Specifier for type (e.g. tier)"
+                },
+                "entity": {
+                    "type": "string",
+                    "value": null,
+                    "comment": "Specifier for specific species (e.g wasserfrosch)"
+                },
+                "feature": {
+                    "type": "string",
+                    "value": null,
+                    "comment": "Specifier for specific key of entity (e.g habitat)"
+                },
+                "options": {
+                    "type": "array",
+                    "items": {},
+                    "comment": "Optional list of selectable options or suggestions"
+                }
+            }
+        }
+    },
+    "required": [
+        "session",
+        "sequence",
+        "lang",
+        "message"
+    ]
+}
