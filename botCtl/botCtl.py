@@ -26,6 +26,7 @@ from sqlalchemy import (
     Integer,
     String,
     Text,
+    Boolean,
     create_engine,
 )
 from sqlalchemy.orm import declarative_base, Session, session, sessionmaker
@@ -179,6 +180,8 @@ class HistoryRecord(Base):
     # status field
     status = Column(String, nullable=True)
     
+    # llm field 
+    llm_used = Column(Boolean,nullable=True)
     # Store the raw JSON context for audit / debugging
     context = Column(Text, nullable=True)
 
