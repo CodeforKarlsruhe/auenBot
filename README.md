@@ -125,6 +125,11 @@ The completion handler requires *entity* and *feature*. From the intent decoding
     "Unterklasse":"Hautflügler"
   },
 
+Every items has the keys *Typ*, *Name* and *Name_sci*, all other keys are optional.
+So far, *Name* is used for matching.
+
+
+
  * Intent Vectors
     Each intent comes with a list of (German) sample texts. The embedding model is used to generate a vector file **rawData/intent_vectors.json** which created the embedding vector for each sentence and maps it to the corresponding intent id. The vectors can be queried for similarity to find the best N matches for any input. **NB** This is a very simple approach. Brute force search against all vectors and a very large vector file (needs git lfs !). Production would use more efficient implementations (e.g. protobuf to get smaller file). However, with less than 10000 vectors the use of a vector database or appoximate nearist-neightbour search (like faiss) would be overkill (if not already in place).
 
