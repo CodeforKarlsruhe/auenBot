@@ -3,8 +3,6 @@ from pathlib import Path
 from typing import Any, Dict
 import os
 
-from openpyxl import DEBUG
-
 from botLlm import OpenAICompatClient
 from botVectors import load_vectors, query_vectors
 
