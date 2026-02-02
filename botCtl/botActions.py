@@ -325,6 +325,9 @@ class BotAction:
                                     current_lr = result[1]
                                     return result
         """
+        if self.DEBUG:
+            print(f"Extracting general information for input '{user_input}'")
+            
         return self.find_entity(user_input)
 
     def find_entity(self, user_input, entity_type=None):
@@ -545,7 +548,7 @@ class BotAction:
                         if "Links" in f and f["Links"]:
                             for l in f["Links"]:
                                 img = l.get("img", None)
-                                if img:
+                                if img and img != "":
                                     values["image"].append(img)
                                     break
                 if searchAudio:
@@ -554,7 +557,7 @@ class BotAction:
                         if "Links" in f and f["Links"]:
                             for l in f["Links"]:
                                 audio = l.get("audio", None)
-                                if audio:
+                                if audio and audio != "":
                                     values["audio"].append(audio)
                                     break
                 if self.DEBUG:

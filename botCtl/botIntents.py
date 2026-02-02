@@ -636,7 +636,7 @@ class BotIntent:
         # Match input to items
         matched_value = self._match_input_to_items(input_text, items)
         if matched_value is None:
-            return self._make_error_response("no_match_completion", context, intent, lang)
+            return self._make_error_response("Nichts gefunden... hier könnte ein Vorschlag kommen", context, intent, lang)
 
         # Update context and finalize
         context[missing_req] = matched_value
