@@ -109,56 +109,6 @@ def get_license_from_structured_data(filename):
         "license_field": license_field
     }
 
-    return None
-    
-    
-    pages = response["query"]["pages"]
-    page = list(pages.values())[0]
-    
-    print(f"Fetched page info for {filename}: {page}")
-    
-    # Get the entity ID (e.g., "M12345")
-    entity_id = f"M{page['pageid']}"
-    
-    # Step 2: Query Wikibase for structured statements
-    wikibase_url = "https://commons.wikimedia.org/w/api.php"
-    params = {
-        "action": "wbgetentities",
-        "ids": entity_id,
-        "format": "json"
-    }
-    
-    sdc_response = requests.get(wikibase_url, params=params).json()
-    
-    # P6216 = copyright status
-    # P275 = license
-    if "entities" in sdc_response and entity_id in sdc_response["entities"]:
-        entity = sdc_response["entities"][entity_id]
-        statements = entity.get("statements", {})
-        
-        # Extract license (P275)
-        if "P275" in statements:
-            license_claim = statements["P275"][0]
-            license_qid = license_claim["mainsnak"]["datavalue"]["value"]["id"]
-            # Returns Q-ID like Q6938433 for CC-BY-SA-4.0
-            return {"license_qid": license_qid, "source": "structured_data"}
-        
-        # Extract copyright status (P6216)
-        if "P6216" in statements:
-            copyright_qid = statements["P6216"][0]["mainsnak"]["datavalue"]["value"]["id"]
-            return {"copyright_status": copyright_qid, "source": "structured_data"}
-    
-    # Fallback to extmetadata
-    extmetadata = page.get("imageinfo", [{}])[0].get("extmetadata", {})
-    
-    # Try multiple fields in order of reliability
-    for field in ["LicenseShortName", "License", "UsageTerms"]:
-        if field in extmetadata:
-            value = extmetadata[field].get("value", "")
-            if value:
-                return {"license": value, "source": "extmetadata", "field": field}
-    
-    return None
 
 
 def process_url(url):
