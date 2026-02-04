@@ -1,0 +1,154 @@
+http -v get https://commons.wikimedia.org/w/api.php action==query titles=="File:Abeille_charpentiere_1024.jpg" prop==imageinfo iiprop==metadata 
+
+https://commons.wikimedia.org/w/api.php?action=query&titles=File:Abeille_charpentiere_1024.jpg&prop=imageinfo&iiprop=extmetadata
+
+https://commons.wikimedia.org/w/api.php?action=query&titles=File:Abeille_charpentiere_1024.jpg&prop=imageinfo&iiprop=extmetadata
+
+https://www.mediawiki.org/wiki/API:Action_API#Uses_for_the_MediaWiki_Action_API
+
+
+
+https://commons.wikimedia.org/w/api.php?action=query&prop=globalusage&titles=File:Abeille_charpentiere_1024.jpg
+
+https://commons.wikimedia.org/w/api.php?action=query&prop=fileusage&titles=File:Abeille_charpentiere_1024.jpg
+
+
+{
+    "batchcomplete": "",
+    "query": {
+        "normalized": [
+            {
+                "from": "File:Abeille_charpentiere_1024.jpg",
+                "to": "File:Abeille charpentiere 1024.jpg"
+            }
+        ],
+        "pages": {
+            "1353124": {
+                "pageid": 1353124,
+                "ns": 6,
+                "title": "File:Abeille charpentiere 1024.jpg",
+                "fileusage": [
+                    {
+                        "pageid": 1273216,
+                        "ns": 2,
+                        "title": "User:SeeSchloss"
+                    },
+                    {
+                        "pageid": 6861583,
+                        "ns": 14,
+                        "title": "Category:Xylocopa violacea"
+                    }
+                ]
+            }
+        }
+    }
+}
+
+=> 
+https://commons.wikimedia.org/wiki/File:Abeille_charpentiere_1024.jpg
+
+
+
+
+https://www.mediawiki.org/wiki/API:Cross-site_requests
+
+CORS usage
+See also: Manual:CORS
+
+If a user script or gadget is used to make an API call against a site within the same wiki family, it must use a MediaWiki module that uses CORS under the hook: mediawiki.ForeignApi. This is the way to go, for instance, if a script on the English Wikipedia needs to check image information on Commons. The rest of this section is for developers who cannot use mediawiki.ForeignApi.
+
+The MediaWiki API requires that origin or crossorigin be supplied as a query string parameter. If the CORS request is authenticated via cookies, the origin value must be the site from which the request originates, which is matched against the Origin header required by the CORS protocol. Note that these parameters must be included in any pre-flight request, and so should be included in the query string portion of the request URI even for POST requests.
+
+When the origin parameter is supplied and the request does not return a successful CORS response, MediaWiki≥1.30 will return a MediaWiki-CORS-Rejection header with a brief reason for the failure, e.g. in case of mismatched origin or unsupported headers in a Access-Control-Request-Headers request header.
+Unauthenticated CORS Requests
+
+Unauthenticated CORS requests may be made from any origin by setting the origin request parameter to *. In this case MediaWiki will include the Access-Control-Allow-Credentials: false header in the response and will process the request as if logged out.
+Example
+GET request
+Get the names of the first three images from Wikimedia Commons.
+api.php?action=query&list=allimages&ailimit=3&format=json&origin=* [try in ApiSandbox]
+Sample JavaScript code
+
+var apiEndpoint = "https://commons.wikimedia.org/w/api.php";
+var params = "action=query&list=allimages&ailimit=3&format=json";
+
+/**
+ * Send the request to get the images
+ */
+fetch(apiEndpoint + "?" + params + "&origin=*")
+    .then(function(response){return response.json();})
+    .then(function(response) {
+          var allimages = response.query.allimages; // Process the output to get the image names
+          Object.keys(allimages).forEach(function(key) {
+               console.log(allimages[key].name);
+          });
+     });
+
+Response
+
+!!!!!_Mdina_Fortifications,_Ditch,_Bridge_and_Main_Gate.jpg
+!!!!_Mdina_buildings_!!!!.jpg
+!!!!_Palazzo_Dorell_ancillary_building.jpg
+
+Authenticated CORS Requests using cookies
+
+To make an authenticated CORS request using cookies, the remote wiki's $wgCrossSiteAJAXdomains setting must be set to allow the origin site, and the origin parameter must be set to the origin site in the request URL. If the CORS origin check passes, MediaWiki will include the Access-Control-Allow-Credentials: true header in the response, so authentication cookies may be sent.
+Authenticated CORS requests using OAuth
+MediaWiki version: 	
+1.44
+Gerrit change 1118583
+
+To make an authenticated CORS request using OAuth, obtain an OAuth access token using the normal authorization flow, then make the request with crossorigin= in the request URL (no value necessary) and Authorization: Bearer access token in the request headers.
+
+Manual:CORS contains more instructions and examples on how to handle CORS requests in JavaScript.
+JSONP usage
+
+The API's format=json accepts a callback parameter, whose value is a JavaScript function which the JSON result will be wrapped in. This may be used to call the API on a remote site by dynamically adding ‎<script> tags to the document.
+Using JSONP weakens the security of your origin site because, as described above, API responses are executed as JavaScript code. If an attacker compromises the remote site, they can use their access to run arbitrary JavaScript code in your users' browsers, within the context of your site. It is recommended to use CORS instead.
+Any JSONP requests will be processed as if logged out (i.e as an anonymous user), even after logging in to the remote wiki.
+Example
+GET request
+Get the titles of three random pages from English Wikipedia.
+api.php?action=query&list=random&rnlimit=3&format=json&callback=my_callback [try in ApiSandbox]
+Sample JavaScript code
+
+var apiEndpoint = "https://en.wikipedia.org/w/api.php";
+var params = "action=query&list=random&rnlimit=3&format=json";
+
+/**
+ * The function to wrap the result
+ */
+window.my_callback = function (response) {
+    var pages = response.query.random; // Process the output to get the titles
+    Object.keys(pages).forEach(function(key) {
+        console.log(pages[key].title);
+    });
+};
+
+var scriptTag = document.createElement("script"); // Dynamically create a "script" tag
+scriptTag.src = apiEndpoint + "?" + params + "&callback=my_callback"; // Point to the query string
+
+document.body.appendChild(scriptTag); // Add the script tag to the document
+
+Response
+
+
+
+--------------------------
+html.client-js.vector-feature-language-in-header-disabled.vector-feature-language-in-main-page-header-disabled.vector-feature-page-tools-pinned-disabled.vector-feature-toc-pinned-clientpref-1.vector-feature-main-menu-pinned-disabled.vector-feature-limited-width-clientpref-1.vector-feature-limited-width-content-enabled.vector-feature-custom-font-size-clientpref--excluded.skin-theme-clientpref-day.vector-toc-available.vector-animations-ready.ve-not-available.vector-feature-appearance-pinned-clientpref-1 body.skin--responsive.skin-vector.skin-vector-search-vue.mediawiki.ltr.sitedir-ltr.mw-hide-empty-elt.ns-6.ns-subject.mw-editable.page-File_Abeille_charpentiere_1024_jpg.rootpage-File_Abeille_charpentiere_1024_jpg.skin-vector-2022.action-view.wb-entitypage.wb-mediainfopage.wb-mediainfopage-M1353124.uls-dialog-sticky-hide div.mw-page-container div.mw-page-container-inner div.mw-content-container main#content.mw-body div#bodyContent.vector-body.ve-init-mw-desktopArticleTarget-targetContainer div#mw-content-text.mw-body-content div.stockphoto-layout-horizontal a.stockphoto_buttonrow
+
+<a class="stockphoto_buttonrow" title="Use this file on the web" role="button" tabindex="0"><span class="stockphoto_buttonrow_icon"><img width="50" height="50" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Gnome-emblem-web.svg/50px-Gnome-emblem-web.svg.png"></span><span class="stockphoto_buttonrow_text"><span class="stockphoto_link">Use this file</span><small>on the web</small></span></a>
+
+
+
+
+then 
+html.client-js.vector-feature-language-in-header-disabled.vector-feature-language-in-main-page-header-disabled.vector-feature-page-tools-pinned-disabled.vector-feature-toc-pinned-clientpref-1.vector-feature-main-menu-pinned-disabled.vector-feature-limited-width-clientpref-1.vector-feature-limited-width-content-enabled.vector-feature-custom-font-size-clientpref--excluded.skin-theme-clientpref-day.vector-toc-available.vector-animations-ready.ve-not-available.vector-feature-appearance-pinned-clientpref-1 body.skin--responsive.skin-vector.skin-vector-search-vue.mediawiki.ltr.sitedir-ltr.mw-hide-empty-elt.ns-6.ns-subject.mw-editable.page-File_Abeille_charpentiere_1024_jpg.rootpage-File_Abeille_charpentiere_1024_jpg.skin-vector-2022.action-view.wb-entitypage.wb-mediainfopage.wb-mediainfopage-M1353124.uls-dialog-sticky-hide div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable div.ui-dialog-content.ui-widget-content div.stockphoto_dialog_row textarea#stockphoto_html
+
+
+<textarea onclick="select()" id="stockphoto_html" readonly="">&lt;a title="SeeSchloss, CC BY-SA 2.5 &amp;lt;https://creativecommons.org/licenses/by-sa/2.5&amp;gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Abeille_charpentiere_1024.jpg"&gt;&lt;img width="512" alt="Abeille charpentiere 1024" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Abeille_charpentiere_1024.jpg/512px-Abeille_charpentiere_1024.jpg?20061109132337"&gt;&lt;/a&gt;</textarea>
+
+
+
+
+&lt;a title="SeeSchloss, CC BY-SA 2.5 &amp;lt;https://creativecommons.org/licenses/by-sa/2.5&amp;gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Abeille_charpentiere_1024.jpg"&gt;&lt;img width="512" alt="Abeille charpentiere 1024" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Abeille_charpentiere_1024.jpg/512px-Abeille_charpentiere_1024.jpg?20061109132337"&gt;&lt;/a&gt;
