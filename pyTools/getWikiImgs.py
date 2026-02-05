@@ -2,6 +2,8 @@ import requests
 import json 
 import os
 import time
+from email.utils import parsedate_to_datetime
+from datetime import datetime, timezone
 
 
         
@@ -19,11 +21,45 @@ def process_all():
         for link in links:
             img_url = link.get("img")
             if img_url and "wikimedia.org" in img_url:
+                #if not "220px-" in img_url:
+                #        print(f"  Skipping image {img_url} because it does not contain '220px-' (not a thumbnail)")
+                #        continue
                 try:
                     print(f"  Downloading image from {img_url}")
                     headers = {"User-Agent": "auenBot/1.0"}
                     response = requests.get(img_url,headers=headers)
                     print(f"    HTTP Status Code: {response.status_code}")
+                    # Handle 429 Too Many Requests by honoring Retry-After and retrying a few times
+                    max_retries = 5
+                    for attempt in range(max_retries):
+                        if response.status_code != 429:
+                            break
+
+                        retry_after = response.headers.get("Retry-After")
+                        delay = 60  # default fallback
+                        if retry_after:
+                            retry_after = retry_after.strip()
+                            if retry_after.isdigit():
+                                delay = int(retry_after)
+                            else:
+                                try:
+                                    dt = parsedate_to_datetime(retry_after)
+                                    if dt.tzinfo is None:
+                                        dt = dt.replace(tzinfo=timezone.utc)
+                                    now = datetime.now(timezone.utc)
+                                    secs = (dt - now).total_seconds()
+                                    if secs > 0:
+                                        delay = int(secs)
+                                except Exception:
+                                    # If parsing fails, fall back to default delay
+                                    pass
+
+                        print(f"    Received 429, sleeping for {delay} seconds before retrying (attempt {attempt+1}/{max_retries})")
+                        time.sleep(delay)
+                        response = requests.get(img_url, headers=headers)
+
+                    if response.status_code == 429:
+                        raise Exception("Received 429 Too Many Requests after retries")
                     response.raise_for_status()  # Raise an error for bad responses
 
                     img_data = response.content
