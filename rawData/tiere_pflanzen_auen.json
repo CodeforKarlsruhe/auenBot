@@ -6131,9 +6131,9 @@
         "Name_alt": "Marder",
         "Links": [
             {
-                "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Squirrel_posing.jpg/220px-Squirrel_posing.jpg",
-                "license_html": "<a title=\"Peter Trimming, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons\" href=\"https://commons.wikimedia.org/wiki/File:Squirrel_posing.jpg\"><img width=\"512\" alt=\"Squirrel\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Squirrel_posing.jpg/512px-Squirrel_posing.jpg?20221220232853\"></a>",
-                "license_parsed": "<a href=\"https://commons.wikimedia.org/wiki/File:Squirrel_posing.jpg\" title=\"Peter Trimming, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons\"><img alt=\"Squirrel\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Squirrel_posing.jpg/512px-Squirrel_posing.jpg?20221220232853\" width=\"512\"/></a>",
+                "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Martes_martes_crop_%28cropped%29.jpg/220px-Martes_martes_crop_%28cropped%29.jpg",
+                "attr":"<a href=\"https://commons.wikimedia.org/wiki/File:Martes_martes_crop.jpg\">Dani Kropivnik</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a>, via Wikimedia Commons",
+                "license_html": "<a title=\"Dani Kropivnik, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons\" href=\"https://commons.wikimedia.org/wiki/File:Martes_martes_crop.jpg\"><img width=\"512\" alt=\"Martes martes crop\" src=\"https://upload.wikimedia.org/wikipedia/commons/f/ff/Martes_martes_crop.jpg?20070820061618\"></a>",
                 "img_local": "Baummarder.jpg"
             },
             {
@@ -6267,9 +6267,16 @@
         "Name": "Rothirsch",
         "Name_alt": "Edelhirsch",
         "Links": [
+            {"img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Cervus_elaphus_Luc_Viatour.jpg/220px-Cervus_elaphus_Luc_Viatour.jpg",
+                "license_html": "<a title=\"Lviatour, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Cervus_elaphus_Luc_Viatour_6.jpg"><img width="512" alt="Red deer (Cervus elaphus)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Cervus_elaphus_Luc_Viatour_6.jpg/512px-Cervus_elaphus_Luc_Viatour_6.jpg?20110919073228\"></a>",
+                "license_parsed": "<a href=\"https://commons.wikimedia.org/wiki/File:Cervus_elaphus_Luc_Viatour.jpg\" title=\"Lviatour, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons\"><img alt=\"Cervus elaphus\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Cervus_elaphus_Luc_Viatour.jpg/256px-Cervus_elaphus_Luc_Viatour.jpg?20130216235803\" width=\"256\"/></a>",
+                "img_local": "Rothirsch.jpg",
+                "attr": "<a href=\"https://commons.wikimedia.org/wiki/File:Cervus_elaphus_Luc_Viatour.jpg\">Lviatour</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a>, via Wikimedia Commons"     
+            },
             {
-                "audio": "https://www.deutsche-digitale-bibliothek.de/item/D6HTWWR6NWZ4QR5GTXRHWXRT5VQBJSBN?isThumbnailFiltered=true&query=Tonaufnahme+rothirsch&rows=20&offset=0&viewType=list&hitNumber=1",
-                "type": "Brunftruf Rothirsch"
+                "audio": "https://suche.tierstimmenarchiv.de/download.mp3?unique_identifier=TSA:Cervus_elaphus_M_71_2_1",
+                "type": "Brunftruf Rothirsch",
+                "attr":"CC-BY 3.0 TSA: Cervus elaphus M 71 2 1, via Tierstimmenarchiv.de"
             }
         ],
         "Typ": "Tier",
