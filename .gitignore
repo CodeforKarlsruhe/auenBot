@@ -201,3 +201,8 @@ Thumbs.db
 
 # all files ending with ":Zone.Identifier"
 *:Zone.Identifier
+
+
+# private python files private*.py everywhere
+private*.py
+**/private*.py
