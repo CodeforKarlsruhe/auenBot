@@ -75,6 +75,10 @@ df.loc[df.intent == "messdaten_welche","handler"] = "complete"
 df.loc[df.intent == "messdaten_welche","requires"] = "target"
 df.loc[df.intent == "messdaten_welche","provides"] = df.loc[df.intent == "messdaten_welche","provides"].apply(lambda x: {"target":"messdaten"})
 
+# propose lieblingstier
+df.loc[df.intent == "lieblingstier","handler"] = "proposeBio"
+df.loc[df.intent == "lieblingstier","options"] = "lieblingstier" # => load from options_lieblingstier.json
+
 
 
 df.to_json(dest_dir + "intents.json",orient="records",indent=2,force_ascii=False)

@@ -581,6 +581,7 @@ class BotIntent:
         # context["last_input"] = input
         
         if ctx_opts is None:
+            # first pass: present options
             return self._handle_no_options(intent, input, context, reqs, intent_base, lang)
         else:
             return self._handle_with_options(intent, input, context, ctx_opts, reqs, lang)
@@ -620,8 +621,7 @@ class BotIntent:
         # nicht verstanden: 63b6a1f6d9d1941218c5c7c7, decline
         
         if ctx_opts is None:
-            if self.DEBUG:
-                print("No options in context, should not happen here. Fallback...")
+            # first pass: present options
             return self._handle_no_options(intent, input, context, reqs, intent_base, lang)
         else:
             if self.DEBUG:

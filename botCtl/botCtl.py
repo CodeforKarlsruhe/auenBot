@@ -47,8 +47,7 @@ import subprocess
 
 
 #intents_path = "../rawData/intents.json"  # _translated.json"
-#intents_path = "./data/intents_raw.json"  # _translated.json"
-intents_path = "../rawData/intents.json"  # _translated.json"
+intents_path = "./data/intents_raw.json"  # _translated.json"
 context_path = "../rawData/tiere_pflanzen_auen.json"
 vectors_path = "../rawData/intent_vectors.json"
 
