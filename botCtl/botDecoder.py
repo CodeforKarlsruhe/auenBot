@@ -303,7 +303,7 @@ class BotDecoder:
 
         # not found. clear options and continue
         if self.DEBUG: print("No option matched user input yet, start over")
-        fallback = self.intents.get_intent_by_id("63b6a1f6d9d1941218c5c7d2")
+        fallback = self.__get_intent_by_id("63b6a1f6d9d1941218c5c7d2")
         target_intent = fallback["intent"]
         if self.DEBUG: print("Using fallback")
         return False, target_intent        

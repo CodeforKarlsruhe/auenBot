@@ -582,7 +582,7 @@ class BotIntent:
         
         if ctx_opts is None:
             # first pass: present options
-            return self._handle_no_options(intent, input, context, reqs, intent_base, lang)
+            return self._handle_no_options(intent, input, None, context, reqs, intent_base, lang)
         else:
             return self._handle_with_options(intent, input, context, ctx_opts, reqs, lang)
 
@@ -622,7 +622,9 @@ class BotIntent:
         
         if ctx_opts is None:
             # first pass: present options
-            return self._handle_no_options(intent, input, context, reqs, intent_base, lang)
+            locale = "" if lang is None else f"_{lang}"
+            output_text = intent.get(f"utter{locale}", "") or ""
+            return self._handle_no_options(intent, input, output_text, context, reqs, intent_base, lang)
         else:
             if self.DEBUG:
                 print("Options present in context: ", ctx_opts, input)
@@ -656,7 +658,7 @@ class BotIntent:
                 return self._handle_no_options(intent, input, context, reqs, intent_base, lang)
             
 
-    def _handle_no_options(self, intent, input_text, context, requirements, intent_base, lang):
+    def _handle_no_options(self, intent, input_text, output_text, context, requirements, intent_base, lang):
         """
         Handle completion when no options are currently in context.
         Either present options or match input against items.
@@ -679,8 +681,10 @@ class BotIntent:
             ctx = dict(context)
             ctx["options"] = options
             ctx["intent"] = intent.get("intent")
-            
-            output = {"text": BotIntent.getMsg("select_options", lang)}
+            if output_text is not None and output_text.strip() != "":
+                output = {"text": output_text}
+            else:
+                output = {"text": BotIntent.getMsg("select_options", lang)}
             if intent.get("link") is not None:
                 output["link"] = intent.get("link")
             
