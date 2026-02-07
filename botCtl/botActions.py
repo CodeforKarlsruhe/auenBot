@@ -108,7 +108,7 @@ class BotAction:
             "ausstellung": self.handle_ausstellung,
             "kinder": self.handle_kinder,
             "bio_feature": self.handle_bio_feature,
-            "messdaten": self.handle_messdaten,
+            "messdaten": self.handle_messdaten
         }
         
         if handler_name not in handler_map:
@@ -129,6 +129,17 @@ class BotAction:
         Return a list of available handler names.
         """
         return ["anreise", "ausstellung", "kinder", "bio_feature", "messdaten"]
+
+    # helper for random choice in propose_bio
+    def propose_entity(self, entity_type):
+        if entity_type == "tier":
+            if self.tiere:
+                return random.choice(self.tiere)
+        elif entity_type == "pflanze":
+            if self.pflanzen:
+                return random.choice(self.pflanzen)
+        return None
+    # ##############
 
     def handle_anreise(self, input=None, context=None, lang="de"):
         """
@@ -193,7 +204,6 @@ class BotAction:
         return self.measurement_retrieval(measurement_type, debug=self.DEBUG, lang=lang)
 
 
-
     def setDebug(self, debug):
         self.DEBUG = debug
 
@@ -252,7 +262,6 @@ class BotAction:
         if debug: print("Fetched JSON data:", json_data[0]["values"][-5:])
             
         # try to get the most recent valid value. iterate over last 5 values. break at the first valid one.
-        options = []
         for k in range(5):
             value = json_data[0]["values"][-(k+1)]
             try:

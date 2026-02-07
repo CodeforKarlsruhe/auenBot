@@ -1881,9 +1881,9 @@
     "alias_de":null,
     "alias_en":null,
     "alias_fr":null,
-    "handler":"default",
+    "handler":"proposeBio",
     "requires":null,
-    "options":null,
+    "options":"lieblingstier",
     "provides":null
   },
   {

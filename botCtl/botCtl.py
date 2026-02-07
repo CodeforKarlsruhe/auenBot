@@ -45,55 +45,10 @@ from botDecoder import BotDecoder
 
 import subprocess
 
-try:
-    import private as pr  # type: ignore
-
-    private = {
-        "apiKey": getattr(pr, "apiKey", None),
-        "baseUrl": getattr(pr, "baseUrl", None),
-        "embUrl": getattr(pr, "embUrl", None),
-        "embMdl": getattr(pr, "embMdl", None),
-        "lngMdl": getattr(pr, "lngMdl", None),
-    }
-    print("Loaded private config for LLM.")
-except Exception:
-    print("No private config found for LLM.")
-    private = None
-
-api_key = private.get("apiKey")
-base_url = private.get("baseUrl")
-emb_url = private.get("embUrl", base_url)
-embed_model = private.get("embMdl")
-chat_model = private.get("lngMdl")
-llm = OpenAICompatClient(
-    base_url=base_url,
-    api_key=api_key,
-    emb_url=emb_url,
-    chat_model=chat_model,
-    embed_model=embed_model,
-)
-print(f"LLM Client initialized with model {llm.chat_model} / {llm.embed_model}")
-
-system_prompt_check_intent_de = """Du bist ein Intent‑Klassifizierungssystem für einen Chatbot.
-    "Dir werden Fragen zu Tieren, Pflanzen und natürlichen Lebensräumen in den Karlsruher Rheinauen gestellt.
-    "Ein bestimmtes Biotop wird im Deutschen ‚Aue‘ genannt.
-    "Für den Chatbot sind mehrere Intents definiert.
-    "Basierend auf der Benutzereingabe wählen den am besten passenden Intent aus den bereitgestellten Optionen aus.
-    "Beachten Sie, dass Verweise auf Tiere oder Pflanzen in der Regel nicht mit Ernährung, sondern mit biologischen Aspekten zusammenhängen.
-    "Wenn keiner passt, gebe als Index -1 zurück. Antworte nur mit dem Index. Gibt keinen weiteren Text zurück.
-    "Die aktuelle Benutzersprache ist Deutsch."""
-
-system_prompt_check_intent_en = """You are an intent classification system for a chatbot. 
-                        "You will be asked questions about animals, plants and natural habitats in the Karlsruher Rheinauen.
-                        "A particular biotiope is called 'Aue' in German. There are a number of intents defined for the chatbot. 
-                        "Given the user input, select the best matching intent from the provided options. 
-                        "Note that typically reference to animals or plants are not related to nutrition but to biological aspects. 
-                        "If none match, respond with 'None'.
-                        "The current user language is English."""
-
 
 #intents_path = "../rawData/intents.json"  # _translated.json"
-intents_path = "./data/intents_raw.json"  # _translated.json"
+#intents_path = "./data/intents_raw.json"  # _translated.json"
+intents_path = "../rawData/intents.json"  # _translated.json"
 context_path = "../rawData/tiere_pflanzen_auen.json"
 vectors_path = "../rawData/intent_vectors.json"
 
@@ -106,11 +61,6 @@ for i in intents.data[:5]:
 intents.setActions(context_path)
 intents.setThreshold(65)  # set fuzzy match threshold
 
-if DEBUG: 
-    print("Intents with actions loaded.")
-    intents.setDebug(True)
-    llm.setDebug(True)
-
 # intent decoder
 decoder = BotDecoder()
 decoder.loadIntents(intents_path)
@@ -119,6 +69,13 @@ decoder.loadModels()
 
 
 print(f"Loaded {len(decoder.vectors)} intent vectors from {vectors_path}.")
+
+# after all classes loaded
+if DEBUG: 
+    print("Intents with actions loaded.")
+    intents.setDebug(True)
+
+
 
 # ----------------------------------------------------------------------
 # 0️⃣ Flask app
@@ -391,8 +348,9 @@ def route_handler():
     # if message text is empty, abort with 400, invalid message text
     # if message text.lower() is in ["nein, non, non, stop, halt,"restart","reset"] set intent to "decline/"63b6a1f6d9d1941218c5c7c7"
     # if intent is none and options are present, check if message text matches one of the options. if yes, set intent to that option title
-    # if intent is none and no options, use vector search to find best intent
-    # if intent is set, execute intent action
+    # if intent is none and no options, use intent decoder to find best intent. detector can return either a single intent or a list of options. 
+    #   if list of options, return those as options in context and ask user to select one. if single intent, set intent to that.
+    # if intent is set, execute intent and return output
     # ----------------------------------------------
     target_intent = None
     if user_input == "" or user_input is None:
@@ -467,7 +425,7 @@ def route_handler():
 
     # --------------------------------------------------------------
     # Check actions
-    # --------------------------------------------------------------
+    # -------------------------------------------------------------- 
     if DEBUG: print(f"Now checking actions for {target_intent} with context {ctx} ...")
     if target_intent is not None:
         result = intents.execute(target_intent,input=user_input,context=ctx,lang=lang)

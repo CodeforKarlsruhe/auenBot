@@ -144,6 +144,7 @@ class BotIntent:
         self.handlers = {
             "default": self.__defaultHandler,
             "complete": self.__completeHandler,
+            "proposeBio": self.__proposeBioHandler,
         }
 
     @staticmethod
@@ -495,7 +496,7 @@ class BotIntent:
             if matched_intent is None:
                 if self.DEBUG:
                     print(f"Target intent '{target_name}' not found.")
-                return self.__make_error_response("intent_not_found", ctx, intent, lang)
+                return self._make_error_response("intent_not_found", ctx, intent, lang)
 
             if self.DEBUG:
                 print(f"Routing to matched intent '{target_name}' -> {matched_intent}")
@@ -527,6 +528,8 @@ class BotIntent:
             print("Context (in):", context)
 
         context = context or {}
+        # remove options if set, in any case, since default handler does not use them
+        context.pop("options", None)
 
         locale = "" if lang is None else f"_{lang}"
         text = intent.get(f"utter{locale}", "") or ""
@@ -581,6 +584,77 @@ class BotIntent:
             return self._handle_no_options(intent, input, context, reqs, intent_base, lang)
         else:
             return self._handle_with_options(intent, input, context, ctx_opts, reqs, lang)
+
+    def __proposeBioHandler(self, intent, input=None, context=None, lang="de"):
+        """
+        Handler for intents with option to make a proposal, e.g. for preferred animal (lieblingstier)
+        Prepares target intent and context for input and intent. e.g. 
+            lieblingstier -> options yes/no 
+            => if no, got to default
+            => if yes, select random choise from animals, feature "erscheinung", go to tiere_erscheinung with entity=selected_animal in context
+        """
+        if self.DEBUG:
+            print("Propose handler for intent:", intent.get("intent"), "lang:", lang)
+            print("Input:", input)
+            print("Context (in):", context)
+
+        context = context or {}
+        intent_base = (intent.get("intent", "").split("_")[0] or "").strip()
+        
+        if self.DEBUG:
+            print("Intent base:", intent_base)
+
+        # Update context with provided values
+        self._update_context_with_provides(intent, context)
+
+        # Parse requirements
+        reqs = [r.strip() for r in (intent.get("requires") or "").split(",") if r.strip() != ""]
+        if self.DEBUG:
+            print("Intent requires:", reqs)
+
+        # Handle options presentation or input matching
+        ctx_opts = context.get("options")
+        # insert input as last_input in context
+        # context["last_input"] = input
+
+        # nicht verstanden: 63b6a1f6d9d1941218c5c7c7, decline
+        
+        if ctx_opts is None:
+            if self.DEBUG:
+                print("No options in context, should not happen here. Fallback...")
+            return self._handle_no_options(intent, input, context, reqs, intent_base, lang)
+        else:
+            if self.DEBUG:
+                print("Options present in context: ", ctx_opts, input)
+            # Match input to options
+            matched = self._match_input_to_options(input, ctx_opts)
+            if self.DEBUG:
+                print("Matched option:", matched)
+            if matched:
+                print("Matched option details:", [o for o in ctx_opts if o.get("title", "").lower() == matched.lower()])
+                # call the propose action to prepare context for target intent
+                type = "tier" if "tier" in intent_base.lower() else "pflanze"
+                entity = self.actionCtl.propose_entity(type)
+                if self.DEBUG:
+                    print(f"Proposed entity for type '{type}':", entity)
+                if entity is None:
+                    print("No entity proposed, cannot proceed to target intent.")
+                    return self._make_error_response("no_match_completion", context, intent, lang)
+                    
+                target = self.get_intent_by_name("tp_definition") # hardcoded target for now, could be made more dynamic
+                context["type"] = type
+                context["entity"] = entity["Name"]
+                context["feature"] = "definition"
+                context.pop("options", None) # remove options from context after selection
+
+                return self._finalize_completion(target, context, reqs, input, lang)
+            
+            else:
+                if self.DEBUG:
+                    print("Input did not match any option, should not happen here. Fallback...")
+                context.pop("options", None) # remove options from context after selection
+                return self._handle_no_options(intent, input, context, reqs, intent_base, lang)
+            
 
     def _handle_no_options(self, intent, input_text, context, requirements, intent_base, lang):
         """
