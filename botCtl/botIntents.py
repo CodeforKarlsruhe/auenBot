@@ -750,15 +750,24 @@ class BotIntent:
             return self._finalize_completion(intent, context, requirements, input_text, lang)
             # ########## completed #############
         
-
+        if self.DEBUG:
+            print(f"Attempting to match input for missing requirement '{missing_req}', intent base '{intent_base}'")
         items = self._load_items_file(missing_req, intent_base)
         if items is None:
+            if self.DEBUG:
+                print("No items file for missing requirement, cannot proceed with matching.")
             return self._make_error_response("no_items_file", context, intent, lang)
 
         # Match input to items
         matched_value = self._match_input_to_items(input_text, items)
         if matched_value is None:
-            return self._make_error_response("Nichts gefunden... hier könnte ein Vorschlag kommen", context, intent, lang)
+            if self.DEBUG:
+                print("Input did not match any item for missing requirement.", input_text)
+            # make a random suggestions
+            matched_value = random.choice(items) 
+            if self.DEBUG:
+                print("Suggestion for input:", matched_value)                 
+            # return self._make_error_response("Nichts gefunden... hier könnte ein Vorschlag kommen", context, intent, lang)
 
         # Update context and finalize
         context[missing_req] = matched_value
