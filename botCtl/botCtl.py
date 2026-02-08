@@ -44,6 +44,7 @@ from botLlm import OpenAICompatClient
 from botDecoder import BotDecoder
 
 import subprocess
+import re
 
 
 #intents_path = "../rawData/intents.json"  # _translated.json"
@@ -166,6 +167,29 @@ SessionLocal = sessionmaker(bind=engine, expire_on_commit=False, future=True)
 def check_input(validated: Dict[str, Any]) -> Dict[str, Any]:
     if DEBUG: print("Check input on: ",validated)
     message = validated.get("message", {})
+    
+    # validate message text is plain text (no HTML tags or critical chars). don't alter umlauts.
+    if not isinstance(message, dict):
+        abort(make_response(jsonify(error="invalid request"), 400))
+
+    text = message.get("text", "")
+    if not isinstance(text, str) or text.strip() == "":
+        abort(make_response(jsonify(error="invalid request"), 400))
+
+
+    # Reject any HTML tags like <...>
+    if re.search(r'<[^>]+>', text):
+        abort(make_response(jsonify(error="invalid request"), 400))
+
+    # Reject clearly dangerous/control characters often used in injections/shell escapes.
+    # Allow unicode letters (including umlauts). Block backticks, braces, dollar, pipe, semicolon, ampersand, angle brackets.
+    if re.search(r'[`{}\|\$;&<>]', text):
+        abort(make_response(jsonify(error="invalid request"), 400))
+
+    # Reject C0 control chars except common whitespace (tab/newline/carriage return).
+    if re.search(r'[\x00-\x08\x0B\x0C\x0E-\x1F]', text):
+        abort(make_response(jsonify(error="invalid request"), 400))
+    
     lang = validated.get("lang", "de")
     session = validated.get("session", "")
     try:
@@ -367,7 +391,7 @@ def route_handler():
         ctx.pop("options",None)
         if DEBUG: print("Mapped user input to intent from options:", target_intent)
     elif (user_intent is None or user_intent == "") and len(options) == 0:
-        if DEBUG: print("No intent and no options, checking for continue:", user_input)
+        if DEBUG: print("No intent and no options, checking input for intent:", user_input)
         # remove options from ctx, if any
         ctx.pop("options",None)
         detection, llmUsed = decoder.detectIntent(user_input)  # will be determined below

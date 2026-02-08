@@ -77,7 +77,7 @@ df.loc[df.intent == "messdaten_welche","provides"] = df.loc[df.intent == "messda
 
 # propose lieblingstier
 df.loc[df.intent == "lieblingstier","handler"] = "proposeBio"
-df.loc[df.intent == "lieblingstier","options"] = "lieblingstier" # => load from options_lieblingstier.json
+df.loc[df.intent == "lieblingstier","options"] = "yesno" 
 
 
 
