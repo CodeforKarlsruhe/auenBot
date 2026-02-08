@@ -576,7 +576,7 @@ class BotAction:
                     )
                 if values["text"] == [] and values["image"] == [] and values["audio"] == []:
                     #return {}
-                    values["text"] = ["Zu dieser Eigenschaft sind für " + name + " leider keine Informationen vorhanden."]
+                    values["text"] = ["Es gibt " + name + ", aber leider kann ich keine Informationen dazu finden."]
                 return values
             else:
                 print("No matching entity found for features:", name)
