@@ -146,6 +146,10 @@ class BotIntent:
             "complete": self.__completeHandler,
             "proposeBio": self.__proposeBioHandler,
         }
+        
+        self.history_items = ["type", "entity", "feature","target","intent","input"]
+        self.MAX_HISTORY = 3
+
 
     @staticmethod
     def getMsg(key, lang = "de"):
@@ -467,6 +471,40 @@ class BotIntent:
                 print(f"Updating context with provided '{key}': '{value}'")
             context[key] = value
 
+    def _update_context_with_history(self, intent, input, context):
+        """
+        Update context with intent history for tracking conversation flow.
+        
+        Args:
+            intent: Intent dict
+            context: Context dict to update (modified in-place)
+        """
+        if self.DEBUG:
+            print(f"_update_context_with_history: Updating context with history for intent '{intent.get('intent')}'")
+        history = context.get("history", [])
+        current_intent = intent.get("intent")
+        # ensure history is a list
+        if not isinstance(history, list):
+            history = []
+
+        new_entry = {}
+        for k in self.history_items:
+            if k == "intent":
+                new_entry[k] = current_intent
+            elif k == "input":
+                new_entry[k] = input
+            else:
+                new_entry[k] = context.get(k, "")
+                context.pop(k, None)  # remove from context after adding to history 
+                
+        history.insert(0, new_entry)
+        # truncate history
+        context["history"] = history[:self.MAX_HISTORY]
+        if self.DEBUG:
+            print("Updated intent history:", context["history"])
+        return context
+
+
     def _finalize_completion(self, intent, context, requirements, input_text, lang):
         """
         Finalize a completed intent by processing action and cleaning up context.
@@ -503,7 +541,7 @@ class BotIntent:
             
             output = {"text": f"{BotIntent.getMsg('completed', lang)} Route to intent: {matched_intent.get('intent') if matched_intent else target_name}"}
             # overwrite intent with target
-            ctx = { "intent": target_name, "last_input": input_text }
+            ctx = { "intent": target_name }
             if self.DEBUG:
                 print(f"Executing routed intent '{target_name}'")
             return self.execute(intent_name=target_name, context=ctx, input=input_text, lang=lang)
@@ -514,8 +552,11 @@ class BotIntent:
             output = action_result if action_result else {"text": BotIntent.getMsg("completed", lang)}
 
         # Remove requirements from context
-        for req in requirements:
-            ctx.pop(req, None)
+        #for req in requirements:
+        #    ctx.pop(req, None)
+
+        ctx = self._update_context_with_history(intent, input_text, ctx)
+
 
         return {"output": output, "context": ctx,"completed": True}
 
@@ -549,6 +590,9 @@ class BotIntent:
 
         # insert input as last_input in context
         # context["last_input"] = input
+        
+        context = self._update_context_with_history(intent, input, context)
+        
         return {"output": output, "context": context,"completed": True}
 
     def __completeHandler(self, intent, input=None, context=None, lang="de"):

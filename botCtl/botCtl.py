@@ -348,14 +348,6 @@ def route_handler():
     options = ctx.get("options", [])
     if DEBUG: print("Options:", options)
 
-    user_input_history = ctx.get("last_input", None)
-    if DEBUG: print("User input history:", user_input_history)
-    # result["context"]["last_input"] = user_input
-
-    user_intent_history = ctx.get("last_intent", None)
-    if DEBUG: print("User intent history:", user_intent_history)
-    # result["context"]["last_intent"] = user_intent
-
     # specific stuff 
     user_type = ctx.get("type", None)
     if DEBUG: print("User type:", user_type)
