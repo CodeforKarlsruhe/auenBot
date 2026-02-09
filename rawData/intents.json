@@ -2342,13 +2342,13 @@
     "utter_en":"The following offers are available for children:",
     "utter_fr":"Les offres suivantes sont disponibles pour les enfants :",
     "link":null,
-    "action":"kinder",
+    "action":null,
     "alias_de":null,
     "alias_en":null,
     "alias_fr":null,
-    "handler":"default",
-    "requires":null,
-    "options":null,
+    "handler":"complete",
+    "requires":"target",
+    "options":"kinder",
     "provides":null
   },
   {
