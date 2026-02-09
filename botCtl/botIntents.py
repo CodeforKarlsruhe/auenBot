@@ -1,5 +1,7 @@
 import json
 import os
+import random
+
 
 try:
     from rapidfuzz import process, fuzz, utils
@@ -8,8 +10,6 @@ except ImportError:
     # ubuntu 20.04 LTS compatibility
     from fuzzywuzzy import process, fuzz, utils
     matchProcessor = utils.full_process
-
-import random
 
 from botActions import BotAction
 
@@ -705,7 +705,7 @@ class BotIntent:
     def _handle_no_options(self, intent, input_text, output_text, context, requirements, intent_base, lang):
         """
         Handle completion when no options are currently in context.
-        Either present options or match input against items.
+        Either present options or match input against items from file (if exists).
         """
         if self.DEBUG:
             print(f"_handle_no_options: No options in context")
