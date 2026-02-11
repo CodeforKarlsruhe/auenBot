@@ -2,6 +2,8 @@ import json
 import os
 import random
 
+from requests import options
+
 
 try:
     from rapidfuzz import process, fuzz, utils
@@ -147,8 +149,8 @@ class BotIntent:
             "proposeBio": self.__proposeBioHandler,
         }
         
-        self.history_items = ["type", "entity", "feature","target","intent","input"]
-        self.MAX_HISTORY = 3
+        self.history_items = ["type", "entity", "feature","target","intent","input","options"]
+        self.MAX_HISTORY = 5
 
 
     @staticmethod
@@ -523,7 +525,8 @@ class BotIntent:
             print(f"_finalize_completion: Finalizing completion for intent '{intent.get('intent')}'")
 
         ctx = dict(context)
-        ctx.pop("options", None)
+        if not "options" in self.history_items:
+            ctx.pop("options", None)
         # insert input as last_input in context
         # context["last_input"] = input_text
 
@@ -570,7 +573,8 @@ class BotIntent:
 
         context = context or {}
         # remove options if set, in any case, since default handler does not use them
-        context.pop("options", None)
+        if not "options" in self.history_items:
+            context.pop("options", None)
 
         locale = "" if lang is None else f"_{lang}"
         text = intent.get(f"utter{locale}", "") or ""
@@ -691,14 +695,16 @@ class BotIntent:
                 context["type"] = type
                 context["entity"] = entity["Name"]
                 context["feature"] = "definition"
-                context.pop("options", None) # remove options from context after selection
+                if not "options" in self.history_items:
+                    context.pop("options", None) # remove options from context after selection
 
                 return self._finalize_completion(target, context, reqs, input, lang)
             
             else:
                 if self.DEBUG:
                     print("Input did not match any option, should not happen here. Fallback...")
-                context.pop("options", None) # remove options from context after selection
+                if not "options" in self.history_items:
+                    context.pop("options", None) # remove options from context after selection
                 return self._handle_no_options(intent, input, context, reqs, intent_base, lang)
             
 
