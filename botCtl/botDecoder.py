@@ -324,8 +324,7 @@ class BotDecoder:
                     and llmResult >= 0
                     and llmResult < len(candidates[0])
                 ):
-                    idx = candidates[0][llmResult]
-                    intent_id = self.vector_intents[idx]
+                    intent_id = candidates[0][llmResult]
                     best_intent = self.__get_intent_by_id(intent_id)
                     if self.DEBUG: print("Selected high score best intent from LLM:", best_intent)
                     target_intent = best_intent.get("intent", None)
