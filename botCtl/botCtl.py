@@ -62,13 +62,19 @@ intents.setActions(context_path)
 intents.setThreshold(65)  # set fuzzy match threshold
 
 # intent decoder
-decoder = BotDecoder()
-decoder.loadIntents(intents_path)
-decoder.loadVectors(vectors_path)
-decoder.loadModels()
-
-
-print(f"Loaded {len(decoder.vectors)} intent vectors from {vectors_path}.")
+USE_DB = True
+if USE_DB:
+    decoder = BotDecoder(useDb = True)
+    decoder.loadIntents(intents_path)
+    #decoder.loadVectors(vectors_path)
+    decoder.loadModels()
+    print("Using database for vectors")
+else:
+    decoder = BotDecoder(useDb = False)
+    decoder.loadIntents(intents_path)
+    decoder.loadVectors(vectors_path)
+    decoder.loadModels()
+    print(f"Loaded {len(decoder.vectors)} intent vectors from {vectors_path}.")
 
 # after all classes loaded
 if DEBUG: 
