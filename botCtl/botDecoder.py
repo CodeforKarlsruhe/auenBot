@@ -6,6 +6,16 @@ import os
 from botLlm import OpenAICompatClient
 from botVectors import load_vectors, query_vectors
 
+from sqlalchemy import create_engine, Column, Integer, String, func, text, desc, inspect
+from sqlalchemy.orm import declarative_base
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy.dialects.postgresql import ARRAY
+
+import numpy as np
+from pgvector.sqlalchemy import Vector
+from sqlalchemy import event
+from pgvector.psycopg2 import register_vector
+
 
 system_prompt_check_intent_de = """Du bist ein Intent‑Klassifizierungssystem für einen Chatbot.
     "Dir werden Fragen zu Tieren, Pflanzen und natürlichen Lebensräumen in den Karlsruher Rheinauen gestellt.
@@ -25,6 +35,14 @@ system_prompt_check_intent_en = """You are an intent classification system for a
                         "The current user language is English."""
 
 
+# Define the table
+Base = declarative_base()
+class Embedding(Base):
+    __tablename__ = "embeddings"
+    id = Column(Integer, primary_key=True)
+    intent = Column(String)
+    value = Column(Vector(1024))  # 1024-dimensional vector
+
 
 class BotDecoder:
     """_summary_
@@ -36,7 +54,7 @@ class BotDecoder:
         _type_: _description_
     """
 
-    def __init__(self):
+    def __init__(self, useDb=False):
         self.DEBUG = False
         self.intents = None
         self.vectors = None
@@ -45,6 +63,7 @@ class BotDecoder:
         self.DEBUG = False
         self.thresholds = {"low": 0.25, "high": 0.75}
         self.neighbors = 5
+        self.useDb = useDb
 
         # load private config for llm
         try:
@@ -62,6 +81,19 @@ class BotDecoder:
             print("No private config found for LLM.")
             self.private = None
             raise RuntimeError("No private config found for LLM.")
+        
+        try:
+            self.engine = create_engine(f"postgresql+psycopg2://{pr.PG_USER}:{pr.PG_PWD}@{pr.PG_HOST}/{pr.PG_NAME}")
+
+            @event.listens_for(self.engine, "connect")
+            def _register_pgvector(dbapi_connection, connection_record):
+                register_vector(dbapi_connection)
+            
+            self.session = sessionmaker(bind=self.engine)()
+            print("Database connection established.")
+        except Exception as e:
+            print(f"Database connection failed: {e}")
+            self.useDb = False
 
     def __get_intent_by_id(self, intent_id):
         """Return the intent dict with matching 'id' or None if not found."""
@@ -151,7 +183,40 @@ class BotDecoder:
         self.vectors, self.vector_intents = load_vectors(vectors_path)
         if self.DEBUG:
             print(f"Loaded {len(self.vectors)} intent vectors from {vectors_path}.")
+            print("types of vectors and intents:", type(self.vectors), type(self.vector_intents))
 
+
+    def matchInput(self, user_input: str, lang="de") -> tuple[str | list, bool]:
+        """Match user input to an intent and return the intent name and a boolean indicating if LLM was used.
+        If LLM was used, the intent name may be a list of options instead of a single intent.
+        """
+        if self.DEBUG: print(f"Matching user input: '{user_input}' with language: '{lang}'")
+        search = self.llm.embed([user_input])
+
+        if self.useDb:
+            if self.DEBUG: print("Using database for intent matching")
+            query = self.session.query(
+            Embedding.intent,
+            (Embedding.value.cosine_distance(search[0])).label("distance")
+            ).order_by("distance").limit(self.neighbors)
+            candidates_ = query.all()
+            ints = [c[0] for c in candidates_]
+            score = [1 - c[1] for c in candidates_]
+            if self.DEBUG: print("Candidate intents from database search:", ints)
+            if self.DEBUG: print("Candidate scores from database search:", score)    
+            candidates = (ints,score)
+        elif isinstance(self.vectors, np.ndarray) and isinstance(self.vector_intents, list):
+            candidates_ = query_vectors(self.vectors, search[0],self.neighbors)
+            ints = [self.vector_intents[i] for i in candidates_[0].tolist()]
+            score = [candidates_[1][i].astype(float) for i in range(len(candidates_[0].tolist()))]
+            if self.DEBUG: print("Candidate intents from vector search:", ints)
+            if self.DEBUG: print("Candidate scores from vector search:", score)
+            candidates = (ints,score)
+        else:
+            raise RuntimeError("Vectors and intents must be loaded before matching input.")
+
+        if self.DEBUG: print("Candidates:", candidates)            
+        return candidates
 
     # ------------------------------------------------------
     # intent detection function
@@ -159,7 +224,8 @@ class BotDecoder:
     def detectIntent(self,user_input: str, lang="de") -> tuple[str | list, bool]:
         search = self.llm.embed([user_input])
         # print("Input embedding:", search[0])
-        candidates = query_vectors(self.vectors, search[0],self.neighbors)
+        # candidates = query_vectors(self.vectors, search[0],self.neighbors)
+        candidates = self.matchInput(user_input, lang=lang)
         if self.DEBUG: print("Intent candidates:", candidates)
         if not candidates or len(candidates[0]) == 0:
             # no intent found, return error
@@ -169,9 +235,9 @@ class BotDecoder:
             return target_intent, False
 
         # find best intent    
-        best_intent_idx = candidates[0][0]  # ["intent_id"]
-        best_intent_id = self.vector_intents[best_intent_idx]
-        best_score = candidates[1][0].astype(float)  # ["intent_id"]
+        best_intent_id = candidates[0][0]  # ["intent_id"]
+        #best_intent_id = self.vector_intents[best_intent_idx]
+        best_score = candidates[1][0]  # ["intent_id"]
         best_intent = self.__get_intent_by_id(best_intent_id)
         if self.DEBUG: print(
             f"Best intent id: {best_intent_id}, intent: {best_intent}, score: {best_score}"
@@ -198,9 +264,9 @@ class BotDecoder:
             intent_aliases = []
             seen = set()
             for i in range(0, len(candidates[0])):
-                idx = candidates[0][i]
-                intent_id = self.vector_intents[idx]
-                score = candidates[1][i].astype(float)
+                intent_id = candidates[0][i]
+                #intent_id = self.vector_intents[idx]
+                score = candidates[1][i]
                 intent_name = self.__get_intent_by_id(intent_id).get("intent")
                 intent_alias = self.__get_intent_by_id(intent_id).get(f"alias_{lang}", None)
                 if not intent_alias or intent_alias == "":
@@ -320,4 +386,11 @@ if __name__ == "__main__":
     decoder.loadModels()
     decoder.loadIntents(os.path.join("data","intents_raw.json"))
     decoder.loadVectors(os.path.join("../rawData/","intent_vectors.json"))
+    decoder.detectIntent("Hallo Auenbot", lang="de")
+    #
+    print("\n\n\n\n\n\nRunning BotDecoder with database connection.")
+    decoder = BotDecoder(useDb=True)
+    decoder.setDebug(True)
+    decoder.loadModels()
+    decoder.loadIntents(os.path.join("data","intents_raw.json"))
     decoder.detectIntent("Hallo Auenbot", lang="de")
