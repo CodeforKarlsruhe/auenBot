@@ -35,12 +35,9 @@ import signal
 import sys
 import os
 
-from sympy import sequence
-
 DEBUG = True
 
 from botIntents import BotIntent
-from botLlm import OpenAICompatClient
 from botDecoder import BotDecoder
 
 import subprocess
