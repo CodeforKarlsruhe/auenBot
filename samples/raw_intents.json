@@ -40,20 +40,19 @@
             "type": "TP"
         }
     },
-  {
-    "id":"666fe30340e45337a5db1a4c",
-    "intent":"tp_generell",
-    "utter":null,
-    "link":null,
-    "action":"bio_feature",
-    "alias":"Fragen zu Tieren und Pflanzen der Rheinauen allgemein",
-    "handler":"complete",
-    "requires":"entity,feature",
-    "options":null,
-    "provides":{
-      "feature":"generell",
-      "type":"TP"
+    {
+        "id": "666fe30340e45337a5db1a4c",
+        "intent": "tp_generell",
+        "utter": null,
+        "link": null,
+        "action": "bio_feature",
+        "alias": "Fragen zu Tieren und Pflanzen der Rheinauen allgemein",
+        "handler": "complete",
+        "requires": "entity,feature",
+        "options": null,
+        "provides": {
+            "feature": "generell",
+            "type": "TP"
+        }
     }
-  }
-
 ]
