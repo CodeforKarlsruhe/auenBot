@@ -1,0 +1,59 @@
+[
+    {
+        "id": "63b6a1f6d9d1941218c5c7c4",
+        "intent": "begrüßung",
+        "utter": "Hi, ich bin KarlA, deine Chatbot-Rangerin😊!\nIch freue mich darauf, mit dir zu chatten.<br \/>Als Chatbot-Rangerin beantworte ich Fragen rund um den Lebensraum \"Karlsruher Rheinauen\". Auch Fragen zum Naturschutzzentrum Karlsruhe-Rappenwört kann ich beantworten.<br \/>\nEin paar Hinweise, bevor es losgeht: In der Natur begegnen wir uns alle auf Augenhöhe, daher benutze ich das \"Du\". Ich bitte dich, mir keine persönlichen Daten wie deinen Namen oder deine Adresse zu verraten. Wenn du mehr über mich wissen möchtest: Klicke auf Chatbot-Rangerin KarlA2.\nSo - jetzt ab zu spannenden Naturthemen! Hast du eine Frage oder darf ich dir etwas zu meinen Lieblingsthemen erzählen?",
+        "action": null,
+        "alias": "Begrüßungtext des Bots zu Beginn eines Chatverlaufs",
+        "handler": "default",
+        "requires": null,
+        "options": null,
+        "provides": null
+    },
+    {
+        "id": "64709aa78ef7ef3b45d4fa79",
+        "intent": "tiere_gewicht",
+        "utter": null,
+        "link": null,
+        "action": "bio_feature",
+        "alias": "Fragen zum Gewicht von Tieren",
+        "handler": "complete",
+        "requires": "entity,feature",
+        "options": null,
+        "provides": {
+            "feature": "gewicht",
+            "type": "Tiere"
+        }
+    },
+    {
+        "id": "64709d358ef7ef3b45d507e2",
+        "intent": "tp_lateinischername",
+        "utter": null,
+        "link": null,
+        "action": "bio_feature",
+        "alias": "Fragen zum lateinischen Namen von Tieren und Pflanzen",
+        "handler": "complete",
+        "requires": "entity,feature",
+        "options": null,
+        "provides": {
+            "feature": "lateinischername",
+            "type": "TP"
+        }
+    },
+  {
+    "id":"666fe30340e45337a5db1a4c",
+    "intent":"tp_generell",
+    "utter":null,
+    "link":null,
+    "action":"bio_feature",
+    "alias":"Fragen zu Tieren und Pflanzen der Rheinauen allgemein",
+    "handler":"complete",
+    "requires":"entity,feature",
+    "options":null,
+    "provides":{
+      "feature":"generell",
+      "type":"TP"
+    }
+  }
+
+]
