@@ -52,7 +52,7 @@ all others keys are optional.
 # General Operation
 
   1. User input
-  2. Intent decoder: find hat the user want. E.g. similarity vector search against intent texts
+  2. Intent decoder: find what the user wants. E.g. via similarity vector search against intent texts
   3. If intent with direct response: Respond with utter => Finished
   4. If complex intent: slot processing: find required slots (e.g. type, entity, feature) from intent. Find provided slots. Q&A to complete missing slots.
   5. If slots completed: extract entity/feature data from database or get *action* result for utterance => Finished
