@@ -1,6 +1,6 @@
 import json
 import os
-with open("rawData/tiere_pflanzen_auen.json") as f:
+with open("../rawData/tiere_pflanzen_auen.json") as f:
     tpa = json.load(f)
     
 
