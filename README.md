@@ -162,7 +162,7 @@ Options for vector-search but initial version with BM25 not very helpfull. Futur
 
 ### Intent detection
 
-  1) Find "simple" intents, which ,ap to one specific answer, like *wo gibt es etwas zu essen?*
+  1) Find "simple" intents, which map to one specific answer, like *wo gibt es etwas zu essen?*
   2) Find "simple" intents which require function calling, like *wie ist der CO2 Gehalt?*
   3) Find intents which require specific information, usually acquired during multiple steps using a more or less complex context. 
     * Travel information with from,to,date
